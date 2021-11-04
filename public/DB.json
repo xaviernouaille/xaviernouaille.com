@@ -1,0 +1,75 @@
+{
+    "links": [
+        {
+            "label": "Accueil",
+            "path": "hero"
+        },
+        {
+            "label": "A propos",
+            "path": "a-propos"
+        },
+        {
+            "label": "Expériences",
+            "path": "experiences"
+        },
+        {
+            "label": "Projets",
+            "path": "projets"
+        }
+    ],
+    "projets": [
+
+        {
+            "img": "https://user-images.githubusercontent.com/68466322/122674881-3e665600-d1d7-11eb-8126-224ae2d40c6b.png",
+            "title": "React Firebase Auth",
+            "description":
+                "Système d'authentification avec comme front une interface développée avec ReactJS, TypeScript, TailwindCSS et comme back Firebase. Le but était de me familiariser avec l'utilisation de firebase.",
+            "stack": ["React", "TypeScript", "Firebase"],
+            "link_github": "https://github.com/xaviernouaille/Firebase-React-Authent"
+            },
+        {
+            "img": "https://user-images.githubusercontent.com/68466322/100167068-7fef8680-2ebe-11eb-80c2-77ebabc881df.png",
+            "title": "Scrapping Météo",
+            "description":
+                "Un script Python permettant de m'informer de la météo actuelle",
+            "stack": ["Python"],
+            "link_github": "https://github.com/xaviernouaille/Notif-Weather"
+            },
+        {
+            "img": "https://user-images.githubusercontent.com/68466322/131214870-2ae65a7e-117e-4bd9-8b4f-b7e4a24bfb80.png",
+            "title": "React Recherche",
+            "description":
+                "Système de recherche permettant de rechercher des articles dans la boutique.",
+            "stack": ["React", "TypeScript", "Express", "MongoDB"],
+            "link_github": "https://github.com/xaviernouaille/Shop-React-Express"
+            },
+        {
+            "title": "Deezart",
+            "description": "Site vitrine Wordpress, vente d'oeuvres d'arts",
+            "stack": ["Wordpress", "Elementor"],
+            "link_preview": "https://deezart.fr/"
+            },
+        {
+            "img": "https://user-images.githubusercontent.com/68466322/122674195-4cff3e00-d1d4-11eb-9eb9-13f4210fb7f9.png",
+            "title": "React TodoList",
+            "description": "TodoList avec ReactJS",
+            "stack": ["React", "TypeScript"],
+            "link_github": "https://github.com/xaviernouaille/React-Todo",
+            "link_preview": "https://todolist.xaviernouaille.fr"
+        }  
+    ],
+    "experiences": [
+        {
+            "date": 2021,
+            "intitule": "Freelance Développeur",
+            "description":
+                "J'ai crée ma micro-entreprise tout récemment, je suis ouvert à tout type d'opportunité. J'ai déjà réalisé de multiples petits projets, en globalité des site vitrines sous le CMS Wordpress. Si vous êtes interessé pour la realisation d'un site vitrine sur mesure, prenez contact avec moi sans plus attendre !"
+        },
+        {
+            "date": 2020,
+            "intitule": "Lyknowledge - Développeur FullStack Junior",
+            "description":
+                "Création d'une API Globale avec le framework NodeJS, ExpressJS et Socket.io. Le but est de fabriquer une API réutilisable pour de futures projets. Création d'une plateforme avec authentification avec ReactJS. Utilisation de TypeScript pour la grande majorité des projets. Création de site showcase, vitrine Wordpress."
+        }
+    ]
+}

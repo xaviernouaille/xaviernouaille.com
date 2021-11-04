@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rock+Salt&display=swap');
+
+.font-logo{
+    font-family: 'Rock Salt', cursive;
+}
+
+body{
+    font-family: "Inter";
+    background-color: #060606;
+}
+
+.text-opacity{
+    color: #95a2b3;
+}
+
+.border-opacity{
+    border-color: #101011;
+}
+
+.hr-opacity{
+   color: #292830;
+}
+
+.cstm-container{
+    @apply w-1/2 mx-auto;
+}
+
+.secondary{
+    color: #64ffda;
+}
+
+.bg-secondary{
+    background-color: #64ffda;
+    @apply text-black;
+}
+
+.bg-primary{
+    background-color: rgba(0,0,0, 0.7);
+}
+
+.my-node-enter {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 500ms;
+  }
+  .my-node-exit {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 500ms;
+  }
+
+  ul.cstm-ul li::before{
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      margin-right: 15px;
+      background-color: #64ffda;
+  }
+
+  .text-description{
+      font-size: 1.1em;
+  }
+
+  .bg-gradient{
+      @apply bg-gradient-to-r from-green-500 to-blue-500;
+  }
+
+  header.nav-header{
+    backdrop-filter: blur(2px);
+  }
