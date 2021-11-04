@@ -1,9 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import DB from '../public/DB.json'
-import { CSSTransition } from 'react-transition-group'
 import NavLink from 'next/link'
 import Logo from './Logo'
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export interface ILink {
