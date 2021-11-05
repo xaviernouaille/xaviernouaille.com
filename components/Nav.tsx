@@ -55,8 +55,8 @@ export default function Nav() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const mobileVariants = {
-    open: { opacity: 1, scaleX: '100%' },
-    closed: { opacity: 0, scaleX: '0%' },
+    open: { opacity: 1, display: "block" },
+    closed: { opacity: 0, transitionEnd: {display: "none"}}
   }
 
   const mobileBtnVariants = {
