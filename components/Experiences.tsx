@@ -20,7 +20,7 @@ function Item({ intitule, children }) {
   return (
     <motion.li
       layout
-      className='py-5 px-8 rounded-lg cursor-pointer'
+      className='p-6 md:py-5 md:px-8 rounded-lg cursor-pointer'
       style={{ backgroundColor: '#27282b' }}
       onClick={() => setIsOpen(!isOpen)}>
       <motion.div
@@ -57,7 +57,7 @@ export default function Experiences() {
     <AnimateSharedLayout>
       <motion.section layout id='experiences' className='section big-section'>
         <section
-          className='cstm-container text-white p-12 rounded-xl'
+          className='cstm-container text-white p-8 md:p-12 rounded-xl'
           style={{ backgroundColor: '#1c1d1f' }}>
           <h2 className='font-bold seconde-title'>Expériences professionnelles</h2>
           <hr className='mt-6 text-gray-200 opacity-10' />
