@@ -81,3 +81,7 @@ background-color: rgba(22, 22, 22,0.3);
   .big-section{
       @apply my-4 md:my-16
   }
+
+  .experience-section{
+      @apply px-0 !important;
+  }

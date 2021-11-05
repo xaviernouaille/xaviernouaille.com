@@ -55,9 +55,9 @@ export default function Experiences() {
 
   return (
     <AnimateSharedLayout>
-      <motion.section layout id='experiences' className='section big-section'>
+      <motion.section layout id='experiences' className='section big-section experience-section'>
         <section
-          className='cstm-container text-white p-8 md:p-12 rounded-xl'
+          className='cstm-container text-white p-8 md:p-12 md:rounded-xl py-16 md:py-12'
           style={{ backgroundColor: '#1c1d1f' }}>
           <h2 className='font-bold seconde-title'>Expériences professionnelles</h2>
           <hr className='mt-6 text-gray-200 opacity-10' />
