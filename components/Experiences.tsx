@@ -32,12 +32,12 @@ function Item({ intitule, children }) {
           animate={isOpen ? 'open' : 'close'}>
           <FiArrowRight className="h-6 w-6" />
         </motion.span>
-        <h3>{intitule}</h3>
+        <h3 className="text-lg md:text-xl">{intitule}</h3>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className='mt-5'
+            className='mt-5 text-base md:text-lg'
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -55,11 +55,11 @@ export default function Experiences() {
 
   return (
     <AnimateSharedLayout>
-      <motion.section layout id='experiences' className='py-44 px-22'>
+      <motion.section layout id='experiences' className='section big-section'>
         <section
           className='cstm-container text-white p-12 rounded-xl'
           style={{ backgroundColor: '#1c1d1f' }}>
-          <h2 className='font-bold text-5xl'>Expériences professionnelles</h2>
+          <h2 className='font-bold seconde-title'>Expériences professionnelles</h2>
           <hr className='mt-6 text-gray-200 opacity-10' />
 
           <motion.ul className='flex flex-col space-y-6 py-10'>

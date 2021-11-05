@@ -24,40 +24,23 @@ body{
 }
 
 .cstm-container{
-    @apply w-1/2 mx-auto;
+    @apply xl:w-2/3 2xl:w-1/2 md:w-4/5 w-full mx-auto;
 }
 
 .secondary{
     color: #64ffda;
 }
 
-.bg-secondary{
-    background-color: #64ffda;
-    @apply text-black;
-}
 
-.bg-primary{
-    background-color: rgba(0,0,0, 0.7);
-}
+    .bg-secondary{
+        background-color: #64ffda;
+        @apply text-black;
+    }
+    
+    .bg-primary{
+        background-color: rgba(0,0,0, 0.7);
+    }
 
-.my-node-enter {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  .my-node-enter-active {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: all 500ms;
-  }
-  .my-node-exit {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  .my-node-exit-active {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 500ms;
-  }
 
   ul.cstm-ul li::before{
       content: '';
@@ -72,10 +55,29 @@ body{
       font-size: 1.1em;
   }
 
-  .bg-gradient{
-      @apply bg-gradient-to-r from-green-500 to-blue-500;
-  }
-
   header.nav-header{
     backdrop-filter: blur(2px);
+  }
+
+  .nav-mobile{
+    backdrop-filter: blur(2px);
+background-color: rgba(22, 22, 22,0.3);
+  }
+
+
+  .seconde-title{
+      @apply md:text-5xl text-3xl sm:text-4xl
+  }
+
+  .big-btn{
+    @apply md:py-3 md:px-10 rounded-lg font-medium md:text-lg py-2 px-7
+  }
+
+
+  .section{
+      @apply py-28 md:py-32 px-6
+  }
+
+  .big-section{
+      @apply my-4 md:my-16
   }

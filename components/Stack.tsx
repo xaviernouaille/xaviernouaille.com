@@ -30,7 +30,7 @@ export default function Stack() {
   return (
     <section
       id='stack'
-      className='py-44'
+      className='section'
       style={{ backgroundColor: '#1c1d1f' }}>
       <section className='cstm-container text-white'>
         <div className='text-center mb-16'>

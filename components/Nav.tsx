@@ -32,6 +32,7 @@ export default function Nav() {
         //   console.log("scrolling down");
       }
       setY(window.scrollY)
+      setMobileNavOpen(false)
     },
     [y]
   )
@@ -50,6 +51,13 @@ export default function Nav() {
     auto: { opacity: 0, y: '-100%' },
   }
 
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+
+  const mobileVariants = {
+    open: { opacity: 1, scaleX: "100%" },
+    closed: { opacity: 0, scaleX: '90%' },
+  }
+
   return (
     <section className='fixed top-0 z-50 w-full'>
       <AnimatePresence exitBeforeEnter>
@@ -60,7 +68,7 @@ export default function Nav() {
             y > 50 ? 'border-b border-opacity' : ''
           } bg-primary nav-header`}>
           <nav
-            className={`cstm-container flex justify-between items-center text-white mx-auto py-5`}>
+            className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
             <ul>
               <Logo />
             </ul>
@@ -84,6 +92,31 @@ export default function Nav() {
               </li>
             </ul>
           </nav>
+
+          <div className="cstm-container mx-auto relative lg:hidden px-6">
+            <nav className="flex items-center justify-between text-white py-5">
+                  <button onClick={()=> setMobileNavOpen(!mobileNavOpen)}>
+                    open
+                  </button>
+                  <Logo />
+            </nav>
+            <AnimatePresence exitBeforeEnter>
+                <motion.div
+                variants={mobileVariants}
+                animate={mobileNavOpen ? 'open' : 'closed'}
+                className="rounded-lg absolute mt-3 left-0 right-0 m-8 md:m-0 shadow-lg nav-mobile">
+                  <ul className='flex flex-col space-y-10 p-8'>
+                    {links.map((link: ILink, index: number) => (
+                      <NavLink scroll={false} key={index} href={`/#${link.path}`}>
+                        <a className='text-gray-200 text-sm2'>
+                          {link.label}
+                        </a>
+                      </NavLink>
+                    ))}
+                  </ul>
+                </motion.div>
+              </AnimatePresence>
+          </div>
         </motion.header>
       </AnimatePresence>
     </section>

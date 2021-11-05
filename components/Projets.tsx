@@ -8,15 +8,15 @@ export default function Projets() {
     <section
       id='projets'
       style={{ backgroundColor: '#1c1d1f' }}
-      className='py-32 text-white'>
+      className='section text-white'>
       <section className='cstm-container'>
         <div className='text-center mb-16'>
-          <h2 className='text-5xl font-bold max-w-2xl mx-auto mb-8'>
+          <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8'>
             Projets réalisés durant mon temps libre.
           </h2>
         </div>
 
-        <section className='grid grid-cols-3 grid-flow-row gap-5 text-white'>
+        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white'>
           {DB.projets.map((projet: IProjet, index: number) => (
             <Link scroll={false} key={index} href="/projet/[index]" as={`/projet/${index}`}>
               <a

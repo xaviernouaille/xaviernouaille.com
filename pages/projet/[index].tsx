@@ -25,9 +25,9 @@ export default function Index({ projet, index }) {
 
       <section className='cstm-container'>
         {projet && (
-          <section className='mt-56 mb-36 text-white'>
+          <section className='section big-section text-white'>
             <div className='max-w-2xl mx-auto mb-24'>
-              <h1 className='text-5xl font-bold'>{projet.title}</h1>
+              <h1 className='seconde-title font-bold'>{projet.title}</h1>
               <div className='mt-7 flex items-center space-x-5'>
                 {projet.link_preview && (
                   <Link href={projet.link_preview}>
