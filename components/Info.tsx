@@ -1,5 +1,5 @@
 import XavierNouaille from '../public/xavier-nouaille.jpg'
-import {FiArrowRight} from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 
 export default function Info() {
   return (
@@ -22,15 +22,17 @@ export default function Info() {
             utilisateurs, au développement du produit final.
           </p>
           <div className='mt-10'>
-            <a className='text-lg secondary flex items-center space-x-2' href=''>
-              <p>Mon CV</p> 
+            <a
+              className='text-lg secondary flex items-center space-x-2'
+              href=''>
+              <p>Mon CV</p>
             </a>
           </div>
         </div>
         <img
           className='lg:w-2/5 w-full rounded-xl'
           src={XavierNouaille.src}
-          alt="Xavier Nouaille"
+          alt='Xavier Nouaille'
         />
       </div>
     </section>

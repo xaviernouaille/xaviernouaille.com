@@ -1,4 +1,4 @@
-import { FiArrowRight } from "react-icons/fi"
+import { FiArrowRight } from 'react-icons/fi'
 
 export default function Contact() {
   return (
@@ -14,7 +14,8 @@ export default function Contact() {
         <a
           href='mailto:xavier.nouaille@protonmail.com'
           className='big-btn inline-flex items-center space-x-2 bg-secondary'>
-          <p>Contact</p><FiArrowRight className="h-5 w-5 md:w-6 md:h-6" />
+          <p>Contact</p>
+          <FiArrowRight className='h-5 w-5 md:w-6 md:h-6' />
         </a>
       </section>
     </section>

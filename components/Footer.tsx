@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className='mt-5 px-6 md:px-0'>
       <hr className='border-t border-opacity' />
       <div className='py-8 cstm-container flex justify-between items-center text-white'>
-        <div className="w-1/2 md:w-auto">
+        <div className='w-1/2 md:w-auto'>
           <p className='text-sm text-opacity'>
             Designé et développé par Xavier Nouaille
           </p>

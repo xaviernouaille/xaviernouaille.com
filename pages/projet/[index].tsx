@@ -2,7 +2,7 @@ import DB from '../../public/DB.json'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import NavLink from 'next/link';
+import NavLink from 'next/link'
 
 export interface IProjet {
   img?: string
@@ -101,13 +101,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const {index} = params
+  const { index } = params
   const projet = DB.projets[index]
   if (!projet) {
     return {
-      redirect:{
-        destination: '/'
-      }
+      redirect: {
+        destination: '/',
+      },
     }
   }
   return { props: { projet, index } }

@@ -18,7 +18,11 @@ export default function Projets() {
 
         <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white'>
           {DB.projets.map((projet: IProjet, index: number) => (
-            <Link scroll={false} key={index} href="/projet/[index]" as={`/projet/${index}`}>
+            <Link
+              scroll={false}
+              key={index}
+              href='/projet/[index]'
+              as={`/projet/${index}`}>
               <a
                 className='p-10 rounded-lg shadow-xl flex flex-col justify-between'
                 style={{ backgroundColor: '#27282b' }}>

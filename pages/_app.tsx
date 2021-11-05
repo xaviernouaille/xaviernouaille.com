@@ -11,19 +11,18 @@ function MyApp({ Component, pageProps, router }) {
   const handExitComplete = (): void => {
     if (typeof window !== 'undefined') {
       // Get the hash from the url
-      const hashId = window.location.hash;
+      const hashId = window.location.hash
       if (hashId) {
-        const element = document.querySelector(hashId);
+        const element = document.querySelector(hashId)
         if (element) {
           // Smooth scroll to that elment
-          element.scrollIntoView({block: "start", inline: "nearest"});
+          element.scrollIntoView({ block: 'start', inline: 'nearest' })
         }
-      }
-      else if(!hashId){
-        scrollTo(0,0)
+      } else if (!hashId) {
+        scrollTo(0, 0)
       }
     }
-  };
+  }
 
   return (
     <>
@@ -31,8 +30,7 @@ function MyApp({ Component, pageProps, router }) {
       <AnimatePresence
         exitBeforeEnter
         initial={false}
-        onExitComplete={handExitComplete}
-        >
+        onExitComplete={handExitComplete}>
         <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
       <Footer />
