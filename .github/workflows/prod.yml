@@ -27,6 +27,7 @@ jobs:
           check-latest: true
       - run: npm install
       - run: npm run build
+      - run: npm run sitemap
       - run: npm run export
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
