@@ -1,5 +1,6 @@
 import XavierNouaille from '../public/xavier-nouaille.webp'
 import { FiArrowRight } from 'react-icons/fi'
+import Image from 'next/image'
 
 export default function Info() {
   return (
@@ -30,11 +31,16 @@ export default function Info() {
             </a>
           </div>
         </div>
-        <img
-          className='lg:w-2/5 w-full rounded-xl'
-          src={XavierNouaille.src}
-          alt='Xavier Nouaille'
+        <div className="lg:w-2/5 w-full">
+        <Image
+        className='rounded-xl'
+        src={XavierNouaille.src}
+        alt='Xavier Nouaille'
+        width={785}
+        height={750}
+        layout="responsive"
         />
+        </div>
       </div>
     </section>
   )
