@@ -3,7 +3,7 @@ import DB from '../public/DB.json'
 import NavLink from 'next/link'
 import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
-import {HiMenuAlt4} from 'react-icons/hi'
+import { HiMenuAlt4 } from 'react-icons/hi'
 
 export interface ILink {
   path: string
@@ -55,13 +55,13 @@ export default function Nav() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const mobileVariants = {
-    open: { opacity: 1, display: "block" },
-    closed: { opacity: 0, transitionEnd: {display: "none"}}
+    open: { opacity: 1, display: 'block' },
+    closed: { opacity: 0, transitionEnd: { display: 'none' } },
   }
 
   const mobileBtnVariants = {
-    open: { rotate: "90deg" },
-    closed: { rotate: "0deg" },
+    open: { rotate: '90deg' },
+    closed: { rotate: '0deg' },
   }
 
   return (
@@ -98,10 +98,15 @@ export default function Nav() {
           </nav>
 
           {/* Mobile Nav */}
-          <div id="mobileNav" className='cstm-container mx-auto relative lg:hidden px-6'>
+          <div
+            id='mobileNav'
+            className='cstm-container mx-auto relative lg:hidden px-6'>
             <nav className='flex items-center justify-between text-white py-5'>
-              <motion.button animate={mobileNavOpen ? 'open' : 'closed'} variants={mobileBtnVariants} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-                <HiMenuAlt4 className="h-6 w-6" />
+              <motion.button
+                animate={mobileNavOpen ? 'open' : 'closed'}
+                variants={mobileBtnVariants}
+                onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                <HiMenuAlt4 className='h-6 w-6' />
               </motion.button>
               <Logo />
             </nav>
