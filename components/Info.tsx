@@ -1,4 +1,4 @@
-import XavierNouaille from '../public/xavier-nouaille.jpg'
+import XavierNouaille from '../public/xavier-nouaille.webp'
 import { FiArrowRight } from 'react-icons/fi'
 
 export default function Info() {
