@@ -28,7 +28,7 @@ export default function Projets() {
                 style={{ backgroundColor: '#27282b' }}>
                 <div>
                   <FolderIcon className='h-7 w-7 secondary mb-5' />
-                  <h4 className='text-xl mb-3 font-medium'>{projet.title}</h4>
+                  <h3 className='text-xl mb-3 font-medium'>{projet.title}</h3>
                   <p className='text-opacity text-lg'>
                     {projet.description.substr(0, 50)}..
                   </p>

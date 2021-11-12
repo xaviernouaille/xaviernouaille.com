@@ -103,6 +103,7 @@ export default function Nav() {
             className='cstm-container mx-auto relative lg:hidden px-6'>
             <nav className='flex items-center justify-between text-white py-5'>
               <motion.button
+                aria-label='menu de navigation'
                 animate={mobileNavOpen ? 'open' : 'closed'}
                 variants={mobileBtnVariants}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}>

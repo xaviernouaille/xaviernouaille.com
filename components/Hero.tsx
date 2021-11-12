@@ -33,13 +33,19 @@ export default function Hero() {
         <div className='flex items-center space-x-3'>
           <a
             target='_blank'
+            aria-label='Linkedin'
+            rel="noreferrer"
             href='https://www.linkedin.com/in/xavier-nouaille/'>
             <FaLinkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
-          <a target='_blank' href='https://github.com/xaviernouaille'>
+          <a
+            target='_blank'
+            aria-label='GitHub'
+            rel="noreferrer"
+            href='https://github.com/xaviernouaille'>
             <FaGithub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
-          <a href='mailto:xavier.nouaille@protonmail.com'>
+          <a aria-label='E-mail' href='mailto:xavier.nouaille@protonmail.com'>
             <IoMail className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
         </div>
