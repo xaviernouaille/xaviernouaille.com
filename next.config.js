@@ -3,5 +3,4 @@ module.exports = {
         loader: "imgix",
         path: "https://xaviernouaille.com/",
     },
-    trailingSlash: true,
 }
