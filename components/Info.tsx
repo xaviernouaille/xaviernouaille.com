@@ -25,7 +25,7 @@ export default function Info() {
           <div className='mt-10'>
             <a
               className='text-lg secondary flex items-center space-x-2'
-              href='/CV_XAVIER_NOUAILLE.pdf'
+              href='/CV-XAVIER-NOUAILLE.pdf'
               target='_blank'>
               <p>Mon CV</p>
             </a>

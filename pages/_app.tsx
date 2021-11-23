@@ -3,7 +3,6 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import '../styles/global.css'
 import { AnimatePresence } from 'framer-motion'
-import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps, router }) {
   const url = `http://localhost:3000${router.asPath.split('#')[0]}`

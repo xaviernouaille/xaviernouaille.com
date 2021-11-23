@@ -1,4 +1,3 @@
-import { CubeIcon } from '@heroicons/react/outline'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiTypescript, SiMongodb } from 'react-icons/si'
 
