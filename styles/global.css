@@ -76,7 +76,3 @@ backdrop-filter: blur(2px);
 .experience-section{
     @apply px-0 !important;
 }
-
-html{
-    scroll-behavior: smooth;
-}

@@ -17,9 +17,9 @@ export default function Index({ projet, index }) {
   return (
     <Layout>
       <Seo
-        title={'Mes projets | Xavier Nouaille | Developpeur web junior'}
+        title={`${projet.title} | Xavier Nouaille | Developpeur web junior`}
         description={
-          'Mes projets | Découvrez mes projets personnels et professionnels.'
+          `${projet.title} | Découvrez mes projets personnels et professionnels.`
         }
       />
 
