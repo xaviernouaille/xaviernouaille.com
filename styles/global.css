@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html{
-    @apply font-body !important;
+    font-family: "Inter";
 }
 body{
     background-color: #060606;
