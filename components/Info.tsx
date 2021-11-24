@@ -6,7 +6,7 @@ export default function Info() {
     <section id='a-propos' className='section cstm-container text-white'>
       <h2 className='seconde-title text-white mb-10 font-bold'>A mon propos</h2>
 
-      <p className='md:text-xl leading-normal text-opacity'>
+      <p className='md:text-xl leading-normal text-opacity mb-5'>
         <i>Interressé</i> par les nouvelles technologies, j'ai débuté début
         2019, un Bachelor chef de projets digitaux. J'ai pour ambition de
         poursuivre mon apprentissage avec un Master en alternance après

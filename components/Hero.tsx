@@ -20,10 +20,10 @@ export default function Hero() {
           Hello,
           <br /> I'm Xavier Nouaille
         </h1>
-        <h2 className='text-lg md:text-2xl max-w-3xl text-opacity font-light'>
+        <p className='text-lg md:hero-subtitle max-w-3xl text-opacity font-light'>
           Développeur junior depuis maintenant 2 ans, j'utilise principalement
           la MERN Stack. Je suis passioné par les nouvelles technologies.
-        </h2>
+        </p>
         <NavLink scroll={false} href='/#contact'>
           <a className='big-btn bg-secondary rounded-lg font-medium'>
             Contactez moi !
