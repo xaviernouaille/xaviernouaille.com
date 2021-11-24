@@ -5,6 +5,7 @@
 
 body{
     background-color: #060606;
+    @apply font-sans;
 }
 
 .text-opacity{
