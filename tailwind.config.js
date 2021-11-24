@@ -11,7 +11,8 @@ module.exports = {
         "sm2": "0.925rem"
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans]
+        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        logo: ['Rock Salt']
       }
     },
   },

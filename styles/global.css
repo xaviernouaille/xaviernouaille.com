@@ -3,12 +3,9 @@
 
 @tailwind utilities;
 
-.font-logo{
-font-family: 'Rock Salt', cursive;
-}
-
 body{
     background-color: #060606;
+    @apply
 }
 
 .text-opacity{
