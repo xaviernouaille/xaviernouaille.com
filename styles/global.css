@@ -76,9 +76,3 @@ backdrop-filter: blur(2px);
 .experience-section{
     @apply px-0 !important;
 }
-
-@variants responsive{
-    .hero-subtitle{
-        font-size: 1.5rem;
-    }
-}
