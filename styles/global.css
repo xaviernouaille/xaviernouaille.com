@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html{
-    @apply font-sans !important;
+    @apply font-body !important;
 }
 body{
     background-color: #060606;
