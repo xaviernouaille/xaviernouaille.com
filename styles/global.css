@@ -3,9 +3,11 @@
 
 @tailwind utilities;
 
+html{
+    @apply font-sans !important;
+}
 body{
     background-color: #060606;
-    @apply font-sans;
 }
 
 .text-opacity{

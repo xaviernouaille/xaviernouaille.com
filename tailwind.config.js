@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        body: ['Inter', ...defaultTheme.fontFamily.sans],
         logo: ['Rock Salt']
       }
     },
