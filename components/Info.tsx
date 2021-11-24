@@ -30,15 +30,15 @@ export default function Info() {
             </a>
           </div>
         </div>
-        <div className="lg:w-2/5 w-full">
-        <Image
-        className='rounded-xl'
-        src={XavierNouaille.src}
-        alt='Xavier Nouaille'
-        width={785}
-        height={750}
-        layout="responsive"
-        />
+        <div className='lg:w-2/5 w-full'>
+          <Image
+            className='rounded-xl'
+            src={XavierNouaille.src}
+            alt='Xavier Nouaille'
+            width={785}
+            height={750}
+            layout='responsive'
+          />
         </div>
       </div>
     </section>

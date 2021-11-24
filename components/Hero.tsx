@@ -34,14 +34,14 @@ export default function Hero() {
           <a
             target='_blank'
             aria-label='Linkedin'
-            rel="noreferrer"
+            rel='noreferrer'
             href='https://www.linkedin.com/in/xavier-nouaille/'>
             <FaLinkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
           <a
             target='_blank'
             aria-label='GitHub'
-            rel="noreferrer"
+            rel='noreferrer'
             href='https://github.com/xaviernouaille'>
             <FaGithub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
