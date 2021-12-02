@@ -34,7 +34,7 @@ export default function Info() {
           <Image
             className='rounded-xl'
             src={XavierNouaille.src}
-            alt='Xavier Nouaille'
+            alt='Xavier-Nouaille'
             width={785}
             height={750}
             layout='responsive'
