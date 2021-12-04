@@ -1,6 +1,3 @@
-import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiTypescript, SiMongodb } from 'react-icons/si'
-
 interface ITech {
   logo: JSX.Element
   title: string
@@ -8,22 +5,22 @@ interface ITech {
 
 export default function Stack() {
   const stackData: ITech[] = [
-    {
-      logo: <FaReact className='h-9 w-9' />,
-      title: 'ReactJS',
-    },
-    {
-      logo: <FaNodeJs className='h-9 w-9' />,
-      title: 'NodeJS',
-    },
-    {
-      logo: <SiMongodb className='h-9 w-9' />,
-      title: 'MongoDB',
-    },
-    {
-      logo: <SiTypescript className='h-9 w-9' />,
-      title: 'TypeScript',
-    },
+    // {
+    //   logo: <FaReact className='h-9 w-9' />,
+    //   title: 'ReactJS',
+    // },
+    // {
+    //   logo: <FaNodeJs className='h-9 w-9' />,
+    //   title: 'NodeJS',
+    // },
+    // {
+    //   logo: <SiMongodb className='h-9 w-9' />,
+    //   title: 'MongoDB',
+    // },
+    // {
+    //   logo: <SiTypescript className='h-9 w-9' />,
+    //   title: 'TypeScript',
+    // },
   ]
 
   return (

@@ -63,13 +63,37 @@
             "date": 2021,
             "intitule": "Freelance Développeur",
             "description":
-                "J'ai crée ma micro-entreprise tout récemment, je suis ouvert à tout type d'opportunité. J'ai déjà réalisé de multiples petits projets, en globalité des site vitrines sous le CMS Wordpress. Si vous êtes interessé pour la realisation d'un site vitrine sur mesure, prenez contact avec moi sans plus attendre !"
+                "J'ai crée ma micro-entreprise tout récemment, je suis ouvert à tout type d'opportunité. J'ai déjà réalisé de multiples petits projets, en globalité des site vitrines sous le CMS Wordpress. Si vous êtes interessé pour la realisation d'un site vitrine sur mesure, prenez contact avec moi sans plus attendre !",
+            "actually": true
         },
         {
             "date": 2020,
+            "dateTo": 2021,
             "intitule": "Lyknowledge - Développeur FullStack Junior",
             "description":
                 "Création d'une API Globale avec le framework NodeJS, ExpressJS et Socket.io. Le but est de fabriquer une API réutilisable pour de futures projets. Création d'une plateforme avec authentification avec ReactJS. Utilisation de TypeScript pour la grande majorité des projets. Création de site showcase, vitrine Wordpress."
+        }
+    ],
+    "formations": [
+        {
+            "date": 2022,
+            "dateTo": 2023,
+            "intitule": "EPITECH - MSC PRO",
+            "description": "A venir.."
+        },
+        {
+            "date": 2019,
+            "dateTo": 2022,
+            "intitule": "Développeur, Chef de projets Digitaux",
+            "description":
+                "EEMI, Ecole Européenne des métiers de l’Internet. Paris 75002, React, Angular, TypeScript, API REST NodeJS - MongoDB, Intégration web : HTML, CSS, JS, PHP, Symfony, SQL, Docker, Bash, Linux. 2 années en alternance : développeur junior fullstack.",
+            "actually": true
+        },
+        {
+            "date": 2018,
+            "intitule": "Baccalauréat Economique et Social",
+            "description":
+                "Spécialité Sciences Politiques"
         }
     ]
 }

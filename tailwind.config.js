@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontSize:{
         "2xl": "1.6rem",
+        "1.5xl": "1.53rem",
         "sm2": "0.925rem"
       },
       fontFamily: {

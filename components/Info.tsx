@@ -1,5 +1,6 @@
 import XavierNouaille from '../public/xavier-nouaille.webp'
 import Image from 'next/image'
+import { ArrowRight } from 'react-feather'
 
 export default function Info() {
   return (
@@ -8,9 +9,9 @@ export default function Info() {
 
       <p className='md:text-xl leading-normal text-opacity mb-5'>
         <i>Interressé</i> par les nouvelles technologies, j'ai débuté début
-        2019, un Bachelor chef de projets digitaux. J'ai pour ambition de
-        poursuivre mon apprentissage avec un Master en alternance après
-        l'obtention de mon Bachelor.
+        2019, un Bachelor chef de projets digitaux. Inscrit pour la rentrée
+        2022, au campus d'Epitech Kremlin Bicêtre, je debuterai un MASTER en
+        alternance.
       </p>
       <div className='flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-12'>
         <div className='lg:w-3/5 w-full'>
@@ -26,7 +27,8 @@ export default function Info() {
               className='text-lg secondary flex items-center space-x-2'
               href='/CV-XAVIER-NOUAILLE.pdf'
               target='_blank'>
-              <p>Mon CV</p>
+              <p>Curriculum Vitae</p>
+              <ArrowRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
             </a>
           </div>
         </div>

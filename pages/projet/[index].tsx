@@ -18,9 +18,7 @@ export default function Index({ projet, index }) {
     <Layout>
       <Seo
         title={`${projet.title} | Xavier Nouaille | Developpeur web junior`}
-        description={
-          `${projet.title} | Découvrez mes projets personnels et professionnels.`
-        }
+        description={`${projet.title} | Découvrez mes projets personnels et professionnels.`}
       />
 
       <section className='cstm-container'>

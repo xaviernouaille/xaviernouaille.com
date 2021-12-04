@@ -1,7 +1,5 @@
 import NavLink from 'next/link'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
-import { IoMail } from 'react-icons/io5'
-import Link from 'next/link'
+import { GitHub, Mail, Linkedin } from 'react-feather'
 
 export default function Hero() {
   return (
@@ -20,7 +18,7 @@ export default function Hero() {
           Hello,
           <br /> I'm Xavier Nouaille
         </h1>
-        <p className='text-lg md:text-2xl md:text-1.5rem max-w-3xl text-opacity font-light'>
+        <p className='text-lg md:text-1.5xl max-w-3xl text-opacity font-light'>
           Développeur junior depuis maintenant 2 ans, j'utilise principalement
           la MERN Stack. Je suis passioné par les nouvelles technologies.
         </p>
@@ -34,19 +32,19 @@ export default function Hero() {
           <a
             target='_blank'
             aria-label='Linkedin'
-            rel="noreferrer"
+            rel='noreferrer'
             href='https://www.linkedin.com/in/xavier-nouaille/'>
-            <FaLinkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <Linkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
           <a
             target='_blank'
             aria-label='GitHub'
-            rel="noreferrer"
+            rel='noreferrer'
             href='https://github.com/xaviernouaille'>
-            <FaGithub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <GitHub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
           <a aria-label='E-mail' href='mailto:xavier.nouaille@protonmail.com'>
-            <IoMail className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <Mail className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
         </div>
       </div>

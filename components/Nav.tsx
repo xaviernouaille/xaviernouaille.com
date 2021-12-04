@@ -3,7 +3,7 @@ import DB from '../public/DB.json'
 import NavLink from 'next/link'
 import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HiMenuAlt4 } from 'react-icons/hi'
+import { Menu } from 'react-feather'
 
 export interface ILink {
   path: string
@@ -89,7 +89,7 @@ export default function Nav() {
             <ul>
               <li>
                 <NavLink scroll={false} href='/#contact'>
-                  <a className='px-4 py-1.5 bg-secondary text-sm rounded-md font-medium'>
+                  <a className='px-5 py-2 bg-secondary text-sm rounded-md font-medium'>
                     Contact
                   </a>
                 </NavLink>
@@ -107,7 +107,7 @@ export default function Nav() {
                 animate={mobileNavOpen ? 'open' : 'closed'}
                 variants={mobileBtnVariants}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-                <HiMenuAlt4 className='h-6 w-6' />
+                <Menu className='h-6 w-6' />
               </motion.button>
               <Logo />
             </nav>
