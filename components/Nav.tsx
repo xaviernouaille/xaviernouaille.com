@@ -3,7 +3,7 @@ import DB from '../public/DB.json'
 import NavLink from 'next/link'
 import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu } from 'react-feather'
+import { Menu, ArrowUpRight } from 'react-feather'
 
 export interface ILink {
   path: string
@@ -75,22 +75,24 @@ export default function Nav() {
           } bg-primary`}>
           <nav
             className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
-            <ul>
-              <Logo />
-            </ul>
-            <ul className='flex space-x-10'>
-              {links.map((link: ILink, index: number) => (
-                <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                  <a className='text-gray-200 text-sm2'>{link.label}</a>
-                </NavLink>
-              ))}
-            </ul>
+              <div className="flex items-center space-x-16">
+                <ul>
+                  <Logo />
+                </ul>
+                <ul className='flex space-x-10'>
+                  {links.map((link: ILink, index: number) => (
+                    <NavLink scroll={false} key={index} href={`/#${link.path}`}>
+                      <a className='text-gray-200 text-sm2'>{link.label}</a>
+                    </NavLink>
+                  ))}
+                </ul>
+              </div>
 
             <ul>
               <li>
                 <NavLink scroll={false} href='/#contact'>
-                  <a className='px-5 py-2 bg-secondary text-sm rounded-md font-medium'>
-                    Contact
+                  <a className='btn border border-secondary text-secondary flex items-center space-x-2'>
+                    <p>Contactez moi</p> <ArrowUpRight/>
                   </a>
                 </NavLink>
               </li>

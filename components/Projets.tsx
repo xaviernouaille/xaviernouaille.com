@@ -16,7 +16,7 @@ export default function Projets() {
           </h2>
         </div>
 
-        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white'>
+        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white px-12'>
           {DB.projets.map((projet: IProjet, index: number) => (
             <Link
               scroll={false}

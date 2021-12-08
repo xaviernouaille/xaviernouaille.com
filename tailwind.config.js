@@ -12,9 +12,12 @@ module.exports = {
         "sm2": "0.925rem"
       },
       fontFamily: {
-        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
-        body: ['"Inter"'],
+        sans: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+        body: ['"Montserrat"'],
         logo: ['"Rock Salt"']
+      },
+      colors: {
+        "secondary": "var(--color-secondary)"
       }
     },
   },

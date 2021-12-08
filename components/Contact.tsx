@@ -13,8 +13,8 @@ export default function Contact() {
         </h3>
         <a
           href='mailto:xavier.nouaille@protonmail.com'
-          className='big-btn inline-flex items-center space-x-2 bg-secondary'>
-          <p>Contact</p>
+          className='big-btn inline-flex items-center space-x-2 border border-secondary text-secondary'>
+          <p>Contactez moi !</p>
           <ArrowRight className='h-5 w-5 md:w-6 md:h-6' />
         </a>
       </section>

@@ -1,78 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Rock+Salt&display=swap');
 
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body{
-    @apply font-body;
-    background-color: #060606;
+@layer utilities {
+  @variants responsive {
+    .w-60c {
+      width: 60%;
+    }
+  }
 }
 
-.text-opacity{
-color: #95a2b3;
+body {
+  @apply font-body;
+  background-color: #060606;
+  --color-secondary: #64ffda;
 }
 
-.border-opacity{
-border-color: #101011;
+.text-opacity {
+  color: #95a2b3;
 }
 
-.hr-opacity{
-color: #292830;
+.border-opacity {
+  border-color: #101011;
 }
 
-.cstm-container{
-@apply xl:w-2/3 2xl:w-1/2 md:w-4/5 w-full mx-auto;
+.hr-opacity {
+  color: #292830;
 }
 
-.secondary{
-color: #64ffda;
+.cstm-container {
+  @apply xl:w-60c md:w-4/5 w-full mx-auto;
 }
 
-
-.bg-secondary{
-    background-color: #64ffda;
-    @apply text-black;
+.secondary {
+  color: #64ffda;
 }
 
-.bg-primary{
-    background-color: rgba(0,0,0, 0.7);
+.bg-secondary {
+  background-color: #64ffda;
+  @apply text-black;
 }
 
-
-ul.cstm-ul li::before{
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 1px;
-    margin-right: 15px;
-    background-color: #64ffda;
+.bg-primary {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.text-description{
-    font-size: 1.1em;
+ul.cstm-ul li::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 1px;
+  margin-right: 15px;
+  background-color: #64ffda;
 }
 
-.bg-blur{
-backdrop-filter: blur(2px);
+.text-description {
+  font-size: 1.1em;
 }
 
-
-.seconde-title{
-    @apply md:text-5xl text-3xl sm:text-4xl
+.bg-blur {
+  backdrop-filter: blur(2px);
 }
 
-.big-btn{
-@apply md:py-3 md:px-10 rounded-lg font-medium md:text-lg py-2 px-7
+.seconde-title {
+  @apply md:text-5xl text-3xl sm:text-4xl;
 }
 
-
-.section{
-    @apply py-28 md:py-32 px-6
+.btn {
+  @apply px-5 py-1.5 rounded-2xl font-medium text-sm;
 }
 
-.big-section{
-    @apply my-4 md:my-16
+.big-btn {
+  @apply py-2.5 px-9 rounded-3xl font-medium md:text-lg;
 }
 
-.experience-section{
-    @apply px-0 !important;
+.section {
+  @apply py-28 md:py-32 px-6;
+}
+
+.big-section {
+  @apply my-4 md:my-16;
+}
+
+.experience-section {
+  @apply px-0 !important;
 }
