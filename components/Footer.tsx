@@ -8,11 +8,9 @@ export default function Footer() {
   return (
     <footer className='mt-20 px-6 md:px-0'>
       <hr className='border-t border-opacity' />
-      <div className='py-20 cstm-container flex flex-col space-y-12 lg:flex-row justify-between text-white'>
+      <div className='py-20 cstm-container flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between text-white'>
         <div className='w-1/2 md:w-auto flex flex-col space-y-7'>
-        <div>
           <Logo />
-        </div>
         </div>
 
         <div>
@@ -42,7 +40,7 @@ export default function Footer() {
       <div>
       <p className='text-sm text-opacity text-center pb-10 mt-8'>
             Designé et développé par Xavier Nouaille
-          </p>
+        </p>
       </div>
     </footer>
   )
