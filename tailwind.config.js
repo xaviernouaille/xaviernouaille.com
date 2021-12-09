@@ -9,7 +9,8 @@ module.exports = {
       fontSize:{
         "2xl": "1.6rem",
         "1.5xl": "1.53rem",
-        "sm2": "0.925rem"
+        "sm2": "0.925rem",
+        "6.5xl": "4.2rem"
       },
       fontFamily: {
         sans: ['"Montserrat"', ...defaultTheme.fontFamily.sans],

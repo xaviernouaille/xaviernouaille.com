@@ -1,4 +1,4 @@
-import { HiFolder } from 'react-icons/hi'
+import { HiOutlineFolder } from 'react-icons/hi'
 import DB from '../public/DB.json'
 import { IProjet } from '../pages/projet/[index]'
 import Link from 'next/link'
@@ -27,7 +27,7 @@ export default function Projets() {
                 className='p-10 rounded-lg shadow-xl flex flex-col justify-between'
                 style={{ backgroundColor: '#27282b' }}>
                 <div>
-                  <HiFolder className='h-7 w-7 secondary mb-5' />
+                  <HiOutlineFolder className='h-7 w-7 secondary mb-5' />
                   <h3 className='text-xl mb-3 font-medium'>{projet.title}</h3>
                   <p className='text-opacity text-lg'>
                     {projet.description.substr(0, 50)}..

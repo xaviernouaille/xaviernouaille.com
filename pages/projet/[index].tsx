@@ -2,7 +2,6 @@ import DB from '../../public/DB.json'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import NavLink from 'next/link'
 
 export interface IProjet {
   img?: string
