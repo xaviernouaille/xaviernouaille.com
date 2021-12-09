@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <p className="text-2xl font-semibold">Une demande de devis ?</p>
               <a className="flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100" href="">
-                <FiArrowRight />
+                <FiArrowRight className="w-6 h-6" />
                 <p className="text-2xl font-semibold">Par ici !</p>
               </a>
           </div>

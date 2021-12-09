@@ -92,7 +92,7 @@ export default function Nav() {
               <li>
                 <NavLink scroll={false} href='/#contact'>
                   <a className='btn border border-secondary text-secondary flex items-center space-x-2'>
-                    <p>Contactez moi</p> <FiArrowUpRight/>
+                    <p>Contactez moi</p> <FiArrowUpRight className="w-5 h-5"/>
                   </a>
                 </NavLink>
               </li>
