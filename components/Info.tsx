@@ -1,6 +1,6 @@
 import XavierNouaille from '../public/xavier-nouaille.webp'
 import Image from 'next/image'
-import { ArrowRight } from 'react-feather'
+import { FiArrowRight } from 'react-icons/fi'
 
 export default function Info() {
   return (
@@ -28,7 +28,7 @@ export default function Info() {
               href='/CV-XAVIER-NOUAILLE.pdf'
               target='_blank'>
               <p>Curriculum Vitae</p>
-              <ArrowRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
+              <FiArrowRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
             </a>
           </div>
         </div>

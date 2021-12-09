@@ -1,5 +1,5 @@
 import NavLink from 'next/link'
-import { GitHub, Mail, Linkedin } from 'react-feather'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 export default function Hero() {
   return (
@@ -14,32 +14,34 @@ export default function Hero() {
               Disponible pour vos missions freelance.
             </a>
           </NavLink>
-        <h1 className='md:text-6xl text-5xl sm:text-6xl font-bold max-w-5xl'>
+        <h1 className='md:text-5xl lg:text-6xl text-4xl font-bold md:max-w-5xl'>
         Bonjour, je m'appelle Xavier Nouaille, développeur junior fullstack basé sur Paris.
         </h1>
-        <div className="flex items-center space-x-5">
-          <NavLink scroll={false} href='/#contact'>
-            <a className='big-btn border border-secondary text-secondary'>
-              Contactez moi !
-            </a>
-          </NavLink>
+        <div className="flex flex-col justify-center space-y-10">
+          <div>
+            <NavLink scroll={false} href='/#contact'>
+              <a className='big-btn border border-secondary text-secondary'>
+                Contactez moi !
+              </a>
+            </NavLink>
+          </div>
         <div className='flex items-center space-x-3'>
           <a
             target='_blank'
             aria-label='Linkedin'
             rel='noreferrer'
             href='https://www.linkedin.com/in/xavier-nouaille/'>
-            <Linkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <FaLinkedin className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
           <a
             target='_blank'
             aria-label='GitHub'
             rel='noreferrer'
             href='https://github.com/xaviernouaille'>
-            <GitHub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <FaGithub className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
           <a aria-label='E-mail' href='mailto:xavier.nouaille@protonmail.com'>
-            <Mail className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
+            <FaEnvelope className='h-6 w-6 text-opacity cursor-pointer hover:opacity-70 transition-opacity' />
           </a>
         </div>
       </div>

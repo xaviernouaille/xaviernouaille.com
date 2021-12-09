@@ -1,5 +1,5 @@
 import Logo from './Logo'
-import { ArrowRight } from 'react-feather'
+import { FiArrowRight } from 'react-icons/fi'
 import DB from '../public/DB.json'
 import { ILink } from './Nav'
 import NavLink from 'next/link'
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className='mt-20 px-6 md:px-0'>
       <hr className='border-t border-opacity' />
-      <div className='py-20 cstm-container flex justify-between text-white'>
+      <div className='py-20 cstm-container flex flex-col space-y-12 lg:flex-row justify-between text-white'>
         <div className='w-1/2 md:w-auto flex flex-col space-y-7'>
         <div>
           <Logo />
@@ -31,10 +31,10 @@ export default function Footer() {
             <p className="text-2xl font-semibold">Un projet ?
             </p>
             <p className="text-2xl font-semibold">Une demande de devis ?</p>
-            <div className="flex items-center space-x-2">
-            <ArrowRight />
-            <p className="text-2xl font-semibold">Par ici !</p>
-            </div>
+              <a className="flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100" href="">
+                <FiArrowRight />
+                <p className="text-2xl font-semibold">Par ici !</p>
+              </a>
           </div>
           <p>Xavier Nouaille, développeur junior fullstack basé sur Paris. Je vous accompagne dans vos projets.</p>
         </div>

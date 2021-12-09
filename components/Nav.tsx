@@ -3,7 +3,7 @@ import DB from '../public/DB.json'
 import NavLink from 'next/link'
 import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, ArrowUpRight } from 'react-feather'
+import { FiMenu, FiArrowUpRight } from 'react-icons/fi'
 
 export interface ILink {
   path: string
@@ -92,7 +92,7 @@ export default function Nav() {
               <li>
                 <NavLink scroll={false} href='/#contact'>
                   <a className='btn border border-secondary text-secondary flex items-center space-x-2'>
-                    <p>Contactez moi</p> <ArrowUpRight/>
+                    <p>Contactez moi</p> <FiArrowUpRight/>
                   </a>
                 </NavLink>
               </li>
@@ -109,7 +109,7 @@ export default function Nav() {
                 animate={mobileNavOpen ? 'open' : 'closed'}
                 variants={mobileBtnVariants}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-                <Menu className='h-6 w-6' />
+                <FiMenu className='h-6 w-6' />
               </motion.button>
               <Logo />
             </nav>

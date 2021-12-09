@@ -1,4 +1,4 @@
-import { FolderIcon } from '@heroicons/react/outline'
+import { HiFolder } from 'react-icons/hi'
 import DB from '../public/DB.json'
 import { IProjet } from '../pages/projet/[index]'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ export default function Projets() {
           </h2>
         </div>
 
-        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white px-12'>
+        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 text-white lg:px-12'>
           {DB.projets.map((projet: IProjet, index: number) => (
             <Link
               scroll={false}
@@ -27,7 +27,7 @@ export default function Projets() {
                 className='p-10 rounded-lg shadow-xl flex flex-col justify-between'
                 style={{ backgroundColor: '#27282b' }}>
                 <div>
-                  <FolderIcon className='h-7 w-7 secondary mb-5' />
+                  <HiFolder className='h-7 w-7 secondary mb-5' />
                   <h3 className='text-xl mb-3 font-medium'>{projet.title}</h3>
                   <p className='text-opacity text-lg'>
                     {projet.description.substr(0, 50)}..

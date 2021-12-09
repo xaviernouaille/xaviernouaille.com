@@ -70,7 +70,7 @@ ul.cstm-ul li::before {
 }
 
 .btn {
-  @apply px-5 py-1.5 rounded-2xl font-medium text-sm;
+  @apply px-5 py-1.5 rounded-3xl font-medium text-sm;
 }
 
 .big-btn {

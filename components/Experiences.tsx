@@ -1,7 +1,7 @@
 import DB from '../public/DB.json'
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import { useState } from 'react'
-import { ArrowRight } from 'react-feather'
+import { FiArrowRight } from 'react-icons/fi'
 
 export interface IDetails {
   date: number
@@ -32,7 +32,7 @@ function Item({ intitule, children }: { intitule: string; children: string }) {
           variants={variants}
           className='secondary'
           animate={isOpen ? 'open' : 'close'}>
-          <ArrowRight className='h-6 w-6' />
+          <FiArrowRight className='h-6 w-6' />
         </motion.span>
         <h3 className='text-lg md:text-xl'>{intitule}</h3>
       </motion.div>
@@ -87,7 +87,7 @@ export default function Experiences() {
       id='experiences'
       className='section big-section experience-section'>
       <section
-        className='overflow-hidden rounded-lg cstm-container p-12 flex flex-col space-y-14'
+        className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14'
         style={{ backgroundColor: '#1c1d1f' }}>
         <ItemContainer title={'Experiences'} data={DB.experiences} />
         <ItemContainer title={'Formations'} data={DB.formations} />

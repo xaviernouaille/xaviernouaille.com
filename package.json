@@ -9,13 +9,12 @@
     "prettier": "prettier --config .prettierrc ./components/*.tsx ./pages/*.tsx ./pages/**/*.tsx --write"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.5",
     "framer-motion": "^4.1.17",
     "next": "latest",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.34",

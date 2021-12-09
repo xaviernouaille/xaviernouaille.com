@@ -1,4 +1,4 @@
-import { ArrowRight } from 'react-feather'
+import { FaArrowRight } from 'react-icons/fa'
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
           href='mailto:xavier.nouaille@protonmail.com'
           className='big-btn inline-flex items-center space-x-2 border border-secondary text-secondary'>
           <p>Contactez moi !</p>
-          <ArrowRight className='h-5 w-5 md:w-6 md:h-6' />
+          <FaArrowRight className='h-5 w-5 md:w-6 md:h-6' />
         </a>
       </section>
     </section>
