@@ -11,7 +11,15 @@ export interface IDetails {
   actually?: boolean
 }
 
-function Item({ intitule, children, status }: { intitule: string; children: string, status?: boolean }) {
+function Item({
+  intitule,
+  children,
+  status,
+}: {
+  intitule: string
+  children: string
+  status?: boolean
+}) {
   const [isOpen, setIsOpen] = useState(status || false)
 
   const variants = {
@@ -72,8 +80,7 @@ function ItemContainer({ title, data }: { title: string; data: IDetails[] }) {
                   : ''
               } : ${detail.intitule}`}
               key={index}
-              status={index === 0 && true}
-              >
+              status={index === 0 && true}>
               {detail.description}
             </Item>
           ))}

@@ -14,32 +14,36 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-5 font-semibold text-2xl">Liens utiles</h2>
-          <div className="flex flex-col space-y-2.5">
-              {DB.links.map((link: ILink, index: number) => (
-                <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                  <a className='text-gray-200'>{link.label}</a>
-                </NavLink>
-              ))}
+          <h2 className='mb-5 font-semibold text-2xl'>Liens utiles</h2>
+          <div className='flex flex-col space-y-2.5'>
+            {DB.links.map((link: ILink, index: number) => (
+              <NavLink scroll={false} key={index} href={`/#${link.path}`}>
+                <a className='text-gray-200'>{link.label}</a>
+              </NavLink>
+            ))}
           </div>
         </div>
 
-        <div className="max-w-sm flex flex-col space-y-8">
-          <div className="flex flex-col -space-y-2">
-            <p className="text-2xl font-semibold">Un projet ?
-            </p>
-            <p className="text-2xl font-semibold">Une demande de devis ?</p>
-              <a className="flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100" href="#contact">
-                <FiArrowRight className="w-6 h-6" />
-                <p className="text-2xl font-semibold">Par ici !</p>
-              </a>
+        <div className='max-w-sm flex flex-col space-y-8'>
+          <div className='flex flex-col -space-y-2'>
+            <p className='text-2xl font-semibold'>Un projet ?</p>
+            <p className='text-2xl font-semibold'>Une demande de devis ?</p>
+            <a
+              className='flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100'
+              href='#contact'>
+              <FiArrowRight className='w-6 h-6' />
+              <p className='text-2xl font-semibold'>Par ici !</p>
+            </a>
           </div>
-          <p>Xavier Nouaille, développeur junior fullstack basé sur Paris. Je vous accompagne dans vos projets.</p>
+          <p>
+            Xavier Nouaille, développeur junior fullstack basé sur Paris. Je
+            vous accompagne dans vos projets.
+          </p>
         </div>
       </div>
       <div>
-      <p className='text-sm text-opacity text-center pb-10 mt-8'>
-            Designé et développé par Xavier Nouaille
+        <p className='text-sm text-opacity text-center pb-10 mt-8'>
+          Designé et développé par Xavier Nouaille
         </p>
       </div>
     </footer>

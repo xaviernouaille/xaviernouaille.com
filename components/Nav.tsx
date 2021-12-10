@@ -75,24 +75,24 @@ export default function Nav() {
           } bg-primary`}>
           <nav
             className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
-              <div className="flex items-center space-x-16">
-                <ul>
-                  <Logo />
-                </ul>
-                <ul className='flex space-x-10'>
-                  {links.map((link: ILink, index: number) => (
-                    <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                      <a className='text-gray-200 text-sm2'>{link.label}</a>
-                    </NavLink>
-                  ))}
-                </ul>
-              </div>
+            <div className='flex items-center space-x-16'>
+              <ul>
+                <Logo />
+              </ul>
+              <ul className='flex space-x-10'>
+                {links.map((link: ILink, index: number) => (
+                  <NavLink scroll={false} key={index} href={`/#${link.path}`}>
+                    <a className='text-gray-200 text-sm2'>{link.label}</a>
+                  </NavLink>
+                ))}
+              </ul>
+            </div>
 
             <ul>
               <li>
                 <NavLink scroll={false} href='/#contact'>
                   <a className='btn border border-secondary text-secondary flex items-center space-x-2'>
-                    <p>Contactez moi</p> <FiArrowUpRight className="w-5 h-5"/>
+                    <p>Contactez moi</p> <FiArrowUpRight className='w-5 h-5' />
                   </a>
                 </NavLink>
               </li>

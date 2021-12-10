@@ -4,7 +4,6 @@ import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
 
-
 export interface IProjet {
   img?: string
   title: string
@@ -30,16 +29,12 @@ export default function Index({ projet, index }) {
               <div className='mt-7 flex items-center space-x-5'>
                 {projet.link_preview && (
                   <Link href={projet.link_preview}>
-                    <a target='_blank'>
-                      Visionner l'aperçu
-                    </a>
+                    <a target='_blank'>Visionner l'aperçu</a>
                   </Link>
                 )}
                 {projet.link_github && (
                   <Link href={projet.link_github}>
-                    <a target='_blank'>
-                      Repository Github
-                    </a>
+                    <a target='_blank'>Repository Github</a>
                   </Link>
                 )}
               </div>
@@ -76,17 +71,17 @@ export default function Index({ projet, index }) {
 
             <div className='mt-24 flex items-center justify-between'>
               <Link scroll={false} href={'/#projets'}>
-                <div className="flex items-center space-x-2 text-secondary">
-                  <FiArrowLeft className="h-5 w-5" />
+                <div className='flex items-center space-x-2 text-secondary'>
+                  <FiArrowLeft className='h-5 w-5' />
                   <a>Retour à l'index des projets</a>
                 </div>
               </Link>
               {DB.projets.length - 1 > index && (
                 <Link href={`/projet/${Number(index) + 1}`}>
-                  <div className="flex items-center space-x-2 text-secondary">
-                  <a>Projet suivant</a>
-                  <FiArrowRight className="h-5 w-5" />
-                </div>
+                  <div className='flex items-center space-x-2 text-secondary'>
+                    <a>Projet suivant</a>
+                    <FiArrowRight className='h-5 w-5' />
+                  </div>
                 </Link>
               )}
             </div>
