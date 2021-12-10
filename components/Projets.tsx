@@ -29,8 +29,8 @@ export default function Projets() {
                 <div>
                   <HiOutlineFolder className='h-7 w-7 secondary mb-5' />
                   <h3 className='text-xl mb-3 font-medium'>{projet.title}</h3>
-                  <p className='text-opacity text-lg'>
-                    {projet.description.substr(0, 50)}..
+                  <p className='text-opacity text-lg truncate overflow-hidden h-28'>
+                    {projet.description}
                   </p>
                 </div>
 

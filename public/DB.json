@@ -31,7 +31,7 @@
             "img": "https://user-images.githubusercontent.com/68466322/100167068-7fef8680-2ebe-11eb-80c2-77ebabc881df.png",
             "title": "Scrapping Météo",
             "description":
-                "Un script Python permettant de m'informer de la météo actuelle",
+                "Un script Python permettant de m'informer de la météo actuelle. Système d'exploitation : Linux Mint / i3wm.",
             "stack": ["Python"],
             "link_github": "https://github.com/xaviernouaille/Notif-Weather"
             },
@@ -45,14 +45,14 @@
             },
         {
             "title": "Deezart",
-            "description": "Site vitrine Wordpress, vente d'oeuvres d'arts",
+            "description": "Site vitrine Wordpress, vente d'oeuvres d'arts. Mission freelance",
             "stack": ["Wordpress", "Elementor"],
             "link_preview": "https://deezart.fr/"
             },
         {
             "img": "https://user-images.githubusercontent.com/68466322/122674195-4cff3e00-d1d4-11eb-9eb9-13f4210fb7f9.png",
             "title": "React TodoList",
-            "description": "TodoList avec ReactJS",
+            "description": "TodoList avec ReactJS et TypeScript. J'ai également utilisé la bibliothèque tailwindCSS. Fonctionnalités : ajout d'une todo, suppression de la todo, ajout comme fait/non fait.",
             "stack": ["React", "TypeScript"],
             "link_github": "https://github.com/xaviernouaille/React-Todo",
             "link_preview": "https://todolist.xaviernouaille.fr"
@@ -79,7 +79,7 @@
             "date": 2022,
             "dateTo": 2023,
             "intitule": "EPITECH - MSC PRO",
-            "description": "A venir.."
+            "description": "Rentrée 2022, à venir.."
         },
         {
             "date": 2019,
