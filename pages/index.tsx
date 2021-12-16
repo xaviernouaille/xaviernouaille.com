@@ -5,10 +5,14 @@ import Projets from '../components/Projets'
 import Contact from '../components/Contact'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <link rel="canonical" href="https://xaviernouaille.com" />
+      </Head>
       <Seo
         title={'Xavier Nouaille | Developpeur web junior'}
         description={
