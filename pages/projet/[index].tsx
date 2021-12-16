@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
+import Image from 'next/image'
 
 export interface IProjet {
   img?: string
@@ -14,6 +15,10 @@ export interface IProjet {
 }
 
 export default function Index({ projet, index }) {
+  const myLoader = ({ src, width, quality }) => {
+    return `https://user-images.githubusercontent.com${src}`
+  }
+
   return (
     <Layout>
       <Seo
@@ -23,7 +28,7 @@ export default function Index({ projet, index }) {
 
       <section className='cstm-container'>
         {projet && (
-          <section className='section big-section text-white'>
+          <section className='pt-32 pb-12 md:py-32 px-6 big-section p-0 text-white'>
             <div className='max-w-2xl mx-auto mb-24'>
               <h1 className='seconde-title font-bold'>{projet.title}</h1>
               <div className='mt-7 flex items-center space-x-5'>
@@ -42,10 +47,14 @@ export default function Index({ projet, index }) {
 
             <div>
               {projet.img ? (
-                <img
-                  className='rounded-lg'
-                  src={projet.img}
-                  alt={projet.title}
+                <Image
+                  className='rounded-2xl'
+                  loader={myLoader}
+                  src={new URL(projet.img).pathname}
+                  alt='Xavier-Nouaille'
+                  width={785}
+                  height={420}
+                  layout='responsive'
                 />
               ) : (
                 <div className='w-full text-gray-500 bg-gray-200 text-center p-28 text-lg rounded-lg'>
@@ -69,16 +78,16 @@ export default function Index({ projet, index }) {
               </ul>
             </div>
 
-            <div className='mt-24 flex items-center justify-between'>
+            <div className='mt-24 flex md:flex-row flex-col md:space-y-0 space-y-5 items-center justify-between'>
               <Link scroll={false} href={'/#projets'}>
-                <div className='flex items-center space-x-2 text-secondary'>
+                <div className='flex items-center space-x-2 justify-center text-secondary btn border border-secondary w-full md:w-auto'>
                   <FiArrowLeft className='h-5 w-5' />
                   <a>Retour à l'index des projets</a>
                 </div>
               </Link>
               {DB.projets.length - 1 > index && (
                 <Link href={`/projet/${Number(index) + 1}`}>
-                  <div className='flex items-center space-x-2 text-secondary'>
+                  <div className='flex items-center space-x-2 justify-center text-secondary btn border border-secondary w-full md:w-auto'>
                     <a>Projet suivant</a>
                     <FiArrowRight className='h-5 w-5' />
                   </div>

@@ -23,5 +23,4 @@ module.exports = {
         ]
       },
       trailingSlash: true,
-      exportTrailingSlash: true
 }

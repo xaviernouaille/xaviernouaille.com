@@ -23,10 +23,10 @@ export default function Info() {
             d'Epitech Kremlin Bicêtre, je débuterai un MASTER en alternance.
             <br />
             <br />
-            Pour la réalisation de mes projets, j'utilise principalement la MERN stack (MongoDB, ExpressJS, React,
-            NodeJS). Je développe
-            la grande majorité de mes projets avec NextJS pour améliorer le référencement de
-            ceux-ci. Tous mes projets sont développés en TypeScript ce qui me
+            Pour la réalisation de mes projets, j'utilise principalement la MERN
+            stack (MongoDB, ExpressJS, React, NodeJS). Je développe la grande
+            majorité de mes projets avec NextJS pour améliorer le référencement
+            de ceux-ci. Tous mes projets sont développés en TypeScript ce qui me
             permet de typer facilement mes variables, de maintenir mon code plus
             facilement, et ainsi gagner du temps de développement.
           </p>
