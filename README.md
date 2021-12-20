@@ -1,8 +1,16 @@
 # Portfolio de Xavier Nouaille
 
-## Stack utilisée
+## Technologies utilisées
 
-NextJS - TailwindCSS - TypeScript
+- NextJS
+- TypeScript
+- TailwindCSS
+
+## Hébergement
+
+- AWS
+- Cloudfront
+- S3
 
 ## Accessible via
 
@@ -10,5 +18,5 @@ https://xaviernouaille.com
 
 ## Overview
 
-![image](https://user-images.githubusercontent.com/68466322/144462498-d78f9b4c-a222-4368-bb9b-c54a6a86524e.png)
+![image](https://user-images.githubusercontent.com/68466322/146836549-a20869b1-a53e-4323-961c-cc51020e2b7a.png)
 
