@@ -19,7 +19,8 @@ module.exports = {
       },
       colors: {
         "secondary": "var(--color-secondary)",
-        "tertiary": "var(--color-tertiary)"
+        "tertiary": "var(--color-tertiary)",
+        "fourth": "var(--color-fourth)"
       }
     },
   },
