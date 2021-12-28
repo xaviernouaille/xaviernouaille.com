@@ -74,6 +74,10 @@ ul.cstm-ul li::before {
   @apply md:text-mid text-3xl sm:text-4xl;
 }
 
+.hero-title {
+  @apply lg:text-hero md:text-5xl text-4xl font-bold md:max-w-5xl;
+}
+
 .btn {
   @apply px-5 py-1.5 rounded-3xl font-medium text-sm;
 }
