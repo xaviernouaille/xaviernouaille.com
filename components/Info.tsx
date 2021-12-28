@@ -8,7 +8,7 @@ export default function Info() {
       <h2 className='seconde-title text-white mb-10 font-bold'>A mon propos</h2>
 
       <section className='grid grid-cols-1 lg:grid-cols-5 gap-8'>
-        <p className='md:text-xl leading-normal text-opacity lg:col-span-5'>
+        <p className='leading-relaxed md:text-lg text-opacity lg:col-span-5'>
           Passionné d’informatique, j’ai appris à coder dans divers langages tel
           que PHP, JavaScript ou encore TypeScript. Polyvalent, je maîtrise les
           différentes étapes techniques de la création d’un site ou d’une
@@ -17,7 +17,7 @@ export default function Info() {
         </p>
 
         <div className='lg:col-span-3'>
-          <p className='md:text-xl leading-normal text-opacity'>
+          <p className='leading-relaxed md:text-lg text-opacity'>
             Pour ce qui est de mon parcours, j'ai débuté début 2019, un Bachelor
             chef de projets digitaux. Inscrit pour la rentrée 2022, au campus
             d'Epitech Kremlin Bicêtre, je débuterai un MASTER en alternance.

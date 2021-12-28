@@ -14,7 +14,7 @@ export default function Hero() {
             Disponible pour vos missions freelance.
           </a>
         </NavLink>
-        <h1 className='md:text-5xl lg:text-6.5xl text-4xl font-bold md:max-w-5xl'>
+        <h1 className='md:text-5xl lg:text-hero text-4xl font-bold md:max-w-5xl'>
           Bonjour, je m'appelle Xavier Nouaille, développeur junior fullstack
           basé sur Paris.
         </h1>

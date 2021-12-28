@@ -3,12 +3,17 @@
 @tailwind utilities;
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @layer utilities {
   @variants responsive {
     .w-60c {
       width: 60%;
+    }
+    .text-mid {
+      font-size: 2.7rem;
+    }
+    .text-hero {
+      font-size: 4rem;
     }
   }
 }
@@ -66,7 +71,7 @@ ul.cstm-ul li::before {
 }
 
 .seconde-title {
-  @apply md:text-5xl text-3xl sm:text-4xl;
+  @apply md:text-mid text-3xl sm:text-4xl;
 }
 
 .btn {

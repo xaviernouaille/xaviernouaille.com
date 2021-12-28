@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <link rel="canonical" href="https://xaviernouaille.com" />
+        <link rel='canonical' href='https://xaviernouaille.com' />
       </Head>
       <Seo
         title={'Xavier Nouaille | Developpeur web junior'}

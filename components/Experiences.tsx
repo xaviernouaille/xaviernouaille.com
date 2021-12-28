@@ -30,7 +30,7 @@ function Item({
   return (
     <motion.li
       layout
-      className='p-6 md:py-5 md:px-8 rounded-lg cursor-pointer'
+      className='p-6 md:py-6 md:px-8 rounded-md cursor-pointer'
       style={{ backgroundColor: '#27282b' }}
       onClick={() => setIsOpen(!isOpen)}>
       <motion.div
@@ -42,12 +42,12 @@ function Item({
           animate={isOpen ? 'open' : 'close'}>
           <FiArrowRight className='h-6 w-6' />
         </motion.span>
-        <h3 className='text-lg md:text-xl'>{intitule}</h3>
+        <h3 className='text-lg md:text-xl font-medium'>{intitule}</h3>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className='mt-5 text-base md:text-lg'
+            className='mt-5 leading-relaxed text-base'
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
