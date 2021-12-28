@@ -30,8 +30,7 @@ function Item({
   return (
     <motion.li
       layout
-      className='p-6 md:py-6 md:px-8 rounded-md cursor-pointer'
-      style={{ backgroundColor: '#27282b' }}
+      className='p-6 md:py-6 md:px-8 rounded-md cursor-pointer bg-fourth'
       onClick={() => setIsOpen(!isOpen)}>
       <motion.div
         className='rounded-lg text-xl flex items-center space-x-3'
@@ -96,8 +95,7 @@ export default function Experiences() {
       id='experiences'
       className='section big-section experience-section'>
       <section
-        className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14'
-        style={{ backgroundColor: '#1c1d1f' }}>
+        className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14 bg-tertiary'>
         <ItemContainer title={'Experiences'} data={DB.experiences} />
         <ItemContainer title={'Formations'} data={DB.formations} />
       </section>

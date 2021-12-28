@@ -7,8 +7,7 @@ export default function Projets() {
   return (
     <section
       id='projets'
-      style={{ backgroundColor: '#1c1d1f' }}
-      className='section text-white'>
+      className='section text-white bg-tertiary'>
       <section className='cstm-container'>
         <div className='text-center mb-16'>
           <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8'>
@@ -24,8 +23,7 @@ export default function Projets() {
               href='/projet/[index]'
               as={`/projet/${index}`}>
               <a
-                className='px-7 py-11 rounded-md shadow-xl flex flex-col justify-between'
-                style={{ backgroundColor: '#27282b' }}>
+                className='px-7 py-11 rounded-md shadow-xl flex flex-col justify-between bg-fourth'>
                 <div>
                   <HiOutlineFolder className='h-8 w-8 secondary mb-10' />
                   <h3 className='text-xl mb-3 font-medium'>{projet.title}</h3>
