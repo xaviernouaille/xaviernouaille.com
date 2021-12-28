@@ -22,7 +22,7 @@ body {
   @apply font-body;
   background-color: #060606;
   --color-secondary: #64ffda;
-  --color-teriary: #101011;
+  --color-tertiary: #101011;
   --color-fourth: #1a1a1a;
 }
 
