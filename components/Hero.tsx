@@ -9,7 +9,7 @@ export default function Hero() {
       <div className='flex flex-col space-y-10'>
         <NavLink scroll={false} href='/#contact'>
           <a
-            className='py-3 text-center max-w-md px-8 rounded-3xl mb-5 secondary font-medium cursor-pointer transform hover:scale-95 transition-transform text-sm md:text-base'
+            className='py-3 text-center max-w-md px-8 rounded-3xl text-xs mb-5 secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base'
             style={{ backgroundColor: '#27282b' }}>
             Disponible pour vos missions freelance.
           </a>
