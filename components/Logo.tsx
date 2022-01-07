@@ -6,7 +6,7 @@ export default function Logo() {
       <a
         style={{ fontSize: '1.5rem' }}
         aria-label='Logo Xavier Nouaille'
-        className='font-medium font-logo'>
+        className='font-medium font-logo text-t-primary'>
         XN
       </a>
     </Link>

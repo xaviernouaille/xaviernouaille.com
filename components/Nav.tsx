@@ -4,6 +4,7 @@ import NavLink from 'next/link'
 import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiArrowUpRight } from 'react-icons/fi'
+import Toggle from './ThemeToggle'
 
 export interface ILink {
   path: string
@@ -71,7 +72,7 @@ export default function Nav() {
           variants={variants}
           animate={isFixed ? 'fixed' : 'auto'}
           className={`bg-blur ${
-            y > 50 ? 'border-b border-opacity' : ''
+            y > 50 ? 'border-b border-tertiary' : ''
           } bg-primary`}>
           <nav
             className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
@@ -79,26 +80,28 @@ export default function Nav() {
               <ul>
                 <Logo />
               </ul>
-              <ul className='flex space-x-10'>
+              <ul className='flex space-x-10 font-medium'>
                 {links.map((link: ILink, index: number) => (
                   <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                    <a className='text-gray-200 text-sm2'>{link.label}</a>
+                    <a className='text-t-secondary text-sm2'>{link.label}</a>
                   </NavLink>
                 ))}
               </ul>
             </div>
 
-            <ul>
+            <ul className="flex items-center space-x-4">
               <li>
                 <NavLink scroll={false} href='/#contact'>
-                  <a className='btn border border-secondary text-secondary flex items-center space-x-2'>
+                  <a className='btn border border-secondary flex items-center space-x-2 text-secondary'>
                     <p>Contactez moi</p> <FiArrowUpRight className='w-5 h-5' />
                   </a>
                 </NavLink>
               </li>
+              <li className="flex items-center text-t-primary">
+                <Toggle />
+              </li>
             </ul>
           </nav>
-
           {/* Mobile Nav */}
           <div
             id='mobileNav'
@@ -112,6 +115,7 @@ export default function Nav() {
                 <FiMenu className='h-6 w-6' />
               </motion.button>
               <Logo />
+              <Toggle />
             </nav>
             <AnimatePresence initial={false} exitBeforeEnter>
               <motion.div

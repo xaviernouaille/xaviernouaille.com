@@ -9,12 +9,11 @@ export default function Hero() {
       <div className='flex flex-col space-y-10'>
         <NavLink scroll={false} href='/#contact'>
           <a
-            className='py-3 text-center max-w-md px-8 rounded-3xl text-xs mb-5 secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base'
-            style={{ backgroundColor: '#27282b' }}>
+            className='py-3 text-center max-w-md px-8 rounded-3xl text-xs mb-5 text-secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base bg-fourth'>
             Disponible pour vos missions freelance.
           </a>
         </NavLink>
-        <h1 className='hero-title'>
+        <h1 className='hero-title text-t-primary'>
           Bonjour, je m'appelle Xavier Nouaille, développeur junior fullstack
           basé sur Paris.
         </h1>

@@ -18,10 +18,13 @@ module.exports = {
         logo: ['"Rock Salt"']
       },
       colors: {
+        "primary": "var(--color-primary)",
         "secondary": "var(--color-secondary)",
         "tertiary": "var(--color-tertiary)",
-        "fourth": "var(--color-fourth)"
-      }
+        "fourth": "var(--color-fourth)",
+        "t-primary": "var(--color-t-primary)",
+        "t-secondary": "var(--color-t-secondary)"
+      },
     },
   },
   variants: {

@@ -37,16 +37,16 @@ function Item({
         layout>
         <motion.span
           variants={variants}
-          className='secondary'
+          className='text-secondary'
           animate={isOpen ? 'open' : 'close'}>
-          <FiArrowRight className='h-6 w-6' />
+          <FiArrowRight className='h-6 w-6 text-secondary' />
         </motion.span>
-        <h3 className='text-lg md:text-xl font-medium'>{intitule}</h3>
+        <h3 className='text-lg md:text-xl font-medium text-t-primary'>{intitule}</h3>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className='mt-5 leading-relaxed text-base'
+            className='mt-5 leading-relaxed text-base text-t-primary'
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -64,7 +64,7 @@ function ItemContainer({ title, data }: { title: string; data: IDetails[] }) {
     <AnimateSharedLayout>
       <section className='text-white flex flex-col space-y-10'>
         <div>
-          <h2 className='font-bold seconde-title'>{title}</h2>
+          <h2 className='font-bold seconde-title text-t-primary'>{title}</h2>
           <hr className='mt-6 text-gray-200 opacity-10' />
         </div>
 

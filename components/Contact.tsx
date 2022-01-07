@@ -4,10 +4,10 @@ export default function Contact() {
   return (
     <section id='contact' className='section big-section text-white'>
       <section className='cstm-container text-center'>
-        <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8'>
+        <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8 text-t-primary'>
           Contactez moi pour plus d'information
         </h2>
-        <h3 className='text-lg md:text-xl max-w-2xl text-opacity mx-auto mb-12'>
+        <h3 className='text-lg md:text-xl max-w-2xl text-t-secondary mx-auto mb-12'>
           Pour toutes demandes d'informations, vous pouvez prendre contact avec
           moi !
         </h3>
