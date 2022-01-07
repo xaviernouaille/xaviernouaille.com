@@ -89,7 +89,7 @@ export default function Nav() {
               </ul>
             </div>
 
-            <ul className="flex items-center space-x-4">
+            <ul className='flex items-center space-x-4'>
               <li>
                 <NavLink scroll={false} href='/#contact'>
                   <a className='btn border border-secondary flex items-center space-x-2 text-secondary'>
@@ -97,7 +97,7 @@ export default function Nav() {
                   </a>
                 </NavLink>
               </li>
-              <li className="flex items-center text-t-primary">
+              <li className='flex items-center text-t-primary'>
                 <Toggle />
               </li>
             </ul>

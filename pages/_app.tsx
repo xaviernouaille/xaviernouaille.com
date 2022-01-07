@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps, router }) {
         <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
       <Footer />
-      </>
+    </>
   )
 }
 

@@ -41,7 +41,9 @@ function Item({
           animate={isOpen ? 'open' : 'close'}>
           <FiArrowRight className='h-6 w-6 text-secondary' />
         </motion.span>
-        <h3 className='text-lg md:text-xl font-medium text-t-primary'>{intitule}</h3>
+        <h3 className='text-lg md:text-xl font-medium text-t-primary'>
+          {intitule}
+        </h3>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
@@ -94,8 +96,7 @@ export default function Experiences() {
     <section
       id='experiences'
       className='section big-section experience-section'>
-      <section
-        className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14 bg-tertiary'>
+      <section className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14 bg-tertiary'>
         <ItemContainer title={'Experiences'} data={DB.experiences} />
         <ItemContainer title={'Formations'} data={DB.formations} />
       </section>

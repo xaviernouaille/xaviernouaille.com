@@ -14,7 +14,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className='mb-5 font-semibold text-2xl text-t-primary'>Liens utiles</h2>
+          <h2 className='mb-5 font-semibold text-2xl text-t-primary'>
+            Liens utiles
+          </h2>
           <div className='flex flex-col space-y-2.5'>
             {DB.links.map((link: ILink, index: number) => (
               <NavLink scroll={false} key={index} href={`/#${link.path}`}>
@@ -27,15 +29,17 @@ export default function Footer() {
         <div className='max-w-sm flex flex-col space-y-8'>
           <div className='flex flex-col -space-y-2'>
             <p className='text-2xl font-semibold text-t-primary'>Un projet ?</p>
-            <p className='text-2xl font-semibold text-t-primary'>Une demande de devis ?</p>
-            <a
-              className='flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100'
-              href='#contact'>
-              <FiArrowRight className='w-6 h-6' />
-              <p className='text-2xl font-semibold'>Par ici !</p>
-            </a>
+            <p className='text-2xl font-semibold text-t-primary'>
+              Une demande de devis ?
+            </p>
+            <NavLink scroll={false} href='/#contact'>
+              <a className='flex items-center space-x-2 text-secondary hover:translate-x-5 transition-transform duration-100'>
+                <FiArrowRight className='w-6 h-6' />
+                <p className='text-2xl font-semibold'>Par ici !</p>
+              </a>
+            </NavLink>
           </div>
-          <p className="text-t-secondary">
+          <p className='text-t-secondary'>
             Xavier Nouaille, développeur junior fullstack basé sur Paris. Je
             vous accompagne dans vos projets.
           </p>

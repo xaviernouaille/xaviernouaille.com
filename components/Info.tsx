@@ -5,7 +5,9 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function Info() {
   return (
     <section id='a-propos' className='section cstm-container text-white'>
-      <h2 className='seconde-title mb-10 font-bold text-t-primary'>A mon propos</h2>
+      <h2 className='seconde-title mb-10 font-bold text-t-primary'>
+        A mon propos
+      </h2>
 
       <section className='grid grid-cols-1 lg:grid-cols-5 gap-8'>
         <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary'>

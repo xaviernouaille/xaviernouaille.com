@@ -8,8 +8,7 @@ export default function Hero() {
       className='text-white h-screen flex items-center cstm-container px-6 md:px-0'>
       <div className='flex flex-col space-y-10'>
         <NavLink scroll={false} href='/#contact'>
-          <a
-            className='py-3 text-center max-w-md px-8 rounded-3xl text-xs mb-5 text-secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base bg-fourth'>
+          <a className='py-3 text-center max-w-md px-8 rounded-3xl text-xs mb-5 text-secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base bg-fourth'>
             Disponible pour vos missions freelance.
           </a>
         </NavLink>

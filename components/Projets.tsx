@@ -5,9 +5,7 @@ import Link from 'next/link'
 
 export default function Projets() {
   return (
-    <section
-      id='projets'
-      className='section text-white bg-tertiary'>
+    <section id='projets' className='section text-white bg-tertiary'>
       <section className='cstm-container'>
         <div className='text-center mb-16'>
           <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8 text-t-primary'>
@@ -22,17 +20,20 @@ export default function Projets() {
               key={index}
               href='/projet/[index]'
               as={`/projet/${index}`}>
-              <a
-                className='px-7 py-11 rounded-md shadow-xl flex flex-col justify-between bg-fourth'>
+              <a className='px-7 py-11 rounded-md shadow-xl flex flex-col justify-between bg-fourth'>
                 <div>
                   <HiOutlineFolder className='h-8 w-8 text-secondary mb-10' />
-                  <h3 className='text-xl mb-3 font-medium text-t-primary'>{projet.title}</h3>
+                  <h3 className='text-xl mb-3 font-medium text-t-primary'>
+                    {projet.title}
+                  </h3>
                   <p className='text-t-secondary text-base leading-relaxed overflow-hidden h-28'>
                     {projet.description.substr(0, 100)}...
                   </p>
                 </div>
 
-                <p className='mt-10 text-t-secondary text-sm'>{projet.stack.join('   ')}</p>
+                <p className='mt-10 text-t-secondary text-sm'>
+                  {projet.stack.join('   ')}
+                </p>
               </a>
             </Link>
           ))}
