@@ -16,6 +16,11 @@
 
 https://xaviernouaille.com
 
+## Routes
+
+- `/` - Accueil
+- `/:id` - Page détails projet
+
 ## Overview
 
 | Light                                                                                                           | Dark                                                                                                            |
