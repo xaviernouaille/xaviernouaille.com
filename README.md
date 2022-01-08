@@ -1,10 +1,13 @@
 # Portfolio de Xavier Nouaille
 
+Mon portfolio construit avec Next.js, Tailwind, et AWS. 
+
 ## Technologies utilisées
 
-- NextJS
-- TypeScript
-- TailwindCSS
+- **Framework**: [Next.js](https://nextjs.org/)
+- **TypeScript**
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment**: [AWS](https://aws.amazon.com/fr/)
 
 ## Hébergement
 
@@ -19,7 +22,16 @@ https://xaviernouaille.com
 ## Routes
 
 - `/` - Accueil
-- `/:id` - Page détails projet
+- `/:index` - Page détails projet
+
+## Utilisation local
+
+```bash
+$ https://github.com/xaviernouaille/xaviernouaille.com.git
+$ cd xaviernouaille.com
+$ npm install
+$ npm start
+```
 
 ## Overview
 
