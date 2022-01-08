@@ -18,5 +18,6 @@ https://xaviernouaille.com
 
 ## Overview
 
-![image](https://user-images.githubusercontent.com/68466322/146836549-a20869b1-a53e-4323-961c-cc51020e2b7a.png)
-
+| Light                                                                                                           | Dark                                                                                                            |
+|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| ![image](https://user-images.githubusercontent.com/68466322/148663260-b8be017b-8a33-460e-adf6-264a4c35783e.png) | ![image](https://user-images.githubusercontent.com/68466322/148663268-74607b1a-3971-4c06-a705-fcd661c82974.png) |
