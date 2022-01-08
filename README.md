@@ -1,6 +1,6 @@
 # Portfolio de Xavier Nouaille
 
-Mon portfolio développé avec Next.js, Tailwind, et AWS. 
+:sparkles: Mon portfolio développé avec Next.js, Tailwind, et AWS. 
 
 ## Technologies utilisées
 
