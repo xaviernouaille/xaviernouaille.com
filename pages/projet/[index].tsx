@@ -32,7 +32,7 @@ export default function Index({ projet, index }) {
           <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white'>
             <div className='flex flex-col space-y-10 mb-20'>
               <div>
-                <h1 className='text-left'>{projet.title}</h1>
+                <h1 className='h1 text-left'>{projet.title}</h1>
               </div>
               <div className='mt-7 flex items-center space-x-5 text-t-secondary'>
                 {projet.link_preview && (
@@ -83,7 +83,7 @@ export default function Index({ projet, index }) {
               </ul>
             </div>
 
-            <div className='mt-28 flex md:flex-row md:space-y-0 space-y-5 items-center justify-between'>
+            <div className='mt-28 flex md:flex-row md:space-y-0 items-center justify-between'>
               <Link scroll={false} href={'/#projets'}>
                 <a className='text-xl font-semibold flex items-center space-x-1'>
                   <FiArrowLeft className='h-5 w-5' />

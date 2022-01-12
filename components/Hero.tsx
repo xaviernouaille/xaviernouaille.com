@@ -12,7 +12,7 @@ export default function Hero() {
             Disponible pour vos missions freelance.
           </p>
         </NavLink> */}
-        <h1>
+        <h1 className="h1">
           Bonjour, je suis Xavier, développeur junior fullstack basé sur Paris.
         </h1>
         <div className='flex flex-col justify-center space-y-10'>

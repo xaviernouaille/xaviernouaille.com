@@ -5,7 +5,7 @@ export default function Toggle() {
   const [isDark, setIsDark] = useDarkMode()
 
   return (
-    <button onClick={() => setIsDark(!isDark)}>
+    <button aria-label='toggle' onClick={() => setIsDark(!isDark)}>
       {isDark ? <HiSun className='h-6 w-6' /> : <HiMoon className='h-6 w-6' />}
     </button>
   )

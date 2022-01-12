@@ -4,16 +4,19 @@
 @tailwind utilities;
 @tailwind components;
 
+@layer components {
+}
+
 @layer base {
-  h1 {
+  h1.h1 {
     @apply xl:text-8xl lg:text-7xl text-5xl font-semibold text-t-primary w-full;
   }
 
-  h2 {
+  h2.h2 {
     @apply text-4xl lg:text-6xl font-semibold text-t-primary;
   }
 
-  h3 {
+  h3.h3 {
     @apply text-t-primary font-semibold text-2xl;
   }
   h2.cstm-h2 {
