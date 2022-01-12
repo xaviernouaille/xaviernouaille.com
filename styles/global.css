@@ -4,27 +4,26 @@
 @tailwind base;
 @tailwind components;
 
-h1 {
-  @apply xl:text-8xl lg:text-7xl text-5xl font-semibold text-t-primary w-full;
-}
-
-h2 {
-  @apply text-4xl lg:text-6xl font-semibold text-t-primary;
-}
-
-h2.cstm-h2 {
-  @apply lg:text-5xl text-4xl font-semibold;
-}
-
-h3 {
-  @apply text-t-primary font-semibold text-2xl;
-}
-
-h3.cstm-h3 {
-  @apply font-semibold text-2xl lg:text-4xl;
-}
-
 @layer base {
+  h1 {
+    @apply xl:text-8xl lg:text-7xl text-5xl font-semibold text-t-primary w-full;
+  }
+
+  h2 {
+    @apply text-4xl lg:text-6xl font-semibold text-t-primary;
+  }
+
+  h2.cstm-h2 {
+    @apply lg:text-5xl text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-t-primary font-semibold text-2xl;
+  }
+
+  h3.cstm-h3 {
+    @apply font-semibold text-2xl lg:text-4xl;
+  }
   .dark {
     --color-primary: #060606;
     --color-secondary: #4f46e5;

@@ -67,7 +67,7 @@ export default function Nav() {
   }
 
   const router = useRouter()
-  useEffect(()=>{
+  useEffect(() => {
     setMobileNavOpen(false)
   }, [router.pathname])
 

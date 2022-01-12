@@ -32,9 +32,7 @@ export default function Index({ projet, index }) {
           <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white'>
             <div className='flex flex-col space-y-10 mb-20'>
               <div>
-                <h1 className='text-left'>
-                  {projet.title}
-                </h1>
+                <h1 className='text-left'>{projet.title}</h1>
               </div>
               <div className='mt-7 flex items-center space-x-5 text-t-secondary'>
                 {projet.link_preview && (
@@ -89,15 +87,15 @@ export default function Index({ projet, index }) {
               <Link scroll={false} href={'/#projets'}>
                 <a className='text-xl font-semibold flex items-center space-x-1'>
                   <FiArrowLeft className='h-5 w-5' />
-                  <a className="hidden md:block">Retour à l'index</a>
-                  <a href="block md:hidden">Index</a>
+                  <a className='hidden md:block'>Retour à l'index</a>
+                  <a href='block md:hidden'>Index</a>
                 </a>
               </Link>
 
               {DB.projets.length - 1 > index && (
                 <Link href={`/projet/${Number(index) + 1}`}>
                   <a className='text-xl font-semibold flex items-center space-x-1'>
-                    <a className="hidden md:block">Projet suivant</a>
+                    <a className='hidden md:block'>Projet suivant</a>
                     <FiArrowRight className='h-5 w-5' />
                   </a>
                 </Link>
