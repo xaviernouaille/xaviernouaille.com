@@ -5,6 +5,7 @@ import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiArrowUpRight } from 'react-icons/fi'
 import Toggle from './ThemeToggle'
+import { useRouter } from 'next/router'
 
 export interface ILink {
   path: string
@@ -15,7 +16,7 @@ export default function Nav() {
   const links: ILink[] = DB.links
 
   const [isFixed, setIsFixed] = useState<boolean>(
-    typeof window !== 'undefined' && window.scrollY < 100 ? true : false
+    typeof window !== 'undefined' && window.scrollY < 300 ? true : false
   )
 
   const [y, setY] = useState(
@@ -65,8 +66,13 @@ export default function Nav() {
     closed: { rotate: '0deg' },
   }
 
+  const router = useRouter()
+  useEffect(()=>{
+    setMobileNavOpen(false)
+  }, [router.pathname])
+
   return (
-    <section className='fixed top-0 z-50 w-full'>
+    <section className='w-full fixed z-50 top-0'>
       <AnimatePresence exitBeforeEnter>
         <motion.header
           variants={variants}
@@ -76,27 +82,20 @@ export default function Nav() {
           } bg-primary`}>
           <nav
             className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
-            <div className='flex items-center space-x-16'>
-              <ul>
-                <Logo />
-              </ul>
-              <ul className='flex space-x-10 font-medium'>
-                {links.map((link: ILink, index: number) => (
-                  <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                    <a className='text-t-secondary text-sm2'>{link.label}</a>
-                  </NavLink>
-                ))}
-              </ul>
-            </div>
+            <ul className='flex space-x-10 font-semibold'>
+              {links.map((link: ILink, index: number) => (
+                <NavLink scroll={false} key={index} href={`/#${link.path}`}>
+                  <a className='text-t-secondary text-sm2'>{link.label}</a>
+                </NavLink>
+              ))}
+              <NavLink scroll={false} href='#contact'>
+                <a className='text-t-secondary text-sm2 flex items-center'>
+                  <p>Contactez moi</p> <FiArrowUpRight className='w-5 h-5' />
+                </a>
+              </NavLink>
+            </ul>
 
             <ul className='flex items-center space-x-4'>
-              <li>
-                <NavLink scroll={false} href='/#contact'>
-                  <a className='btn border border-secondary flex items-center space-x-2 text-secondary'>
-                    <p>Contactez moi</p> <FiArrowUpRight className='w-5 h-5' />
-                  </a>
-                </NavLink>
-              </li>
               <li className='flex items-center text-t-primary'>
                 <Toggle />
               </li>
@@ -105,8 +104,8 @@ export default function Nav() {
           {/* Mobile Nav */}
           <div
             id='mobileNav'
-            className='cstm-container mx-auto relative lg:hidden px-6'>
-            <nav className='flex items-center justify-between text-white py-5'>
+            className='cstm-container mx-auto relative lg:hidden'>
+            <nav className='flex items-center justify-between text-white py-5 px-6'>
               <motion.button
                 aria-label='menu de navigation'
                 animate={mobileNavOpen ? 'open' : 'closed'}
@@ -114,21 +113,20 @@ export default function Nav() {
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                 <FiMenu className='h-6 w-6' />
               </motion.button>
-              <Logo />
               <Toggle />
             </nav>
             <AnimatePresence initial={false} exitBeforeEnter>
               <motion.div
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg absolute mt-3 left-0 right-0 m-8 md:m-0 shadow-lg bg-blur bg-primary'>
-                <ul className='flex flex-col space-y-10 p-8'>
+                className='rounded-lg absolute mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary'>
+                <ul className='flex flex-col space-y-10 py-8 absolute bg-primary w-full p-8 rounded-b-xl'>
                   {links.map((link: ILink, index: number) => (
                     <NavLink scroll={false} key={index} href={`/#${link.path}`}>
                       <a className='text-gray-200 text-sm2'>{link.label}</a>
                     </NavLink>
                   ))}
-                  <NavLink scroll={false} href='/#contact'>
+                  <NavLink scroll={false} href='#contact'>
                     <a className='text-gray-200 text-sm2'>Contact</a>
                   </NavLink>
                 </ul>

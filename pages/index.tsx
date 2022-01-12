@@ -24,7 +24,6 @@ export default function Home() {
       <Info />
       <Experiences />
       <Projets />
-      <Contact />
     </Layout>
   )
 }

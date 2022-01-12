@@ -5,35 +5,43 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function Info() {
   return (
     <section id='a-propos' className='section cstm-container text-white'>
-      <h2 className='seconde-title mb-10 font-bold text-t-primary'>
-        A mon propos
-      </h2>
-
-      <section className='grid grid-cols-1 lg:grid-cols-5 gap-8'>
-        <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary'>
-          Passionné d’informatique, j’ai appris à coder dans divers langages tel
-          que PHP, JavaScript ou encore TypeScript. Polyvalent, je maîtrise les
-          différentes étapes techniques de la création d’un site ou d’une
-          application web ; de la compréhension des besoins utilisateurs, au
-          développement du produit final.
-        </p>
-
-        <div className='lg:col-span-3'>
-          <p className='leading-relaxed md:text-lg text-t-secondary'>
-            Pour ce qui est de mon parcours, j'ai débuté début 2019, un Bachelor
-            chef de projets digitaux. Inscrit pour la rentrée 2022, au campus
-            d'Epitech Kremlin Bicêtre, je débuterai un MASTER en alternance.
+      <section className='flex flex-col lg:flex-row lg:space-x-24 space-x-0 space-y-20 lg:space-y-0'>
+        <div className='lg:w-3/5 w-full pr-8 lg:pr-20'>
+          <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary font-medium'>
+            <span className='text-t-primary'>Passionné d’informatique,</span>{' '}
+            j’ai appris à coder dans divers langages tel que{' '}
+            <span className='text-t-primary'>PHP, JavaScript</span> ou encore{' '}
+            <span className='text-t-primary'>TypeScript</span>. Polyvalent, je
+            maîtrise les différentes étapes techniques de la{' '}
+            <span className='text-t-primary'>création d’un site </span>
+            ou d’une <span className='text-t-primary'>application web</span> ;
+            de la{' '}
+            <span className='text-t-primary'>compréhension des besoins </span>
+            utilisateurs, au développement du produit final.
             <br />
             <br />
-            Pour la réalisation de mes projets, j'utilise principalement la MERN
+            Pour ce qui est de mon parcours, j'ai débuté début 2019, un{' '}
+            <span className='text-t-primary'>
+              Bachelor chef de projets digitaux.
+            </span>{' '}
+            Inscrit pour la rentrée 2022, au campus
+            <span className='text-t-primary'> d'Epitech</span> Kremlin Bicêtre,
+            je débuterai un{' '}
+            <span className='text-t-primary'>MASTER en alternance.</span>
+            <br />
+            <br />
+            Pour la réalisation de mes projets, j'utilise principalement la{' '}
+            <span className='text-t-primary'>MERN </span>
             stack (MongoDB, ExpressJS, React, NodeJS). Je développe la grande
-            majorité de mes projets avec NextJS pour améliorer le référencement
-            de ceux-ci. Tous mes projets sont développés en TypeScript ce qui me
-            permet de typer facilement mes variables, de maintenir mon code plus
+            majorité de mes projets avec{' '}
+            <span className='text-t-primary'>NextJS</span> pour améliorer le
+            référencement de ceux-ci. Tous mes projets sont développés en{' '}
+            <span className='text-t-primary'>TypeScript</span> ce qui me permet
+            de typer facilement mes variables, de maintenir mon code plus
             facilement, et ainsi gagner du temps de développement.
           </p>
           <a
-            className='inline-flex items-center space-x-2 mt-10 btn text-secondary border border-secondary'
+            className='inline-flex items-center space-x-2 mt-10 btn  bg-secondary text-white'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
             <p>Curriculum Vitae</p>
@@ -41,13 +49,13 @@ export default function Info() {
           </a>
         </div>
 
-        <figure className='lg:col-span-2'>
+        <figure className='lg:w-2/5 w-full'>
           <Image
             className='rounded-2xl'
             src={XavierNouaille.src}
             alt='Xavier-Nouaille'
-            width={785}
-            height={750}
+            width={500}
+            height={470}
             layout='responsive'
           />
         </figure>

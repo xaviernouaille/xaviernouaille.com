@@ -4,6 +4,7 @@ import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
 import Image from 'next/image'
+import { FaGithub, FaLink } from 'react-icons/fa'
 
 export interface IProjet {
   img?: string
@@ -28,18 +29,26 @@ export default function Index({ projet, index }) {
 
       <section className='cstm-container'>
         {projet && (
-          <section className='pt-32 pb-12 md:py-32 px-6 big-section p-0 text-white'>
-            <div className='max-w-2xl mx-auto mb-24'>
-              <h1 className='seconde-title font-bold'>{projet.title}</h1>
-              <div className='mt-7 flex items-center space-x-5'>
+          <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white'>
+            <div className='flex flex-col space-y-10 mb-20'>
+              <div>
+                <h1 className='text-left'>
+                  {projet.title}
+                </h1>
+              </div>
+              <div className='mt-7 flex items-center space-x-5 text-t-secondary'>
                 {projet.link_preview && (
                   <Link href={projet.link_preview}>
-                    <a target='_blank'>Visionner l'aperçu</a>
+                    <a className='btn text-white bg-secondary' target='_blank'>
+                      Visualiser
+                    </a>
                   </Link>
                 )}
                 {projet.link_github && (
                   <Link href={projet.link_github}>
-                    <a target='_blank'>Repository Github</a>
+                    <a className='btn text-white bg-secondary' target='_blank'>
+                      GitHub
+                    </a>
                   </Link>
                 )}
               </div>
@@ -61,36 +70,36 @@ export default function Index({ projet, index }) {
                   Image prochainement en ligne.
                 </div>
               )}
+            </div>
 
-              <h2 className='mt-16 font-medium text-2xl'>
-                Description du projet
-              </h2>
-              <p className='mt-3 text-description text-opacity'>
+            <div className='mt-10 flex flex-col space-y-10'>
+              <p className='text-t-secondary text-lg font-medium text-left'>
                 {projet.description}
               </p>
-              <h2 className='mt-14 font-medium text-2xl'>Technos utilisées</h2>
-              <ul className='mt-3 cstm-ul flex flex-col space-y-2 text-description'>
+              <ul className='flex space-x-6'>
                 {projet.stack.map((s: string, index: number) => (
-                  <li key={index} className='flex items-center'>
+                  <li key={index} className='flex items-center font-semibold'>
                     {s}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className='mt-24 flex md:flex-row flex-col md:space-y-0 space-y-5 items-center justify-between'>
+            <div className='mt-28 flex md:flex-row md:space-y-0 space-y-5 items-center justify-between'>
               <Link scroll={false} href={'/#projets'}>
-                <div className='flex items-center space-x-2 justify-center text-secondary btn border border-secondary w-full md:w-auto'>
+                <a className='text-xl font-semibold flex items-center space-x-1'>
                   <FiArrowLeft className='h-5 w-5' />
-                  <a>Retour à l'index des projets</a>
-                </div>
+                  <a className="hidden md:block">Retour à l'index</a>
+                  <a href="block md:hidden">Index</a>
+                </a>
               </Link>
+
               {DB.projets.length - 1 > index && (
                 <Link href={`/projet/${Number(index) + 1}`}>
-                  <div className='flex items-center space-x-2 justify-center text-secondary btn border border-secondary w-full md:w-auto'>
-                    <a>Projet suivant</a>
+                  <a className='text-xl font-semibold flex items-center space-x-1'>
+                    <a className="hidden md:block">Projet suivant</a>
                     <FiArrowRight className='h-5 w-5' />
-                  </div>
+                  </a>
                 </Link>
               )}
             </div>

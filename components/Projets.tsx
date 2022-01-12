@@ -1,41 +1,53 @@
-import { HiOutlineFolder } from 'react-icons/hi'
+import { HiArrowRight } from 'react-icons/hi'
 import DB from '../public/DB.json'
 import { IProjet } from '../pages/projet/[index]'
 import Link from 'next/link'
 
+export function ProjetItem({ title, description, img, stack, index }) {
+  return (
+    <section className='flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center'>
+      <div className='w-full lg:w-2/5 lg:mr-10 flex flex-col space-y-5'>
+        <h3 className='cstm-h3'>{title}</h3>
+        <p className='md:text-lg text-base text-t-secondary'>{description}</p>
+        <p className='font-medium text-t-secondary'>{stack.join(' ')}</p>
+        <Link
+          scroll={false}
+          key={index}
+          href='/projet/[index]'
+          as={`/projet/${index}`}>
+          <a className='text-xl font-semibold flex items-center space-x-1'>
+            <p>Consulter le projet</p>
+            <HiArrowRight />
+          </a>
+        </Link>
+      </div>
+      <div className='w-full lg:w-3/5'>
+        <img className='rounded-lg' src={img} alt={title} />
+      </div>
+    </section>
+  )
+}
+
 export default function Projets() {
   return (
-    <section id='projets' className='section text-white bg-tertiary'>
+    <section id='projets' className='section text-white'>
       <section className='cstm-container'>
-        <div className='text-center mb-16'>
-          <h2 className='seconde-title font-bold max-w-2xl mx-auto mb-8 text-t-primary'>
-            Projets réalisés durant mon temps libre.
+        <div className='mb-16'>
+          <h2 className='mb-32'>
+            Mes travaux
           </h2>
         </div>
 
-        <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-7 text-white lg:px-12'>
+        <section className='flex flex-col space-y-28 md:space-y-32'>
           {DB.projets.map((projet: IProjet, index: number) => (
-            <Link
-              scroll={false}
+            <ProjetItem
               key={index}
-              href='/projet/[index]'
-              as={`/projet/${index}`}>
-              <a className='px-7 py-11 rounded-md shadow-xl flex flex-col justify-between bg-fourth'>
-                <div>
-                  <HiOutlineFolder className='h-8 w-8 text-secondary mb-10' />
-                  <h3 className='text-xl mb-3 font-medium text-t-primary'>
-                    {projet.title}
-                  </h3>
-                  <p className='text-t-secondary text-base leading-relaxed overflow-hidden h-28'>
-                    {projet.description.substr(0, 100)}...
-                  </p>
-                </div>
-
-                <p className='mt-10 text-t-secondary text-sm'>
-                  {projet.stack.join('   ')}
-                </p>
-              </a>
-            </Link>
+              title={projet.title}
+              description={projet.description}
+              stack={projet.stack}
+              img={projet.img}
+              index={index}
+            />
           ))}
         </section>
       </section>

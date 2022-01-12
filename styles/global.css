@@ -4,33 +4,39 @@
 @tailwind base;
 @tailwind components;
 
-@layer utilities {
-  @variants responsive {
-    .w-60c {
-      width: 60%;
-    }
-    .text-mid {
-      font-size: 2.7rem;
-    }
-    .text-hero {
-      font-size: 4rem;
-    }
-  }
+h1 {
+  @apply xl:text-8xl lg:text-7xl text-5xl font-semibold text-t-primary w-full;
+}
+
+h2 {
+  @apply text-4xl lg:text-6xl font-semibold text-t-primary;
+}
+
+h2.cstm-h2 {
+  @apply lg:text-5xl text-4xl font-semibold;
+}
+
+h3 {
+  @apply text-t-primary font-semibold text-2xl;
+}
+
+h3.cstm-h3 {
+  @apply font-semibold text-2xl lg:text-4xl;
 }
 
 @layer base {
   .dark {
     --color-primary: #060606;
-    --color-secondary: #64ffda;
+    --color-secondary: #4f46e5;
     --color-tertiary: #101011;
     --color-fourth: #1a1a1a;
     --color-t-primary: white;
-    --color-t-secondary: #95a2b3;
+    --color-t-secondary: rgb(170, 170, 170);
   }
 
   .light {
     --color-primary: #161853;
-    --color-secondary: #18d4de;
+    --color-secondary: #4f46e5;
     --color-tertiary: #14164a;
     --color-fourth: #272c6e;
     --color-t-primary: white;
@@ -42,59 +48,26 @@
   }
 }
 
-.border-opacity {
-  border-color: #101011;
-}
-
-.hr-opacity {
-  color: #292830;
-}
-
 .cstm-container {
-  @apply 2xl:w-60c md:w-4/5 w-full mx-auto;
-}
-
-ul.cstm-ul li::before {
-  content: '';
-  display: inline-block;
-  width: 15px;
-  height: 1px;
-  margin-right: 15px;
-  @apply bg-secondary;
-}
-
-.text-description {
-  font-size: 1.1em;
+  @apply 2xl:w-2/3 md:w-4/5 w-full mx-auto;
 }
 
 .bg-blur {
   backdrop-filter: blur(2px);
 }
 
-.seconde-title {
-  @apply md:text-mid text-3xl sm:text-4xl;
-}
-
-.hero-title {
-  @apply lg:text-hero md:text-5xl text-4xl font-bold md:max-w-5xl;
-}
-
 .btn {
-  @apply px-5 py-1.5 rounded-3xl font-medium text-sm;
+  @apply px-7 py-2.5 rounded-3xl font-medium text-sm;
 }
 
 .big-btn {
-  @apply py-2.5 px-9 rounded-3xl font-medium md:text-lg;
+  @apply py-3 px-9 rounded-3xl font-medium md:text-lg;
 }
 
 .section {
-  @apply py-28 md:py-32 px-6;
+  @apply py-28 md:py-32 px-6 md:px-0;
 }
 
 .big-section {
   @apply my-4 md:my-16;
-}
-
-.experience-section {
-  @apply px-0 !important;
 }

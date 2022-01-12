@@ -44,12 +44,6 @@
             "link_github": "https://github.com/xaviernouaille/Shop-React-Express"
             },
         {
-            "title": "Deezart",
-            "description": "Site vitrine Wordpress, vente d'oeuvres d'arts. Mission freelance",
-            "stack": ["Wordpress", "Elementor"],
-            "link_preview": "https://deezart.fr/"
-            },
-        {
             "img": "https://user-images.githubusercontent.com/68466322/122674195-4cff3e00-d1d4-11eb-9eb9-13f4210fb7f9.png",
             "title": "React TodoList",
             "description": "TodoList avec ReactJS et TypeScript. J'ai également utilisé la bibliothèque tailwindCSS. Fonctionnalités : ajout d'une todo, suppression de la todo, ajout comme fait/non fait.",
@@ -72,9 +66,7 @@
             "intitule": "Lyknowledge - Développeur FullStack Junior",
             "description":
                 "Création d'une API Globale avec le framework NodeJS, ExpressJS et Socket.io. Le but est de fabriquer une API réutilisable pour de futures projets. Création d'une plateforme avec authentification avec ReactJS. Utilisation de TypeScript pour la grande majorité des projets. Création de site showcase, vitrine Wordpress."
-        }
-    ],
-    "formations": [
+        },
         {
             "date": 2022,
             "dateTo": 2023,

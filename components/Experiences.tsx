@@ -1,104 +1,22 @@
 import DB from '../public/DB.json'
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
-import { useState } from 'react'
-import { FiArrowRight } from 'react-icons/fi'
-
-export interface IDetails {
-  date: number
-  dateTo?: number
-  intitule: string
-  description: string
-  actually?: boolean
-}
-
-function Item({
-  intitule,
-  children,
-  status,
-}: {
-  intitule: string
-  children: string
-  status?: boolean
-}) {
-  const [isOpen, setIsOpen] = useState(status || false)
-
-  const variants = {
-    open: { rotate: 90 },
-    close: { rotate: 0 },
-  }
-
-  return (
-    <motion.li
-      layout
-      className='p-6 md:py-6 md:px-8 rounded-md cursor-pointer bg-fourth'
-      onClick={() => setIsOpen(!isOpen)}>
-      <motion.div
-        className='rounded-lg text-xl flex items-center space-x-3'
-        layout>
-        <motion.span
-          variants={variants}
-          className='text-secondary'
-          animate={isOpen ? 'open' : 'close'}>
-          <FiArrowRight className='h-6 w-6 text-secondary' />
-        </motion.span>
-        <h3 className='text-lg md:text-xl font-medium text-t-primary'>
-          {intitule}
-        </h3>
-      </motion.div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className='mt-5 leading-relaxed text-base text-t-primary'
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}>
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.li>
-  )
-}
-
-function ItemContainer({ title, data }: { title: string; data: IDetails[] }) {
-  return (
-    <AnimateSharedLayout>
-      <section className='text-white flex flex-col space-y-10'>
-        <div>
-          <h2 className='font-bold seconde-title text-t-primary'>{title}</h2>
-          <hr className='mt-6 text-gray-200 opacity-10' />
-        </div>
-
-        <motion.ul className='flex flex-col space-y-6'>
-          {data.map((detail, index) => (
-            <Item
-              intitule={`${detail.date} ${
-                detail.actually
-                  ? '- maintenant'
-                  : detail.dateTo
-                  ? `- ${detail.dateTo}`
-                  : ''
-              } : ${detail.intitule}`}
-              key={index}
-              status={index === 0 && true}>
-              {detail.description}
-            </Item>
-          ))}
-        </motion.ul>
-      </section>
-    </AnimateSharedLayout>
-  )
-}
 
 export default function Experiences() {
+  const experiences = DB.experiences
+
   return (
-    <section
-      id='experiences'
-      className='section big-section experience-section'>
-      <section className='overflow-hidden rounded-lg cstm-container py-12 px-5 md:p-12 flex flex-col space-y-14 bg-tertiary'>
-        <ItemContainer title={'Experiences'} data={DB.experiences} />
-        <ItemContainer title={'Formations'} data={DB.formations} />
+    <section id="experiences" className='text-t-primary cstm-container section'>
+      <h2 className='mb-32'>
+        Expériences
+      </h2>
+      <section className='grid grid-cols-1 lg:grid-cols-2 grid-flow-row text-primary gap-28'>
+        {experiences.map((exp, index: number) => (
+          <div key={index}>
+            <h3 className='tmb-5'>
+              {exp.intitule} ({exp.date})
+            </h3>
+            <p className='text-t-secondary'>{exp.description}</p>
+          </div>
+        ))}
       </section>
     </section>
   )
