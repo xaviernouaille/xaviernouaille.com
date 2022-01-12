@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Rock+Salt&display=swap');
 
-@tailwind utilities;
 @tailwind base;
+@tailwind utilities;
 @tailwind components;
 
 @layer base {
@@ -24,6 +24,7 @@
   h3.cstm-h3 {
     @apply font-semibold text-2xl lg:text-4xl;
   }
+
   .dark {
     --color-primary: #060606;
     --color-secondary: #4f46e5;

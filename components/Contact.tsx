@@ -20,6 +20,7 @@ export default function Contact() {
           <div className='lg:mr-16'>
             <a
               href={`mailto:${process.env.NEXT_PUBLIC_ADDRESSMAIL}`}
+              target='_blank'
               className='big-btn bg-secondary'>
               contact
             </a>
