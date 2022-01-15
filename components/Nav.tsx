@@ -81,7 +81,7 @@ export default function Nav() {
             y > 50 ? 'border-b border-tertiary' : ''
           } bg-primary`}>
           <nav
-            className={`cstm-container justify-between items-center text-white mx-auto py-5 hidden lg:flex`}>
+            className={`cstm-container justify-between items-center mx-auto py-5 hidden lg:flex`}>
             <ul className='flex space-x-10 font-semibold'>
               {links.map((link: ILink, index: number) => (
                 <NavLink scroll={false} key={index} href={`/#${link.path}`}>

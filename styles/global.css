@@ -4,9 +4,6 @@
 @tailwind utilities;
 @tailwind components;
 
-@layer components {
-}
-
 @layer base {
   h1.h1 {
     @apply xl:text-8xl lg:text-7xl text-5xl font-semibold text-t-primary w-full;
@@ -47,6 +44,11 @@
 
   body {
     @apply font-body bg-primary;
+  }
+
+  body,
+  body * {
+    @apply transition-colors ease-in-out duration-500;
   }
 }
 
