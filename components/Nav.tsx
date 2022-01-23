@@ -78,7 +78,7 @@ export default function Nav() {
           variants={variants}
           animate={isFixed ? 'fixed' : 'auto'}
           className={`bg-blur ${
-            y > 50 ? 'border-b border-tertiary' : ''
+            y > 50 ? 'border-b border-tertiary' : 'border-0'
           } bg-primary`}>
           <nav
             className={`cstm-container justify-between items-center mx-auto py-5 hidden lg:flex`}>

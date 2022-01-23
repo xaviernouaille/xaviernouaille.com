@@ -26,7 +26,7 @@
 
   .dark {
     --color-primary: #060606;
-    --color-secondary: #4f46e5;
+    --color-secondary: #4338ca;
     --color-tertiary: #101011;
     --color-fourth: #1a1a1a;
     --color-t-primary: white;
@@ -48,7 +48,8 @@
 
   body,
   body * {
-    @apply transition-colors ease-in-out duration-500;
+    transition: background;
+    @apply ease-in-out duration-500;
   }
 }
 
