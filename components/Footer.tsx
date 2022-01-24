@@ -7,9 +7,10 @@ import Contact from './Contact'
 
 export default function Footer() {
   return (
+    <>
+    <Contact />
     <footer className='px-6 md:px-0'>
-      <Contact />
-      <div className='pt-20 pb-36 cstm-container flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between text-white font-medium'>
+      <div className='pt-20 pb-28 cstm-container flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between text-white font-medium'>
         <div className='lg:w-1/2 w-full flex flex-col space-y-7'>
           <Logo />
           <p className='lg:max-w-sm text-sm text-t-secondary leading-loose'>
@@ -41,10 +42,11 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        <p className='text-sm text-t-secondary text-center pb-10 mt-8'>
+        <p className='text-sm text-t-secondary text-center pb-10 md:mt-8'>
           Designé et développé par Xavier Nouaille
         </p>
       </div>
     </footer>
+    </>
   )
 }

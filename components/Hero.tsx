@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id='hero'
-      className='text-white flex items-center cstm-container px-6 md:px-0 pb-24 pt-44'>
+      className='text-white flex items-center cstm-container px-6 md:px-0 md:pb-24 md:pt-44 pt-28 pb-12'>
       <div className='flex flex-col space-y-10 w-full'>
         {/* <NavLink scroll={false} href='/#contact'>
           <p className='py-3 text-center text-sm text-secondary font-medium cursor-pointer transform hover:scale-95 transition-transform sm:text-sm md:text-base bg-fourth'>

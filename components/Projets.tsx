@@ -33,7 +33,7 @@ export default function Projets() {
     <section id='projets' className='section text-white'>
       <section className='cstm-container'>
         <div className='mb-16'>
-          <h2 className='h2 mb-32'>Mes travaux</h2>
+          <h2 className='h2 mb-20 md:mb-32'>Réalisations</h2>
         </div>
 
         <section className='flex flex-col space-y-28 md:space-y-32'>

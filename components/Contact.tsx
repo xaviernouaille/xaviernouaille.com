@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section id='contact' className='pt-28 md:pt-32 md:pb-10 text-white mb-0'>
       <section
-        className='relative lg:py-28 p-10 lg:px-0 rounded-xl lg:rounded-none'
+        className='relative lg:py-28 p-10 py-16 lg:px-0'
         style={{
           backgroundImage:
             'url(https://images.pexels.com/photos/3705846/pexels-photo-3705846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)',
@@ -13,11 +13,9 @@ export default function Contact() {
           backgroundSize: 'cover',
         }}>
         <div className='absolute inset-0 h-full w-full bg-black bg-opacity-50 z-1'></div>
-        <section className='cstm-container flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-5 lg:space-y-0 relative z-3'>
-          <div>
-            <h2 className='cstm-h2'>Contactez-moi!</h2>
-          </div>
-          <div className='lg:mr-16'>
+        <section className='cstm-container flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-10 lg:space-y-0 relative z-3'>
+            <h2 className='cstm-h2 text-center sm:text-left w-full'>Contactez-moi!</h2>
+          <div className='lg:mr-16 mx-auto sm:mx-0'>
             <a
               href={`mailto:${process.env.NEXT_PUBLIC_ADDRESSMAIL}`}
               target='_blank'
