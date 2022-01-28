@@ -1,9 +1,18 @@
 import { HiArrowRight } from 'react-icons/hi'
 import DB from '../public/DB.json'
-import { IProjet } from '../pages/projet/[index]'
+import { IProject } from '../pages/projet/[index]'
 import Link from 'next/link'
+import { ReactElement } from 'react'
 
-export function ProjetItem({ title, description, img, stack, index }) {
+interface IPropsProjectItem{
+  title: string
+  description: string
+  img: string
+  stack: string[]
+  index: number
+}
+
+const ProjetItem = ({ title, description, img, stack, index }: IPropsProjectItem): ReactElement=> {
   return (
     <section className='flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center'>
       <div className='w-full lg:w-2/5 lg:mr-10 flex flex-col space-y-5'>
@@ -28,7 +37,7 @@ export function ProjetItem({ title, description, img, stack, index }) {
   )
 }
 
-export default function Projets() {
+const Projects = ():ReactElement=> {
   return (
     <section id='projets' className='section text-white'>
       <section className='cstm-container'>
@@ -37,7 +46,7 @@ export default function Projets() {
         </div>
 
         <section className='flex flex-col space-y-28 md:space-y-32'>
-          {DB.projets.map((projet: IProjet, index: number) => (
+          {DB.projets.map((projet: IProject, index: number) => (
             <ProjetItem
               key={index}
               title={projet.title}
@@ -52,3 +61,5 @@ export default function Projets() {
     </section>
   )
 }
+
+export default Projects

@@ -1,18 +1,19 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, ReactElement } from 'react'
 import DB from '../public/DB.json'
 import NavLink from 'next/link'
-import Logo from './Logo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiArrowUpRight } from 'react-icons/fi'
 import Toggle from './ThemeToggle'
 import { useRouter } from 'next/router'
+import BurgerIcon from './BurgerIcon'
+import Logo from './Logo'
 
 export interface ILink {
   path: string
   label: string
 }
 
-export default function Nav() {
+const Nav = ():ReactElement=> {
   const links: ILink[] = DB.links
 
   const [isFixed, setIsFixed] = useState<boolean>(
@@ -54,16 +55,11 @@ export default function Nav() {
     auto: { opacity: 0, y: '-100%' },
   }
 
-  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
 
   const mobileVariants = {
-    open: { opacity: 1, display: 'block' },
-    closed: { opacity: 0, transitionEnd: { display: 'none' } },
-  }
-
-  const mobileBtnVariants = {
-    open: { rotate: '90deg' },
-    closed: { rotate: '0deg' },
+    open: { x: 0, display: 'block' },
+    closed: { x: '-100%', transitionEnd: { display: 'none' } },
   }
 
   const router = useRouter()
@@ -106,31 +102,33 @@ export default function Nav() {
             id='mobileNav'
             className='cstm-container mx-auto relative lg:hidden'>
             <nav className='flex items-center justify-between text-white py-5 px-6'>
-              <motion.button
-                aria-label='menu de navigation'
-                animate={mobileNavOpen ? 'open' : 'closed'}
-                variants={mobileBtnVariants}
-                onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-                <FiMenu className='h-6 w-6' />
-              </motion.button>
+              <BurgerIcon
+                isOpen={mobileNavOpen}
+                onClick={() => setMobileNavOpen(!mobileNavOpen)}
+              />
               <Toggle />
             </nav>
             <AnimatePresence initial={false} exitBeforeEnter>
-              <motion.div
+              <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg absolute mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary'>
-                <ul className='flex flex-col space-y-10 py-8 absolute bg-primary w-full p-8 rounded-b-xl'>
+                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary border-b w-2/3 h-full'>
+                <ul className='flex flex-col space-y-10 py-8 bg-primary w-full p-8 rounded-b-xl'>
+                  <Logo className='text-xl' />
                   {links.map((link: ILink, index: number) => (
                     <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                      <a className='text-gray-200 text-sm2'>{link.label}</a>
+                      <a className='text-gray-200 font-medium'>
+                        {link.label}
+                      </a>
                     </NavLink>
                   ))}
                   <NavLink scroll={false} href='#contact'>
-                    <a className='text-gray-200 text-sm2'>Contact</a>
+                    <a className='text-gray-200 big-btn bg-secondary w-fit'>
+                      Contact
+                    </a>
                   </NavLink>
                 </ul>
-              </motion.div>
+              </motion.aside>
             </AnimatePresence>
           </div>
         </motion.header>
@@ -138,3 +136,5 @@ export default function Nav() {
     </section>
   )
 }
+
+export default Nav

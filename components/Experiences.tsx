@@ -1,6 +1,7 @@
+import { ReactElement } from 'react'
 import DB from '../public/DB.json'
 
-export default function Experiences() {
+const Experiences = (): ReactElement=> {
   const experiences = DB.experiences
 
   return (
@@ -19,3 +20,5 @@ export default function Experiences() {
     </section>
   )
 }
+
+export default Experiences

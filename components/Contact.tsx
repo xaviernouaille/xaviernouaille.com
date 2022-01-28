@@ -1,13 +1,14 @@
+import { ReactElement } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
+import Code from '../public/code.webp'
 
-export default function Contact() {
+const Contact = (): ReactElement => {
   return (
     <section id='contact' className='pt-28 md:pt-32 md:pb-10 text-white mb-0'>
       <section
         className='relative lg:py-28 p-10 py-16 lg:px-0'
         style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/3705846/pexels-photo-3705846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)',
+          backgroundImage: `url(${Code.src})`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -28,3 +29,5 @@ export default function Contact() {
     </section>
   )
 }
+
+export default Contact

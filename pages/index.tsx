@@ -1,13 +1,14 @@
 import Hero from '../components/Hero'
 import Info from '../components/Info'
 import Experiences from '../components/Experiences'
-import Projets from '../components/Projets'
+import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Head from 'next/head'
+import { NextPage } from 'next'
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Head>
@@ -23,7 +24,9 @@ export default function Home() {
       <Hero />
       <Info />
       <Experiences />
-      <Projets />
+      <Projects />
     </Layout>
   )
 }
+
+export default Home

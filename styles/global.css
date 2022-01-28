@@ -28,7 +28,7 @@
     --color-primary: #060606;
     --color-secondary: #4338ca;
     --color-tertiary: #101011;
-    --color-fourth: #1a1a1a;
+    --color-fourth: white;
     --color-t-primary: white;
     --color-t-secondary: rgb(170, 170, 170);
   }
@@ -37,7 +37,7 @@
     --color-primary: #161853;
     --color-secondary: #4f46e5;
     --color-tertiary: #14164a;
-    --color-fourth: #272c6e;
+    --color-fourth: white;
     --color-t-primary: white;
     --color-t-secondary: #95a2b3;
   }

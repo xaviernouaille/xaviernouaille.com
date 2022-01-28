@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react"
+import { Dispatch, SetStateAction } from "react"
 
-export function useDarkMode() {
-    const prefersDarkMode: any = ()=> true
+interface IHooksReturnType{
+  isDark: boolean;
+  setIsDark: Dispatch<SetStateAction<boolean>>;
+}
+
+const useDarkMode = (): IHooksReturnType => {
+    const prefersDarkMode: boolean = true
     const [
       isEnabled, 
-      setIsEnabled] = useState(true)
+      setIsEnabled] = useState<boolean>(true)
   
-    const enabled = 
+    const enabled: boolean = 
       isEnabled === undefined ? prefersDarkMode : isEnabled
   
     useEffect(() => {
@@ -16,6 +22,10 @@ export function useDarkMode() {
       root.classList.add(enabled ? 'dark' : 'light')
     }, [enabled])
   
-    return [enabled, setIsEnabled]
+    return {
+      isDark: enabled,
+      setIsDark: setIsEnabled
+    }
   }
   
+  export default useDarkMode

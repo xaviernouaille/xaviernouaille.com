@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-type Props = {
+type IProps = {
   children: ReactNode
 }
 
@@ -11,7 +11,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 100 },
 }
 
-const Layout = ({ children }: Props): JSX.Element => (
+const Layout = ({ children }: IProps): ReactElement => (
   <motion.main
     initial='hidden'
     animate='enter'

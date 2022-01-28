@@ -3,8 +3,10 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import '../styles/global.css'
 import { AnimatePresence } from 'framer-motion'
+import { ReactElement } from 'react'
+import {AppProps} from 'next/app'
 
-function MyApp({ Component, pageProps, router }) {
+const MyApp = ({ Component, pageProps, router }: AppProps): ReactElement =>{
   const url = `http://localhost:3000${router.asPath.split('#')[0]}`
 
   const handExitComplete = (): void => {

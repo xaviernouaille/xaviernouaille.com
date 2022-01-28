@@ -1,8 +1,9 @@
 import XavierNouaille from '../public/xavier-nouaille.webp'
 import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
+import { ReactElement } from 'react'
 
-export default function Info() {
+const Info = ():ReactElement=> {
   return (
     <section id='a-propos' className='section cstm-container text-white'>
       <section className='flex flex-col lg:flex-row lg:space-x-24 space-x-0 space-y-20 lg:space-y-0'>
@@ -63,3 +64,5 @@ export default function Info() {
     </section>
   )
 }
+
+export default Info

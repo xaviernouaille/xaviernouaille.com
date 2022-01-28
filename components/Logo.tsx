@@ -1,14 +1,20 @@
 import Link from 'next/link'
+import { ReactElement } from 'react'
 
-export default function Logo() {
+interface IProps{
+  className?: string
+}
+
+const Logo = ({className = ""}: IProps): ReactElement => {
   return (
     <Link scroll={false} href='/#hero'>
       <a
-        style={{ fontSize: '1.5rem' }}
         aria-label='Logo Xavier Nouaille'
-        className='font-medium font-logo text-t-primary'>
+        className={`${className} font-medium font-logo text-t-primary w-fit`}>
         XN
       </a>
     </Link>
   )
 }
+
+export default Logo

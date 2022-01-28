@@ -4,9 +4,10 @@ import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
 import Image from 'next/image'
-import { FaGithub, FaLink } from 'react-icons/fa'
+import { GetStaticPaths, GetStaticProps ,GetStaticPropsContext, GetStaticPropsResult, NextPage } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 
-export interface IProjet {
+export interface IProject {
   img?: string
   title: string
   description: string
@@ -15,10 +16,19 @@ export interface IProjet {
   link_preview?: string
 }
 
-export default function Index({ projet, index }) {
+interface IProps{
+  projet: IProject,
+  index: string
+}
+
+const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
   const myLoader = ({ src, width, quality }) => {
     return `https://user-images.githubusercontent.com${src}`
   }
+
+  const idx = parseInt(index, 10)
+
+  const allProject: IProject[] = DB.projets
 
   return (
     <Layout>
@@ -92,7 +102,7 @@ export default function Index({ projet, index }) {
                 </a>
               </Link>
 
-              {DB.projets.length - 1 > index && (
+              {(allProject.length - 1) > idx && (
                 <Link href={`/projet/${Number(index) + 1}`}>
                   <a className='text-xl font-semibold flex items-center space-x-1'>
                     <a className='hidden md:block'>Projet suivant</a>
@@ -108,23 +118,24 @@ export default function Index({ projet, index }) {
   )
 }
 
-export async function getStaticPaths() {
-  const paths = DB.projets.map((projet: IProjet, index: number) => {
+export const getStaticPaths: GetStaticPaths = async ()=> {
+  const paths = DB.projets.map((projet: IProject, index: number) => {
     const slug = index
     return { params: { index: slug.toString() } }
   })
   return { paths, fallback: false }
 }
 
-export async function getStaticProps({ params }) {
+interface Params extends ParsedUrlQuery{
+  index: string
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext<Params>): Promise<
+GetStaticPropsResult<IProps>
+> => {
   const { index } = params
   const projet = DB.projets[index]
-  if (!projet) {
-    return {
-      redirect: {
-        destination: '/',
-      },
-    }
-  }
   return { props: { projet, index } }
 }
+
+export default Index

@@ -4,15 +4,16 @@ import DB from '../public/DB.json'
 import { ILink } from './Nav'
 import NavLink from 'next/link'
 import Contact from './Contact'
+import { ReactElement } from 'react'
 
-export default function Footer() {
+const Footer = (): ReactElement=> {
   return (
     <>
     <Contact />
     <footer className='px-6 md:px-0'>
       <div className='pt-20 pb-28 cstm-container flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between text-white font-medium'>
         <div className='lg:w-1/2 w-full flex flex-col space-y-7'>
-          <Logo />
+          <Logo className="text-2xl" />
           <p className='lg:max-w-sm text-sm text-t-secondary leading-loose'>
             Xavier Nouaille, développeur junior fullstack basé sur Paris. Je
             vous accompagne dans vos projets.
@@ -50,3 +51,5 @@ export default function Footer() {
     </>
   )
 }
+
+export default Footer

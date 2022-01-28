@@ -1,7 +1,8 @@
 import NavLink from 'next/link'
+import { ReactElement } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
-export default function Hero() {
+const Hero = ():ReactElement=> {
   return (
     <section
       id='hero'
@@ -26,3 +27,5 @@ export default function Hero() {
     </section>
   )
 }
+
+export default Hero

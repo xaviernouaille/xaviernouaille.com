@@ -1,6 +1,12 @@
 import Head from 'next/head'
+import { ReactElement } from 'react'
 
-export default function Seo({ title, description }) {
+interface IProps{
+  title: string
+  description: string
+}
+
+const Seo = ({ title, description }:IProps):ReactElement=> {
   return (
     <Head>
       <title>{title}</title>
@@ -31,3 +37,5 @@ export default function Seo({ title, description }) {
     </Head>
   )
 }
+
+export default Seo
