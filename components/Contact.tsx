@@ -1,6 +1,8 @@
-import { ReactElement } from 'react'
+import { ReactElement, useEffect } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import Art from '../public/art.jpg'
+import ArtLight from '../public/art-light.jpg'
+import useDarkMode from './useDarkMode'
 
 const Contact = (): ReactElement => {
   return (
@@ -8,7 +10,7 @@ const Contact = (): ReactElement => {
       <section
         className='relative lg:py-28 p-10 py-16 lg:px-0'
         style={{
-          backgroundImage: `url(${Art.src})`,
+          backgroundImage: `url(${ArtLight.src})`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
