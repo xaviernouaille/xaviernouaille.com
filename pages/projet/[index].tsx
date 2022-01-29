@@ -41,8 +41,8 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
         {projet && (
           <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white'>
             <div className='flex flex-col space-y-8 mb-20'>
-              <div className="pr-44">
-                <h1 className='text-7xl font-semibold'>{projet.title}</h1>
+              <div className="md:pr-44">
+                <h1 className='xl:text-7xl lg:text-6xl text-5xl font-semibold'>{projet.title}</h1>
               </div>
               <div className='mt-7 flex space-x-5 text-t-secondary'>
                 {projet.link_preview && (
@@ -81,7 +81,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
             </div>
 
             <div className='mt-10 flex flex-col space-y-10'>
-              <p className='text-t-secondary text-lg font-medium text-left pr-44'>
+              <p className='text-t-secondary text-lg font-medium text-left md:pr-44'>
                 {projet.description}
               </p>
               <ul className='flex pr-44 space-x-6'>

@@ -112,7 +112,7 @@ const Nav = ():ReactElement=> {
               <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary border-b w-2/3 h-full'>
+                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary border-b w-2/3 h-screen'>
                 <ul className='flex flex-col space-y-10 py-8 bg-primary w-full p-8 rounded-b-xl'>
                   <Logo className='text-xl' />
                   {links.map((link: ILink, index: number) => (
