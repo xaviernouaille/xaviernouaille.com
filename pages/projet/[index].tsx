@@ -2,7 +2,7 @@ import DB from '../../public/DB.json'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import Image from 'next/image'
 import { GetStaticPaths, GetStaticProps ,GetStaticPropsContext, GetStaticPropsResult, NextPage } from 'next'
 import { ParsedUrlQuery } from 'querystring'
@@ -40,21 +40,21 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
       <section className='cstm-container'>
         {projet && (
           <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white'>
-            <div className='flex flex-col space-y-10 mb-20'>
-              <div>
-                <h1 className='h1 text-left'>{projet.title}</h1>
+            <div className='flex flex-col space-y-8 mb-20'>
+              <div className="pr-44">
+                <h1 className='text-7xl font-semibold'>{projet.title}</h1>
               </div>
-              <div className='mt-7 flex items-center space-x-5 text-t-secondary'>
+              <div className='mt-7 flex space-x-5 text-t-secondary'>
                 {projet.link_preview && (
                   <Link href={projet.link_preview}>
-                    <a className='btn text-white bg-secondary' target='_blank'>
+                    <a className='text-white btn border-2 border-fourth' target='_blank'>
                       Visualiser
                     </a>
                   </Link>
                 )}
                 {projet.link_github && (
                   <Link href={projet.link_github}>
-                    <a className='btn text-white bg-secondary' target='_blank'>
+                    <a className='text-white btn border-2 border-fourth' target='_blank'>
                       GitHub
                     </a>
                   </Link>
@@ -65,7 +65,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
             <div>
               {projet.img ? (
                 <Image
-                  className='rounded-2xl'
+                  className='rounded-xl'
                   loader={myLoader}
                   src={new URL(projet.img).pathname}
                   alt='Xavier-Nouaille'
@@ -81,32 +81,30 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
             </div>
 
             <div className='mt-10 flex flex-col space-y-10'>
-              <p className='text-t-secondary text-lg font-medium text-left'>
+              <p className='text-t-secondary text-lg font-medium text-left pr-44'>
                 {projet.description}
               </p>
-              <ul className='flex space-x-6'>
+              <ul className='flex pr-44 space-x-6'>
                 {projet.stack.map((s: string, index: number) => (
-                  <li key={index} className='flex items-center font-semibold'>
+                  <li key={index} className='flex items-center font-semibold text-center'>
                     {s}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className='mt-28 flex md:flex-row md:space-y-0 items-center justify-between'>
+            <div className='mt-28 flex md:flex-row md:space-y-0 items-center justify-between '>
               <Link scroll={false} href={'/#projets'}>
-                <a className='text-xl font-semibold flex items-center space-x-1'>
-                  <FiArrowLeft className='h-5 w-5' />
-                  <a className='hidden md:block'>Retour à l'index</a>
-                  <a href='block md:hidden'>Index</a>
+                <a className='font-medium flex items-center space-x-1'>
+                  <FiChevronLeft className='h-5 w-5' />
+                  <a>Retour</a>
                 </a>
               </Link>
 
               {(allProject.length - 1) > idx && (
                 <Link href={`/projet/${Number(index) + 1}`}>
                   <a className='text-xl font-semibold flex items-center space-x-1'>
-                    <a className='hidden md:block'>Projet suivant</a>
-                    <FiArrowRight className='h-5 w-5' />
+                    <FiChevronRight className='h-5 w-5' />
                   </a>
                 </Link>
               )}

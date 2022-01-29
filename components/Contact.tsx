@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
-import Code from '../public/code.webp'
+import Art from '../public/art.jpg'
 
 const Contact = (): ReactElement => {
   return (
@@ -8,7 +8,7 @@ const Contact = (): ReactElement => {
       <section
         className='relative lg:py-28 p-10 py-16 lg:px-0'
         style={{
-          backgroundImage: `url(${Code.src})`,
+          backgroundImage: `url(${Art.src})`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -20,7 +20,7 @@ const Contact = (): ReactElement => {
             <a
               href={`mailto:${process.env.NEXT_PUBLIC_ADDRESSMAIL}`}
               target='_blank'
-              className='big-btn bg-secondary'>
+              className='big-btn bg-white text-black'>
               contact
             </a>
           </div>

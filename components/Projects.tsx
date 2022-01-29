@@ -1,4 +1,4 @@
-import { HiArrowRight } from 'react-icons/hi'
+import { HiChevronRight } from 'react-icons/hi'
 import DB from '../public/DB.json'
 import { IProject } from '../pages/projet/[index]'
 import Link from 'next/link'
@@ -26,7 +26,7 @@ const ProjetItem = ({ title, description, img, stack, index }: IPropsProjectItem
           as={`/projet/${index}`}>
           <a className='text-xl font-semibold flex items-center space-x-1'>
             <p>Consulter le projet</p>
-            <HiArrowRight />
+            <HiChevronRight />
           </a>
         </Link>
       </div>

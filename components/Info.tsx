@@ -1,6 +1,6 @@
 import XavierNouaille from '../public/xavier-nouaille.webp'
 import Image from 'next/image'
-import { FiArrowRight } from 'react-icons/fi'
+import { HiChevronRight } from 'react-icons/hi'
 import { ReactElement } from 'react'
 
 const Info = ():ReactElement=> {
@@ -42,11 +42,11 @@ const Info = ():ReactElement=> {
             facilement, et ainsi gagner du temps de développement.
           </p>
           <a
-            className='inline-flex items-center space-x-2 mt-10 btn  bg-secondary text-white'
+            className='inline-flex items-center space-x-1 mt-10 btn bg-secondary text-white'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
-            <p>Curriculum Vitae</p>
-            <FiArrowRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
+            Curriculum Vitae
+            <HiChevronRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
           </a>
         </div>
 
