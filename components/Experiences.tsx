@@ -1,13 +1,15 @@
 import { ReactElement } from 'react'
 import DB from '../public/DB.json'
 
-const Experiences = (): ReactElement=> {
+const Experiences = (): ReactElement => {
   const experiences = DB.experiences
 
   return (
-    <section id='experiences' className='text-t-primary cstm-container section'>
-      <h2 className='h2 mb-20 md:mb-32'>Expériences</h2>
-      <section className='grid grid-cols-1 lg:grid-cols-2 grid-flow-row text-primary gap-28'>
+    <section id='experiences' className='text-t-primary cstm-container section relative flex space-x-20'>
+      <div className="sticky top-28 h-fit">
+        <h2 className='h2'>Expériences</h2>
+      </div>
+      <section className='grid grid-cols-1 grid-flow-row text-primary gap-28 pr-20'>
         {experiences.map((exp, index: number) => (
           <div key={index}>
             <h3 className='h3 mb-5'>

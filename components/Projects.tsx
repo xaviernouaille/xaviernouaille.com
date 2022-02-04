@@ -16,7 +16,7 @@ const ProjetItem = ({ title, description, img, stack, index }: IPropsProjectItem
   return (
     <section className='flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center'>
       <div className='w-full lg:w-2/5 lg:mr-10 flex flex-col space-y-5'>
-        <h3 className='cstm-h3'>{title}</h3>
+        <h3 className='cstm-h3 text-t-primary'>{title}</h3>
         <p className='md:text-lg text-base text-t-secondary'>{description}</p>
         <p className='font-medium text-t-secondary'>{stack.join(' ')}</p>
         <Link
