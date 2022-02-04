@@ -10,7 +10,7 @@
   }
 
   h2.h2 {
-    @apply text-4xl lg:text-6xl font-semibold text-t-primary;
+    @apply text-4xl lg:text-5xl xl:text-6xl font-semibold text-t-primary;
   }
 
   h3.h3 {
