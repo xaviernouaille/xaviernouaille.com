@@ -13,7 +13,7 @@ const Contact = (): ReactElement => {
   return (
     <section id='contact' className='cstm-container section text-white'>
       <section
-        className='relative lg:py-28 p-16 rounded-xl'
+        className='relative lg:py-24 p-16 rounded-xl'
         style={{
           backgroundImage: `url(https://images.pexels.com/photos/2832439/pexels-photo-2832439.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
           backgroundPosition: 'center center',
