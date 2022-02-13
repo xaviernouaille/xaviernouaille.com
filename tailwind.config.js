@@ -13,8 +13,8 @@ module.exports = {
         "6.5xl": "4.2rem"
       },
       fontFamily: {
-        sans: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
-        body: ['"Montserrat"'],
+        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        body: ['"Inter"'],
         logo: ['"Rock Salt"']
       },
       colors: {

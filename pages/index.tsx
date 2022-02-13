@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Hero from '../components/Hero'
 import Info from '../components/Info'
 import Experiences from '../components/Experiences'
@@ -5,8 +6,6 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import Head from 'next/head'
-import { NextPage } from 'next'
 
 const Home = () => {
   return (
@@ -25,6 +24,7 @@ const Home = () => {
       <Info />
       <Experiences />
       <Projects />
+      <Contact />
     </Layout>
   )
 }

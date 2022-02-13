@@ -3,12 +3,12 @@ import Image from 'next/image'
 import { HiChevronRight } from 'react-icons/hi'
 import { ReactElement } from 'react'
 
-const Info = ():ReactElement=> {
+const Info = (): ReactElement => {
   return (
     <section id='a-propos' className='section cstm-container text-white'>
       <section className='flex flex-col lg:flex-row lg:space-x-24 space-x-0 space-y-20 lg:space-y-0'>
-        <div className='lg:w-3/5 w-full pr-8 lg:pr-20'>
-          <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary font-medium'>
+        <div className='lg:w-3/5 w-full pr-8 lg:pr-10'>
+          <p className='leading-relaxed lg:col-span-5 text-t-secondary font-medium'>
             <span className='text-t-primary'>Passionné d’informatique,</span>{' '}
             j’ai appris à coder dans divers langages tel que{' '}
             <span className='text-t-primary'>PHP, JavaScript</span> ou encore{' '}
@@ -41,12 +41,18 @@ const Info = ():ReactElement=> {
             de typer facilement mes variables, de maintenir mon code plus
             facilement, et ainsi gagner du temps de développement.
           </p>
-          <a
+          {/* <a
             className='inline-flex items-center space-x-1 mt-10 btn bg-secondary text-white'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
             Curriculum Vitae
             <HiChevronRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
+          </a> */}
+          <a
+            href='https://flowbite.com/docs/getting-started/quickstart/'
+            target='_blank'
+            className='text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-base px-6 py-2.5 text-center md:mr-5 mb-3 md:mb-0 inline-flex items-center justify-center mt-8'>
+            Mon CV
           </a>
         </div>
 
