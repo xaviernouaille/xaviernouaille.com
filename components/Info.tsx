@@ -3,14 +3,14 @@ import Image from 'next/image'
 import { HiChevronRight } from 'react-icons/hi'
 import { ReactElement } from 'react'
 
-const Info = ():ReactElement=> {
+const Info = (): ReactElement => {
   return (
     <section id='a-propos' className='section cstm-container text-white'>
       <section className='flex flex-col lg:flex-row lg:space-x-24 space-x-0 space-y-20 lg:space-y-0'>
         <div className='lg:w-3/5 w-full pr-8 lg:pr-20'>
           <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary font-medium'>
             <span className='text-t-primary'>Passionné d’informatique,</span>{' '}
-            j’ai appris à coder dans divers langages tel que{' '}
+            j’ai appris à coder dans divers langages tels que{' '}
             <span className='text-t-primary'>PHP, JavaScript</span> ou encore{' '}
             <span className='text-t-primary'>TypeScript</span>. Polyvalent, je
             maîtrise les différentes étapes techniques de la{' '}

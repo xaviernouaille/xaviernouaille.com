@@ -34,13 +34,20 @@
     },
     {
       "img": "https://user-images.githubusercontent.com/68466322/148681752-28809e6a-79f7-4eae-be46-1c4dd3d52277.png",
-      "title": "Dashboard Buisness Card",
-      "description": "Un dashboard permettant d'enregistrer ses contacts via des cards. Ces cards sont partagable via un ID à tous les utilisateurs incrits.",
+      "title": "Dashboard Business Card",
+      "description": "Un dashboard permettant d'enregistrer ses contacts via des cards. Ces cards sont partagables via un ID à tous les utilisateurs incrits.",
       "stack": ["Next", "TypeScript", "ExpressJS", "MobgoDB"],
       "link_github": "https://github.com/xaviernouaille/ktr-msc-ls1"
     }
   ],
   "experiences": [
+    {
+      "date": 2022,
+      "dateTo": 2023,
+      "intitule": "Développeur FullStack chez Offeaze",
+      "description": "En voie pour valider mon bachelor de chef de projets digitaux, j'ai rejoins Offeaze, une startup tournée vers la location de salle de réunion et de coworking, incubée à l'université Paris Dauphine PSL.",
+      "actually": true
+    },
     {
       "date": 2021,
       "intitule": "Freelance Développeur",

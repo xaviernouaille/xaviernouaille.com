@@ -6,7 +6,6 @@ import Contact from '../components/Contact'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Head from 'next/head'
-import { NextPage } from 'next'
 
 const Home = () => {
   return (
@@ -20,7 +19,6 @@ const Home = () => {
           'Portfolio | Xavier Nouaille, 21 ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.'
         }
       />
-
       <Hero />
       <Info />
       <Experiences />

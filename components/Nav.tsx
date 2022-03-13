@@ -2,18 +2,20 @@ import { useState, useCallback, useEffect, ReactElement } from 'react'
 import DB from '../public/DB.json'
 import NavLink from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiMenu, FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight } from 'react-icons/fi'
 import Toggle from './ThemeToggle'
 import { useRouter } from 'next/router'
 import BurgerIcon from './BurgerIcon'
 import Logo from './Logo'
+import { FiInfo } from 'react-icons/fi'
+import Link from 'next/link'
 
 export interface ILink {
   path: string
   label: string
 }
 
-const Nav = ():ReactElement=> {
+const Nav = (): ReactElement => {
   const links: ILink[] = DB.links
 
   const [isFixed, setIsFixed] = useState<boolean>(
@@ -76,6 +78,19 @@ const Nav = ():ReactElement=> {
           className={`bg-blur ${
             y > 50 ? 'border-b border-tertiary' : 'border-0'
           } bg-primary`}>
+          <div className='bg-secondary py-5 opacity-80'>
+            <div className='cstm-container mx-auto text-t-primary flex space-x-2 items-center'>
+              <FiInfo className='h-5 w-5' />
+              <p className='font-semibold'>
+                Disponible en tant que freelance sur{' '}
+                <Link href='https://www.malt.fr/profile/xaviernouaille1'>
+                  <a target={'_blank'} className='underline'>
+                    Malt
+                  </a>
+                </Link>
+              </p>
+            </div>
+          </div>
           <nav
             className={`cstm-container justify-between items-center mx-auto py-5 hidden lg:flex`}>
             <ul className='flex space-x-10 font-semibold'>
