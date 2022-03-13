@@ -6,7 +6,7 @@ const Hero = (): ReactElement => {
   return (
     <section
       id='hero'
-      className='text-white flex items-center cstm-container px-6 md:px-0 md:pb-24 md:pt-44 pt-28 pb-12'>
+      className='text-white flex items-center cstm-container px-6 md:px-0 md:pb-24 pt-52 pb-12'>
       <div className='flex flex-col space-y-10 w-full'>
         <h1 className='h1'>
           Bonjour, je suis Xavier, développeur junior fullstack basé sur Paris.

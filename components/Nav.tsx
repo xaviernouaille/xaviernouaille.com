@@ -78,7 +78,7 @@ const Nav = (): ReactElement => {
           className={`bg-blur ${
             y > 50 ? 'border-b border-tertiary' : 'border-0'
           } bg-primary`}>
-          <div className='bg-secondary py-5 opacity-80'>
+          <div className='bg-secondary py-5 opacity-80 px-6 lg:px-0'>
             <div className='cstm-container mx-auto text-t-primary flex space-x-2 items-center'>
               <FiInfo className='h-5 w-5' />
               <p className='font-semibold'>

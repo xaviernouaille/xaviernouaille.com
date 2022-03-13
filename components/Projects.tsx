@@ -3,8 +3,9 @@ import DB from '../public/DB.json'
 import { IProject } from '../pages/projet/[index]'
 import Link from 'next/link'
 import { ReactElement } from 'react'
+import Image from 'next/image'
 
-interface IPropsProjectItem{
+interface IPropsProjectItem {
   title: string
   description: string
   img: string
@@ -12,7 +13,13 @@ interface IPropsProjectItem{
   index: number
 }
 
-const ProjetItem = ({ title, description, img, stack, index }: IPropsProjectItem): ReactElement=> {
+const ProjetItem = ({
+  title,
+  description,
+  img,
+  stack,
+  index,
+}: IPropsProjectItem): ReactElement => {
   return (
     <section className='flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center'>
       <div className='w-full lg:w-2/5 lg:mr-10 flex flex-col space-y-5'>
@@ -31,13 +38,21 @@ const ProjetItem = ({ title, description, img, stack, index }: IPropsProjectItem
         </Link>
       </div>
       <div className='w-full lg:w-3/5'>
-        <img className='rounded-lg' src={img} alt={title} />
+        <Image
+          className='rounded-lg'
+          layout='responsive'
+          width={'100%'}
+          height={'50%'}
+          objectFit='cover'
+          src={img}
+          alt={title}
+        />
       </div>
     </section>
   )
 }
 
-const Projects = ():ReactElement=> {
+const Projects = (): ReactElement => {
   return (
     <section id='projets' className='section text-white'>
       <section className='cstm-container'>
