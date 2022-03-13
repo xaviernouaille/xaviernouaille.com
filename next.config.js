@@ -8,6 +8,7 @@ const securityHeaders = [
 
 module.exports = {
   images: {
+    loader: 'imgix',
     domains: ['xaviernouaille.com', 'user-images.githubusercontent.com'],
   },
   async headers() {
