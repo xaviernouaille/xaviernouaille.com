@@ -27,6 +27,8 @@ interface IProps {
   index: string
 }
 
+const myLoader = ({ src, width }) => `${src}?w=${width}`
+
 const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
   const idx = parseInt(index, 10)
 
@@ -41,7 +43,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
 
       <section className='cstm-container my-10'>
         {projet && (
-          <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white flex flex-col space-y-10 lg:flex-row lg:space-y-0'>
+          <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white flex flex-col space-y-10 lg:flex-row lg:space-x-8 lg:space-y-0'>
             <div className='lg:w-1/2'>
               <div className='flex flex-col space-y-8 mb-20'>
                 <Link scroll={false} href={'/#projets'}>
@@ -79,7 +81,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
                 </div>
               </div>
               <div className='mt-10 flex flex-col space-y-10'>
-                <p className='text-t-secondary text-lg font-medium text-left md:pr-44'>
+                <p className='text-t-secondary text-lg font-medium text-left'>
                   {projet.description}
                 </p>
                 <ul className='flex pr-44 space-x-6'>
@@ -109,6 +111,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
             <div className='lg:w-1/2'>
               {projet.img ? (
                 <Image
+                  loader={myLoader}
                   className='rounded-lg'
                   src={projet.img}
                   alt='Xavier-Nouaille'

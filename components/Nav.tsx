@@ -78,7 +78,7 @@ const Nav = (): ReactElement => {
           className={`bg-blur ${
             y > 50 ? 'border-b border-tertiary' : 'border-0'
           } bg-primary`}>
-          <div className='bg-secondary py-5 opacity-80 px-6 lg:px-0'>
+          <div className='bg-secondary py-4 opacity-80 px-6 lg:px-0'>
             <div className='cstm-container mx-auto text-t-primary flex space-x-2 items-center'>
               <FiInfo className='h-5 w-5' />
               <p className='font-semibold'>
@@ -127,9 +127,9 @@ const Nav = (): ReactElement => {
               <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary border-b h-screen'>
+                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary h-screen'>
                 <ul className='flex flex-col items-center space-y-10 py-8 bg-primary w-full p-8 rounded-b-xl'>
-                  <Logo className='text-2xl sm:text-3xl' />
+                  {/* <Logo className='text-2xl sm:text-3xl' /> */}
                   {links.map((link: ILink, index: number) => (
                     <NavLink scroll={false} key={index} href={`/#${link.path}`}>
                       <a className='text-gray-200 font-medium text-center'>
@@ -139,7 +139,7 @@ const Nav = (): ReactElement => {
                   ))}
                   <NavLink scroll={false} href='#contact'>
                     <a className='text-gray-200 big-btn bg-secondary w-fit'>
-                      Contact
+                      Contactez moi !
                     </a>
                   </NavLink>
                 </ul>

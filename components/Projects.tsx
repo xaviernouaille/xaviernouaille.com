@@ -12,6 +12,7 @@ interface IPropsProjectItem {
   stack: string[]
   index: number
 }
+const myLoader = ({ src, width }) => `${src}?w=${width}`
 
 const ProjetItem = ({
   title,
@@ -39,11 +40,13 @@ const ProjetItem = ({
       </div>
       <div className='w-full lg:w-3/5'>
         <Image
+          loader={myLoader}
           className='rounded-lg'
           layout='responsive'
           width={'100%'}
           height={'50%'}
           objectFit='cover'
+          quality={75}
           src={img}
           alt={title}
         />
