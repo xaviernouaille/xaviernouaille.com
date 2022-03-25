@@ -50,7 +50,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps): ReactElement => {
             'Portfolio | Xavier Nouaille, 21 ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.',
           images: [
             {
-              url: '/OpenGraph.jpg',
+              url: 'https://xaviernouaille.com/open-graph.jpg',
               alt: 'Xavier Nouaille',
               type: 'image/jpeg',
             },
