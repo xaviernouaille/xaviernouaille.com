@@ -1,15 +1,6 @@
-import { ReactElement, useEffect } from 'react'
-import { FaArrowRight } from 'react-icons/fa'
-import Art from '../public/art.jpg'
-import ArtLight from '../public/art-light.jpg'
-import useDarkMode from './useDarkMode'
+import { ReactElement } from 'react'
 
 const Contact = (): ReactElement => {
-  const { isDark } = useDarkMode()
-  useEffect(() => {
-    console.log(isDark)
-  }, [isDark])
-
   return (
     <section id='contact' className='cstm-container section text-white'>
       <section className='relative lg:py-24 p-16 rounded-lg bg-gradient-to-br from-primary via-secondary to-transparent opacity-80'>

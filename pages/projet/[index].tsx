@@ -1,7 +1,6 @@
 import DB from '../../public/DB.json'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
-import Seo from '../../components/Seo'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import Image from 'next/image'
 import {
@@ -12,6 +11,7 @@ import {
   NextPage,
 } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+import { NextSeo } from 'next-seo'
 
 export interface IProject {
   img?: string
@@ -36,7 +36,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
 
   return (
     <Layout>
-      <Seo
+      <NextSeo
         title={`${projet.title} | Xavier Nouaille | Developpeur web junior`}
         description={`${projet.title} | Découvrez mes projets personnels et professionnels.`}
       />
@@ -46,7 +46,7 @@ const Index: NextPage<IProps> = ({ projet, index }: IProps) => {
           <section className='pt-32 pb-12 md:pt-44 md:pb-10 px-6 md:p-0 text-white flex flex-col space-y-10 lg:flex-row lg:space-x-8 lg:space-y-0'>
             <div className='lg:w-1/2'>
               <div className='flex flex-col space-y-8 mb-20'>
-                <Link scroll={false} href={'/#projets'}>
+                <Link scroll={false} href={'/#projects'}>
                   <a className='font-medium flex items-center space-x-1'>
                     <FiChevronLeft className='h-5 w-5' />
                     <a className='underline hover:no-underline'>
