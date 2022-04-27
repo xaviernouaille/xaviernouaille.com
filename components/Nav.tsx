@@ -103,13 +103,14 @@ const Nav = (): ReactElement => {
                 isOpen={mobileNavOpen}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
               />
+
               {/* <Toggle /> */}
             </nav>
             <AnimatePresence initial={false} exitBeforeEnter>
               <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-gradient-primary h-screen'>
+                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg h-screen bg-gradient-primary'>
                 <ul className='flex flex-col items-center space-y-10 py-20 w-full p-8 rounded-b-xl font-sans text-3xl'>
                   {/* <Logo className='text-2xl sm:text-3xl' /> */}
                   {links.map((link: ILink, index: number) => (

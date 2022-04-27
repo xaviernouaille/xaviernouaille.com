@@ -23,9 +23,14 @@
     --color-t-secondary: #95a2b3;
   }
 
-  body {
-    @apply font-body bg-gradient-to-r from-[#060606] to-[#000]/95;
+  .bg-gradient-primary{
+    @apply bg-gradient-to-r from-[#060606] to-[#000]/95
   }
+  
+  body {
+    @apply font-body bg-gradient-primary;
+  }
+
 
   body,
   body * {
