@@ -6,7 +6,7 @@ const Hero = (): ReactElement => {
     <>
       <section
         id='hero'
-        className='text-white flex items-center px-6 md:px-0 container-center pt-44 pb-24'>
+        className='text-white flex items-center px-6 md:px-0 container-center pt-36 lg:pt-44 pb-24'>
         <div className='flex flex-col space-y-10 w-full'>
           <h1 className='leading-tight text-w-1'>
             Bonjour, je suis Xavier, développeur junior fullstack basé sur

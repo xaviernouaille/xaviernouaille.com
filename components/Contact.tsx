@@ -29,7 +29,7 @@ const Contact = (): ReactElement => {
               type='text'
               id='nom'
               {...register('nom', { required: 'Champs obligatoire' })}
-              className='p-3'
+              className='md:p-3 p-2.5'
             />
             {errors.nom && (
               <small className='mt-2 text-red-300'>{errors.nom.message}</small>
@@ -43,7 +43,7 @@ const Contact = (): ReactElement => {
               type='text'
               id='prenom'
               {...register('prenom', { required: 'Champs obligatoire' })}
-              className='p-3'
+              className='md:p-3 p-2.5'
             />
             {errors.prenom && (
               <small className='mt-2 text-red-300'>
@@ -66,7 +66,7 @@ const Contact = (): ReactElement => {
                 message: 'Remplissez une adresse email valide',
               },
             })}
-            className='p-3'
+            className='md:p-3 p-2.5'
           />
           {errors.email && (
             <small className='mt-2 text-red-300'>{errors.email.message}</small>
@@ -80,7 +80,7 @@ const Contact = (): ReactElement => {
             id='message'
             rows={10}
             {...register('message', { required: 'Champs obligatoire' })}
-            className='p-3'></textarea>
+            className='md:p-3 p-2.5'></textarea>
           {errors.message && (
             <small className='mt-2 text-red-300'>
               {errors.message.message}

@@ -47,7 +47,8 @@ const ProjetItem = ({
         <p className='font-medium opacity-50'>{stack.join(' ')}</p>
         <a
           className='text-xl font-semibold flex items-center space-x-1'
-          href={link_github}>
+          href={link_github}
+          target='_blank'>
           <p>Consulter le projet</p>
           <HiChevronRight />
         </a>
