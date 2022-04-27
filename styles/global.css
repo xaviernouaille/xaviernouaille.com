@@ -8,7 +8,7 @@
   .dark {
     --color-primary: #060606;
     --color-secondary: #4338ca;
-    --color-tertiary: #101011;
+    --color-tertiary: white;
     --color-fourth: white;
     --color-t-primary: white;
     --color-t-secondary: rgb(170, 170, 170);
@@ -24,11 +24,7 @@
   }
 
   body {
-    @apply font-body bg-gradient-primary;
-  }
-
-  .bg-gradient-primary{
-    @apply bg-gradient-to-r from-primary to-[#000]/95
+    @apply font-body bg-gradient-to-r from-[#060606] to-[#000]/95;
   }
 
   body,

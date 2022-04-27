@@ -8,13 +8,13 @@ const Experiences = (): ReactElement => {
       id='experiences'
       className='text-t-primary container-center section flex flex-col'>
       <div className='mb-14'>
-        <h2>Expériences</h2>
+        <h2 className='text-white'>Expériences</h2>
       </div>
       <div>
-        <div className='grid grid-cols-1 xl:grid-cols-2 gap-16'>
+        <div className='grid grid-cols-1 xl:grid-cols-2 gap-16 text-white'>
           {experiences.map((exp, index: number) => (
             <div className='' key={index}>
-              <p className='mb-5 uppercase text-white font-semibold text-xl'>{`${exp.date} - ${exp.intitule}`}</p>
+              <p className='mb-5 uppercase font-semibold text-xl'>{`${exp.date} - ${exp.intitule}`}</p>
               <p className='text-lg opacity-50'>{exp.description}</p>
             </div>
           ))}
