@@ -15,7 +15,7 @@ export default function notFound404() {
   return (
     <section className='h-screen text-white flex flex-col space-y-5 justify-center items-center'>
       <div className='relative'>
-        <h1 className='leading-tight'>404</h1>
+        <h1 className='leading-tight text-w-1'>404</h1>
       </div>
       <p className='text-lg'>Redirection vers l'accueil dans {counter} s</p>
       <div className='flex space-x-5 text-xl'>

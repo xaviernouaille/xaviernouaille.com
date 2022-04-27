@@ -18,7 +18,7 @@ const Info = (): ReactElement => {
           <img className='w-full h-full object-cover' src='/xn.jpg' alt='' />
         </figure>
         <div className='lg:w-3/5 w-full pr-8 lg:pr-20 lg:pl-24'>
-          <h2 className='mb-8'>A propos</h2>
+          <h2 className='mb-8 text-w-2'>A propos</h2>
           <p className='leading-relaxed md:text-lg lg:col-span-5 opacity-50 text-tertiary'>
             <span>Passionné d’informatique,</span> j’ai appris à coder dans
             divers langages tels que <span>PHP, JavaScript</span> ou encore{' '}

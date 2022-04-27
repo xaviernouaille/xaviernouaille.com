@@ -42,7 +42,7 @@ const Footer = (): ReactElement => {
           </div>
         </div>
         <div>
-          <p className='text-sm text-t-primary font-medium pb-10 md:mt-8'>
+          <p className='text-sm text-white font-medium pb-10 md:mt-8'>
             © Designé et développé par Xavier Nouaille
           </p>
         </div>

@@ -73,7 +73,7 @@ const Projects = (): ReactElement => {
     <section id='projets' className='section container-center text-white'>
       <section>
         <div className='mb-14'>
-          <h2>Réalisations</h2>
+          <h2 className='text-w-2'>Réalisations</h2>
         </div>
         <Slider {...settings}>
           {DB.projets.map(

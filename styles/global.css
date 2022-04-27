@@ -5,38 +5,38 @@
 @tailwind components;
 
 
-  .dark {
-    --color-primary: #060606;
-    --color-secondary: #4338ca;
-    --color-tertiary: white;
-    --color-fourth: white;
-    --color-t-primary: white;
-    --color-t-secondary: rgb(170, 170, 170);
-  }
+.dark {
+  --color-primary: #060606;
+  --color-secondary: #4338ca;
+  --color-tertiary: white;
+  --color-fourth: white;
+  --color-t-primary: white;
+  --color-t-secondary: rgb(170, 170, 170);
+}
 
-  .light {
-    --color-primary: #000;
-    --color-secondary: #4f46e5;
-    --color-tertiary: #14164a;
-    --color-fourth: white;
-    --color-t-primary: white;
-    --color-t-secondary: #95a2b3;
-  }
+.light {
+  --color-primary: #000;
+  --color-secondary: #4f46e5;
+  --color-tertiary: #14164a;
+  --color-fourth: white;
+  --color-t-primary: white;
+  --color-t-secondary: #95a2b3;
+}
 
-  .bg-gradient-primary{
-    @apply bg-gradient-to-r from-[#060606] to-[#000]/95
-  }
-  
-  body {
-    @apply font-body bg-gradient-primary;
-  }
+.bg-gradient-primary{
+  @apply bg-gradient-to-r from-[#060606] to-[#000]/95
+}
+
+body {
+  @apply font-body bg-gradient-primary;
+}
 
 
-  body,
-  body * {
-    transition: background;
-    @apply ease-in-out duration-200;
-  }
+body,
+body * {
+  transition: background;
+  @apply ease-in-out duration-200;
+}
 
 .bg-blur {
   backdrop-filter: blur(2px);
@@ -47,22 +47,22 @@
 }
 
 .container-left{
-  @apply mr-[20%] flex flex-grow;
+@apply mr-[20%] flex flex-grow;
 }
 
 .container-right{
   @apply ml-[20%] flex flex-grow;
 }
 
-h1{
+.text-w-1{
   @apply xl:text-8xl md:text-7xl sm:text-6xl text-5xl font-sans font-bold;
 }
 
-h2{
+.text-w-2{
   @apply xl:text-6xl text-4xl lg:text-5xl font-sans font-semibold;
 }
 
-h3{
+.text-w-3{
   @apply text-2xl
 }
 

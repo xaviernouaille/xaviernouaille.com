@@ -8,7 +8,7 @@ const Experiences = (): ReactElement => {
       id='experiences'
       className='text-t-primary container-center section flex flex-col'>
       <div className='mb-14'>
-        <h2 className='text-white'>Expériences</h2>
+        <h2 className='text-white text-w-2'>Expériences</h2>
       </div>
       <div>
         <div className='grid grid-cols-1 xl:grid-cols-2 gap-16 text-white'>

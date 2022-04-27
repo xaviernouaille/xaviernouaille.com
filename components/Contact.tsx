@@ -13,8 +13,8 @@ const Contact = (): ReactElement => {
   return (
     <section className='container-center text-white section' id='contact'>
       <div className='text-center'>
-        <h2 className='mb-4'>Un projet, une idée ?</h2>
-        <h3 className='uppercase font-semibold'>Engagez moi !</h3>
+        <h2 className='mb-4 text-w-2'>Un projet, une idée ?</h2>
+        <h3 className='uppercase font-semibold text-w-3'>Engagez moi !</h3>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
