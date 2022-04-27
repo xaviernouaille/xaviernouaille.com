@@ -1,6 +1,5 @@
 import NavLink from 'next/link'
 import { ReactElement } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const Hero = (): ReactElement => {
   return (

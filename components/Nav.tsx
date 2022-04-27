@@ -6,9 +6,6 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import Toggle from './ThemeToggle'
 import { useRouter } from 'next/router'
 import BurgerIcon from './BurgerIcon'
-import Logo from './Logo'
-import { FiInfo } from 'react-icons/fi'
-import Link from 'next/link'
 
 export interface ILink {
   path: string
@@ -91,11 +88,11 @@ const Nav = (): ReactElement => {
               </NavLink>
             </ul>
 
-            <ul className='flex items-center space-x-4'>
+            {/* <ul className='flex items-center space-x-4'>
               <li className='flex items-center text-t-primary'>
                 <Toggle />
               </li>
-            </ul>
+            </ul> */}
           </nav>
           {/* Mobile Nav */}
           <div
@@ -106,7 +103,7 @@ const Nav = (): ReactElement => {
                 isOpen={mobileNavOpen}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
               />
-              <Toggle />
+              {/* <Toggle /> */}
             </nav>
             <AnimatePresence initial={false} exitBeforeEnter>
               <motion.aside
