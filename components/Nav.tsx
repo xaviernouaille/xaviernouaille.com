@@ -98,7 +98,7 @@ const Nav = (): ReactElement => {
           <div
             id='mobileNav'
             className='cstm-container mx-auto relative lg:hidden'>
-            <nav className='flex items-center justify-between text-white py-5 px-6'>
+            <nav className='flex items-center justify-between text-white py-5 px-6 relative z-20'>
               <BurgerIcon
                 isOpen={mobileNavOpen}
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
@@ -110,7 +110,7 @@ const Nav = (): ReactElement => {
               <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg h-screen bg-gradient-primary'>
+                className='rounded-lg fixed top-0 left-0 right-0 md:m-0 shadow-lg h-screen bg-gradient-primary'>
                 <ul className='flex flex-col items-center space-y-10 py-20 w-full p-8 rounded-b-xl font-sans text-3xl'>
                   {/* <Logo className='text-2xl sm:text-3xl' /> */}
                   {links.map((link: ILink, index: number) => (
