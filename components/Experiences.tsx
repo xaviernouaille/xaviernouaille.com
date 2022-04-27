@@ -3,22 +3,23 @@ import DB from '../public/DB.json'
 
 const Experiences = (): ReactElement => {
   const experiences = DB.experiences
-
   return (
     <section
       id='experiences'
-      className='text-t-primary cstm-container section relative flex flex-col lg:flex-row lg:space-x-28'>
-      <div className='lg:sticky lg:top-44 h-fit'>
-        <h2 className='h2 mb-20 lg:mb-0'>Expériences</h2>
+      className='text-t-primary container-center section flex flex-col'>
+      <div className='mb-14'>
+        <h2>Expériences</h2>
       </div>
-      <section className='grid grid-cols-1 grid-flow-row text-primary gap-28 md:pr-20'>
-        {experiences.map((exp, index: number) => (
-          <div key={index}>
-            <h3 className='h3 mb-5'>{`${exp.date} - ${exp.intitule}`}</h3>
-            <p className='text-t-secondary'>{exp.description}</p>
-          </div>
-        ))}
-      </section>
+      <div>
+        <div className='grid grid-cols-1 xl:grid-cols-2 gap-16'>
+          {experiences.map((exp, index: number) => (
+            <div className='' key={index}>
+              <p className='mb-5 uppercase text-white font-semibold text-xl'>{`${exp.date} - ${exp.intitule}`}</p>
+              <p className='text-lg opacity-50'>{exp.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

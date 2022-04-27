@@ -1,9 +1,10 @@
 import { HiChevronRight } from 'react-icons/hi'
 import DB from '../public/DB.json'
-import { IProject } from '../pages/projet/[index]'
-import Link from 'next/link'
-import { ReactElement } from 'react'
+import { ReactElement, useRef } from 'react'
 import Image from 'next/image'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 interface IPropsProjectItem {
   title: string
@@ -11,6 +12,7 @@ interface IPropsProjectItem {
   img: string
   stack: string[]
   index: number
+  link_github: string
 }
 const myLoader = ({ src, width }) => `${src}?w=${width}`
 
@@ -20,63 +22,77 @@ const ProjetItem = ({
   img,
   stack,
   index,
+  link_github,
 }: IPropsProjectItem): ReactElement => {
   return (
-    <section
-      id='projects'
-      className='flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center'>
-      <div className='w-full lg:w-2/5 lg:mr-10 flex flex-col space-y-5'>
-        <h3 className='cstm-h3 text-t-primary'>{title}</h3>
-        <p className='md:text-lg text-base text-t-secondary'>{description}</p>
-        <p className='font-medium text-t-secondary'>{stack.join(' ')}</p>
-        <Link
-          scroll={false}
-          key={index}
-          href='/projet/[index]'
-          as={`/projet/${index}`}>
-          <a className='text-xl font-semibold flex items-center space-x-1'>
-            <p>Consulter le projet</p>
-            <HiChevronRight />
-          </a>
-        </Link>
-      </div>
-      <div className='w-full lg:w-3/5'>
+    <section id='projects' className='flex flex-col space-y-10'>
+      <div className='w-full'>
         <Image
           loader={myLoader}
           className='rounded-lg'
           layout='responsive'
           width={'100%'}
-          height={'50%'}
-          objectFit='cover'
-          quality={75}
+          height={'55%'}
+          objectFit='contain'
+          quality={100}
           src={img}
           alt={title}
         />
+      </div>
+      <div className='w-full lg:mr-10 flex flex-col space-y-5'>
+        <p className='mb-5 uppercase text-white font-semibold text-xl'>
+          {title}
+        </p>
+        <p className='text-lg opacity-50'>{description}</p>
+        <p className='font-medium opacity-50'>{stack.join(' ')}</p>
+        <a
+          className='text-xl font-semibold flex items-center space-x-1'
+          href={link_github}>
+          <p>Consulter le projet</p>
+          <HiChevronRight />
+        </a>
       </div>
     </section>
   )
 }
 
 const Projects = (): ReactElement => {
-  return (
-    <section id='projets' className='section text-white'>
-      <section className='cstm-container'>
-        <div className='mb-16'>
-          <h2 className='h2 mb-20 md:mb-32'>Réalisations</h2>
-        </div>
+  const sliderRef = useRef<Slider | null>(null)
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    ref: sliderRef,
+    nextArrow: <></>,
+    prevArrow: <></>,
+  }
 
-        <section className='flex flex-col space-y-28 md:space-y-32'>
-          {DB.projets.map((projet: IProject, index: number) => (
-            <ProjetItem
-              key={index}
-              title={projet.title}
-              description={projet.description}
-              stack={projet.stack}
-              img={projet.img}
-              index={index}
-            />
-          ))}
-        </section>
+  return (
+    <section id='projets' className='section container-center text-white'>
+      <section>
+        <div className='mb-14'>
+          <h2>Réalisations</h2>
+        </div>
+        <Slider {...settings}>
+          {DB.projets.map(
+            (
+              { title, description, stack, img, link_github },
+              index: number
+            ) => (
+              <ProjetItem
+                key={index}
+                title={title}
+                description={description}
+                stack={stack}
+                img={img}
+                index={index}
+                link_github={link_github}
+              />
+            )
+          )}
+        </Slider>
       </section>
     </section>
   )

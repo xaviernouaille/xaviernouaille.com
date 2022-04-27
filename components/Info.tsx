@@ -1,14 +1,25 @@
-import XavierNouaille from '../public/xavier-nouaille.webp'
 import Image from 'next/image'
 import { HiChevronRight } from 'react-icons/hi'
 import { ReactElement } from 'react'
 
 const Info = (): ReactElement => {
   return (
-    <section id='a-propos' className='section cstm-container text-white'>
-      <section className='flex flex-col lg:flex-row lg:space-x-24 space-x-0 space-y-20 lg:space-y-0'>
-        <div className='lg:w-3/5 w-full pr-8 lg:pr-20'>
-          <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary font-medium'>
+    <section id='a-propos' className='section container-center text-white'>
+      <section className='flex flex-col lg:flex-row space-x-0 space-y-20 lg:space-y-0'>
+        <figure className='lg:w-2/5 w-full'>
+          {/* <Image
+            src={'../public/xn.jpg'}
+            alt='Xavier Nouaille'
+            width={'100%'}
+            height={'100%'}
+            objectFit='cover'
+            layout='responsive'
+          /> */}
+          <img className='w-full h-full object-cover' src='/xn.jpg' alt='' />
+        </figure>
+        <div className='lg:w-3/5 w-full pr-8 lg:pr-20 lg:pl-24'>
+          <h2 className='mb-8'>A propos</h2>
+          <p className='leading-relaxed md:text-lg lg:col-span-5 text-t-secondary'>
             <span className='text-t-primary'>Passionné d’informatique,</span>{' '}
             j’ai appris à coder dans divers langages tels que{' '}
             <span className='text-t-primary'>PHP, JavaScript</span> ou encore{' '}
@@ -42,24 +53,13 @@ const Info = (): ReactElement => {
             facilement, et ainsi gagner du temps de développement.
           </p>
           <a
-            className='inline-flex items-center space-x-1 mt-10 btn bg-secondary text-white'
+            className='inline-flex items-center space-x-1 mt-10 btn bg-green-300 text-black'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
             Curriculum Vitae
             <HiChevronRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
           </a>
         </div>
-
-        <figure className='lg:w-2/5 w-full'>
-          <Image
-            className='rounded-2xl'
-            src={XavierNouaille.src}
-            alt='Xavier-Nouaille'
-            width={500}
-            height={470}
-            layout='responsive'
-          />
-        </figure>
       </section>
     </section>
   )

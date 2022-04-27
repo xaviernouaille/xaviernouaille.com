@@ -44,6 +44,12 @@
     {
       "date": 2022,
       "dateTo": 2023,
+      "intitule": "EPITECH - MSC PRO",
+      "description": "Rentrée 2022, à venir.."
+    },
+    {
+      "date": 2022,
+      "dateTo": 2023,
       "intitule": "Développeur FullStack chez Offeaze",
       "description": "En voie pour valider mon bachelor de chef de projets digitaux, j'ai rejoins Offeaze, une startup tournée vers la location de salle de réunion et de coworking, incubée à l'université Paris Dauphine PSL.",
       "actually": true
@@ -59,12 +65,6 @@
       "dateTo": 2021,
       "intitule": "Lyknowledge - Développeur FullStack Junior",
       "description": "Création d'une API Globale avec le framework NodeJS, ExpressJS et Socket.io. Le but est de fabriquer une API réutilisable pour de futures projets. Création d'une plateforme avec authentification avec ReactJS. Utilisation de TypeScript pour la grande majorité des projets. Création de site showcase, vitrine Wordpress."
-    },
-    {
-      "date": 2022,
-      "dateTo": 2023,
-      "intitule": "EPITECH - MSC PRO",
-      "description": "Rentrée 2022, à venir.."
     },
     {
       "date": 2019,

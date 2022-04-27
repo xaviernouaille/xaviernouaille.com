@@ -15,8 +15,8 @@ module.exports = {
         '6xl': '3.6rem',
       },
       fontFamily: {
-        sans: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
-        body: ['"Montserrat"'],
+        sans: ['"bennet-banner"', ...defaultTheme.fontFamily.sans],
+        body: ['"Open Sans"'],
         logo: ['"Rock Salt"'],
       },
       colors: {
@@ -26,6 +26,9 @@ module.exports = {
         fourth: 'var(--color-fourth)',
         't-primary': 'var(--color-t-primary)',
         't-secondary': 'var(--color-t-secondary)',
+      },
+      screens: {
+        '3xl': '1750px',
       },
     },
   },

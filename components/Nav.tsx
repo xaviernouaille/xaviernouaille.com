@@ -75,32 +75,17 @@ const Nav = (): ReactElement => {
         <motion.header
           variants={variants}
           animate={isFixed ? 'fixed' : 'auto'}
-          className={`bg-blur ${
-            y > 50 ? 'border-b border-tertiary' : 'border-0'
-          } bg-primary`}>
-          <div className='bg-secondary py-4 opacity-80 px-6 lg:px-0'>
-            <div className='cstm-container mx-auto text-t-primary flex space-x-2 items-center'>
-              <FiInfo className='h-5 w-5' />
-              <p className='font-semibold'>
-                Disponible en tant que freelance sur{' '}
-                <Link href='https://www.malt.fr/profile/xaviernouaille1'>
-                  <a target={'_blank'} className='underline'>
-                    Malt
-                  </a>
-                </Link>
-              </p>
-            </div>
-          </div>
+          className={`bg-blur`}>
           <nav
-            className={`cstm-container justify-between items-center mx-auto py-5 hidden lg:flex`}>
+            className={`container-center justify-between items-center mx-auto py-5 hidden lg:flex`}>
             <ul className='flex space-x-10 font-semibold'>
               {links.map((link: ILink, index: number) => (
                 <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                  <a className='text-t-secondary text-sm2'>{link.label}</a>
+                  <a className='text-white text-base'>{link.label}</a>
                 </NavLink>
               ))}
               <NavLink scroll={false} href='#contact'>
-                <a className='text-t-secondary text-sm2 flex items-center'>
+                <a className='text-white text-sm2 flex items-center'>
                   <p>Contactez moi</p> <FiArrowUpRight className='w-5 h-5' />
                 </a>
               </NavLink>
@@ -127,18 +112,18 @@ const Nav = (): ReactElement => {
               <motion.aside
                 variants={mobileVariants}
                 animate={mobileNavOpen ? 'open' : 'closed'}
-                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-blur bg-primary h-screen'>
-                <ul className='flex flex-col items-center space-y-10 py-8 bg-primary w-full p-8 rounded-b-xl'>
+                className='rounded-lg fixed mt-3 left-0 right-0 md:m-0 shadow-lg bg-gradient-primary h-screen'>
+                <ul className='flex flex-col items-center space-y-10 py-20 w-full p-8 rounded-b-xl font-sans text-3xl'>
                   {/* <Logo className='text-2xl sm:text-3xl' /> */}
                   {links.map((link: ILink, index: number) => (
                     <NavLink scroll={false} key={index} href={`/#${link.path}`}>
-                      <a className='text-gray-200 font-medium text-center'>
+                      <a className='text-gray-200 font-semibold text-center'>
                         {link.label}
                       </a>
                     </NavLink>
                   ))}
                   <NavLink scroll={false} href='#contact'>
-                    <a className='text-gray-200 big-btn bg-secondary w-fit'>
+                    <a className='text-black big-btn bg-green-300 w-fit btn font-body'>
                       Contactez moi !
                     </a>
                   </NavLink>

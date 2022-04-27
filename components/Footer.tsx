@@ -1,5 +1,4 @@
 import Logo from './Logo'
-import { FiArrowRight } from 'react-icons/fi'
 import DB from '../public/DB.json'
 import { ILink } from './Nav'
 import NavLink from 'next/link'
@@ -10,11 +9,11 @@ const Footer = (): ReactElement => {
   return (
     <>
       <Contact />
-      <footer className='px-6 md:px-0 cstm-container'>
+      <footer className='px-6 md:px-0 container-center'>
         <div className='pt-20 pb-16 flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between text-white font-medium'>
           <div className='lg:w-1/2 w-full flex flex-col space-y-7'>
             <Logo className='text-2xl' />
-            <p className='lg:max-w-sm text-sm text-t-secondary leading-loose'>
+            <p className='lg:max-w-sm text-t-secondary leading-loose'>
               Xavier Nouaille, développeur junior fullstack basé sur Paris. Je
               vous accompagne dans vos projets.
             </p>

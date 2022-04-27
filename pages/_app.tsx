@@ -7,7 +7,6 @@ import { ReactElement } from 'react'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import { animateScroll } from 'react-scroll'
-import OpenGraph from '../public/OpenGraph.jpg'
 
 const MyApp = ({ Component, pageProps, router }: AppProps): ReactElement => {
   const url = `http://localhost:3000${router.asPath.split('#')[0]}`

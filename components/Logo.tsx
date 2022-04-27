@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { ReactElement } from 'react'
 
-interface IProps{
+interface IProps {
   className?: string
 }
 
-const Logo = ({className = ""}: IProps): ReactElement => {
+const Logo = ({ className = '' }: IProps): ReactElement => {
   return (
     <Link scroll={false} href='/#hero'>
       <a
