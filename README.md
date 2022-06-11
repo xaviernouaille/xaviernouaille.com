@@ -34,7 +34,6 @@ $ npm start
 ```
 
 ## Overview
+![2022-06-11-02-37-xaviernouaille com](https://user-images.githubusercontent.com/68466322/173165709-34fd0919-c61b-4fb3-a433-f0a750f34eb2.png)
 
-| Light                                                                                                           | Dark                                                                                                            |
-|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| ![image](https://user-images.githubusercontent.com/68466322/149621532-576a59e5-3b74-4ea2-880a-8e469d9f5d65.png) | ![image](https://user-images.githubusercontent.com/68466322/149621527-3485cee5-ad40-4935-b4b7-58341efd3b02.png) |
+
