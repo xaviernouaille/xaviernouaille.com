@@ -94,7 +94,7 @@ const Contact = (): ReactElement => {
         <div>
           <input
             type='submit'
-            className='btn bg-green-300 text-black w-full'
+            className='btn text-white w-full'
             value='Envoyer le message'
           />
         </div>

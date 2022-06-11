@@ -46,7 +46,7 @@ const Info = (): ReactElement => {
             temps de développement.
           </p>
           <a
-            className='inline-flex items-center space-x-1 mt-10 btn bg-green-300 text-sm'
+            className='inline-flex items-center space-x-1 mt-10 btn text-white text-sm'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
             Curriculum Vitae
