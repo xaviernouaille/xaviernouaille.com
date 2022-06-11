@@ -92,11 +92,9 @@ const Contact = (): ReactElement => {
           )}
         </div>
         <div>
-          <input
-            type='submit'
-            className='btn text-white w-full'
-            value='Envoyer le message'
-          />
+          <button type='submit' className='btn w-full'>
+            Envoyer le message
+          </button>
         </div>
       </form>
     </section>
