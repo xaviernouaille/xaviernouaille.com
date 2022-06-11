@@ -1,5 +1,15 @@
 @import url("https://use.typekit.net/umm7tni.css");
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&family=Fraunces:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@layer base{
+  h1{
+    @apply xl:text-8xl md:text-7xl sm:text-6xl text-5xl font-sans font-bold;
+  }
+  .btn{
+    @apply text-white bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-7 py-3 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
+  }
+}
+
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
@@ -64,15 +74,6 @@ body * {
 
 .section{
   @apply py-16 md:py-32 px-6 md:px-0;
-}
-
-@layer base{
-  h1{
-    @apply xl:text-8xl md:text-7xl sm:text-6xl text-5xl font-sans font-bold;
-  }
-  .btn{
-    @apply text-white bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-7 py-3 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
-  }
 }
 
 input, textarea{
