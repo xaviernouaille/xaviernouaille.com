@@ -15,7 +15,9 @@ const Hero = (): ReactElement => {
           <div className='flex flex-col justify-center space-y-10'>
             <div>
               <NavLink scroll={false} href='/#contact'>
-                <a className='btn bg-green-300 text-black'>Contactez moi !</a>
+                <a className='btn bg-green-300 text-black text-lg'>
+                  Contactez moi !
+                </a>
               </NavLink>
             </div>
           </div>

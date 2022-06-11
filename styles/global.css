@@ -71,7 +71,7 @@ body * {
 }
 
 .btn{
-  @apply py-3 px-10 uppercase font-semibold tracking-wider text-base rounded-sm;
+  @apply text-white bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-7 py-3 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
 }
 
 input, textarea{

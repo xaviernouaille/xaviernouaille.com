@@ -40,43 +40,60 @@
       "link_github": "https://github.com/xaviernouaille/ktr-msc-ls1"
     }
   ],
-  "experiences": [
+  "jobs": [
     {
-      "date": 2022,
-      "dateTo": 2023,
-      "intitule": "EPITECH - MSC PRO",
-      "description": "Rentrée 2022, à venir.."
+      "dateFrom": "mai 2022",
+      "dateTo": "aujourd'hui",
+      "title": "Développeur FullStack chez DialOnce",
+      "description": "J'ai recemment intégré l'équipe dev de DialOnce en tant que développeur fullstack en alternance. Fondée en 2015 à Paris, DialOnce est un éditeur de logiciel SaaS qui intervient dans le domaine de la relation client."
     },
     {
-      "date": 2022,
-      "dateTo": 2023,
-      "intitule": "Développeur FullStack chez Offeaze",
-      "description": "En voie pour valider mon bachelor de chef de projets digitaux, j'ai rejoins Offeaze, une startup tournée vers la location de salle de réunion et de coworking, incubée à l'université Paris Dauphine PSL.",
-      "actually": true
+      "dateFrom": "janv. 2022",
+      "dateTo": "mai 2022",
+      "title": "Développeur FullStack chez Offeaze",
+      "description": "En voie pour valider mon bachelor de chef de projets digitaux, j'ai rejoins Offeaze, une startup tournée vers la location de salle de réunion et de coworking, incubée à l'université Paris Dauphine PSL."
     },
     {
-      "date": 2021,
-      "intitule": "Freelance Développeur",
+      "dateFrom": 2021,
+      "dateTo": "aujourd'hui",
+      "title": "Freelance Développeur",
       "description": "J'ai crée ma micro-entreprise tout récemment, je suis ouvert à tout type d'opportunité. J'ai déjà réalisé de multiples petits projets, en globalité des site vitrines sous le CMS Wordpress. Si vous êtes interessé pour la realisation d'un site vitrine sur mesure, prenez contact avec moi sans plus attendre !",
       "actually": true
+    }
+  ],
+  "degrees": [
+    {
+      "dateFrom": 2022,
+      "dateTo": 2024,
+      "title": "EPITECH - Master MSC PRO",
+      "description": "Je vais intégré à la rentrée d'octobre 2022, le cursus MSPRO à l'école Epitech."
     },
     {
-      "date": 2020,
-      "dateTo": 2021,
-      "intitule": "Lyknowledge - Développeur FullStack Junior",
-      "description": "Création d'une API Globale avec le framework NodeJS, ExpressJS et Socket.io. Le but est de fabriquer une API réutilisable pour de futures projets. Création d'une plateforme avec authentification avec ReactJS. Utilisation de TypeScript pour la grande majorité des projets. Création de site showcase, vitrine Wordpress."
-    },
-    {
-      "date": 2019,
+      "dateFrom": 2019,
       "dateTo": 2022,
-      "intitule": "Développeur, Chef de projets Digitaux",
+      "title": "Développeur, Chef de projets Digitaux",
       "description": "EEMI, Ecole Européenne des métiers de l’Internet. Paris 75002, React, Angular, TypeScript, API REST NodeJS - MongoDB, Intégration web : HTML, CSS, JS, PHP, Symfony, SQL, Docker, Bash, Linux. 2 années en alternance : développeur junior fullstack.",
       "actually": true
     },
     {
-      "date": 2018,
-      "intitule": "Baccalauréat Economique et Social",
-      "description": "Spécialité Sciences Politiques"
+      "dateFrom": 2015,
+      "dateTo": 2018,
+      "title": "Baccalauréat Economique et Social",
+      "description": "Spécialité Sciences Politiques."
+    }
+  ],
+  "socialNetworks": [
+    {
+      "title": "Malt",
+      "url": "https://www.malt.fr/profile/xaviernouaille1"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/xavier-nouaille/"
+    },
+    {
+      "title": "Github",
+      "url": "https://github.com/xaviernouaille"
     }
   ]
 }

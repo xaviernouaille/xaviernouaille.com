@@ -25,32 +25,30 @@ const ProjetItem = ({
   link_github,
 }: IPropsProjectItem): ReactElement => {
   return (
-    <section id='projects' className='flex flex-col space-y-10'>
-      <div className='w-full'>
+    <section id='projects' className='flex flex-col'>
+      <div className='w-full h-full relative md:h-[600px] h-[200px]'>
         <Image
           loader={myLoader}
           className='rounded-lg'
-          layout='responsive'
+          layout='fill'
           width={'100%'}
-          height={'55%'}
-          objectFit='contain'
           quality={100}
           src={img}
           alt={title}
         />
       </div>
-      <div className='w-full lg:mr-10 flex flex-col space-y-5'>
-        <p className='mb-5 uppercase text-white font-semibold text-xl'>
+      <div className='w-full lg:mr-10 flex flex-col mt-5'>
+        <p className='mb-5 text-xl md:text-2xl text-white font-semibold text-xl'>
           {title}
         </p>
         <p className='text-lg opacity-50'>{description}</p>
         <p className='font-medium opacity-50'>{stack.join(' ')}</p>
         <a
-          className='text-xl font-semibold flex items-center space-x-1'
+          className='btn flex items-center space-x-1 inline-flex w-fit mt-4'
           href={link_github}
           target='_blank'>
-          <p>Consulter le projet</p>
-          <HiChevronRight />
+          <p>En savoir plus</p>
+          <HiChevronRight className='h-5 w-5 md:w-6 md:h-6 animate-pulse' />
         </a>
       </div>
     </section>
@@ -58,25 +56,13 @@ const ProjetItem = ({
 }
 
 const Projects = (): ReactElement => {
-  const sliderRef = useRef<Slider | null>(null)
-  const settings = {
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    ref: sliderRef,
-    nextArrow: <></>,
-    prevArrow: <></>,
-  }
-
   return (
     <section id='projets' className='section container-center text-white'>
       <section>
         <div className='mb-14'>
           <h2 className='text-w-2'>Réalisations</h2>
         </div>
-        <Slider {...settings}>
+        <div className='flex flex-col space-y-10'>
           {DB.projets.map(
             (
               { title, description, stack, img, link_github },
@@ -93,7 +79,7 @@ const Projects = (): ReactElement => {
               />
             )
           )}
-        </Slider>
+        </div>
       </section>
     </section>
   )

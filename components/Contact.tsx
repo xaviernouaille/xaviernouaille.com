@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import { useForm } from 'react-hook-form'
+import SocialNetwork from './SocialNetwork'
 
 const Contact = (): ReactElement => {
   const {
@@ -14,7 +15,10 @@ const Contact = (): ReactElement => {
     <section className='container-center text-white section' id='contact'>
       <div className='text-center'>
         <h2 className='mb-4 text-w-2'>Un projet, une idée ?</h2>
-        <h3 className='uppercase font-semibold text-w-3'>Engagez moi !</h3>
+        <h3 className='uppercase font-semibold text-w-3'>Contactez moi !</h3>
+      </div>
+      <div className='mt-10'>
+        <SocialNetwork />
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -29,7 +33,7 @@ const Contact = (): ReactElement => {
               type='text'
               id='nom'
               {...register('nom', { required: 'Champs obligatoire' })}
-              className='md:p-3 p-2.5'
+              className=' p-2.5'
             />
             {errors.nom && (
               <small className='mt-2 text-red-300'>{errors.nom.message}</small>
@@ -43,7 +47,7 @@ const Contact = (): ReactElement => {
               type='text'
               id='prenom'
               {...register('prenom', { required: 'Champs obligatoire' })}
-              className='md:p-3 p-2.5'
+              className=' p-2.5'
             />
             {errors.prenom && (
               <small className='mt-2 text-red-300'>
@@ -66,7 +70,7 @@ const Contact = (): ReactElement => {
                 message: 'Remplissez une adresse email valide',
               },
             })}
-            className='md:p-3 p-2.5'
+            className=' p-2.5'
           />
           {errors.email && (
             <small className='mt-2 text-red-300'>{errors.email.message}</small>
@@ -80,7 +84,7 @@ const Contact = (): ReactElement => {
             id='message'
             rows={10}
             {...register('message', { required: 'Champs obligatoire' })}
-            className='md:p-3 p-2.5'></textarea>
+            className=' p-2.5'></textarea>
           {errors.message && (
             <small className='mt-2 text-red-300'>
               {errors.message.message}
@@ -90,8 +94,8 @@ const Contact = (): ReactElement => {
         <div>
           <input
             type='submit'
-            className='btn bg-green-300 text-black'
-            value='Envoyer'
+            className='btn bg-green-300 text-black w-full'
+            value='Envoyer le message'
           />
         </div>
       </form>

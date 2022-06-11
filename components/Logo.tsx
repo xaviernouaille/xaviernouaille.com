@@ -10,7 +10,7 @@ const Logo = ({ className = '' }: IProps): ReactElement => {
     <Link scroll={false} href='/#hero'>
       <a
         aria-label='Logo Xavier Nouaille'
-        className={`${className} font-medium font-logo text-t-primary w-fit`}>
+        className={`${className} font-semibold font-sans text-t-primary w-fit`}>
         XN
       </a>
     </Link>

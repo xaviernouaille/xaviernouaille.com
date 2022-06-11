@@ -17,9 +17,9 @@ const Info = (): ReactElement => {
           /> */}
           <img className='w-full h-full object-cover' src='/xn.jpg' alt='' />
         </figure>
-        <div className='lg:w-3/5 w-full lg:pr-20 lg:pl-24'>
+        <div className='lg:w-3/5 w-full lg:pl-16'>
           <h2 className='mb-8 text-w-2'>A propos</h2>
-          <p className='leading-relaxed text-lg lg:col-span-5 opacity-50 text-tertiary'>
+          <p className='leading-relaxed text-base lg:col-span-5 text-gray-500'>
             <span>Passionné d’informatique,</span> j’ai appris à coder dans
             divers langages tels que <span>PHP, JavaScript</span> ou encore{' '}
             <span>TypeScript</span>. Polyvalent, je maîtrise les différentes
@@ -46,7 +46,7 @@ const Info = (): ReactElement => {
             temps de développement.
           </p>
           <a
-            className='inline-flex items-center space-x-1 mt-10 btn bg-green-300 text-black'
+            className='inline-flex items-center space-x-1 mt-10 btn bg-green-300 text-sm'
             href='/CV-XAVIER-NOUAILLE.pdf'
             target='_blank'>
             Curriculum Vitae
