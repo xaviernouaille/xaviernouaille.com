@@ -1,10 +1,7 @@
 import { HiChevronRight } from 'react-icons/hi'
 import DB from '../public/DB.json'
-import { ReactElement, useRef } from 'react'
+import { ReactElement } from 'react'
 import Image from 'next/image'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 interface IPropsProjectItem {
   title: string

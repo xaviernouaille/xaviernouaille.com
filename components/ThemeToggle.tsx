@@ -2,8 +2,8 @@ import useDarkMode from './useDarkMode'
 import { HiSun, HiMoon } from 'react-icons/hi'
 import { ReactElement } from 'react'
 
-const Toggle = (): ReactElement=> {
-  const {isDark, setIsDark} = useDarkMode()
+const Toggle = (): ReactElement => {
+  const { isDark, setIsDark } = useDarkMode()
 
   return (
     <button aria-label='toggle' onClick={() => setIsDark(!isDark)}>
