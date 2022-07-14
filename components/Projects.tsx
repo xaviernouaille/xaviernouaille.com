@@ -13,7 +13,7 @@ interface IPropsProjectItem {
 }
 const myLoader = ({ src, width }) => `${src}?w=${width}`
 
-const ProjetItem = ({
+const ProjectItem = ({
   title,
   description,
   img,
@@ -61,11 +61,8 @@ const Projects = (): ReactElement => {
         </div>
         <div className='flex flex-col space-y-10'>
           {DB.projets.map(
-            (
-              { title, description, stack, img, link_github },
-              index: number
-            ) => (
-              <ProjetItem
+            ({ title, description, stack, img, link_github }, index) => (
+              <ProjectItem
                 key={index}
                 title={title}
                 description={description}

@@ -33,7 +33,7 @@ const Footer = (): ReactElement => {
               Liens utiles
             </h2>
             <div className='flex flex-col space-y-2.5'>
-              {DB.links.map((link: ILink, index: number) => (
+              {DB.links.map((link: ILink, index) => (
                 <NavLink scroll={false} key={index} href={`/#${link.path}`}>
                   <a className='text-t-primary'>{link.label}</a>
                 </NavLink>

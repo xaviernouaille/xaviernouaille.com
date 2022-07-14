@@ -76,7 +76,7 @@ const Nav = (): ReactElement => {
           <nav
             className={`container-center justify-between items-center mx-auto py-5 hidden lg:flex`}>
             <ul className='flex space-x-10 font-semibold'>
-              {links.map((link: ILink, index: number) => (
+              {links.map((link: ILink, index) => (
                 <NavLink scroll={false} key={index} href={`/#${link.path}`}>
                   <a className='text-white text-base'>{link.label}</a>
                 </NavLink>
@@ -113,7 +113,7 @@ const Nav = (): ReactElement => {
                 className='rounded-lg fixed top-0 left-0 right-0 md:m-0 shadow-lg h-screen bg-gradient-primary'>
                 <ul className='flex flex-col items-center space-y-10 py-20 w-full p-8 rounded-b-xl font-sans text-3xl'>
                   {/* <Logo className='text-2xl sm:text-3xl' /> */}
-                  {links.map((link: ILink, index: number) => (
+                  {links.map((link: ILink, index) => (
                     <NavLink scroll={false} key={index} href={`/#${link.path}`}>
                       <a className='text-gray-200 font-semibold text-center'>
                         {link.label}
