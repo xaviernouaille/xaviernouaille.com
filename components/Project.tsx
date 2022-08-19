@@ -21,6 +21,7 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                     justifyContent: 'space-between',
                     bgcolor: 'action.disabledBackground',
                     borderRadius: '3px',
+                    cursor: 'pointer',
                 }}
             >
                 <Box
