@@ -1,15 +1,20 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useTranslation } from 'react-i18next'
 
-const _Document = () => {
-  return (
-    <Html lang='fr'>
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+const Document = () => {
+    const {
+        i18n: { changeLanguage, language },
+    } = useTranslation()
+
+    return (
+        <Html lang={language}>
+            <Head />
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    )
 }
 
-export default _Document
+export default Document

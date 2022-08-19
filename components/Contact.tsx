@@ -1,104 +1,62 @@
-import { ReactElement } from 'react'
-import { useForm } from 'react-hook-form'
-import SocialNetwork from './SocialNetwork'
+import { Box, Button, Typography } from '@mui/material'
+import Link from 'next/link'
+import { FC } from 'react'
+import { MAIL } from '@constants/index'
 
-const Contact = (): ReactElement => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
+type Props = {
+    title: string
+    subtitle: string
+    paragraph: string
+    button: string
+}
 
-  const onSubmit = (data) => console.log(data)
-
-  return (
-    <section className='container-center text-white section' id='contact'>
-      <div className='text-center'>
-        <h2 className='mb-4 text-w-2'>Un projet, une idée ?</h2>
-        <h3 className='uppercase font-semibold text-w-3'>Contactez moi !</h3>
-      </div>
-      <div className='mt-10'>
-        <SocialNetwork />
-      </div>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className='w-full flex flex-col space-y-8 mt-14'>
-        {/* <div><p>{Object.keys(errors)[0]}</p></div> */}
-        <div className='w-full flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-8'>
-          <div className='md:w-1/2 flex flex-col'>
-            <label htmlFor='nom' className='text-lg mb-3'>
-              Nom
-            </label>
-            <input
-              type='text'
-              id='nom'
-              {...register('nom', { required: 'Champs obligatoire' })}
-              className=' p-2.5'
-            />
-            {errors.nom && (
-              <small className='mt-2 text-red-300'>{errors.nom.message}</small>
-            )}
-          </div>
-          <div className='md:w-1/2 flex flex-col'>
-            <label htmlFor='prenom' className='text-lg mb-3'>
-              Prénom
-            </label>
-            <input
-              type='text'
-              id='prenom'
-              {...register('prenom', { required: 'Champs obligatoire' })}
-              className=' p-2.5'
-            />
-            {errors.prenom && (
-              <small className='mt-2 text-red-300'>
-                {errors.prenom.message}
-              </small>
-            )}
-          </div>
-        </div>
-        <div className='w-full flex flex-col'>
-          <label htmlFor='email' className='text-lg mb-3'>
-            Email
-          </label>
-          <input
-            type='email'
-            id='email'
-            {...register('email', {
-              required: 'Champs obligatoire',
-              pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: 'Remplissez une adresse email valide',
-              },
-            })}
-            className=' p-2.5'
-          />
-          {errors.email && (
-            <small className='mt-2 text-red-300'>{errors.email.message}</small>
-          )}
-        </div>
-        <div className='w-full flex flex-col'>
-          <label htmlFor='message' className='text-lg mb-3'>
-            Décrivez moi votre projet
-          </label>
-          <textarea
-            id='message'
-            rows={10}
-            {...register('message', { required: 'Champs obligatoire' })}
-            className=' p-2.5'></textarea>
-          {errors.message && (
-            <small className='mt-2 text-red-300'>
-              {errors.message.message}
-            </small>
-          )}
-        </div>
-        <div>
-          <button type='submit' className='btn w-full'>
-            Envoyer le message
-          </button>
-        </div>
-      </form>
-    </section>
-  )
+const Contact: FC<Props> = ({ title, subtitle, paragraph, button }) => {
+    return (
+        <Box
+            sx={{
+                width: {
+                    md: '66%',
+                    xs: '85%',
+                    sm: '72%',
+                },
+                margin: '0 auto',
+                padding: {
+                    xs: '5rem 0',
+                    sm: '7rem 0',
+                },
+            }}
+        >
+            <Typography
+                textTransform="uppercase"
+                variant="h6"
+                textAlign="center"
+                component="h2"
+            >
+                {subtitle}
+            </Typography>
+            <Typography variant="h3" textAlign="center" marginBottom="10px">
+                {title}
+            </Typography>
+            <Typography variant="body1" textAlign="center">
+                {paragraph}
+            </Typography>
+            <Box display="flex" justifyContent="center" marginTop="40px">
+                <Link href={`mailto:${MAIL}`}>
+                    <a style={{ textDecoration: 'none' }}>
+                        <Button
+                            sx={{
+                                textTransform: 'none',
+                            }}
+                            variant="outlined"
+                            size="large"
+                        >
+                            {button}
+                        </Button>
+                    </a>
+                </Link>
+            </Box>
+        </Box>
+    )
 }
 
 export default Contact

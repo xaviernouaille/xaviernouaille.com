@@ -1,0 +1,111 @@
+{
+    "hero": {
+        "title": "Hello, I'm Xavier Nouaille",
+        "position": "FullStack developer",
+        "paragraph": "Passionate about IT, I learned to code in different languages ​​such as PHP, JavaScript or TypeScript. I am currently a Master MSCPRO student at Epitech Paris and a fullstack developer at DialOnce."
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "My projects and desires for the future",
+        "paragraphs": [
+            "Passionate about IT, I learned to code in different languages ​​such as PHP, JavaScript or TypeScript. Versatile, I master the different technical stages of creating a website or a web application; from understanding user needs to developing the final product.",
+            "For the realization of my projects, I mainly use the MERN stack (MongoDB, ExpressJS, React, NodeJS). All of my projects are developed with the TypeScript overlay.",
+            "As for my background, I started in September 2019, a Bachelor's degree in digital project management. I am currently continuing my apprenticeship in Master MSCPro at Epitech Paris.",
+            "After obtaining my Master's degree, my ambition is to go to the United States to improve my level in English and perhaps discover and learn new ways of working."
+        ]
+    },
+    "career": {
+        "title": "Experiences",
+        "items": [
+            {
+                "title": "FullStack developer",
+                "establishment": "DialOnce",
+                "date": "May 2022 - Currently",
+                "description": [
+                    "Development of micro-services used within the company",
+                    "Front-end development with <span class='hightlight'>ReactJS & NextJS</span>, back-end with <span class='hightlight'>NodeJS, Koa</span>. GraphQL & REST APIs. MongoDB NoSQL database",
+                    "<span class='hightlight'>TypeScript</span> overlay",
+                    "Migrating services to a <span class='hightlight'>mono-repo</span> structure",
+                    "Collaboration with a team of 5 to 10 developers."
+                ]
+            },
+            {
+                "title": "Master MSC PRO in work-study program",
+                "establishment": "Epitech Paris",
+                "date": "September 2022 - Currently",
+                "description": ["In progress....."]
+            },
+            {
+                "title": "FullStack developer",
+                "establishment": "Offeaze",
+                "date": "January - May 2022",
+                "description": [
+                    "Development of a coworking platform with <span class='hightlight'>NextJS - NestJS GraphQL</span> technologies",
+                    "Implementation of the blog with the headless CMS <span class='hightlight'>Contentful</span>",
+                    "<span class='hightlight'>TypeScript</span> overlay",
+                    "Answers to SEO issues with server-side rendering",
+                    "Remote work in collaboration with the lead tech"
+                ]
+            },
+            {
+                "title": "FullStack developer",
+                "establishment": "Lyknowledge",
+                "date": "January 2020 - January 2021",
+                "description": [
+                    "Development of a modular API with <span class='hightlight'>ExpressJS</span> to be reused as a base in other developments",
+                    "Remote work in collaboration with the lead tech"
+                ]
+            },
+            {
+                "title": "Bachelor chef de projets digitaux en alternance",
+                "establishment": "EEMI",
+                "date": "Septembre 2019 - Août 2022",
+                "description": [
+                    "Integrating static sites with <span class='hightlight'>HTML/CSS</span>.",
+                    "Apprentissage des langages <span class='hightlight'>PHP & JavaScript</span>",
+                    "API development with <span class='hightlight'>NodeJS</span>.",
+                    "Containerization applications with <span class='hightlight'>Docker</span>. Training on <span class='hightlight'>Linux</span> commands.",
+                    "Introduction to <span class='hightlight'>Wordpress</span> CMS."
+                ]
+            }
+        ]
+    },
+    "project": {
+        "title": "Projects",
+        "items": [
+            {
+                "title": "Notif Weather",
+                "description": "A Python script to inform me of the current weather.",
+                "url": "https://github.com/xaviernouaille/Notif-Weather",
+                "tags": ["Python", "bs4"]
+            },
+            {
+                "title": "Terra DiscordBot",
+                "description": "A bot that scrapes work-study offers.",
+                "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
+                "tags": ["DiscordJS", "cheerio"]
+            },
+            {
+                "title": "ktr-msc-ls1 - Admission test Epitech MSC Pro",
+                "description": "Business card sharing between users.",
+                "url": "https://github.com/xaviernouaille/ktr-msc-ls1",
+                "tags": ["ExpressJS", "NextJS", "TypeScript"]
+            },
+            {
+                "title": "React, TypeScript & TailwindCSS Generator",
+                "description": "A script that allows to quickly create a React project with TypeScript & TailwindCSS embedded directly. No need to follow the Tailwind doc anymore.",
+                "url": "https://github.com/xaviernouaille/React-TypeScript-TailwindCSS-Generator",
+                "tags": ["Shell"]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Let's get in touch",
+        "subtitle": "Contact",
+        "paragraph": "A project, a question? Do not hesitate to contact me, I will let you know my answer as soon as possible.",
+        "button": "Contact"
+    },
+    "footer": {
+        "paragraph": "Développé par Xavier Nouaille"
+    }
+}

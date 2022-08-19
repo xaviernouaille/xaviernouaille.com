@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Apercu';
+    src: url('Apercu_Bold.49e3b9c9.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('Apercu_Mono.0c31ab10.otf') format('truetype');
+}

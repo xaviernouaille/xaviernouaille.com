@@ -1,0 +1,112 @@
+{
+    "hero": {
+        "title": "Hello, je suis Xavier Nouaille",
+        "position": "Développeur FullStack",
+        "paragraph": "Passionné d’informatique, j’ai appris à coder dans divers langages tels que PHP, JavaScript ou encore TypeScript. Actuellement étudiant en Master MSCPRO à Epitech Paris et développeur fullstack chez DialOnce."
+    },
+    "about": {
+        "title": "A propos",
+        "subtitle": "Mes projets et envies pour le futur",
+        "paragraphs": [
+            "Passionné d’informatique, j’ai appris à coder dans divers langages tels que PHP, JavaScript ou encore TypeScript. Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site ou d’une application web ; de la compréhension des besoins utilisateurs, au développement du produit final.",
+            "Pour la réalisation de mes projets, j'utilise principalement la MERN stack (MongoDB, ExpressJS, React, NodeJS). L'intégralité de mes projets sont développés avec la surcouche TypeScript.",
+            "Pour ce qui est de mon parcours, j'ai débuté en septembre 2019, un Bachelor chef de projets digitaux. Je poursuis actuellement mon apprentissage en Master MSCPro à Epitech Paris.",
+            "Après l'obtention de mon Master, j'ai pour ambition de me rendre aux Etats-Unis pour renforcer mon niveau en anglais, découvrir et apprendre des nouvelles manières de travailler."
+        ]
+    },
+    "career": {
+        "title": "Experiences",
+        "items": [
+            {
+                "title": "Développeur FullStack",
+                "establishment": "DialOnce",
+                "date": "Mai 2022 - Aujourd'hui",
+                "description": [
+                    "Développement des micro-services internes à l'entreprise",
+                    "Développement front-end avec <span class='hightlight'>ReactJS & NextJS</span>, back-end avec <span class='hightlight'>NodeJS, Koa</span>. API GraphQL & REST. Base de données No-SQL MongoDB",
+                    "Surcouche <span class='hightlight'>TypeScript</span>",
+                    "Migration des services en vue d'un passage à une structure <span class='hightlight'>mono-repo</span>",
+                    "Collaboration avec une équipe de 5 à 10 développeurs."
+                ]
+            },
+            {
+                "title": "Master MSC PRO en alternance",
+                "establishment": "Epitech Paris",
+                "date": "Mai 2022 - Aujourd'hui",
+                "description": ["En cours..."]
+            },
+            {
+                "title": "Développeur FullStack",
+                "establishment": "Offeaze",
+                "date": "Janvier - Mai 2022",
+                "description": [
+                    "Développement d'une plateforme de coworking avec les technologies <span class='hightlight'>NextJS - NestJS GraphQL</span>",
+                    "Implémentation du blog avec le headless CMS <span class='hightlight'>Contentful</span>",
+                    "Surcouche <span class='hightlight'>TypeScript</span>",
+                    "Réponses aux problématiques de SEO avec du server-side rendering",
+                    "Travail à distance en collaboration avec le lead tech"
+                ]
+            },
+            {
+                "title": "Développeur FullStack",
+                "establishment": "Lyknowledge",
+                "date": "Janvier 2020 - Janvier 2021",
+                "description": [
+                    "Développement d'une API modulaire avec <span class='hightlight'>ExpressJS</span> ayant pour d'être reutilisée comme base dans d'autres développements",
+                    "Surcouche <span class='hightlight'>TypeScript</span>",
+                    "Travail à distance en collaboration avec le lead tech"
+                ]
+            },
+            {
+                "title": "Bachelor chef de projets digitaux en alternance",
+                "establishment": "EEMI",
+                "date": "Septembre 2019 - Août 2022",
+                "description": [
+                    "Intégration de sites statiques avec <span class='hightlight'>HTML/CSS</span>.",
+                    "Apprentissage des langages <span class='hightlight'>PHP & JavaScript</span>",
+                    "Développement d'API avec <span class='hightlight'>NodeJS</span>.",
+                    "Contenerisation d'applications avec <span class='hightlight'>Docker</span>. Formation sur les commandes <span class='hightlight'>Linux</span>.",
+                    "Introduction au CMS <span class='hightlight'>Wordpress</span>."
+                ]
+            }
+        ]
+    },
+    "project": {
+        "title": "Projets",
+        "items": [
+            {
+                "title": "Notif Weather",
+                "description": "Un script Python permettant de m'informer de la météo actuelle.",
+                "url": "https://github.com/xaviernouaille/Notif-Weather",
+                "tags": ["Python", "bs4"]
+            },
+            {
+                "title": "Terra DiscordBot",
+                "description": "Un bot qui scrap les offres d'alternance.",
+                "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
+                "tags": ["DiscordJS", "cheerio"]
+            },
+            {
+                "title": "ktr-msc-ls1 - Test d'admission Epitech MSC Pro",
+                "description": "Partage de buisness card entre utilisateurs.",
+                "url": "https://github.com/xaviernouaille/ktr-msc-ls1",
+                "tags": ["ExpressJS", "NextJS", "TypeScript"]
+            },
+            {
+                "title": "React, TypeScript & TailwindCSS Generator",
+                "description": "Un script qui permet de créer rapidement un projet React avec TypeScript & TailwindCSS incorporé directement. Plus besoin de suivre la doc de Tailwind.",
+                "url": "https://github.com/xaviernouaille/React-TypeScript-TailwindCSS-Generator",
+                "tags": ["Shell"]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Entrons en contact",
+        "subtitle": "Contact",
+        "paragraph": "Un projet, une question ? N'hésitez pas à me contacter, je vous ferai part de ma réponse dans les plus brefs délais.",
+        "button": "Contact"
+    },
+    "footer": {
+        "paragraph": "Developped by Xavier Nouaille"
+    }
+}

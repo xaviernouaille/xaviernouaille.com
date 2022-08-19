@@ -1,28 +1,41 @@
-import NavLink from 'next/link'
-import { ReactElement } from 'react'
+import { Box, Button, ButtonGroup, Typography } from '@mui/material'
+import { FC } from 'react'
 
-const Hero = (): ReactElement => {
-  return (
-    <>
-      <section
-        id='hero'
-        className='text-white flex items-center px-6 md:px-0 container-center pt-36 lg:pt-44 pb-24'>
-        <div className='flex flex-col space-y-10 w-full'>
-          <h1 className='leading-tight text-w-1'>
-            Bonjour, je suis Xavier, développeur junior fullstack basé sur
-            Paris.
-          </h1>
-          <div className='flex flex-col justify-center space-y-10'>
-            <div>
-              <NavLink scroll={false} href='/#contact'>
-                <a className='btn text-white text-lg'>Contactez moi !</a>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
+type Props = {
+    title: string
+    position: string
+    paragraph: string
+}
+
+const Hero: FC<Props> = ({ title, position, paragraph }) => {
+    return (
+        <Box
+            margin="180px 0 100px 0"
+            display="flex"
+            sx={{
+                margin: { xs: '100px 0', sm: '180px 0 100px 0' },
+            }}
+        >
+            <Box>
+                <Box margin="0 0 15px 0">
+                    <Typography variant="h2" component="h1">
+                        <Typography variant="h2" component="span">
+                            {title}
+                        </Typography>
+                        <br></br> {position}
+                    </Typography>
+                </Box>
+                <Typography
+                    sx={{
+                        width: { sm: '87%' },
+                        marginTop: '50px',
+                    }}
+                >
+                    {paragraph}
+                </Typography>
+            </Box>
+        </Box>
+    )
 }
 
 export default Hero
