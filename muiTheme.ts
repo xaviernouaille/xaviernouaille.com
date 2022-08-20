@@ -57,19 +57,23 @@ let muiThemeLight = createTheme({
     palette: {
         mode: 'light',
         background: {
-            default: '#FFFDFD',
+            default: '#F4F4F2',
+            paper: '#E8E8E8',
         },
         secondary: {
-            main: '#FFFDFD',
+            main: '#fff',
         },
         primary: {
-            main: '#5e5e',
+            main: '#064663',
+        },
+        text: {
+            primary: '#000',
         },
     },
     ...baseTheme,
     typography: {
         h6: {
-            color: '#5e5e',
+            color: '#064663',
             fontSize: '1.125rem',
             fontWeight: 600,
         },
@@ -94,7 +98,8 @@ let muiThemeDark = createTheme({
             main: '#333333',
         },
         background: {
-            default: 'black',
+            default: '#000',
+            paper: '#1F1F1F',
         },
     },
     ...baseTheme,

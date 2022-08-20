@@ -19,7 +19,7 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    bgcolor: 'action.disabledBackground',
+                    bgcolor: 'background.paper',
                     borderRadius: '3px',
                     cursor: 'pointer',
                 }}
