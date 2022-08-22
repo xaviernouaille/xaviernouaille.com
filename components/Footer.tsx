@@ -22,7 +22,18 @@ const Footer: FC<Props> = ({ paragraph, children }) => {
                     justifyContent: 'space-between',
                 }}
             >
-                <Typography variant="body2">{paragraph}</Typography>
+                <Typography
+                    textAlign="center"
+                    variant="body2"
+                    sx={{
+                        fontSize: {
+                            xs: '14px',
+                            sm: '1rem',
+                        },
+                    }}
+                >
+                    {paragraph}
+                </Typography>
                 <Box
                     sx={{
                         display: 'flex',

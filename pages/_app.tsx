@@ -35,12 +35,26 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <List sx={{ display: 'flex', gap: 1 }}>
                     <ListItem disablePadding sx={{ width: 'fit-content' }}>
                         <Link color="inherit" href={LINKEDIN} target="_blank">
-                            <LinkedInIcon sx={{ fontSize: 28 }} />
+                            <LinkedInIcon
+                                sx={{
+                                    fontSize: {
+                                        xs: 25,
+                                        sm: 28,
+                                    },
+                                }}
+                            />
                         </Link>
                     </ListItem>
                     <ListItem disablePadding sx={{ width: 'fit-content' }}>
                         <Link color="inherit" href={GITHUB} target="_blank">
-                            <GitHubIcon sx={{ fontSize: 25 }} />
+                            <GitHubIcon
+                                sx={{
+                                    fontSize: {
+                                        xs: 22,
+                                        sm: 25,
+                                    },
+                                }}
+                            />
                         </Link>
                     </ListItem>
                 </List>

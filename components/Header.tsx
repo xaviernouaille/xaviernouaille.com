@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next'
 import TranslateIcon from '@mui/icons-material/Translate'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import { useEffect, useRef, useState } from 'react'
+import { alpha } from '@mui/material/styles'
 
 const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
     const {
@@ -44,12 +45,19 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
 
     return (
         <Slide direction="down" in={goingUp}>
-            <AppBar elevation={0} color="transparent">
+            <AppBar
+                elevation={0}
+                sx={{
+                    bgcolor: (theme) =>
+                        alpha(theme.palette.background.paper, 0.4),
+                    bgOpacity: 0.4,
+                }}
+            >
                 <Container
                     maxWidth="xl"
                     sx={{
                         display: 'flex',
-                        justifyContent: 'space-between',
+                        justifyContent: 'end',
                         alignItems: 'center',
                     }}
                 >
@@ -63,7 +71,15 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
                                 }
                                 aria-label="Language"
                             >
-                                <TranslateIcon />
+                                <TranslateIcon
+                                    sx={{
+                                        fontSize: {
+                                            xs: 20,
+                                            sm: 24,
+                                        },
+                                        color: 'text.primary',
+                                    }}
+                                />
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding sx={{ width: 'fit-content' }}>
@@ -71,7 +87,15 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
                                 aria-label="Theme"
                                 onClick={() => toggleTheme()}
                             >
-                                <Brightness4Icon />
+                                <Brightness4Icon
+                                    sx={{
+                                        fontSize: {
+                                            xs: 20,
+                                            sm: 24,
+                                        },
+                                        color: 'text.primary',
+                                    }}
+                                />
                             </ListItemButton>
                         </ListItem>
                     </List>
