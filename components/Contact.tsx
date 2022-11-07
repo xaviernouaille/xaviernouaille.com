@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import Link from 'next/link'
 import { FC } from 'react'
-import { MAIL } from '@constants/index'
+import { MAIL } from '@constants/social'
 
 type Props = {
     title: string

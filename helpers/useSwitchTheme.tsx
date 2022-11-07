@@ -1,24 +1,15 @@
 import { useCallback, useState } from 'react'
-
-const PREFRED_THEME = 'dark'
+import DEFAULT_THEME from '@constants/theme'
 
 export const isInitialTheme = (): 'dark' | 'light' => {
     if (typeof window === 'undefined') {
-        return PREFRED_THEME
+        return DEFAULT_THEME
     }
-    // const getThemeFromLocalStorage = window.localStorage.getItem('theme')
-    // console.log(getThemeFromLocalStorage)
-    // if (
-    //     getThemeFromLocalStorage &&
-    //     (getThemeFromLocalStorage === 'light' ||
-    //         getThemeFromLocalStorage === 'dark')
-    // )
-    //     return getThemeFromLocalStorage
     const getThemeFromOS = window.matchMedia(
         '(prefers-color-scheme: dark)'
     ).matches
     if (getThemeFromOS) return 'dark'
-    else return PREFRED_THEME
+    else return DEFAULT_THEME
 }
 
 const useSwitchTheme = (): ['light' | 'dark', () => void] => {
