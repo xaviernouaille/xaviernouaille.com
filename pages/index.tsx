@@ -9,14 +9,13 @@ import { useTranslation } from 'react-i18next'
 
 const Home: NextPage = () => {
     const { t } = useTranslation()
+    const age = new Date().getFullYear() - 2000
 
     return (
         <>
             <NextSeo
                 title={'Xavier Nouaille | Developpeur web junior'}
-                description={
-                    'Portfolio | Xavier Nouaille, 21 ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.'
-                }
+                description={`Portfolio | Xavier Nouaille, ${age} ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.`}
                 canonical={'https://xaviernouaille.com'}
                 additionalMetaTags={[
                     {
@@ -29,8 +28,7 @@ const Home: NextPage = () => {
                     type: 'website',
                     url: 'https://xaviernouaille.com',
                     title: 'Bonjour, je suis Xavier, développeur junior fullstack basé sur Paris.',
-                    description:
-                        'Portfolio | Xavier Nouaille, 21 ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.',
+                    description: `Portfolio | Xavier Nouaille, ${age} ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.`,
                 }}
                 additionalLinkTags={[
                     {
