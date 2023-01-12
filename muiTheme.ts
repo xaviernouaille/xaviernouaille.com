@@ -4,11 +4,13 @@ import { TypographyOptions } from '@mui/material/styles/createTypography'
 declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides {
         body3: true
+        body4: true
     }
 }
 
 interface ExtendedTypographyOptions extends TypographyOptions {
     body3: React.CSSProperties
+    body4: React.CSSProperties
 }
 
 const baseTheme = {
@@ -22,24 +24,50 @@ const baseTheme = {
         },
     },
     typography: {
-        fontFamily: ['Apercu'].join(','),
+        fontFamily: ['SoleSans'].join(','),
         h2: {
-            fontSize: '4.68rem',
-            fontWeight: 'bold',
+            fontSize: '3.8rem',
+            fontWeight: 400,
+            letterSpacing: '-0.06rem',
+            lineHeight: 1,
         },
         h3: {
-            fontSize: '3.9rem',
-            fontWeight: 'bold',
+            fontSize: '1.8rem',
+            fontWeight: 400,
+            letterSpacing: '-0.06rem',
+            lineHeight: 1,
+        },
+        h4: {
+            fontSize: '1.45rem',
+            fontWeight: 400,
+            letterSpacing: '-0.06rem',
+            lineHeight: 1,
+        },
+        h5: {
+            fontSize: '2.75rem',
+            fontWeight: 400,
+            letterSpacing: '-0.06rem',
+            lineHeight: 1,
+        },
+        h6: {
+            fontSize: '1.3rem',
+            fontWeight: 400,
+            letterSpacing: '-0.06rem',
+            lineHeight: 1.2,
         },
         body1: {
             fontSize: '1.125rem',
+            fontWeight: 300,
         },
         body2: {
-            fontSize: '1rem',
+            fontSize: '1.1rem',
         },
         body3: {
             fontSize: '0.9rem',
             lineHeight: '1.7rem',
+        },
+        body4: {
+            fontSize: '1.03rem',
         },
     } as ExtendedTypographyOptions,
     components: {
@@ -99,7 +127,7 @@ let muiThemeDark = createTheme({
         },
         background: {
             default: '#000',
-            paper: '#1F1F1F',
+            paper: '#0A0A0A',
         },
     },
     ...baseTheme,

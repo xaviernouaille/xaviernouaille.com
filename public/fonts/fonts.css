@@ -9,3 +9,27 @@
     font-family: 'Apercu';
     src: url('Apercu_Mono.0c31ab10.otf') format('truetype');
 }
+
+@font-face {
+    font-family: 'SoleSans';
+    src: url('SoleSans-Book-Light') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SoleSans';
+    src: url('SoleSans-Book-Regular') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SoleSans';
+    src: url('SoleSans-Book-Medium') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SoleSans';
+    src: url('SoleSans-Book-SemiBold') format('truetype');
+    font-weight: 600;
+}

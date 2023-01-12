@@ -14,9 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme === 'light' ? muiThemeLight : muiThemeDark}>
             <CssBaseline />
             <Header toggleTheme={toggleTheme} />
-            <Container maxWidth="md" component="main">
-                <Component {...pageProps} />
-            </Container>
+            <Component {...pageProps} />
             <Footer />
         </ThemeProvider>
     )

@@ -1,39 +1,44 @@
-import { Box, Button, ButtonGroup, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import { FC } from 'react'
+import Image from 'next/image'
 
 type Props = {
     title: string
-    position: string
     paragraph: string
 }
 
-const Hero: FC<Props> = ({ title, position, paragraph }) => {
+const Hero: FC<Props> = ({ title, paragraph }) => {
     return (
         <Box
-            margin="180px 0 100px 0"
-            display="flex"
             sx={{
-                margin: { xs: '100px 0', sm: '180px 0 100px 0' },
+                bgcolor: 'background.paper',
+                padding: {
+                    xs: '130px 0 60px 0',
+                    sm: '120px 0 100px 0',
+                    md: '160px 0 120px 0',
+                },
             }}
         >
-            <Box>
-                <Box margin="0 0 15px 0">
-                    <Typography variant="h2" component="h1">
-                        <Typography variant="h2" component="span">
-                            {title}
+            <Container maxWidth="md">
+                <Box display="flex">
+                    <Box sx={{ maxWidth: '900px' }}>
+                        <Box margin="0 0 15px 0">
+                            <Typography variant="h2" component="h1">
+                                <Typography variant="h2" component="span">
+                                    {title}
+                                </Typography>
+                            </Typography>
+                        </Box>
+                        <Typography
+                            sx={{
+                                marginTop: '50px',
+                            }}
+                        >
+                            {paragraph}
                         </Typography>
-                        <br></br> {position}
-                    </Typography>
+                    </Box>
                 </Box>
-                <Typography
-                    sx={{
-                        width: { sm: '87%' },
-                        marginTop: '50px',
-                    }}
-                >
-                    {paragraph}
-                </Typography>
-            </Box>
+            </Container>
         </Box>
     )
 }

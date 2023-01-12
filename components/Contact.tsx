@@ -1,60 +1,84 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import Link from 'next/link'
 import { FC } from 'react'
 import { MAIL } from '@constants/social'
 
 type Props = {
     title: string
-    subtitle: string
     paragraph: string
     button: string
 }
 
-const Contact: FC<Props> = ({ title, subtitle, paragraph, button }) => {
+const Contact: FC<Props> = ({ title, paragraph, button }) => {
     return (
         <Box
             sx={{
-                width: {
-                    md: '66%',
-                    xs: '85%',
-                    sm: '72%',
-                },
-                margin: '0 auto',
                 padding: {
-                    xs: '5rem 0',
-                    sm: '7rem 0',
+                    xs: '30px 0 20px 0',
+                    sm: '90px 0 40px 0',
+                    md: '120px 0 70px 0',
                 },
             }}
         >
-            <Typography
-                textTransform="uppercase"
-                variant="h6"
-                textAlign="center"
-                component="h2"
-            >
-                {subtitle}
-            </Typography>
-            <Typography variant="h3" textAlign="center" marginBottom="10px">
-                {title}
-            </Typography>
-            <Typography variant="body1" textAlign="center">
-                {paragraph}
-            </Typography>
-            <Box display="flex" justifyContent="center" marginTop="40px">
-                <Link href={`mailto:${MAIL}`}>
-                    <a style={{ textDecoration: 'none' }}>
-                        <Button
-                            sx={{
-                                textTransform: 'none',
-                            }}
-                            variant="outlined"
-                            size="large"
-                        >
-                            {button}
-                        </Button>
-                    </a>
-                </Link>
-            </Box>
+            <Container sx={{ maxWidth: { xs: '100%', sm: 'lg' }, padding: 0 }}>
+                <Box
+                    sx={{
+                        margin: '0 auto',
+                        padding: {
+                            xs: '5rem 20px',
+                            sm: '7rem 0',
+                        },
+                        bgcolor: 'background.paper',
+                    }}
+                >
+                    <Typography
+                        variant="h5"
+                        textAlign="center"
+                        marginBottom="20px"
+                    >
+                        {title}
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        textAlign="center"
+                        sx={{
+                            width: { md: '40%', sm: '75%', xs: '90%' },
+                            margin: 'auto',
+                        }}
+                    >
+                        {paragraph}
+                    </Typography>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        marginTop="30px"
+                    >
+                        <Link href={`mailto:${MAIL}`}>
+                            <Box
+                                sx={{
+                                    textDecoration: 'none',
+                                    display: 'inline-block',
+                                    width: { xs: '100%', sm: 'auto' },
+                                }}
+                            >
+                                <Button
+                                    sx={{
+                                        textTransform: 'none',
+                                        borderRadius: 0,
+                                        padding: '10px 40px',
+                                        width: { xs: '100%', sm: 'auto' },
+                                    }}
+                                    variant="outlined"
+                                >
+                                    <Typography variant="body2">
+                                        {button}
+                                    </Typography>
+                                </Button>
+                            </Box>
+                        </Link>
+                    </Box>
+                </Box>
+            </Container>
         </Box>
     )
 }

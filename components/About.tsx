@@ -1,132 +1,113 @@
-import { Box, Typography } from '@mui/material'
-import Image from 'next/image'
+import { MALT } from '@constants/social'
+import { Box, Button, Container, Link, Typography } from '@mui/material'
 import { FC } from 'react'
 
 type Props = {
     title: string
     subtitle: string
     paragraphs: string[]
+    modalTitle: string
+    modalText: string
+    modalButtonText: string
 }
 
-const About: FC<Props> = ({ title, subtitle, paragraphs }) => (
+const About: FC<Props> = ({
+    title,
+    subtitle,
+    paragraphs,
+    modalTitle,
+    modalText,
+    modalButtonText,
+}) => (
     <Box
         sx={{
             padding: {
-                xs: '5rem 0',
-                sm: '7rem 0',
+                xs: '80px 0 60px 0',
+                sm: '90px 0 70px 0',
+                md: '120px 0 70px 0',
             },
         }}
     >
-        <Typography
-            variant="h6"
-            marginBottom={'10px'}
-            textTransform="uppercase"
-            component="h2"
-        >
-            {title}
-        </Typography>
-        <Typography
-            paddingBottom={'40px'}
+        <Container
             sx={{
-                width: { sm: '87%', md: '70%' },
+                display: 'flex',
+                flexDirection: { md: 'row', xs: 'column' },
+                gap: '80px',
             }}
+            maxWidth="md"
         >
-            {paragraphs[0]}
-        </Typography>
-        <Box
-            display="flex"
-            sx={{
-                flexDirection: { xs: 'column', md: 'row' },
-            }}
-            justifyContent={'stretch'}
-        >
-            <Box
-                sx={{
-                    width: { xs: '100%', md: '57%' },
-                    paddingRight: '50px',
-                }}
-            >
-                <Typography marginBottom={'20px'} variant="body2">
-                    {paragraphs[1]}
-                    <br />
-                    <br />
-                    {paragraphs[2]}
+            <Box>
+                <Typography variant="h3" marginBottom={'20px'} component="h2">
+                    {title}
                 </Typography>
-                <Typography variant="h6" marginBottom={'10px'} component="h3">
-                    {subtitle}
-                </Typography>
-                <Typography variant="body2">{paragraphs[3]}</Typography>
-            </Box>
-            <Box
-                sx={{
-                    position: 'relative',
-                    width: {
-                        sx: '100%',
-                        sm: '60%',
-                        md: '43%',
-                    },
-                    marginTop: {
-                        xs: 4,
-                        md: 0,
-                    },
-                }}
-            >
-                <Image
-                    layout="responsive"
-                    width="100%"
-                    height="100%"
-                    objectFit="cover"
-                    quality={100}
-                    src={'/xavier-nouaille.jpg'}
-                    alt={'Xavier Nouaille'}
-                />
                 <Box
+                    display="flex"
                     sx={{
-                        position: 'absolute',
-                        top: 0,
-                        right: 0,
-                        margin: '-5rem -35% 0 0',
-                        display: {
-                            xs: 'none',
-                            md: 'block',
-                        },
-                        zIndex: -1,
-                        color: 'primary.main',
+                        flexDirection: { xs: 'column', md: 'row' },
                     }}
+                    justifyContent={'stretch'}
                 >
-                    <svg
-                        width="404"
-                        height="384"
-                        viewBox="0 0 404 384"
-                        aria-hidden="true"
-                    >
-                        <defs>
-                            <pattern
-                                id="bedc54bc-7371-44a2-a2bc-dc68d819ae60"
-                                x="0"
-                                y="0"
-                                width="20"
-                                height="20"
-                                patternUnits="userSpaceOnUse"
-                            >
-                                <rect
-                                    x="0"
-                                    y="0"
-                                    width="4"
-                                    height="4"
-                                    fill="currentColor"
-                                ></rect>
-                            </pattern>
-                        </defs>{' '}
-                        <rect
-                            width="404"
-                            height="384"
-                            fill="url(#bedc54bc-7371-44a2-a2bc-dc68d819ae60)"
-                        ></rect>
-                    </svg>
+                    <Box>
+                        <Typography marginBottom={'30px'}>
+                            {paragraphs[0]}
+                            <br />
+                            <br />
+                            {paragraphs[1]}
+                            <br />
+                            <br />
+                            {paragraphs[2]}
+                        </Typography>
+                        <Typography
+                            variant="h3"
+                            marginTop={'80px'}
+                            marginBottom={'20px'}
+                            component="h3"
+                        >
+                            {subtitle}
+                        </Typography>
+                        <Typography>{paragraphs[3]}</Typography>
+                    </Box>
                 </Box>
             </Box>
-        </Box>
+            <Box sx={{ position: 'relative' }}>
+                <Box
+                    sx={{
+                        bgcolor: 'background.paper',
+                        padding: { md: '40px', sm: '30px', xs: '25px' },
+                        position: 'sticky',
+                        top: '70px',
+                    }}
+                >
+                    <Typography
+                        variant="h3"
+                        sx={{
+                            marginBottom: '20px',
+                            display: { md: 'inline-block', xs: 'block' },
+                        }}
+                    >
+                        {modalTitle}
+                    </Typography>
+                    <Typography variant="body4">{modalText}</Typography>
+                    <Box sx={{ marginTop: '20px' }}>
+                        <Link href={`${MALT}`} sx={{ textDecoration: 'none' }}>
+                            <Button
+                                sx={{
+                                    textTransform: 'none',
+                                    borderRadius: 0,
+                                    padding: '8px 32px',
+                                    width: { xs: '100%', sm: 'auto' },
+                                }}
+                                variant="outlined"
+                            >
+                                <Typography variant="body3">
+                                    {modalButtonText}
+                                </Typography>
+                            </Button>
+                        </Link>
+                    </Box>
+                </Box>
+            </Box>
+        </Container>
     </Box>
 )
 

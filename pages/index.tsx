@@ -54,15 +54,14 @@ const Home: NextPage = () => {
                     },
                 ]}
             />
-            <Hero
-                title={t('hero.title')}
-                position={t('hero.position')}
-                paragraph={t('hero.paragraph')}
-            />
+            <Hero title={t('hero.title')} paragraph={t('hero.paragraph')} />
             <About
                 title={t('about.title')}
                 subtitle={t('about.subtitle')}
                 paragraphs={t('about.paragraphs', { returnObjects: true })}
+                modalTitle={t('about.modalTitle')}
+                modalText={t('about.modalText')}
+                modalButtonText={t('about.modalButtonText')}
             />
             <Career
                 title={t('career.title')}
@@ -74,7 +73,6 @@ const Home: NextPage = () => {
             />
             <Contact
                 title={t('contact.title')}
-                subtitle={t('contact.subtitle')}
                 paragraph={t('contact.paragraph')}
                 button={t('contact.button')}
             />

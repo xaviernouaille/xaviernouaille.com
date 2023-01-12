@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import FolderOpenIcon from '@mui/icons-material/FolderOpen'
 import { FC } from 'react'
 import Link from 'next/link'
@@ -39,16 +39,16 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                     />
                     <Typography
                         component="h3"
-                        variant="body1"
                         marginBottom={'15px'}
-                        fontWeight="bold"
+                        variant="h6"
+                        fontWeight={400}
                     >
                         {title}
                     </Typography>
                     <Typography
                         variant="body3"
                         component={'p'}
-                        lineHeight="1.2rem"
+                        lineHeight="1.3rem"
                         sx={{
                             overflowWrap: 'break-word',
                         }}
@@ -82,40 +82,44 @@ const Project: FC<Props> = ({ title, items }) => {
         <Box
             sx={{
                 padding: {
-                    xs: '5rem 0',
-                    sm: '6rem 0',
+                    xs: '30px 0 60px 0',
+                    sm: '40px 0 40px 0',
+                    md: '120px 0 70px 0',
                 },
             }}
         >
-            <Typography
-                variant="h6"
-                marginBottom={'10px'}
-                textTransform="uppercase"
-                component="h2"
-            >
-                {title}
-            </Typography>
-            <Box
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                        xs: 'repeat(1, minmax(0,1fr))',
-                        sm: 'repeat(2, minmax(0,1fr))',
-                        md: 'repeat(3, minmax(0,1fr))',
-                    },
-                    gap: '25px',
-                }}
-            >
-                {items.map(({ title, description, url, tags }, i) => (
-                    <ProjectItem
-                        key={i}
-                        title={title}
-                        description={description}
-                        url={url}
-                        tags={tags}
-                    />
-                ))}
-            </Box>
+            <Container maxWidth="md">
+                <Box>
+                    <Typography
+                        variant="h3"
+                        marginBottom={'20px'}
+                        component="h2"
+                    >
+                        {title}
+                    </Typography>
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            gridTemplateColumns: {
+                                xs: 'repeat(1, minmax(0,1fr))',
+                                sm: 'repeat(2, minmax(0,1fr))',
+                                md: 'repeat(3, minmax(0,1fr))',
+                            },
+                            gap: '25px',
+                        }}
+                    >
+                        {items.map(({ title, description, url, tags }, i) => (
+                            <ProjectItem
+                                key={i}
+                                title={title}
+                                description={description}
+                                url={url}
+                                tags={tags}
+                            />
+                        ))}
+                    </Box>
+                </Box>
+            </Container>
         </Box>
     )
 }

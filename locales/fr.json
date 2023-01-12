@@ -1,7 +1,6 @@
 {
     "hero": {
-        "title": "Hello, je suis Xavier Nouaille",
-        "position": "Développeur FullStack",
+        "title": "Bonjour, je suis Xavier Nouaille, développeur fullstack basé sur Paris",
         "paragraph": "Passionné d’informatique, j’ai appris à coder dans divers langages tels que PHP, JavaScript ou encore TypeScript. Actuellement étudiant en Master MSCPRO à Epitech Paris et développeur fullstack chez DialOnce."
     },
     "about": {
@@ -12,7 +11,10 @@
             "Pour la réalisation de mes projets, j'utilise principalement la MERN stack (MongoDB, ExpressJS, React, NodeJS). L'intégralité de mes projets sont développés avec la surcouche TypeScript.",
             "Pour ce qui est de mon parcours, j'ai débuté en septembre 2019, un Bachelor chef de projets digitaux. Je poursuis actuellement mon apprentissage en Master MSCPro à Epitech Paris.",
             "Après l'obtention de mon Master, j'ai pour ambition de me rendre aux Etats-Unis pour renforcer mon niveau en anglais, découvrir et apprendre des nouvelles manières de travailler."
-        ]
+        ],
+        "modalTitle": "Disponible en freelance",
+        "modalText": "Depuis maintenant plus d'un an, j'accompagne les entreprises vers leurs digitalisations en développant des sites internets, en effectuant des refontes, en développant des plugins customs, etc...",
+        "modalButtonText": "Profil Malt"
     },
     "career": {
         "title": "Experiences",
@@ -101,7 +103,7 @@
         ]
     },
     "contact": {
-        "title": "Entrons en contact",
+        "title": "Un projet ou une quelconque question ?",
         "subtitle": "Contact",
         "paragraph": "Un projet, une question ? N'hésitez pas à me contacter, je vous ferai part de ma réponse dans les plus brefs délais.",
         "button": "Contact"

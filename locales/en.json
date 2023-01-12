@@ -1,7 +1,6 @@
 {
     "hero": {
-        "title": "Hello, I'm Xavier Nouaille",
-        "position": "FullStack developer",
+        "title": "Hello, I am Xavier Nouaille, fullstack developer based on Paris",
         "paragraph": "Passionate about IT, I learned to code in different languages ​​such as PHP, JavaScript or TypeScript. I am currently a Master MSCPRO student at Epitech Paris and a fullstack developer at DialOnce."
     },
     "about": {
@@ -12,7 +11,10 @@
             "For the realization of my projects, I mainly use the MERN stack (MongoDB, ExpressJS, React, NodeJS). All of my projects are developed with the TypeScript overlay.",
             "As for my background, I started in September 2019, a Bachelor's degree in digital project management. I am currently continuing my apprenticeship in Master MSCPro at Epitech Paris.",
             "After obtaining my Master's degree, my ambition is to go to the United States to improve my level in English and perhaps discover and learn new ways of working."
-        ]
+        ],
+        "modalTitle": "Available as a freelancer",
+        "modalText": "For more than a year now, I have been supporting companies in their digitalization by developing websites, redesigning them, developing custom plugins, etc...",
+        "modalButtonText": "Malt profile"
     },
     "career": {
         "title": "Experiences",

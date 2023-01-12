@@ -1,5 +1,6 @@
 import {
     Box,
+    Container,
     FormControl,
     List,
     ListItem,
@@ -111,9 +112,7 @@ const CareerSelector: FC<CareerMobileSelectorProps> = ({
                                         : 'action.disabledBackground',
                             }}
                         >
-                            <Typography variant="body2" fontWeight="bold">
-                                {label}
-                            </Typography>
+                            <Typography variant="body2">{label}</Typography>
                         </ListItemText>
                     </ListItemButton>
                 </ListItem>
@@ -129,110 +128,124 @@ const Career: FC<Props> = ({ title, items }) => {
         <Box
             sx={{
                 padding: {
-                    xs: '5rem 0',
-                    sm: '7rem 0',
+                    xs: '30px 0 60px 0',
+                    sm: '40px 0 70px 0',
+                    md: '120px 0 70px 0',
                 },
             }}
         >
-            <Typography
-                variant="h6"
-                marginBottom={'10px'}
-                textTransform="uppercase"
-                component="h2"
-            >
-                {title}
-            </Typography>
+            <Container maxWidth="md">
+                <Box>
+                    <Typography
+                        variant="h3"
+                        marginBottom={'20px'}
+                        component="h2"
+                    >
+                        {title}
+                    </Typography>
 
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' },
-                }}
-            >
-                <Box
-                    sx={{
-                        display: { md: 'block', xs: 'none' },
-                        width: '40%',
-                    }}
-                >
-                    <CareerSelector
-                        onChange={setSelected}
-                        currentValue={selected}
-                        establishments={items.map(({ establishment }, i) => ({
-                            value: i,
-                            label: establishment,
-                        }))}
-                    />
-                </Box>
-                <Box
-                    sx={{
-                        display: { md: 'none', xs: 'block' },
-                        marginBottom: 2,
-                    }}
-                >
-                    <CareerMobileSelector
-                        onChange={setSelected}
-                        currentValue={selected}
-                        establishments={items.map(({ establishment }, i) => ({
-                            value: i,
-                            label: establishment,
-                        }))}
-                    />
-                </Box>
-                <Box
-                    sx={{
-                        marginLeft: { md: '30px' },
-                        width: '100%',
-                    }}
-                >
-                    <Box>
-                        <Typography variant="body1" fontWeight="bold">
-                            {items[selected]?.title}{' '}
-                            <Box
-                                component="span"
-                                sx={{
-                                    color: 'primary.main',
-                                }}
-                            >
-                                @{items[selected]?.establishment}
-                            </Box>
-                        </Typography>
-                        <Typography variant="caption">
-                            {items[selected]?.date}
-                        </Typography>
-                        <List>
-                            {items[selected]?.description.map((content, i) => (
-                                <ListItem
-                                    key={i}
-                                    sx={{
-                                        listStyle: 'disc',
-                                        listStylePosition: 'inside',
-                                    }}
-                                    disablePadding
-                                >
-                                    <ListItemText
-                                        primary={
-                                            <Typography
-                                                variant="body2"
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: { xs: 'column', md: 'row' },
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: { md: 'block', xs: 'none' },
+                                width: '40%',
+                            }}
+                        >
+                            <CareerSelector
+                                onChange={setSelected}
+                                currentValue={selected}
+                                establishments={items.map(
+                                    ({ establishment }, i) => ({
+                                        value: i,
+                                        label: establishment,
+                                    })
+                                )}
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                display: { md: 'none', xs: 'block' },
+                                marginBottom: 2,
+                            }}
+                        >
+                            <CareerMobileSelector
+                                onChange={setSelected}
+                                currentValue={selected}
+                                establishments={items.map(
+                                    ({ establishment }, i) => ({
+                                        value: i,
+                                        label: establishment,
+                                    })
+                                )}
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                marginLeft: { md: '50px' },
+                                width: '100%',
+                            }}
+                        >
+                            <Box>
+                                <Typography variant="h4">
+                                    {items[selected]?.title}{' '}
+                                    <Box
+                                        component="span"
+                                        sx={{
+                                            color: 'primary.main',
+                                        }}
+                                    >
+                                        @{items[selected]?.establishment}
+                                    </Box>
+                                </Typography>
+                                <Typography variant="caption">
+                                    {items[selected]?.date}
+                                </Typography>
+                                <List sx={{ marginTop: '20px' }}>
+                                    {items[selected]?.description.map(
+                                        (content, i) => (
+                                            <ListItem
+                                                key={i}
                                                 sx={{
-                                                    display: 'list-item',
+                                                    listStyle: 'disc',
                                                     listStylePosition: 'inside',
-                                                    '&>.hightlight': {
-                                                        color: 'primary.main',
-                                                    },
+                                                    marginBottom: '4px',
                                                 }}
-                                                dangerouslySetInnerHTML={{
-                                                    __html: content,
-                                                }}
-                                            />
-                                        }
-                                    />
-                                </ListItem>
-                            ))}
-                        </List>
+                                                disablePadding
+                                            >
+                                                <ListItemText
+                                                    primary={
+                                                        <Typography
+                                                            variant="body1"
+                                                            sx={{
+                                                                display:
+                                                                    'list-item',
+                                                                listStylePosition:
+                                                                    'inside',
+                                                                '&>.hightlight':
+                                                                    {
+                                                                        color: 'primary.main',
+                                                                    },
+                                                            }}
+                                                            dangerouslySetInnerHTML={{
+                                                                __html: content,
+                                                            }}
+                                                        />
+                                                    }
+                                                />
+                                            </ListItem>
+                                        )
+                                    )}
+                                </List>
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
+            </Container>
         </Box>
     )
 }
