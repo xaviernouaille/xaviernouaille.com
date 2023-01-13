@@ -42,7 +42,7 @@
                 "establishment": "Offeaze",
                 "date": "Janvier - Mai 2022",
                 "description": [
-                    "Développement d'une plateforme de coworking avec les technologies <span class='hightlight'>NextJS - NestJS GraphQL</span>",
+                    "Développement d'une plateforme e-commerce mettant en relation les differents espace de coworking et des potentiels clients avec les technologies <span class='hightlight'>NextJS - NestJS GraphQL</span>",
                     "Implémentation du blog avec le headless CMS <span class='hightlight'>Contentful</span>",
                     "Surcouche <span class='hightlight'>TypeScript</span>",
                     "Réponses aux problématiques de SEO avec du server-side rendering",
