@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     return (
         <>
             <NextSeo
-                title={'Xavier Nouaille | Developpeur web junior'}
+                title={'Xavier Nouaille | Développeur fullstack'}
                 description={`Portfolio | Xavier Nouaille, ${age} ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.`}
                 canonical={'https://xaviernouaille.com'}
                 additionalMetaTags={[
