@@ -1,16 +1,14 @@
 {
     "hero": {
         "title": "Hello, I am Xavier Nouaille, fullstack developer based on Paris",
-        "paragraph": "Passionate about IT, I learned to code in different languages ​​such as PHP, JavaScript or TypeScript. I am currently a Master MSCPRO student at Epitech Paris and a fullstack developer at DialOnce."
+        "paragraph": "A 22-year-old full stack developer based in the Paris region with three years of experience, I specialize in Javascript/Typescript programming languages, with React for the front-end and Node.js for the back-end."
     },
     "about": {
         "title": "About",
-        "subtitle": "My projects and desires for the future",
         "paragraphs": [
-            "Passionate about IT, I learned to code in different languages ​​such as PHP, JavaScript or TypeScript. Versatile, I master the different technical stages of creating a website or a web application; from understanding user needs to developing the final product.",
-            "For the realization of my projects, I mainly use the MERN stack (MongoDB, ExpressJS, React, NodeJS). All of my projects are developed with the TypeScript overlay.",
-            "As for my background, I started in September 2019, a Bachelor's degree in digital project management. I am currently continuing my apprenticeship in Master MSCPro at Epitech Paris.",
-            "After obtaining my Master's degree, my ambition is to go to the United States to improve my level in English and perhaps discover and learn new ways of working."
+            "Hello! My name is Xavier Nouaille and I am a full stack developer. Ever since I discovered the world of programming a few years ago, I knew it was my passion.",
+            "I already have three years of experience as a developer, which has allowed me to specialize in the programming languages of Javascript and Typescript. I am proud to say that I have gained extensive experience in creating both front-end and back-end applications, with React for the front-end and Node.js for the back-end. These technologies are my preferred ones, but I am also open to learning new skills.",
+            "Passionate and meticulous, I am always on the lookout for interesting projects to work on. I enjoy working in a team and sharing my knowledge with my colleagues to build quality projects. I also have an excellent adaptability and can easily adjust to different work environments. In my free time, I like to stay up-to-date with the latest technological advancements by doing technology watch."
         ],
         "modalTitle": "Available as a freelancer",
         "modalText": "For more than a year now, I have been supporting companies in their digitalization by developing websites, redesigning them, developing custom plugins, etc...",
@@ -35,7 +33,10 @@
                 "title": "Master MSC PRO in work-study program",
                 "establishment": "Epitech Paris",
                 "date": "September 2022 - Currently",
-                "description": ["In progress....."]
+                "description": [
+                    "Development of applications with a team composed of 5 to 10 developers",
+                    "Unit testing"
+                ]
             },
             {
                 "title": "FullStack developer",
@@ -104,7 +105,7 @@
     "contact": {
         "title": "Let's get in touch",
         "subtitle": "Contact",
-        "paragraph": "A project, a question? Do not hesitate to contact me, I will let you know my answer as soon as possible.",
+        "paragraph": "A project, a question? Do not hesitate to contact me, I will provide you with my response as soon as possible.",
         "button": "Contact"
     }
 }

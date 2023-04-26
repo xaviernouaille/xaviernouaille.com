@@ -4,7 +4,6 @@ import { FC } from 'react'
 
 type Props = {
     title: string
-    subtitle: string
     paragraphs: string[]
     modalTitle: string
     modalText: string
@@ -13,7 +12,6 @@ type Props = {
 
 const About: FC<Props> = ({
     title,
-    subtitle,
     paragraphs,
     modalTitle,
     modalText,
@@ -57,15 +55,6 @@ const About: FC<Props> = ({
                             <br />
                             {paragraphs[2]}
                         </Typography>
-                        <Typography
-                            variant="h3"
-                            marginTop={'80px'}
-                            marginBottom={'20px'}
-                            component="h3"
-                        >
-                            {subtitle}
-                        </Typography>
-                        <Typography>{paragraphs[3]}</Typography>
                     </Box>
                 </Box>
             </Box>
@@ -76,6 +65,7 @@ const About: FC<Props> = ({
                         padding: { md: '40px', sm: '30px', xs: '25px' },
                         position: 'sticky',
                         top: '70px',
+                        minWidth: { md: '385px' },
                     }}
                 >
                     <Typography

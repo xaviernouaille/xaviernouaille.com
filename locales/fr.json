@@ -1,16 +1,14 @@
 {
     "hero": {
         "title": "Bonjour, je suis Xavier Nouaille, développeur fullstack basé sur Paris",
-        "paragraph": "Passionné d’informatique, j’ai appris à coder dans divers langages tels que PHP, JavaScript ou encore TypeScript. Actuellement étudiant en Master MSCPRO à Epitech Paris et développeur fullstack chez DialOnce."
+        "paragraph": "Développeur full stack de 22 ans basé en région parisienne et fort de trois ans d'expérience, mes spécialités sont les langages de programmation Javascript/Typescript, avec React pour le front-end et Node.js pour le back-end."
     },
     "about": {
         "title": "A propos",
-        "subtitle": "Mes projets et envies pour le futur",
         "paragraphs": [
-            "Passionné d’informatique, j’ai appris à coder dans divers langages tels que PHP, JavaScript ou encore TypeScript. Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site ou d’une application web ; de la compréhension des besoins utilisateurs, au développement du produit final.",
-            "Pour la réalisation de mes projets, j'utilise principalement la MERN stack (MongoDB, ExpressJS, React, NodeJS). L'intégralité de mes projets sont développés avec la surcouche TypeScript.",
-            "Pour ce qui est de mon parcours, j'ai débuté en septembre 2019, un Bachelor chef de projets digitaux. Je poursuis actuellement mon apprentissage en Master MSCPro à Epitech Paris.",
-            "Après l'obtention de mon Master, j'ai pour ambition de me rendre aux Etats-Unis pour renforcer mon niveau en anglais, découvrir et apprendre des nouvelles manières de travailler."
+            "Bonjour ! Je m'appelle Xavier Nouaille et je suis un développeur full stack. Depuis que j'ai découvert le monde de la programmation il y a quelques années, j'ai su que c'était ma passion.",
+            "J'ai déjà trois ans d'expérience en tant que développeur, ce qui m'a permis de me spécialiser dans les langages de programmation Javascript et Typescript. Je suis fier de dire que j'ai acquis une grande expérience dans la création d'applications à la fois front-end et back-end, avec React pour le front-end et Node.js pour le back-end. Ces technologies sont celles que je préfère utiliser, mais je suis également ouvert à l'apprentissage de nouvelles compétences.",
+            "Passionné et rigoureux, je suis toujours à la recherche de projets intéressants sur lesquels travailler. J'aime travailler en équipe et partager mes connaissances avec mes collègues pour construire des projets de qualité. J'ai également une excellente capacité d'adaptation et je peux facilement m'adapter à différents environnements de travail. Sur mon temps libre, j'aime être au courant des dernières avancées technologiques en faisant de la veille technologique."
         ],
         "modalTitle": "Disponible en freelance",
         "modalText": "Depuis maintenant plus d'un an, j'accompagne les entreprises vers leurs digitalisations en développant des sites internets, en effectuant des refontes, en développant des plugins customs, etc...",
@@ -35,7 +33,10 @@
                 "title": "Master MSC PRO en alternance",
                 "establishment": "Epitech Paris",
                 "date": "Mai 2022 - Aujourd'hui",
-                "description": ["En cours..."]
+                "description": [
+                    "Développement d'applications avec une équipe composée de 5 à 10 développeurs",
+                    "Tests unitaires"
+                ]
             },
             {
                 "title": "Développeur FullStack",

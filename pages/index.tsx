@@ -57,7 +57,6 @@ const Home: NextPage = () => {
             <Hero title={t('hero.title')} paragraph={t('hero.paragraph')} />
             <About
                 title={t('about.title')}
-                subtitle={t('about.subtitle')}
                 paragraphs={t('about.paragraphs', { returnObjects: true })}
                 modalTitle={t('about.modalTitle')}
                 modalText={t('about.modalText')}
