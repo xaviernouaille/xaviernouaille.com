@@ -1,5 +1,4 @@
 import { Box, Container, List, Typography } from '@mui/material'
-import Link from 'next/link'
 import { FC } from 'react'
 import { GITHUB, LINKEDIN, MALT, MAIL } from '@constants/social'
 
@@ -27,7 +26,6 @@ const Footer: FC = () => {
                         <a
                             href={LINKEDIN}
                             target="_blank"
-                            rel="noreferrer"
                             style={resetAnchorStyle}
                         >
                             <Typography
@@ -43,7 +41,6 @@ const Footer: FC = () => {
                         <a
                             href={GITHUB}
                             target="_blank"
-                            rel="noreferrer"
                             style={resetAnchorStyle}
                         >
                             <Typography
@@ -56,12 +53,7 @@ const Footer: FC = () => {
                                 GitHub
                             </Typography>
                         </a>
-                        <a
-                            href={MALT}
-                            target="_blank"
-                            rel="noreferrer"
-                            style={resetAnchorStyle}
-                        >
+                        <a href={MALT} target="_blank" style={resetAnchorStyle}>
                             <Typography
                                 variant="body3"
                                 sx={{
@@ -75,7 +67,6 @@ const Footer: FC = () => {
                         <a
                             href={`mailto:${MAIL}`}
                             target="_blank"
-                            rel="noreferrer"
                             style={resetAnchorStyle}
                         >
                             <Typography
