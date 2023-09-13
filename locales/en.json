@@ -1,7 +1,8 @@
 {
     "hero": {
         "title": "Hello, I am Xavier Nouaille, fullstack developer based on Paris",
-        "paragraph": "A 22-year-old full stack developer based in the Paris region with three years of experience, I specialize in Javascript/Typescript programming languages, with React for the front-end and Node.js for the back-end."
+        "paragraph": "A 22-year-old full stack developer based in the Paris region with three years of experience, I specialize in Javascript/Typescript programming languages, with React for the front-end and Node.js for the back-end.",
+        "buttonText": "Learn more"
     },
     "about": {
         "title": "About",

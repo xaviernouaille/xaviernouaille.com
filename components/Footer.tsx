@@ -11,7 +11,7 @@ const Footer: FC = () => {
         <Container
             maxWidth="md"
             component="footer"
-            sx={{ paddingBottom: 5, paddingTop: 5, marginTop: 4 }}
+            sx={{ paddingBottom: 3, paddingTop: 2 }}
         >
             <Box
                 sx={{

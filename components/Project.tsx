@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from '@mui/material'
-import FolderOpenIcon from '@mui/icons-material/FolderOpen'
+import LaunchIcon from '@mui/icons-material/Launch'
 import { FC } from 'react'
 import Link from 'next/link'
+import { alpha } from '@mui/material/styles'
 
 type ProjectItemProps = {
     title: string
@@ -29,42 +30,53 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                         marginBottom: '35px',
                     }}
                 >
-                    <FolderOpenIcon
-                        sx={{
-                            width: '30px',
-                            height: '30px',
-                            marginBottom: '20px',
-                            color: 'primary.main',
-                        }}
-                    />
+                    <Box display={'flex'} justifyContent={'end'}>
+                        <LaunchIcon
+                            sx={{
+                                width: '22px',
+                                height: '22px',
+                                marginBottom: '40px',
+                                color: 'primary.main',
+                            }}
+                        />
+                    </Box>
                     <Typography
                         component="h3"
                         marginBottom={'15px'}
-                        variant="h6"
-                        fontWeight={400}
+                        variant="h5"
                     >
                         {title}
                     </Typography>
                     <Typography
-                        variant="body3"
+                        variant="body2"
                         component={'p'}
-                        lineHeight="1.3rem"
                         sx={{
                             overflowWrap: 'break-word',
                         }}
                     >
-                        {`${description.substring(0, 200)} ${
-                            description.length > 200 ? '...' : ''
+                        {`${description.substring(0, 100)} ${
+                            description.length > 100 ? '...' : ''
                         }`}
                     </Typography>
                 </Box>
                 <Typography
-                    variant="body3"
-                    marginTop="30px"
+                    variant="body4"
+                    marginTop="10px"
                     sx={{ display: 'flex', gap: 1 }}
                 >
                     {tags.map((tag, i) => (
-                        <span key={i}>{tag}</span>
+                        <Box
+                            sx={{
+                                bgcolor: (theme) =>
+                                    alpha(theme.palette.primary.main, 0.3),
+                                padding: '5px 13px',
+                                borderRadius: '100px',
+                                color: (theme) => theme.palette.primary.main,
+                            }}
+                            key={i}
+                        >
+                            {tag}
+                        </Box>
                     ))}
                 </Typography>
             </Box>
@@ -91,7 +103,7 @@ const Project: FC<Props> = ({ title, items }) => {
             <Container maxWidth="md">
                 <Box>
                     <Typography
-                        variant="h3"
+                        variant="h2"
                         marginBottom={'20px'}
                         component="h2"
                     >
@@ -104,6 +116,11 @@ const Project: FC<Props> = ({ title, items }) => {
                                 xs: 'repeat(1, minmax(0,1fr))',
                                 sm: 'repeat(2, minmax(0,1fr))',
                                 md: 'repeat(3, minmax(0,1fr))',
+                            },
+                            gridTemplateRows: {
+                                xs: 'repeat(4, minmax(0,1fr))',
+                                sm: 'repeat(2, minmax(0,1fr))',
+                                md: 'repeat(2, minmax(0,1fr))',
                             },
                             gap: '25px',
                         }}

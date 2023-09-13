@@ -54,7 +54,11 @@ const Home: NextPage = () => {
                     },
                 ]}
             />
-            <Hero title={t('hero.title')} paragraph={t('hero.paragraph')} />
+            <Hero
+                title={t('hero.title')}
+                paragraph={t('hero.paragraph')}
+                buttonText={t('hero.buttonText')}
+            />
             <About
                 title={t('about.title')}
                 paragraphs={t('about.paragraphs', { returnObjects: true })}

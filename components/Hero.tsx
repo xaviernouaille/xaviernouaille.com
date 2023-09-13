@@ -1,13 +1,14 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import { FC } from 'react'
 import Image from 'next/image'
 
 type Props = {
     title: string
     paragraph: string
+    buttonText: string
 }
 
-const Hero: FC<Props> = ({ title, paragraph }) => {
+const Hero: FC<Props> = ({ title, paragraph, buttonText }) => {
     return (
         <Box
             sx={{
@@ -23,13 +24,14 @@ const Hero: FC<Props> = ({ title, paragraph }) => {
                 <Box display="flex">
                     <Box sx={{ maxWidth: '900px' }}>
                         <Box margin="0 0 15px 0">
-                            <Typography variant="h2" component="h1">
-                                <Typography variant="h2" component="span">
+                            <Typography variant="h1" component="h1">
+                                <Typography variant="h1" component="span">
                                     {title}
                                 </Typography>
                             </Typography>
                         </Box>
                         <Typography
+                            variant="body1"
                             sx={{
                                 marginTop: '50px',
                             }}
@@ -38,6 +40,19 @@ const Hero: FC<Props> = ({ title, paragraph }) => {
                         </Typography>
                     </Box>
                 </Box>
+                <Button
+                    sx={{
+                        marginTop: 4,
+                        textTransform: 'none',
+                        borderRadius: 0,
+                        padding: '10px 40px',
+                        width: { xs: '100%', sm: 'auto' },
+                    }}
+                    variant="outlined"
+                    href="#"
+                >
+                    <Typography variant="body2">{buttonText}</Typography>
+                </Button>
             </Container>
         </Box>
     )

@@ -137,7 +137,7 @@ const Career: FC<Props> = ({ title, items }) => {
             <Container maxWidth="md">
                 <Box>
                     <Typography
-                        variant="h3"
+                        variant="h2"
                         marginBottom={'20px'}
                         component="h2"
                     >
@@ -220,7 +220,7 @@ const Career: FC<Props> = ({ title, items }) => {
                                                 <ListItemText
                                                     primary={
                                                         <Typography
-                                                            variant="body1"
+                                                            variant="body2"
                                                             sx={{
                                                                 display:
                                                                     'list-item',

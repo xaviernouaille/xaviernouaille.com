@@ -10,6 +10,8 @@ type Props = {
     modalButtonText: string
 }
 
+const customFontSize = { fontSize: { md: '17.3px', sm: '17px', xs: '17px' } }
+
 const About: FC<Props> = ({
     title,
     paragraphs,
@@ -29,15 +31,33 @@ const About: FC<Props> = ({
         <Container
             sx={{
                 display: 'flex',
-                flexDirection: { md: 'row', xs: 'column' },
-                gap: '80px',
+                flexDirection: 'column',
+                gap: '60px',
             }}
             maxWidth="md"
         >
-            <Box>
-                <Typography variant="h3" marginBottom={'20px'} component="h2">
-                    {title}
-                </Typography>
+            <Box sx={{ maxWidth: '900px' }}>
+                <Box
+                    sx={{
+                        marginBottom: 4,
+                        height: { xs: '130px', md: '150px' },
+                        width: { xs: '130px', md: '150px' },
+                    }}
+                >
+                    {/* eslint-disable-next-line */}
+                    <img
+                        style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: '100%',
+                        }}
+                        src="/xavier-nouaille.jpg"
+                        alt="Xavier Nouaille, Développeur FullStack"
+                    />
+                </Box>
                 <Box
                     display="flex"
                     sx={{
@@ -46,30 +66,31 @@ const About: FC<Props> = ({
                     justifyContent={'stretch'}
                 >
                     <Box>
-                        <Typography marginBottom={'30px'}>
-                            {paragraphs[0]}
-                            <br />
-                            <br />
-                            {paragraphs[1]}
-                            <br />
-                            <br />
-                            {paragraphs[2]}
+                        <Typography sx={customFontSize}>
+                            {paragraphs.map((paragraph, i) => (
+                                <>
+                                    {paragraph}
+                                    {i < 2 && (
+                                        <>
+                                            <br></br>
+                                            <br></br>
+                                        </>
+                                    )}
+                                </>
+                            ))}
                         </Typography>
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{ position: 'relative' }}>
+            <Box>
                 <Box
                     sx={{
                         bgcolor: 'background.paper',
                         padding: { md: '40px', sm: '30px', xs: '25px' },
-                        position: 'sticky',
-                        top: '70px',
-                        minWidth: { md: '385px' },
                     }}
                 >
                     <Typography
-                        variant="h3"
+                        variant="h2"
                         sx={{
                             marginBottom: '20px',
                             display: { md: 'inline-block', xs: 'block' },
@@ -77,7 +98,7 @@ const About: FC<Props> = ({
                     >
                         {modalTitle}
                     </Typography>
-                    <Typography variant="body4">{modalText}</Typography>
+                    <Typography sx={customFontSize}>{modalText}</Typography>
                     <Box sx={{ marginTop: '20px' }}>
                         <Link href={`${MALT}`} sx={{ textDecoration: 'none' }}>
                             <Button

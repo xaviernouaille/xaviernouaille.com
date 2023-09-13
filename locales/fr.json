@@ -1,10 +1,11 @@
 {
     "hero": {
         "title": "Bonjour, je suis Xavier Nouaille, développeur fullstack basé sur Paris",
-        "paragraph": "Développeur full stack de 22 ans basé en région parisienne et fort de trois ans d'expérience, mes spécialités sont les langages de programmation Javascript/Typescript, avec React pour le front-end et Node.js pour le back-end."
+        "paragraph": "Développeur full stack de 22 ans basé en région parisienne et fort de trois ans d'expérience, mes spécialités sont les langages de programmation Javascript/Typescript, avec React pour le front-end et Node.js pour le back-end.",
+        "buttonText": "En savoir plus"
     },
     "about": {
-        "title": "A propos",
+        "title": "Présentation & ambitions",
         "paragraphs": [
             "Bonjour ! Je m'appelle Xavier Nouaille et je suis un développeur full stack. Depuis que j'ai découvert le monde de la programmation il y a quelques années, j'ai su que c'était ma passion.",
             "J'ai déjà trois ans d'expérience en tant que développeur, ce qui m'a permis de me spécialiser dans les langages de programmation Javascript et Typescript. Je suis fier de dire que j'ai acquis une grande expérience dans la création d'applications à la fois front-end et back-end, avec React pour le front-end et Node.js pour le back-end. Ces technologies sont celles que je préfère utiliser, mais je suis également ouvert à l'apprentissage de nouvelles compétences.",
@@ -75,7 +76,7 @@
         ]
     },
     "project": {
-        "title": "Projets",
+        "title": "Mes projets personnels",
         "items": [
             {
                 "title": "Notif Weather",
