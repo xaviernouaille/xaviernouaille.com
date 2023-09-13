@@ -49,7 +49,7 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText }) => {
                         width: { xs: '100%', sm: 'auto' },
                     }}
                     variant="outlined"
-                    href="#"
+                    href="#about"
                 >
                     <Typography variant="body2">{buttonText}</Typography>
                 </Button>

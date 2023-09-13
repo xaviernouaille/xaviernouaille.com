@@ -27,6 +27,7 @@ const About: FC<Props> = ({
                 md: '120px 0 70px 0',
             },
         }}
+        id="about"
     >
         <Container
             sx={{

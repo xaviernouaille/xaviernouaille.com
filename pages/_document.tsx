@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 
 const Document = () => {
     const {
-        i18n: { changeLanguage, language },
+        i18n: { language },
     } = useTranslation()
 
     return (
-        <Html lang={language}>
+        <Html lang={language} style={{ scrollBehavior: 'smooth' }}>
             <Head />
             <body>
                 <Main />
