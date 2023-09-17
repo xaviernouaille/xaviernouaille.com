@@ -1,37 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@100;200;300;400;500&family=Merriweather:wght@300;400&family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@500;600;700&display=swap');
-
 @font-face {
-    font-family: 'Apercu';
-    src: url('Apercu_Bold.49e3b9c9.otf') format('truetype');
-    font-weight: bold;
+    font-family: 'Inter';
+    src: url('Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Apercu';
-    src: url('Apercu_Mono.0c31ab10.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'SoleSans';
-    src: url('SoleSans-Book-Light') format('truetype');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'SoleSans';
-    src: url('SoleSans-Book-Regular') format('truetype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'SoleSans';
-    src: url('SoleSans-Book-Medium') format('truetype');
+    font-family: 'Inter';
+    src: url('Inter-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'SoleSans';
-    src: url('SoleSans-Book-SemiBold') format('truetype');
-    font-weight: 600;
+    font-family: 'Inter';
+    src: url('Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }

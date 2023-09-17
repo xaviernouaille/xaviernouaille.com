@@ -69,7 +69,7 @@ const About: FC<Props> = ({
                     <Box>
                         <Typography sx={customFontSize}>
                             {paragraphs.map((paragraph, i) => (
-                                <>
+                                <div key={i}>
                                     {paragraph}
                                     {i < 2 && (
                                         <>
@@ -77,7 +77,7 @@ const About: FC<Props> = ({
                                             <br></br>
                                         </>
                                     )}
-                                </>
+                                </div>
                             ))}
                         </Typography>
                     </Box>
