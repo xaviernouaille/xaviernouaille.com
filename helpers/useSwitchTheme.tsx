@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import DEFAULT_THEME from '@constants/theme'
+import { DEFAULT_THEME } from '@constants/theme'
 
 export const isInitialTheme = (): 'dark' | 'light' => {
     if (typeof window === 'undefined') {

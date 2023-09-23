@@ -1,3 +1,1 @@
-const DEFAULT_THEME = 'dark'
-
-export default DEFAULT_THEME
+export const DEFAULT_THEME = 'dark'

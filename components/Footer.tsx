@@ -1,6 +1,6 @@
+import { SOCIAL } from '@constants/social'
 import { Box, Container, List, Typography } from '@mui/material'
 import { FC } from 'react'
-import { GITHUB, LINKEDIN, MALT, MAIL } from '@constants/social'
 
 const resetAnchorStyle = {
     textDecoration: 'none',
@@ -23,66 +23,29 @@ const Footer: FC = () => {
             >
                 <Box>
                     <List sx={{ display: 'flex', gap: 4 }}>
-                        <a
-                            href={LINKEDIN}
-                            target="_blank"
-                            style={resetAnchorStyle}
-                        >
-                            <Typography
-                                variant="body3"
-                                sx={{
-                                    cursor: 'pointer',
-                                    color: 'text.primary',
-                                }}
-                            >
-                                Linkedin
-                            </Typography>
-                        </a>
-                        <a
-                            href={GITHUB}
-                            target="_blank"
-                            style={resetAnchorStyle}
-                        >
-                            <Typography
-                                variant="body3"
-                                sx={{
-                                    cursor: 'pointer',
-                                    color: 'text.primary',
-                                }}
-                            >
-                                GitHub
-                            </Typography>
-                        </a>
-                        <a href={MALT} target="_blank" style={resetAnchorStyle}>
-                            <Typography
-                                variant="body3"
-                                sx={{
-                                    cursor: 'pointer',
-                                    color: 'text.primary',
-                                }}
-                            >
-                                Malt
-                            </Typography>
-                        </a>
-                        <a
-                            href={`mailto:${MAIL}`}
-                            target="_blank"
-                            style={resetAnchorStyle}
-                        >
-                            <Typography
-                                variant="body3"
-                                sx={{
-                                    cursor: 'pointer',
-                                    color: 'text.primary',
-                                }}
-                            >
-                                E-mail
-                            </Typography>
-                        </a>
+                        {Object.keys(SOCIAL).map((label, index) => (
+                            <li key={index}>
+                                <a
+                                    href={SOCIAL[label]}
+                                    target="_blank"
+                                    style={resetAnchorStyle}
+                                >
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            cursor: 'pointer',
+                                            color: 'text.primary',
+                                        }}
+                                    >
+                                        {label}
+                                    </Typography>
+                                </a>
+                            </li>
+                        ))}
                     </List>
                 </Box>
                 <Box>
-                    <Typography variant="body3">
+                    <Typography variant="body2">
                         © Copyright 2022. All rights reserved.
                     </Typography>
                 </Box>

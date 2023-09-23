@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import Link from 'next/link'
 import { FC } from 'react'
-import { MAIL } from '@constants/social'
+import { SOCIAL } from '@constants/social'
 
 type Props = {
     title: string
@@ -55,7 +55,7 @@ const Contact: FC<Props> = ({ title, paragraph, button }) => {
                         justifyContent="center"
                         marginTop="30px"
                     >
-                        <Link href={`mailto:${MAIL}`}>
+                        <Link href={`mailto:${SOCIAL['Email']}`}>
                             <Box
                                 sx={{
                                     textDecoration: 'none',

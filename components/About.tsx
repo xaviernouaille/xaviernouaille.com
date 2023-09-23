@@ -1,4 +1,4 @@
-import { MALT } from '@constants/social'
+import { SOCIAL } from '@constants/social'
 import { Box, Button, Container, Link, Typography } from '@mui/material'
 import { FC } from 'react'
 
@@ -13,7 +13,6 @@ type Props = {
 const customFontSize = { fontSize: { md: '17.3px', sm: '17px', xs: '17px' } }
 
 const About: FC<Props> = ({
-    title,
     paragraphs,
     modalTitle,
     modalText,
@@ -69,7 +68,7 @@ const About: FC<Props> = ({
                     <Box>
                         <Typography sx={customFontSize}>
                             {paragraphs.map((paragraph, i) => (
-                                <div key={i}>
+                                <span key={i}>
                                     {paragraph}
                                     {i < 2 && (
                                         <>
@@ -77,7 +76,7 @@ const About: FC<Props> = ({
                                             <br></br>
                                         </>
                                     )}
-                                </div>
+                                </span>
                             ))}
                         </Typography>
                     </Box>
@@ -101,7 +100,10 @@ const About: FC<Props> = ({
                     </Typography>
                     <Typography sx={customFontSize}>{modalText}</Typography>
                     <Box sx={{ marginTop: '20px' }}>
-                        <Link href={`${MALT}`} sx={{ textDecoration: 'none' }}>
+                        <Link
+                            href={SOCIAL['Malt']}
+                            sx={{ textDecoration: 'none' }}
+                        >
                             <Button
                                 sx={{
                                     textTransform: 'none',

@@ -1,6 +1,5 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import { FC } from 'react'
-import Image from 'next/image'
 
 type Props = {
     title: string
