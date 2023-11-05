@@ -9,7 +9,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import TranslateIcon from '@mui/icons-material/Translate'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { alpha } from '@mui/material/styles'
 
 const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
@@ -39,6 +39,11 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [goingUp])
 
+    const changeLanguageFunc = useCallback(
+        () => changeLanguage(language === 'fr' ? 'en' : 'fr'),
+        [language]
+    )
+
     return (
         <Slide direction="down" in={goingUp}>
             <AppBar
@@ -60,11 +65,7 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
                     <List sx={{ display: 'flex' }}>
                         <ListItem disablePadding sx={{ width: 'fit-content' }}>
                             <ListItemButton
-                                onClick={() =>
-                                    changeLanguage(
-                                        language === 'fr' ? 'en' : 'fr'
-                                    )
-                                }
+                                onClick={changeLanguageFunc}
                                 aria-label="Language"
                             >
                                 <TranslateIcon

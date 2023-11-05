@@ -6,37 +6,22 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import { muiThemeDark, muiThemeLight } from 'muiTheme'
 import useSwitchTheme from '@helpers/useSwitchTheme'
-import Script from 'next/script'
+import { useMemo } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [theme, toggleTheme] = useSwitchTheme()
+    const themeValue = useMemo(
+        () => (theme === 'light' ? muiThemeLight : muiThemeDark),
+        [theme]
+    )
+
     return (
-        <>
-            <Script
-                strategy="afterInteractive"
-                src="https://www.googletagmanager.com/gtag/js?id=G-PR0RYWYEZJ"
-            />
-            <Script
-                id="google-analytics"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-PR0RYWYEZJ');
-                    `,
-                }}
-            />
-            <ThemeProvider
-                theme={theme === 'light' ? muiThemeLight : muiThemeDark}
-            >
-                <CssBaseline />
-                <Header toggleTheme={toggleTheme} />
-                <Component {...pageProps} />
-                <Footer />
-            </ThemeProvider>
-        </>
+        <ThemeProvider theme={themeValue}>
+            <CssBaseline />
+            <Header toggleTheme={toggleTheme} />
+            <Component {...pageProps} />
+            <Footer />
+        </ThemeProvider>
     )
 }
 
