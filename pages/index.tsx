@@ -8,6 +8,7 @@ import { NextSeo } from 'next-seo'
 import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import { MetaTag } from 'next-seo/lib/types'
+import { Box } from '@mui/material'
 
 const Home: NextPage = () => {
     const { t } = useTranslation()
@@ -72,16 +73,17 @@ const Home: NextPage = () => {
 
     return (
         <>
-            {/* eslint-disable-next-line */}
-            <img
-                src="/docs-right.png"
-                style={{
+            <Box
+                sx={{
                     position: 'fixed',
-                    left: 0,
+                    left: { xs: -300, md: 0 },
                     top: 0,
                     opacity: 0.6,
                 }}
-            />
+            >
+                {/* eslint-disable-next-line */}
+                <img src="/docs-right.png" />
+            </Box>
             <NextSeo
                 title={title}
                 description={description}

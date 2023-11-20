@@ -14,7 +14,7 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText, buttonText2 }) => {
             sx={{
                 bgcolor: 'background.paper',
                 padding: {
-                    xs: '130px 0 60px 0',
+                    xs: '120px 0 60px 0',
                     sm: '120px 0 100px 0',
                     md: '160px 0 120px 0',
                 },
