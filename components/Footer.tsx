@@ -31,7 +31,7 @@ const Footer: FC = () => {
                                     style={resetAnchorStyle}
                                 >
                                     <Typography
-                                        variant="body3"
+                                        variant="body5"
                                         sx={{
                                             cursor: 'pointer',
                                             color: 'text.primary',
@@ -45,7 +45,7 @@ const Footer: FC = () => {
                     </List>
                 </Box>
                 <Box>
-                    <Typography variant="body2">
+                    <Typography variant="body5">
                         © Copyright 2022. All rights reserved.
                     </Typography>
                 </Box>

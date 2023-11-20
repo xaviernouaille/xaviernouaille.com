@@ -5,12 +5,14 @@ declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides {
         body3: true
         body4: true
+        body5: true
     }
 }
 
 interface ExtendedTypographyOptions extends TypographyOptions {
     body3: React.CSSProperties
     body4: React.CSSProperties
+    body5: React.CSSProperties
 }
 
 const baseTheme = {
@@ -85,6 +87,10 @@ const baseTheme = {
         },
         caption: {
             fontSize: '0.75rem',
+            fontFamily: ['Inter'].join(','),
+        },
+        body5: {
+            fontSize: '0.9rem',
             fontFamily: ['Inter'].join(','),
         },
     } as ExtendedTypographyOptions,
