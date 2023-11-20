@@ -6,7 +6,7 @@ import Contact from '@components/Contact'
 import Hero from '@components/Hero'
 import { NextSeo } from 'next-seo'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { MetaTag } from 'next-seo/lib/types'
 
 const Home: NextPage = () => {
@@ -72,6 +72,16 @@ const Home: NextPage = () => {
 
     return (
         <>
+            {/* eslint-disable-next-line */}
+            <img
+                src="/docs-right.png"
+                style={{
+                    position: 'fixed',
+                    left: 0,
+                    top: 0,
+                    opacity: 0.6,
+                }}
+            />
             <NextSeo
                 title={title}
                 description={description}
@@ -84,10 +94,11 @@ const Home: NextPage = () => {
                 title={t('hero.title')}
                 paragraph={t('hero.paragraph')}
                 buttonText={t('hero.buttonText')}
+                buttonText2={t('hero.buttonText2')}
             />
             <About
                 title={t('about.title')}
-                paragraphs={t('about.paragraphs', { returnObjects: true })}
+                paragraph={t('about.paragraph')}
                 modalTitle={t('about.modalTitle')}
                 modalText={t('about.modalText')}
                 modalButtonText={t('about.modalButtonText')}

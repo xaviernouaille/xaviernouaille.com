@@ -9,10 +9,17 @@ import {
 import { useTranslation } from 'react-i18next'
 import TranslateIcon from '@mui/icons-material/Translate'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
+import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { alpha } from '@mui/material/styles'
 
-const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
+const Header = ({
+    toggleTheme,
+    theme,
+}: {
+    toggleTheme: () => void
+    theme: string
+}) => {
     const {
         i18n: { changeLanguage, language },
     } = useTranslation()
@@ -84,15 +91,27 @@ const Header = ({ toggleTheme }: { toggleTheme: () => void }) => {
                                 aria-label="Theme"
                                 onClick={() => toggleTheme()}
                             >
-                                <Brightness4Icon
-                                    sx={{
-                                        fontSize: {
-                                            xs: 20,
-                                            sm: 24,
-                                        },
-                                        color: 'text.primary',
-                                    }}
-                                />
+                                {theme === 'dark' ? (
+                                    <Brightness7Icon
+                                        sx={{
+                                            fontSize: {
+                                                xs: 20,
+                                                sm: 24,
+                                            },
+                                            color: 'text.primary',
+                                        }}
+                                    />
+                                ) : (
+                                    <Brightness4Icon
+                                        sx={{
+                                            fontSize: {
+                                                xs: 20,
+                                                sm: 24,
+                                            },
+                                            color: 'text.primary',
+                                        }}
+                                    />
+                                )}
                             </ListItemButton>
                         </ListItem>
                     </List>

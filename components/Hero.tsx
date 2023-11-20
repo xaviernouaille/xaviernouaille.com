@@ -5,9 +5,10 @@ type Props = {
     title: string
     paragraph: string
     buttonText: string
+    buttonText2: string
 }
 
-const Hero: FC<Props> = ({ title, paragraph, buttonText }) => {
+const Hero: FC<Props> = ({ title, paragraph, buttonText, buttonText2 }) => {
     return (
         <Box
             sx={{
@@ -21,7 +22,7 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText }) => {
         >
             <Container maxWidth="md">
                 <Box display="flex">
-                    <Box sx={{ maxWidth: '900px' }}>
+                    <Box>
                         <Box margin="0 0 15px 0">
                             <Typography variant="h1" component="h1">
                                 <Typography variant="h1" component="span">
@@ -34,23 +35,44 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText }) => {
                             sx={{
                                 marginTop: '50px',
                             }}
-                        >
-                            {paragraph}
-                        </Typography>
+                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                        ></Typography>
                     </Box>
                 </Box>
                 <Button
                     sx={{
                         marginTop: 4,
+                        marginRight: 2,
                         textTransform: 'none',
-                        borderRadius: 0,
+                        borderRadius: 2,
                         padding: '10px 40px',
                         width: { xs: '100%', sm: 'auto' },
+                        bgcolor: 'primary.main',
+                        color: 'background.default',
+                        '&:hover': {
+                            bgcolor: 'primary.dark',
+                        },
                     }}
-                    variant="outlined"
                     href="#about"
                 >
-                    <Typography variant="body2">{buttonText}</Typography>
+                    <Typography variant="button">{buttonText}</Typography>
+                </Button>
+                <Button
+                    sx={{
+                        marginTop: { md: 4, xs: 1 },
+                        textTransform: 'none',
+                        borderRadius: 2,
+                        padding: '10px 40px',
+                        width: { xs: '100%', sm: 'auto' },
+                        bgcolor: 'background.default',
+                        color: 'primary.main',
+                        '&:hover': {
+                            bgcolor: 'background.dark',
+                        },
+                    }}
+                    href="#contact"
+                >
+                    <Typography variant="button">{buttonText2}</Typography>
                 </Button>
             </Container>
         </Box>

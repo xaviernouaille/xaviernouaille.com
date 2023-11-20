@@ -62,7 +62,7 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                 <Typography
                     variant="body4"
                     marginTop="10px"
-                    sx={{ display: 'flex', gap: 1 }}
+                    sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}
                 >
                     {tags.map((tag, i) => (
                         <Box
@@ -115,7 +115,6 @@ const Project: FC<Props> = ({ title, items }) => {
                             gridTemplateColumns: {
                                 xs: 'repeat(1, minmax(0,1fr))',
                                 sm: 'repeat(2, minmax(0,1fr))',
-                                md: 'repeat(3, minmax(0,1fr))',
                             },
                             gridTemplateRows: {
                                 xs: 'repeat(4, minmax(0,1fr))',

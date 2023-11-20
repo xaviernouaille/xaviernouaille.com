@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={themeValue}>
             <CssBaseline />
-            <Header toggleTheme={toggleTheme} />
+            <Header toggleTheme={toggleTheme} theme={theme} />
             <Component {...pageProps} />
             <Footer />
         </ThemeProvider>

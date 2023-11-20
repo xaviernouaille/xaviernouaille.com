@@ -1,18 +1,14 @@
 {
     "hero": {
         "title": "Bonjour, je suis Xavier Nouaille, développeur fullstack basé sur Paris",
-        "paragraph": "Développeur full stack de 22 ans basé en région parisienne et fort de trois ans d'expérience, mes spécialités sont les langages de programmation Javascript/Typescript, avec React pour le front-end et Node.js pour le back-end.",
-        "buttonText": "En savoir plus"
+        "paragraph": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative.",
+        "buttonText": "À propos",
+        "buttonText2": "Contact"
     },
     "about": {
-        "title": "Présentation & ambitions",
-        "paragraphs": [
-            "Bonjour ! Je m'appelle Xavier Nouaille et je suis un développeur full stack. Depuis que j'ai découvert le monde de la programmation il y a quelques années, j'ai su que c'était ma passion.",
-            "J'ai déjà trois ans d'expérience en tant que développeur, ce qui m'a permis de me spécialiser dans les langages de programmation Javascript et Typescript. Je suis fier de dire que j'ai acquis une grande expérience dans la création d'applications à la fois front-end et back-end, avec React pour le front-end et Node.js pour le back-end. Ces technologies sont celles que je préfère utiliser, mais je suis également ouvert à l'apprentissage de nouvelles compétences.",
-            "Passionné et rigoureux, je suis toujours à la recherche de projets intéressants sur lesquels travailler. J'aime travailler en équipe et partager mes connaissances avec mes collègues pour construire des projets de qualité. J'ai également une excellente capacité d'adaptation et je peux facilement m'adapter à différents environnements de travail. Sur mon temps libre, j'aime être au courant des dernières avancées technologiques en faisant de la veille technologique."
-        ],
+        "paragraph": "Mon parcours a débuté avec des projets personnels, évoluant rapidement vers des collaborations professionnelles. Parmi celles-ci, ma contribution chez Offeaze, une plateforme Saas, a été significative. J'ai travaillé sur le développement frontend et backend de la plateforme qui facilitait la connexion entre espaces de coworking et entreprises/particuliers. <br> Bien que le projet ait pris fin, il a consolidé mes compétences techniques et ma compréhension des besoins des utilisateurs. <br><br> Actuellement, je fais partie de l'équipe chez DialOnce, un éditeur de logiciels SaaS spécialisé dans la digitalisation de la relation client. Mon rôle consiste à orchestrer les parcours des contacts dans un environnement dynamique axé sur l'efficacité et l'innovation. <br><br> Actuellement, en tant que freelance développeur, je propose mes services pour la création de plateformes robustes, résilientes et de haute qualité. Mon expertise s'étend à la construction d'expériences digitales. ",
         "modalTitle": "Disponible en freelance",
-        "modalText": "Depuis maintenant plus d'un an, j'accompagne les entreprises vers leurs digitalisations en développant des sites internets, en effectuant des refontes, en développant des plugins customs, etc...",
+        "modalText": "En tant que freelance expérimenté, je propose mes services pour la conception intégrale de vos plateformes web, que ce soit du côté frontend ou backend, en mettant en œuvre des solutions robustes en TypeScript. Je suis ouvert à toute discussion pour comprendre vos besoins spécifiques et trouver la meilleure approche pour votre projet.",
         "modalButtonText": "Profil Malt"
     },
     "career": {
@@ -76,8 +72,27 @@
         ]
     },
     "project": {
-        "title": "Mes projets personnels",
+        "title": "Mes projets",
         "items": [
+            {
+                "title": "Offeaze",
+                "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
+                "url": "#",
+                "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
+            },
+            {
+                "title": "Portfolio",
+                "description": "Mon portfolio personnel ou vous vous trouvez en ce moment même.",
+                "url": "#",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "NextJS",
+                    "SSG",
+                    "AWS S3",
+                    "GitHub Action"
+                ]
+            },
             {
                 "title": "Notif Weather",
                 "description": "Un script Python permettant de m'informer de la météo actuelle.",

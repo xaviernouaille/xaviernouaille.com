@@ -24,29 +24,30 @@ const baseTheme = {
         },
     },
     typography: {
-        fontFamily: ['Merriweather'].join(','),
+        fontFamily: 'Inter',
         h1: {
-            fontSize: '3.4rem',
+            fontSize: '4rem',
             fontWeight: 600,
-            letterSpacing: '-0.06rem',
+            letterSpacing: '-0.07rem',
             lineHeight: 1,
             fontFamily: ['Inter'].join(','),
         },
         h2: {
-            fontSize: '1.9rem',
-            fontWeight: 500,
+            fontSize: '2rem',
+            fontWeight: 600,
+            letterSpacing: '-0.02rem',
             lineHeight: 1.5,
             fontFamily: ['Inter'].join(','),
         },
         h4: {
             fontSize: '1.45rem',
-            fontWeight: 500,
-            letterSpacing: '-0.06rem',
+            fontWeight: 600,
+            letterSpacing: '-0.01rem',
             lineHeight: 1,
             fontFamily: ['Inter'].join(','),
         },
         h5: {
-            fontSize: '1.4rem',
+            fontSize: '1.55rem',
             fontWeight: 500,
             letterSpacing: '-0.06rem',
             lineHeight: 1.3,
@@ -60,7 +61,7 @@ const baseTheme = {
             fontFamily: ['Inter'].join(','),
         },
         body1: {
-            fontSize: '1.2rem',
+            fontSize: '1.15rem',
             fontWeight: 400,
             fontFamily: ['Inter'].join(','),
         },
@@ -76,6 +77,11 @@ const baseTheme = {
         },
         body4: {
             fontSize: '0.8rem',
+        },
+        button: {
+            fontSize: '0.8rem',
+            fontWeight: 600,
+            fontFamily: ['Inter'].join(','),
         },
         caption: {
             fontSize: '0.75rem',
@@ -124,22 +130,19 @@ let muiThemeDark = createTheme({
     palette: {
         mode: 'dark',
         text: {
-            primary: 'rgb(204, 204, 204)',
+            primary: '#FFFFFF', // Blanc pour le texte principal
         },
         primary: {
-            main: '#65FFDA',
-        },
-        secondary: {
-            main: '#333333',
+            main: '#a594fd', // Bleu primaire
         },
         background: {
-            default: '#000',
-            paper: '#0A0A0A',
+            default: '#000000', // Gris foncé pour le fond par défaut
+            paper: '#101010', // Gris légèrement plus clair pour le fond du papier
         },
     },
-    ...baseTheme,
+    ...baseTheme, // Assurez-vous d'inclure vos autres paramètres de thème de base ici
     typography: {
-        ...baseTheme.typography,
+        ...baseTheme.typography, // Vous pouvez personnaliser la typographie si nécessaire
     },
 })
 

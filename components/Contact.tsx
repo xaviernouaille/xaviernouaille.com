@@ -56,27 +56,24 @@ const Contact: FC<Props> = ({ title, paragraph, button }) => {
                         marginTop="30px"
                     >
                         <Link href={`mailto:${SOCIAL['Email']}`}>
-                            <Box
+                            <Button
                                 sx={{
-                                    textDecoration: 'none',
-                                    display: 'inline-block',
+                                    marginTop: 4,
+                                    textTransform: 'none',
+                                    borderRadius: 2,
+                                    padding: '10px 40px',
                                     width: { xs: '100%', sm: 'auto' },
+                                    bgcolor: 'primary.main',
+                                    color: 'background.default',
+                                    '&:hover': {
+                                        bgcolor: 'primary.dark',
+                                    },
                                 }}
                             >
-                                <Button
-                                    sx={{
-                                        textTransform: 'none',
-                                        borderRadius: 0,
-                                        padding: '10px 40px',
-                                        width: { xs: '100%', sm: 'auto' },
-                                    }}
-                                    variant="outlined"
-                                >
-                                    <Typography variant="body2">
-                                        {button}
-                                    </Typography>
-                                </Button>
-                            </Box>
+                                <Typography variant="button">
+                                    {button}
+                                </Typography>
+                            </Button>
                         </Link>
                     </Box>
                 </Box>

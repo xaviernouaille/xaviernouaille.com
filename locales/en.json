@@ -1,112 +1,128 @@
 {
     "hero": {
-        "title": "Hello, I am Xavier Nouaille, fullstack developer based on Paris",
-        "paragraph": "A 22-year-old full stack developer based in the Paris region with three years of experience, I specialize in Javascript/Typescript programming languages, with React for the front-end and Node.js for the back-end.",
-        "buttonText": "Learn more"
+        "title": "Hello, I'm Xavier Nouaille, a full-stack developer based in Paris",
+        "paragraph": "Engineer and full-stack developer trained at <b>Epitech</b> Paris, I offer my skills to design robust, high-performance, and high-quality web applications. <br> With over 5 years of experience in full-stack development, I have collaborated with teams of 5 to 10 developers on significant projects.",
+        "buttonText": "About",
+        "buttonText2": "Contact"
     },
     "about": {
-        "title": "About",
-        "paragraphs": [
-            "Hello! My name is Xavier Nouaille and I am a full stack developer. Ever since I discovered the world of programming a few years ago, I knew it was my passion.",
-            "I already have three years of experience as a developer, which has allowed me to specialize in the programming languages of Javascript and Typescript. I am proud to say that I have gained extensive experience in creating both front-end and back-end applications, with React for the front-end and Node.js for the back-end. These technologies are my preferred ones, but I am also open to learning new skills.",
-            "Passionate and meticulous, I am always on the lookout for interesting projects to work on. I enjoy working in a team and sharing my knowledge with my colleagues to build quality projects. I also have an excellent adaptability and can easily adjust to different work environments. In my free time, I like to stay up-to-date with the latest technological advancements by doing technology watch."
-        ],
-        "modalTitle": "Available as a freelancer",
-        "modalText": "For more than a year now, I have been supporting companies in their digitalization by developing websites, redesigning them, developing custom plugins, etc...",
-        "modalButtonText": "Malt profile"
+        "paragraph": "My journey started with personal projects, quickly evolving into professional collaborations. Among these, my contribution at Offeaze, a SaaS platform, was significant. I worked on both the frontend and backend development of the platform, facilitating the connection between coworking spaces and companies/individuals. <br> Although the project came to an end, it strengthened my technical skills and understanding of user needs. <br><br> Currently, I am part of the team at DialOnce, a SaaS software editor specializing in customer relationship digitalization. My role involves orchestrating contact journeys in a dynamic environment focused on efficiency and innovation. <br><br> As a freelance developer, I offer my services for the creation of robust, resilient, and high-quality platforms. My expertise extends to building digital experiences.",
+        "modalTitle": "Available as a Freelancer",
+        "modalText": "As an experienced freelancer, I offer my services for the complete design of your web platforms, whether on the frontend or backend, implementing robust solutions in TypeScript. I am open to any discussion to understand your specific needs and find the best approach for your project.",
+        "modalButtonText": "Malt Profile"
     },
     "career": {
         "title": "Experiences",
         "items": [
             {
-                "title": "FullStack developer",
+                "title": "FullStack Developer",
                 "establishment": "DialOnce",
-                "date": "May 2022 - Currently",
+                "date": "May 2022 - Present",
                 "description": [
-                    "Development of micro-services used within the company",
-                    "Front-end development with <span class='hightlight'>ReactJS & NextJS</span>, back-end with <span class='hightlight'>NodeJS, Koa</span>. GraphQL & REST APIs. MongoDB NoSQL database",
-                    "<span class='hightlight'>TypeScript</span> overlay",
-                    "Migrating services to a <span class='hightlight'>mono-repo</span> structure",
+                    "Development of internal microservices",
+                    "Frontend development with <span class='hightlight'>ReactJS & NextJS</span>, backend with <span class='hightlight'>NodeJS, Koa</span>. GraphQL & REST API. No-SQL MongoDB database",
+                    "TypeScript <span class='hightlight'>overlay</span>",
+                    "Migration of services for a transition to a <span class='hightlight'>mono-repo</span> structure",
                     "Collaboration with a team of 5 to 10 developers."
                 ]
             },
             {
-                "title": "Master MSC PRO in work-study program",
+                "title": "Master's MSC PRO in Alternance",
                 "establishment": "Epitech Paris",
-                "date": "September 2022 - Currently",
+                "date": "May 2022 - Present",
                 "description": [
-                    "Development of applications with a team composed of 5 to 10 developers",
+                    "Development of applications with a team of 5 to 10 developers",
                     "Unit testing"
                 ]
             },
             {
-                "title": "FullStack developer",
+                "title": "FullStack Developer",
                 "establishment": "Offeaze",
                 "date": "January - May 2022",
                 "description": [
-                    "Development of a coworking platform with <span class='hightlight'>NextJS - NestJS GraphQL</span> technologies",
+                    "Development of an e-commerce platform connecting coworking spaces with potential clients using <span class='hightlight'>NextJS - NestJS GraphQL</span>",
                     "Implementation of the blog with the headless CMS <span class='hightlight'>Contentful</span>",
-                    "<span class='hightlight'>TypeScript</span> overlay",
-                    "Answers to SEO issues with server-side rendering",
-                    "Remote work in collaboration with the lead tech"
+                    "TypeScript <span class='hightlight'>overlay</span>",
+                    "Addressing SEO issues with server-side rendering",
+                    "Remote collaboration with the lead tech"
                 ]
             },
             {
-                "title": "FullStack developer",
+                "title": "FullStack Developer",
                 "establishment": "Lyknowledge",
                 "date": "January 2020 - January 2021",
                 "description": [
-                    "Development of a modular API with <span class='hightlight'>ExpressJS</span> to be reused as a base in other developments",
-                    "Remote work in collaboration with the lead tech"
+                    "Development of a modular API with <span class='hightlight'>ExpressJS</span> intended to be reused as a base in other developments",
+                    "TypeScript <span class='hightlight'>overlay</span>",
+                    "Remote collaboration with the lead tech"
                 ]
             },
             {
-                "title": "Bachelor chef de projets digitaux en alternance",
+                "title": "Bachelor Digital Project Manager in Alternance",
                 "establishment": "EEMI",
-                "date": "Septembre 2019 - Août 2022",
+                "date": "September 2019 - August 2022",
                 "description": [
-                    "Integrating static sites with <span class='hightlight'>HTML/CSS</span>.",
-                    "Apprentissage des langages <span class='hightlight'>PHP & JavaScript</span>",
-                    "API development with <span class='hightlight'>NodeJS</span>.",
-                    "Containerization applications with <span class='hightlight'>Docker</span>. Training on <span class='hightlight'>Linux</span> commands.",
+                    "Integration of static sites with <span class='hightlight'>HTML/CSS</span>.",
+                    "Learning <span class='hightlight'>PHP & JavaScript</span> languages",
+                    "Development of APIs with <span class='hightlight'>NodeJS</span>",
+                    "Containerization of applications with <span class='hightlight'>Docker</span>. Training on <span class='hightlight'>Linux</span> commands.",
                     "Introduction to <span class='hightlight'>Wordpress</span> CMS."
                 ]
             }
         ]
     },
     "project": {
-        "title": "Projects",
+        "title": "My Projects",
         "items": [
             {
+                "title": "Offeaze",
+                "description": "SaaS platform facilitating the connection of offices and coworking spaces with individuals and businesses.",
+                "url": "#",
+                "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
+            },
+            {
+                "title": "Portfolio",
+                "description": "My personal portfolio where you currently are.",
+                "url": "#",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "NextJS",
+                    "SSG",
+                    "AWS S3",
+                    "GitHub Action"
+                ]
+            },
+            {
                 "title": "Notif Weather",
-                "description": "A Python script to inform me of the current weather.",
+                "description": "A Python script informing me of the current weather.",
                 "url": "https://github.com/xaviernouaille/Notif-Weather",
                 "tags": ["Python", "bs4"]
             },
             {
                 "title": "Terra DiscordBot",
-                "description": "A bot that scrapes work-study offers.",
+                "description": "A bot that scrapes internship offers.",
                 "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
                 "tags": ["DiscordJS", "cheerio"]
             },
             {
-                "title": "ktr-msc-ls1 - Admission test Epitech MSC Pro",
-                "description": "Business card sharing between users.",
+                "title": "ktr-msc-ls1 - Epitech MSC Pro Admission Test",
+                "description": "Sharing business cards between users.",
                 "url": "https://github.com/xaviernouaille/ktr-msc-ls1",
                 "tags": ["ExpressJS", "NextJS", "TypeScript"]
             },
             {
                 "title": "React, TypeScript & TailwindCSS Generator",
-                "description": "A script that allows to quickly create a React project with TypeScript & TailwindCSS embedded directly. No need to follow the Tailwind doc anymore.",
+                "description": "A script that quickly creates a React project with TypeScript & TailwindCSS incorporated. No need to follow the Tailwind documentation.",
                 "url": "https://github.com/xaviernouaille/React-TypeScript-TailwindCSS-Generator",
                 "tags": ["Shell"]
             }
         ]
     },
     "contact": {
-        "title": "Let's get in touch",
+        "title": "Have a project or any questions?",
         "subtitle": "Contact",
-        "paragraph": "A project, a question? Do not hesitate to contact me, I will provide you with my response as soon as possible.",
+        "paragraph": "A project, a question? Feel free to contact me, and I will get back to you as soon as possible.",
         "button": "Contact"
     }
 }

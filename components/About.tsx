@@ -4,16 +4,14 @@ import { FC } from 'react'
 
 type Props = {
     title: string
-    paragraphs: string[]
+    paragraph: string
     modalTitle: string
     modalText: string
     modalButtonText: string
 }
 
-const customFontSize = { fontSize: { md: '17.3px', sm: '17px', xs: '17px' } }
-
 const About: FC<Props> = ({
-    paragraphs,
+    paragraph,
     modalTitle,
     modalText,
     modalButtonText,
@@ -54,7 +52,7 @@ const About: FC<Props> = ({
                             objectFit: 'cover',
                             borderRadius: '100%',
                         }}
-                        src="/xavier-nouaille.jpg"
+                        src="/xavier-nouaille.png"
                         alt="Xavier Nouaille, Développeur FullStack"
                     />
                 </Box>
@@ -66,59 +64,51 @@ const About: FC<Props> = ({
                     justifyContent={'stretch'}
                 >
                     <Box>
-                        <Typography sx={customFontSize}>
-                            {paragraphs.map((paragraph, i) => (
-                                <span key={i}>
-                                    {paragraph}
-                                    {i < 2 && (
-                                        <>
-                                            <br></br>
-                                            <br></br>
-                                        </>
-                                    )}
-                                </span>
-                            ))}
-                        </Typography>
+                        <Typography
+                            variant="body1"
+                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                        ></Typography>
                     </Box>
                 </Box>
             </Box>
-            <Box>
-                <Box
+            <Box
+                sx={{
+                    bgcolor: 'background.paper',
+                    padding: { md: '40px', sm: '30px', xs: '25px' },
+                    borderRadius: 2,
+                }}
+            >
+                <Typography
+                    variant="h2"
                     sx={{
-                        bgcolor: 'background.paper',
-                        padding: { md: '40px', sm: '30px', xs: '25px' },
+                        marginBottom: '20px',
+                        display: { md: 'inline-block', xs: 'block' },
                     }}
                 >
-                    <Typography
-                        variant="h2"
-                        sx={{
-                            marginBottom: '20px',
-                            display: { md: 'inline-block', xs: 'block' },
-                        }}
-                    >
-                        {modalTitle}
-                    </Typography>
-                    <Typography sx={customFontSize}>{modalText}</Typography>
-                    <Box sx={{ marginTop: '20px' }}>
-                        <Link
-                            href={SOCIAL['Malt']}
-                            sx={{ textDecoration: 'none' }}
+                    {modalTitle}
+                </Typography>
+                <Typography variant="body1">{modalText}</Typography>
+                <Box sx={{ marginTop: '20px' }}>
+                    <Link href={SOCIAL['Malt']} sx={{ textDecoration: 'none' }}>
+                        <Button
+                            sx={{
+                                marginTop: 1,
+                                textTransform: 'none',
+                                borderRadius: 2,
+                                padding: '10px 40px',
+                                width: { xs: '100%', sm: 'auto' },
+                                bgcolor: 'primary.main',
+                                color: 'background.default',
+                                '&:hover': {
+                                    bgcolor: 'primary.dark',
+                                },
+                            }}
                         >
-                            <Button
-                                sx={{
-                                    textTransform: 'none',
-                                    borderRadius: 0,
-                                    padding: '8px 32px',
-                                    width: { xs: '100%', sm: 'auto' },
-                                }}
-                                variant="outlined"
-                            >
-                                <Typography variant="body3">
-                                    {modalButtonText}
-                                </Typography>
-                            </Button>
-                        </Link>
-                    </Box>
+                            <Typography variant="button">
+                                {modalButtonText}
+                            </Typography>
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
         </Container>
