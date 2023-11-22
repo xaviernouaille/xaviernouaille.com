@@ -35,7 +35,7 @@ const ProjectItem = ({ title, description, url, tags }: ProjectItemProps) => {
                             sx={{
                                 width: '22px',
                                 height: '22px',
-                                marginBottom: '40px',
+                                marginBottom: { xs: '25px', sm: '40px' },
                                 color: 'primary.main',
                             }}
                         />
@@ -94,7 +94,7 @@ const Project: FC<Props> = ({ title, items }) => {
         <Box
             sx={{
                 padding: {
-                    xs: '30px 0 60px 0',
+                    xs: '30px 15px 60px 15px',
                     sm: '40px 0 40px 0',
                     md: '120px 0 70px 0',
                 },
@@ -104,7 +104,7 @@ const Project: FC<Props> = ({ title, items }) => {
                 <Box>
                     <Typography
                         variant="h2"
-                        marginBottom={'20px'}
+                        marginBottom={{ xs: '30px', sm: '20px' }}
                         component="h2"
                     >
                         {title}

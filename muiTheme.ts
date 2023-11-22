@@ -28,7 +28,7 @@ const baseTheme = {
     typography: {
         fontFamily: 'Inter',
         h1: {
-            fontSize: '4rem',
+            fontSize: '3.8rem',
             fontWeight: 600,
             letterSpacing: '-0.07rem',
             lineHeight: 1,
@@ -50,7 +50,7 @@ const baseTheme = {
         },
         h5: {
             fontSize: '1.55rem',
-            fontWeight: 500,
+            fontWeight: 600,
             letterSpacing: '-0.06rem',
             lineHeight: 1.3,
             fontFamily: ['Inter'].join(','),

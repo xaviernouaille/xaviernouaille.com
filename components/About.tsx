@@ -19,7 +19,7 @@ const About: FC<Props> = ({
     <Box
         sx={{
             padding: {
-                xs: '80px 0 60px 0',
+                xs: '80px 15px 60px 15px',
                 sm: '90px 0 70px 0',
                 md: '120px 0 70px 0',
             },

@@ -14,7 +14,7 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText, buttonText2 }) => {
             sx={{
                 bgcolor: 'background.paper',
                 padding: {
-                    xs: '150px 0 60px 0',
+                    xs: '110px 15px 60px 15px',
                     sm: '120px 0 100px 0',
                     md: '160px 0 120px 0',
                 },
@@ -59,7 +59,7 @@ const Hero: FC<Props> = ({ title, paragraph, buttonText, buttonText2 }) => {
                 </Button>
                 <Button
                     sx={{
-                        marginTop: { md: 4, xs: 1 },
+                        marginTop: { sm: 4, xs: 1 },
                         textTransform: 'none',
                         borderRadius: 2,
                         padding: '10px 40px',

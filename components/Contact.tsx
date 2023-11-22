@@ -15,7 +15,7 @@ const Contact: FC<Props> = ({ title, paragraph, button }) => {
             sx={{
                 marginTop: 8,
                 padding: {
-                    xs: '30px 0 20px 0',
+                    xs: '30px 15px 20px 15px',
                     sm: '90px 0 40px 0',
                     md: '0 0 30px 0',
                 },

@@ -41,8 +41,30 @@ const CareerMobileSelector: FC<CareerMobileSelectorProps> = ({
     establishments,
 }) => {
     return (
-        <FormControl fullWidth>
+        <FormControl
+            sx={{
+                height: '60px',
+                '& .MuiSelect-select': {
+                    bgcolor: 'background.paper',
+                    padding: '0 16px',
+                },
+                '& .MuiInputBase-root': {
+                    bgcolor: 'background.paper',
+                },
+                '& svg': {
+                    marginRight: 1,
+                },
+            }}
+            fullWidth
+        >
             <Select
+                sx={{
+                    height: '60px',
+                    borderRadius: 2,
+                }}
+                disableUnderline
+                fullWidth
+                variant="standard"
                 value={currentValue}
                 onChange={({ target: { value } }) =>
                     onChange(isNaN(value as number) ? 0 : (value as number))
@@ -128,7 +150,7 @@ const Career: FC<Props> = ({ title, items }) => {
         <Box
             sx={{
                 padding: {
-                    xs: '30px 0 60px 0',
+                    xs: '30px 15px 60px 15px',
                     sm: '40px 0 70px 0',
                     md: '120px 0 70px 0',
                 },
@@ -138,7 +160,7 @@ const Career: FC<Props> = ({ title, items }) => {
                 <Box>
                     <Typography
                         variant="h2"
-                        marginBottom={'20px'}
+                        marginBottom={{ xs: '30px', sm: '20px' }}
                         component="h2"
                     >
                         {title}
@@ -205,7 +227,7 @@ const Career: FC<Props> = ({ title, items }) => {
                                 <Typography variant="caption">
                                     {items[selected]?.date}
                                 </Typography>
-                                <List sx={{ marginTop: '20px' }}>
+                                <List sx={{ marginTop: '0px' }}>
                                     {items[selected]?.description.map(
                                         (content, i) => (
                                             <ListItem
