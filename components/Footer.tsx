@@ -10,11 +10,26 @@ const Footer: FC<Props> = ({ paragraph }) => {
         <Container
             maxWidth="md"
             component="footer"
-            sx={{ paddingBottom: 5, paddingTop: 2, marginTop: 6 }}
+            sx={{
+                paddingBottom: 5,
+                paddingTop: 2,
+                marginTop: 6,
+                padding: {
+                    xs: '0px 30px 0px 30px',
+                },
+            }}
         >
             <Divider />
-            <Box display={'flex'} alignItems={'center'} gap={1} paddingTop={3}>
-                <Typography variant="body2">{paragraph}</Typography>
+            <Box
+                display={'flex'}
+                alignItems={'center'}
+                gap={1}
+                paddingTop={3}
+                paddingBottom={4}
+            >
+                <Typography variant="body2" lineHeight={1.5}>
+                    {paragraph}
+                </Typography>
             </Box>
         </Container>
     )

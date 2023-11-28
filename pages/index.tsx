@@ -76,13 +76,13 @@ const Home: NextPage = () => {
             <Box
                 sx={{
                     position: 'fixed',
-                    left: { xs: -300, md: 0 },
+                    left: { xs: -300, md: -600 },
                     top: 0,
                     opacity: 0.35,
                 }}
             >
                 {/* eslint-disable-next-line */}
-                {/* <img src="/docs-right.png" /> */}
+                <img src="/docs-right.png" />
             </Box>
             <NextSeo
                 title={title}
@@ -94,7 +94,11 @@ const Home: NextPage = () => {
             />
             <Box
                 sx={{
-                    marginTop: '200px',
+                    marginTop: { xs: '170px', sm: '200px' },
+                    padding: {
+                        xs: '0px 15px 0px 15px',
+                        sm: '0',
+                    },
                 }}
             >
                 <Hero title={t('hero.title')} subtitle={t('hero.subtitle')} />
@@ -103,7 +107,7 @@ const Home: NextPage = () => {
             <Box
                 sx={{
                     padding: {
-                        xs: '80px 15px 60px 15px',
+                        xs: '100px 15px 60px 15px',
                         sm: '90px 0 70px 0',
                         md: '160px 0 70px 0',
                     },
@@ -128,12 +132,22 @@ const Home: NextPage = () => {
                 title={t('project.title')}
                 items={t('project.items', { returnObjects: true })}
             />
-            <Contact
-                title={t('contact.title')}
-                emailTitle={t('contact.emailTitle')}
-                paragraph={t('contact.paragraph')}
-                buttonText={t('contact.buttonText')}
-            />
+            <Box
+                sx={{
+                    padding: {
+                        xs: '30px 15px 60px 15px',
+                        sm: '40px 0 70px 0',
+                        md: '120px 0 70px 0',
+                    },
+                }}
+            >
+                <Contact
+                    title={t('contact.title')}
+                    emailTitle={t('contact.emailTitle')}
+                    paragraph={t('contact.paragraph')}
+                    buttonText={t('contact.buttonText')}
+                />
+            </Box>
         </>
     )
 }

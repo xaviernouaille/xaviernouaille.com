@@ -93,7 +93,10 @@ const Home: NextPage = () => {
             />
             <Box
                 sx={{
-                    marginTop: '150px',
+                    marginTop: '110px',
+                    padding: {
+                        xs: '0 15px 0 15px',
+                    },
                 }}
             >
                 <Hero title={'Hello !'} />
@@ -102,8 +105,7 @@ const Home: NextPage = () => {
                 sx={{
                     padding: {
                         xs: '80px 15px 60px 15px',
-                        sm: '90px 0 70px 0',
-                        md: '120px 0 70px 0',
+                        sm: '80px 0 70px 0',
                     },
                 }}
             >

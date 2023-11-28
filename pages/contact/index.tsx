@@ -92,19 +92,31 @@ const Home: NextPage = () => {
 
             <Box
                 sx={{
-                    marginTop: '150px',
+                    marginTop: '110px',
+                    padding: {
+                        xs: '0px 15px 0px 15px',
+                    },
                 }}
             >
                 <Hero title={'Contact'} />
             </Box>
 
-            <Contact
-                title={t('contact.title')}
-                emailTitle={t('contact.emailTitle')}
-                paragraph={t('contact.paragraph')}
-                isContactPage={true}
-                buttonText={t('contact.buttonText')}
-            />
+            <Box
+                sx={{
+                    padding: {
+                        xs: '80px 15px 60px 15px',
+                        sm: '80px 0 70px 0',
+                    },
+                }}
+            >
+                <Contact
+                    title={t('contact.title')}
+                    emailTitle={t('contact.emailTitle')}
+                    paragraph={t('contact.paragraph')}
+                    isContactPage={true}
+                    buttonText={t('contact.buttonText')}
+                />
+            </Box>
         </>
     )
 }

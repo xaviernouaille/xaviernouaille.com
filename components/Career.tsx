@@ -72,6 +72,10 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                         <Box
                                             sx={{
                                                 display: 'flex',
+                                                flexDirection: {
+                                                    xs: 'column',
+                                                    sm: 'row',
+                                                },
                                                 justifyContent: 'space-between',
                                             }}
                                         >
