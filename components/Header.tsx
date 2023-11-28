@@ -67,6 +67,7 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
                         alpha(theme.palette.background.paper, 0.4),
                     bgOpacity: 0.4,
                     paddingTop: 1,
+                    paddingLeft: { xs: 2, sm: 0 },
                 }}
             >
                 <Container
@@ -76,9 +77,15 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         padding: 0,
+                        paddingRight: 1,
                     }}
                 >
-                    <List sx={{ display: 'flex', gap: 4 }}>
+                    <List
+                        sx={{
+                            display: 'flex',
+                            gap: 4,
+                        }}
+                    >
                         {links.map(({ text, link }, index) => (
                             <ListItem
                                 key={index}

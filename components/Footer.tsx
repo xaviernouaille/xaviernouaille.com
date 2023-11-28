@@ -27,7 +27,7 @@ const Footer: FC<Props> = ({ paragraph }) => {
                 paddingTop={3}
                 paddingBottom={4}
             >
-                <Typography variant="body2" lineHeight={1.5}>
+                <Typography variant="body2" fontWeight={400} lineHeight={1.5}>
                     {paragraph}
                 </Typography>
             </Box>
