@@ -20,7 +20,7 @@ const baseTheme = {
         values: {
             xs: 0,
             sm: 600,
-            md: 1024,
+            md: 933,
             lg: 1120,
             xl: 1570,
         },
@@ -28,69 +28,39 @@ const baseTheme = {
     typography: {
         fontFamily: 'Inter',
         h1: {
-            fontSize: '3.8rem',
+            fontSize: '2.6rem',
             fontWeight: 600,
-            letterSpacing: '-0.07rem',
-            lineHeight: 1,
+            lineHeight: '1.5',
             fontFamily: ['Inter'].join(','),
         },
         h2: {
             fontSize: '2rem',
             fontWeight: 600,
-            letterSpacing: '-0.02rem',
             lineHeight: 1.5,
             fontFamily: ['Inter'].join(','),
         },
-        h4: {
-            fontSize: '1.45rem',
+        h3: {
+            fontSize: '1.25rem',
             fontWeight: 600,
-            letterSpacing: '-0.01rem',
-            lineHeight: 1,
-            fontFamily: ['Inter'].join(','),
-        },
-        h5: {
-            fontSize: '1.55rem',
-            fontWeight: 600,
-            letterSpacing: '-0.06rem',
-            lineHeight: 1.3,
-            fontFamily: ['Inter'].join(','),
-        },
-        h6: {
-            fontSize: '2.8rem',
-            fontWeight: 600,
-            letterSpacing: '-0.06rem',
-            lineHeight: 1.2,
+            lineHeight: 1.5,
             fontFamily: ['Inter'].join(','),
         },
         body1: {
-            fontSize: '1.15rem',
+            fontSize: '1.125rem',
             fontWeight: 400,
+            lineHeight: 2,
             fontFamily: ['Inter'].join(','),
         },
         body2: {
-            fontSize: '1.12rem',
-            fontWeight: 400,
+            fontSize: '1rem',
+            fontWeight: 500,
+            lineHeight: 1,
             fontFamily: ['Inter'].join(','),
         },
         body3: {
-            fontSize: '1rem',
-            lineHeight: '1.7rem',
-            fontFamily: ['Inter'].join(','),
-        },
-        body4: {
-            fontSize: '0.8rem',
-        },
-        button: {
-            fontSize: '0.8rem',
-            fontWeight: 600,
-            fontFamily: ['Inter'].join(','),
-        },
-        caption: {
-            fontSize: '0.75rem',
-            fontFamily: ['Inter'].join(','),
-        },
-        body5: {
             fontSize: '0.9rem',
+            fontWeight: 400,
+            lineHeight: 1,
             fontFamily: ['Inter'].join(','),
         },
     } as ExtendedTypographyOptions,
@@ -139,7 +109,7 @@ let muiThemeDark = createTheme({
             primary: '#FFFFFF', // Blanc pour le texte principal
         },
         primary: {
-            main: '#a594fd', // Bleu primaire
+            main: 'rgba(156,163,175,.9)', // Bleu primaire
         },
         background: {
             default: '#000000', // Gris foncé pour le fond par défaut

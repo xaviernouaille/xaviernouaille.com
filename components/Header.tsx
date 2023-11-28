@@ -5,21 +5,28 @@ import {
     ListItem,
     ListItemButton,
     Slide,
+    Typography,
 } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import TranslateIcon from '@mui/icons-material/Translate'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { alpha } from '@mui/material/styles'
+import Link from 'next/link'
 
-const Header = ({
-    toggleTheme,
-    theme,
-}: {
+type Link = {
+    text: string
+    link: string
+}
+
+type Props = {
     toggleTheme: () => void
     theme: string
-}) => {
+    links: Link[]
+}
+
+const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
     const {
         i18n: { changeLanguage, language },
     } = useTranslation()
@@ -59,16 +66,37 @@ const Header = ({
                     bgcolor: (theme) =>
                         alpha(theme.palette.background.paper, 0.4),
                     bgOpacity: 0.4,
+                    paddingTop: 1,
                 }}
             >
                 <Container
-                    maxWidth="xl"
+                    maxWidth="md"
                     sx={{
                         display: 'flex',
-                        justifyContent: 'end',
+                        justifyContent: 'space-between',
                         alignItems: 'center',
+                        padding: 0,
                     }}
                 >
+                    <List sx={{ display: 'flex', gap: 4 }}>
+                        {links.map(({ text, link }, index) => (
+                            <ListItem
+                                key={index}
+                                sx={{ padding: 0, whiteSpace: 'nowrap' }}
+                            >
+                                <Link href={link}>
+                                    <a style={{ textDecoration: 'none' }}>
+                                        <Typography
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            {text}
+                                        </Typography>
+                                    </a>
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
                     <List sx={{ display: 'flex' }}>
                         <ListItem disablePadding sx={{ width: 'fit-content' }}>
                             <ListItemButton
@@ -77,10 +105,7 @@ const Header = ({
                             >
                                 <TranslateIcon
                                     sx={{
-                                        fontSize: {
-                                            xs: 20,
-                                            sm: 24,
-                                        },
+                                        fontSize: 20,
                                         color: 'text.primary',
                                     }}
                                 />
@@ -94,20 +119,15 @@ const Header = ({
                                 {theme === 'dark' ? (
                                     <Brightness7Icon
                                         sx={{
-                                            fontSize: {
-                                                xs: 20,
-                                                sm: 24,
-                                            },
+                                            fontSize: 20,
+
                                             color: 'text.primary',
                                         }}
                                     />
                                 ) : (
                                     <Brightness4Icon
                                         sx={{
-                                            fontSize: {
-                                                xs: 20,
-                                                sm: 24,
-                                            },
+                                            fontSize: 20,
                                             color: 'text.primary',
                                         }}
                                     />

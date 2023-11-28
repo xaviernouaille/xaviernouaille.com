@@ -1,81 +1,87 @@
-import { Box, Button, Container, Typography } from '@mui/material'
-import Link from 'next/link'
+import { Box, Container, Typography } from '@mui/material'
 import { FC } from 'react'
-import { SOCIAL } from '@constants/social'
+import CustomLink from './CustomLink'
 
 type Props = {
     title: string
+    emailTitle: string
     paragraph: string
-    button: string
+    buttonText: string
+    isContactPage?: boolean
 }
 
-const Contact: FC<Props> = ({ title, paragraph, button }) => {
+const Contact: FC<Props> = ({
+    title,
+    paragraph,
+    buttonText,
+    emailTitle,
+    isContactPage = false,
+}) => {
     return (
         <Box
             sx={{
-                marginTop: 8,
                 padding: {
-                    xs: '30px 15px 20px 15px',
-                    sm: '90px 0 40px 0',
-                    md: '0 0 30px 0',
+                    xs: '30px 15px 60px 15px',
+                    sm: '40px 0 70px 0',
+                    md: '120px 0 70px 0',
                 },
-                bgcolor: 'background.paper',
             }}
         >
-            <Container sx={{ maxWidth: { xs: '100%', sm: 'md' }, padding: 0 }}>
-                <Box
-                    sx={{
-                        margin: '0 0',
-                        padding: {
-                            xs: '5rem 20px',
-                            sm: '7rem 0',
-                        },
-                    }}
-                >
+            <Container maxWidth="md">
+                {isContactPage && (
+                    <Box sx={{ marginBottom: 8 }}>
+                        <Box sx={{ marginBottom: 8 }}>
+                            <Typography
+                                variant="h3"
+                                marginBottom={{ xs: '30px', sm: '20px' }}
+                                component="h2"
+                            >
+                                {emailTitle}
+                            </Typography>
+                            <CustomLink
+                                link="mailto:xavier.nouaille@protonmail.com"
+                                text="xavier.nouaille@protonmail.com"
+                                size="small"
+                                withArrow
+                                withUnderline
+                            />
+                        </Box>
+                        <Box>
+                            <Typography
+                                variant="body2"
+                                sx={{ marginBottom: 2 }}
+                            >
+                                November 11th, 2023, 9:17:54 AM
+                            </Typography>
+                            <Typography variant="body2">
+                                UTC-05:00 - Boston, MA
+                            </Typography>
+                        </Box>
+                    </Box>
+                )}
+                <Box>
                     <Typography
-                        variant="h6"
-                        textAlign="center"
-                        marginBottom="20px"
-                        component={'h2'}
+                        variant={isContactPage ? 'h3' : 'h2'}
+                        marginBottom={{ xs: '30px', sm: '20px' }}
+                        component="h2"
                     >
                         {title}
                     </Typography>
-                    <Typography
-                        variant="body1"
-                        textAlign="center"
-                        sx={{
-                            width: { md: '70%', sm: '75%', xs: '90%' },
-                            margin: '30px auto 0 auto',
-                        }}
-                    >
+
+                    <Typography variant="body1" sx={{ width: '80%' }}>
                         {paragraph}
                     </Typography>
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        marginTop="30px"
-                    >
-                        <Link href={`mailto:${SOCIAL['Email']}`}>
-                            <Button
-                                sx={{
-                                    marginTop: 4,
-                                    textTransform: 'none',
-                                    borderRadius: 2,
-                                    padding: '10px 40px',
-                                    width: { xs: '100%', sm: 'auto' },
-                                    bgcolor: 'primary.main',
-                                    color: 'background.default',
-                                    '&:hover': {
-                                        bgcolor: 'primary.dark',
-                                    },
-                                }}
-                            >
-                                <Typography variant="button">
-                                    {button}
-                                </Typography>
-                            </Button>
-                        </Link>
-                    </Box>
+
+                    {!isContactPage && (
+                        <Box marginTop={4}>
+                            <CustomLink
+                                link="/contact"
+                                text={buttonText}
+                                size="medium"
+                                withUnderline
+                            />
+                        </Box>
+                    )}
                 </Box>
             </Container>
         </Box>

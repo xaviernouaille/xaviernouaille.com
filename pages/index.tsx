@@ -78,11 +78,11 @@ const Home: NextPage = () => {
                     position: 'fixed',
                     left: { xs: -300, md: 0 },
                     top: 0,
-                    opacity: 0.6,
+                    opacity: 0.35,
                 }}
             >
                 {/* eslint-disable-next-line */}
-                <img src="/docs-right.png" />
+                {/* <img src="/docs-right.png" /> */}
             </Box>
             <NextSeo
                 title={title}
@@ -92,19 +92,34 @@ const Home: NextPage = () => {
                 openGraph={openGraph}
                 additionalLinkTags={additionalLinkTags}
             />
-            <Hero
-                title={t('hero.title')}
-                paragraph={t('hero.paragraph')}
-                buttonText={t('hero.buttonText')}
-                buttonText2={t('hero.buttonText2')}
-            />
-            <About
-                title={t('about.title')}
-                paragraph={t('about.paragraph')}
-                modalTitle={t('about.modalTitle')}
-                modalText={t('about.modalText')}
-                modalButtonText={t('about.modalButtonText')}
-            />
+            <Box
+                sx={{
+                    marginTop: '200px',
+                }}
+            >
+                <Hero title={t('hero.title')} subtitle={t('hero.subtitle')} />
+            </Box>
+
+            <Box
+                sx={{
+                    padding: {
+                        xs: '80px 15px 60px 15px',
+                        sm: '90px 0 70px 0',
+                        md: '160px 0 70px 0',
+                    },
+                }}
+            >
+                <About
+                    title={t('about.title')}
+                    paragraph0={t('about.paragraph0')}
+                    paragraph1={t('about.paragraph1')}
+                    modalTitle={t('about.modalTitle')}
+                    modalText={t('about.modalText')}
+                    buttonText={t('about.buttonText')}
+                    modalButtonText={t('about.modalButtonText')}
+                />
+            </Box>
+
             <Career
                 title={t('career.title')}
                 items={t('career.items', { returnObjects: true })}
@@ -115,8 +130,9 @@ const Home: NextPage = () => {
             />
             <Contact
                 title={t('contact.title')}
+                emailTitle={t('contact.emailTitle')}
                 paragraph={t('contact.paragraph')}
-                button={t('contact.button')}
+                buttonText={t('contact.buttonText')}
             />
         </>
     )

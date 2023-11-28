@@ -1,34 +1,50 @@
 {
+    "header": {
+        "links": [
+            {
+                "text": "Acceuil",
+                "link": "/"
+            },
+            {
+                "text": "About",
+                "link": "/about"
+            },
+            {
+                "text": "Contact",
+                "link": "/contact"
+            }
+        ]
+    },
     "hero": {
-        "title": "Bonjour, je suis Xavier Nouaille, développeur fullstack basé sur Paris",
-        "paragraph": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative.",
-        "buttonText": "À propos",
-        "buttonText2": "Contact"
+        "title": "Développeur et passionné de Javascript originaire de France. Je suis intéressé par React, Node, Jamstack, Typescript.",
+        "subtitle": "Bonjour, je suis Xavier Nouaille 👋",
+        "paragraph": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative."
     },
     "about": {
-        "paragraph": "Mon parcours a débuté avec des projets personnels, évoluant rapidement vers des collaborations professionnelles. Parmi celles-ci, ma contribution chez Offeaze, une plateforme Saas, a été significative. J'ai travaillé sur le développement frontend et backend de la plateforme qui facilitait la connexion entre espaces de coworking et entreprises/particuliers. <br> Bien que le projet ait pris fin, il a consolidé mes compétences techniques et ma compréhension des besoins des utilisateurs. <br><br> Actuellement, je fais partie de l'équipe chez DialOnce, un éditeur de logiciels SaaS spécialisé dans la digitalisation de la relation client. Mon rôle consiste à orchestrer les parcours des contacts dans un environnement dynamique axé sur l'efficacité et l'innovation. <br><br> Actuellement, en tant que freelance développeur, je propose mes services pour la création de plateformes robustes, résilientes et de haute qualité. Mon expertise s'étend à la construction d'expériences digitales. ",
+        "paragraph0": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative. <br><br> Mon parcours a débuté avec des projets personnels, évoluant rapidement vers des collaborations professionnelles. Parmi celles-ci, ma contribution chez Offeaze, une plateforme Saas, a été significative. J'ai travaillé sur le développement frontend et backend de la plateforme qui facilitait la connexion entre espaces de coworking et entreprises/particuliers. <br> Bien que le projet ait pris fin, il a consolidé mes compétences techniques et ma compréhension des besoins des utilisateurs.",
+        "paragraph1": "Actuellement, je fais partie de l'équipe chez DialOnce, un éditeur de logiciels SaaS spécialisé dans la digitalisation de la relation client. Mon rôle consiste à orchestrer les parcours des contacts dans un environnement dynamique axé sur l'efficacité et l'innovation. <br><br> Actuellement, en tant que freelance développeur, je propose mes services pour la création de plateformes robustes, résilientes et de haute qualité. Mon expertise s'étend à la construction d'expériences digitales.",
         "modalTitle": "Disponible en freelance",
         "modalText": "En tant que freelance expérimenté, je propose mes services pour la conception intégrale de vos plateformes web, que ce soit du côté frontend ou backend, en mettant en œuvre des solutions robustes en TypeScript. Je suis ouvert à toute discussion pour comprendre vos besoins spécifiques et trouver la meilleure approche pour votre projet.",
-        "modalButtonText": "Profil Malt"
+        "buttonText": "En savoir plus →"
     },
     "career": {
         "title": "Experiences",
         "items": [
             {
                 "title": "Développeur FullStack",
-                "establishment": "DialOnce",
+                "company": "DialOnce",
                 "date": "Mai 2022 - Aujourd'hui",
                 "description": [
                     "Développement des micro-services internes à l'entreprise",
-                    "Développement front-end avec <span class='hightlight'>ReactJS & NextJS</span>, back-end avec <span class='hightlight'>NodeJS, Koa</span>. API GraphQL & REST. Base de données No-SQL MongoDB",
-                    "Surcouche <span class='hightlight'>TypeScript</span>",
-                    "Migration des services en vue d'un passage à une structure <span class='hightlight'>mono-repo</span>",
+                    "Développement front-end avec ReactJS & NextJS, back-end avec NodeJS, Koa. API GraphQL & REST. Base de données No-SQL MongoDB",
+                    "Surcouche TypeScript",
+                    "Migration des services en vue d'un passage à une structure mono-repo",
                     "Collaboration avec une équipe de 5 à 10 développeurs."
                 ]
             },
             {
                 "title": "Master MSC PRO en alternance",
-                "establishment": "Epitech Paris",
+                "company": "Epitech Paris",
                 "date": "Mai 2022 - Aujourd'hui",
                 "description": [
                     "Développement d'applications avec une équipe composée de 5 à 10 développeurs",
@@ -37,36 +53,36 @@
             },
             {
                 "title": "Développeur FullStack",
-                "establishment": "Offeaze",
+                "company": "Offeaze",
                 "date": "Janvier - Mai 2022",
                 "description": [
-                    "Développement d'une plateforme e-commerce mettant en relation les differents espace de coworking et des potentiels clients avec les technologies <span class='hightlight'>NextJS - NestJS GraphQL</span>",
-                    "Implémentation du blog avec le headless CMS <span class='hightlight'>Contentful</span>",
-                    "Surcouche <span class='hightlight'>TypeScript</span>",
+                    "Développement d'une plateforme e-commerce mettant en relation les différents espaces de coworking et des potentiels clients avec les technologies NextJS - NestJS GraphQL",
+                    "Implémentation du blog avec le headless CMS Contentful",
+                    "Surcouche TypeScript",
                     "Réponses aux problématiques de SEO avec du server-side rendering",
                     "Travail à distance en collaboration avec le lead tech"
                 ]
             },
             {
                 "title": "Développeur FullStack",
-                "establishment": "Lyknowledge",
+                "company": "Lyknowledge",
                 "date": "Janvier 2020 - Janvier 2021",
                 "description": [
-                    "Développement d'une API modulaire avec <span class='hightlight'>ExpressJS</span> ayant pour d'être reutilisée comme base dans d'autres développements",
-                    "Surcouche <span class='hightlight'>TypeScript</span>",
+                    "Développement d'une API modulaire avec ExpressJS ayant pour but d'être réutilisée comme base dans d'autres développements",
+                    "Surcouche TypeScript",
                     "Travail à distance en collaboration avec le lead tech"
                 ]
             },
             {
                 "title": "Bachelor chef de projets digitaux en alternance",
-                "establishment": "EEMI",
+                "company": "EEMI",
                 "date": "Septembre 2019 - Août 2022",
                 "description": [
-                    "Intégration de sites statiques avec <span class='hightlight'>HTML/CSS</span>.",
-                    "Apprentissage des langages <span class='hightlight'>PHP & JavaScript</span>",
-                    "Développement d'API avec <span class='hightlight'>NodeJS</span>.",
-                    "Contenerisation d'applications avec <span class='hightlight'>Docker</span>. Formation sur les commandes <span class='hightlight'>Linux</span>.",
-                    "Introduction au CMS <span class='hightlight'>Wordpress</span>."
+                    "Intégration de sites statiques avec HTML/CSS.",
+                    "Apprentissage des langages PHP & JavaScript",
+                    "Développement d'API avec NodeJS.",
+                    "Conteneurisation d'applications avec Docker. Formation sur les commandes Linux.",
+                    "Introduction au CMS Wordpress."
                 ]
             }
         ]
@@ -120,9 +136,12 @@
         ]
     },
     "contact": {
+        "emailTitle": "Contactez moi par e-mail",
         "title": "Un projet ou une quelconque question ?",
-        "subtitle": "Contact",
         "paragraph": "Un projet, une question ? N'hésitez pas à me contacter, je vous ferai part de ma réponse dans les plus brefs délais.",
-        "button": "Contact"
+        "buttonText": "En savoir plus →"
+    },
+    "footer": {
+        "paragraph": "Droits d'auteur © 2023 Xavier Nouaille. Tous droits réservés. Fabriqué en 🇫🇷"
     }
 }

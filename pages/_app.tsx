@@ -7,6 +7,7 @@ import Footer from '@components/Footer'
 import { muiThemeDark, muiThemeLight } from 'muiTheme'
 import useSwitchTheme from '@helpers/useSwitchTheme'
 import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [theme, toggleTheme] = useSwitchTheme()
@@ -15,13 +16,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         [theme]
     )
 
+    const { t } = useTranslation()
+
     return (
-        <ThemeProvider theme={themeValue}>
-            <CssBaseline />
-            <Header toggleTheme={toggleTheme} theme={theme} />
-            <Component {...pageProps} />
-            <Footer />
-        </ThemeProvider>
+        <>
+            <ThemeProvider theme={themeValue}>
+                <Header
+                    links={t('header.links', { returnObjects: true })}
+                    toggleTheme={toggleTheme}
+                    theme={theme}
+                />
+                <Component {...pageProps} />
+                <Footer paragraph={t('footer.paragraph')} />
+                <CssBaseline />
+            </ThemeProvider>
+        </>
     )
 }
 

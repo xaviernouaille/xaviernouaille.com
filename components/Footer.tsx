@@ -1,54 +1,20 @@
-import { SOCIAL } from '@constants/social'
-import { Box, Container, List, Typography } from '@mui/material'
+import { Box, Container, Divider, Typography } from '@mui/material'
 import { FC } from 'react'
 
-const resetAnchorStyle = {
-    textDecoration: 'none',
+type Props = {
+    paragraph: string
 }
 
-const Footer: FC = () => {
+const Footer: FC<Props> = ({ paragraph }) => {
     return (
         <Container
             maxWidth="md"
             component="footer"
-            sx={{ paddingBottom: 3, paddingTop: 2 }}
+            sx={{ paddingBottom: 5, paddingTop: 2, marginTop: 6 }}
         >
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' },
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                }}
-            >
-                <Box>
-                    <List sx={{ display: 'flex', gap: 4 }}>
-                        {Object.keys(SOCIAL).map((label, index) => (
-                            <li key={index}>
-                                <a
-                                    href={SOCIAL[label]}
-                                    target="_blank"
-                                    style={resetAnchorStyle}
-                                >
-                                    <Typography
-                                        variant="body5"
-                                        sx={{
-                                            cursor: 'pointer',
-                                            color: 'text.primary',
-                                        }}
-                                    >
-                                        {label}
-                                    </Typography>
-                                </a>
-                            </li>
-                        ))}
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="body5">
-                        © Copyright 2022. All rights reserved.
-                    </Typography>
-                </Box>
+            <Divider />
+            <Box display={'flex'} alignItems={'center'} gap={1} paddingTop={3}>
+                <Typography variant="body2">{paragraph}</Typography>
             </Box>
         </Container>
     )

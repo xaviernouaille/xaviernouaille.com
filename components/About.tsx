@@ -1,31 +1,28 @@
 import { SOCIAL } from '@constants/social'
-import { Box, Button, Container, Link, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
+import Link from 'next/link'
 import { FC } from 'react'
+import CustomLink from './CustomLink'
 
 type Props = {
+    isAboutPage?: boolean
     title: string
-    paragraph: string
+    paragraph0: string
+    paragraph1?: string
     modalTitle: string
     modalText: string
+    buttonText?: string
     modalButtonText: string
 }
 
 const About: FC<Props> = ({
-    paragraph,
+    isAboutPage = false,
     modalTitle,
-    modalText,
-    modalButtonText,
+    paragraph0,
+    paragraph1,
+    buttonText,
 }) => (
-    <Box
-        sx={{
-            padding: {
-                xs: '80px 15px 60px 15px',
-                sm: '90px 0 70px 0',
-                md: '120px 0 70px 0',
-            },
-        }}
-        id="about"
-    >
+    <Box>
         <Container
             sx={{
                 display: 'flex',
@@ -34,12 +31,12 @@ const About: FC<Props> = ({
             }}
             maxWidth="md"
         >
-            <Box sx={{ maxWidth: '900px' }}>
+            <Box>
                 <Box
                     sx={{
                         marginBottom: 4,
-                        height: { xs: '130px', md: '150px' },
-                        width: { xs: '130px', md: '150px' },
+                        height: { xs: '120px' },
+                        width: { xs: '120px' },
                     }}
                 >
                     {/* eslint-disable-next-line */}
@@ -66,49 +63,40 @@ const About: FC<Props> = ({
                     <Box>
                         <Typography
                             variant="body1"
-                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                            dangerouslySetInnerHTML={{ __html: paragraph0 }}
                         ></Typography>
+                        {isAboutPage && paragraph1 && (
+                            <>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    dangerouslySetInnerHTML={{
+                                        __html: paragraph1,
+                                    }}
+                                ></Typography>
+                            </>
+                        )}
                     </Box>
                 </Box>
+                {!isAboutPage && buttonText && (
+                    <Box marginTop={4}>
+                        <CustomLink
+                            link="/contact"
+                            text={buttonText}
+                            size="medium"
+                            withUnderline
+                        />
+                    </Box>
+                )}
             </Box>
-            <Box
-                sx={{
-                    bgcolor: 'background.paper',
-                    padding: { md: '40px', sm: '30px', xs: '25px' },
-                    borderRadius: 2,
-                }}
-            >
-                <Typography
-                    variant="h2"
-                    sx={{
-                        marginBottom: '20px',
-                        display: { md: 'inline-block', xs: 'block' },
-                    }}
-                >
-                    {modalTitle}
-                </Typography>
-                <Typography variant="body1">{modalText}</Typography>
+            <Box>
                 <Box sx={{ marginTop: '20px' }}>
-                    <Link href={SOCIAL['Malt']} sx={{ textDecoration: 'none' }}>
-                        <Button
-                            sx={{
-                                marginTop: 1,
-                                textTransform: 'none',
-                                borderRadius: 2,
-                                padding: '10px 40px',
-                                width: { xs: '100%', sm: 'auto' },
-                                bgcolor: 'primary.main',
-                                color: 'background.default',
-                                '&:hover': {
-                                    bgcolor: 'primary.dark',
-                                },
-                            }}
-                        >
-                            <Typography variant="button">
-                                {modalButtonText}
-                            </Typography>
-                        </Button>
-                    </Link>
+                    <CustomLink
+                        link={SOCIAL.Malt}
+                        text={modalTitle}
+                        size="big"
+                        withArrow
+                    />
                 </Box>
             </Box>
         </Container>

@@ -1,151 +1,28 @@
 import {
     Box,
     Container,
-    FormControl,
+    Divider,
     List,
     ListItem,
-    ListItemButton,
-    ListItemText,
-    MenuItem,
-    Select,
     Typography,
 } from '@mui/material'
-import { Dispatch, FC, SetStateAction, useState } from 'react'
-import { alpha } from '@mui/material/styles'
+import { FC } from 'react'
+import CustomLink from './CustomLink'
 
 type CareerItem = {
     title: string
-    establishment: string
+    company: string
     date: string
     description: string[]
-    bullets: string[]
 }
 
 type Props = {
     title: string
     items: CareerItem[]
+    withDetail?: boolean
 }
 
-type CareerMobileSelectorProps = {
-    onChange: Dispatch<SetStateAction<number>>
-    currentValue: number
-    establishments: {
-        value: number
-        label: string
-    }[]
-}
-
-const CareerMobileSelector: FC<CareerMobileSelectorProps> = ({
-    onChange,
-    currentValue,
-    establishments,
-}) => {
-    return (
-        <FormControl
-            sx={{
-                height: '60px',
-                '& .MuiSelect-select': {
-                    bgcolor: 'background.paper',
-                    padding: '0 16px',
-                },
-                '& .MuiInputBase-root': {
-                    bgcolor: 'background.paper',
-                },
-                '& svg': {
-                    marginRight: 1,
-                },
-            }}
-            fullWidth
-        >
-            <Select
-                sx={{
-                    height: '60px',
-                    borderRadius: 2,
-                }}
-                disableUnderline
-                fullWidth
-                variant="standard"
-                value={currentValue}
-                onChange={({ target: { value } }) =>
-                    onChange(isNaN(value as number) ? 0 : (value as number))
-                }
-            >
-                {establishments.map(({ value, label }) => (
-                    <MenuItem key={value} value={value}>
-                        {label}
-                    </MenuItem>
-                ))}
-            </Select>
-        </FormControl>
-    )
-}
-
-const CareerSelector: FC<CareerMobileSelectorProps> = ({
-    onChange,
-    establishments,
-    currentValue,
-}) => {
-    return (
-        <List
-            sx={{
-                width: '100%',
-            }}
-        >
-            {establishments.map(({ value, label }) => (
-                <ListItem
-                    disablePadding
-                    key={value}
-                    sx={{
-                        borderLeft: `3px solid`,
-                        borderColor: 'action.disabledBackground',
-                        '&:hover span': {
-                            color: 'primary.main',
-                        },
-
-                        borderLeftColor:
-                            currentValue === value ? 'primary.main' : '',
-                    }}
-                >
-                    <ListItemButton
-                        sx={{
-                            bgcolor:
-                                value === currentValue
-                                    ? (theme) =>
-                                          alpha(
-                                              theme.palette.primary.main,
-                                              0.05
-                                          )
-                                    : '',
-                            '&:hover': {
-                                bgcolor: (theme) =>
-                                    alpha(theme.palette.primary.main, 0.05),
-                            },
-                            '&:hover p': {
-                                color: 'primary.main',
-                            },
-                        }}
-                        onClick={() => onChange(value)}
-                    >
-                        <ListItemText
-                            sx={{
-                                color:
-                                    value === currentValue
-                                        ? 'primary.main'
-                                        : 'action.disabledBackground',
-                            }}
-                        >
-                            <Typography variant="body2">{label}</Typography>
-                        </ListItemText>
-                    </ListItemButton>
-                </ListItem>
-            ))}
-        </List>
-    )
-}
-
-const Career: FC<Props> = ({ title, items }) => {
-    const [selected, setSelected] = useState(0)
-
+const Career: FC<Props> = ({ title, items, withDetail = false }) => {
     return (
         <Box
             sx={{
@@ -159,112 +36,80 @@ const Career: FC<Props> = ({ title, items }) => {
             <Container maxWidth="md">
                 <Box>
                     <Typography
-                        variant="h2"
+                        variant="h3"
                         marginBottom={{ xs: '30px', sm: '20px' }}
                         component="h2"
                     >
                         {title}
                     </Typography>
 
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' },
-                        }}
-                    >
-                        <Box
+                    <Box>
+                        <List
                             sx={{
-                                display: { md: 'block', xs: 'none' },
-                                width: '40%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: 2,
                             }}
                         >
-                            <CareerSelector
-                                onChange={setSelected}
-                                currentValue={selected}
-                                establishments={items.map(
-                                    ({ establishment }, i) => ({
-                                        value: i,
-                                        label: establishment,
-                                    })
-                                )}
-                            />
-                        </Box>
-                        <Box
-                            sx={{
-                                display: { md: 'none', xs: 'block' },
-                                marginBottom: 2,
-                            }}
-                        >
-                            <CareerMobileSelector
-                                onChange={setSelected}
-                                currentValue={selected}
-                                establishments={items.map(
-                                    ({ establishment }, i) => ({
-                                        value: i,
-                                        label: establishment,
-                                    })
-                                )}
-                            />
-                        </Box>
-                        <Box
-                            sx={{
-                                marginLeft: { md: '50px' },
-                                width: '100%',
-                            }}
-                        >
-                            <Box>
-                                <Typography variant="h4">
-                                    {items[selected]?.title}{' '}
-                                    <Box
-                                        component="span"
-                                        sx={{
-                                            color: 'primary.main',
-                                        }}
-                                    >
-                                        @{items[selected]?.establishment}
-                                    </Box>
-                                </Typography>
-                                <Typography variant="caption">
-                                    {items[selected]?.date}
-                                </Typography>
-                                <List sx={{ marginTop: '0px' }}>
-                                    {items[selected]?.description.map(
-                                        (content, i) => (
-                                            <ListItem
-                                                key={i}
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: 1.5,
+                                }}
+                            >
+                                {items.map((item, index) => (
+                                    <>
+                                        <Box>
+                                            <CustomLink
+                                                link="#"
+                                                text={item.company}
+                                                withArrow
+                                                withUnderline
+                                                size="medium"
+                                            />
+                                        </Box>
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
+                                            }}
+                                        >
+                                            <Typography variant="body1">
+                                                {item.title}
+                                            </Typography>
+                                            <Typography variant="body1">
+                                                {item.date}
+                                            </Typography>
+                                        </Box>
+                                        {withDetail && (
+                                            <List
                                                 sx={{
-                                                    listStyle: 'disc',
-                                                    listStylePosition: 'inside',
-                                                    marginBottom: '4px',
+                                                    maxWidth: '620px',
+                                                    listStyleType: 'disc',
                                                 }}
-                                                disablePadding
                                             >
-                                                <ListItemText
-                                                    primary={
-                                                        <Typography
-                                                            variant="body2"
-                                                            sx={{
-                                                                display:
-                                                                    'list-item',
-                                                                listStylePosition:
-                                                                    'inside',
-                                                                '&>.hightlight':
-                                                                    {
-                                                                        color: 'primary.main',
-                                                                    },
-                                                            }}
-                                                            dangerouslySetInnerHTML={{
-                                                                __html: content,
-                                                            }}
-                                                        />
-                                                    }
-                                                />
-                                            </ListItem>
-                                        )
-                                    )}
-                                </List>
+                                                {item.description.map(
+                                                    (description, index) => (
+                                                        <ListItem key={index}>
+                                                            <Typography
+                                                                variant="body2"
+                                                                lineHeight={1.3}
+                                                            >
+                                                                {description}
+                                                            </Typography>
+                                                        </ListItem>
+                                                    )
+                                                )}
+                                            </List>
+                                        )}
+                                        {index !== items.length - 1 && (
+                                            <Divider />
+                                        )}
+                                    </>
+                                ))}
                             </Box>
-                        </Box>
+                        </List>
                     </Box>
                 </Box>
             </Container>

@@ -1,72 +1,88 @@
 {
+    "header": {
+        "links": [
+            {
+                "text": "Home",
+                "link": "/"
+            },
+            {
+                "text": "About",
+                "link": "/about"
+            },
+            {
+                "text": "Contact",
+                "link": "/contact"
+            }
+        ]
+    },
     "hero": {
-        "title": "Hello, I'm Xavier Nouaille, a full-stack developer based in Paris",
-        "paragraph": "Engineer and full-stack developer trained at <b>Epitech</b> Paris, I offer my skills to design robust, high-performance, and high-quality web applications. <br> With over 5 years of experience in full-stack development, I have collaborated with teams of 5 to 10 developers on significant projects.",
-        "buttonText": "About",
-        "buttonText2": "Contact"
+        "title": "FullStack Developer and Javascript enthusiast from France. Interested in React, Node, Jamstack, Typescript.",
+        "subtitle": "Hello, I'm Xavier Nouaille 👋",
+        "paragraph": "Engineer and fullstack developer trained at <b>Epitech</b> Paris, offering my skills to design robust, high-performance, and high-quality web applications. <br> With over 5 years of experience in fullstack development, I've worked collaboratively with teams of 5 to 10 developers on significant projects."
     },
     "about": {
-        "paragraph": "My journey started with personal projects, quickly evolving into professional collaborations. Among these, my contribution at Offeaze, a SaaS platform, was significant. I worked on both the frontend and backend development of the platform, facilitating the connection between coworking spaces and companies/individuals. <br> Although the project came to an end, it strengthened my technical skills and understanding of user needs. <br><br> Currently, I am part of the team at DialOnce, a SaaS software editor specializing in customer relationship digitalization. My role involves orchestrating contact journeys in a dynamic environment focused on efficiency and innovation. <br><br> As a freelance developer, I offer my services for the creation of robust, resilient, and high-quality platforms. My expertise extends to building digital experiences.",
+        "paragraph0": "Engineer and fullstack developer trained at <b>Epitech</b> Paris, offering my skills to design robust, high-performance, and high-quality web applications. <br> With over 5 years of experience in fullstack development, I've worked collaboratively with teams of 5 to 10 developers on significant projects. <br><br> My journey began with personal projects, quickly evolving into professional collaborations. Among them, my contribution at Offeaze, a Saas platform, was significant. I worked on the frontend and backend development of the platform that facilitated the connection between coworking spaces and businesses/individuals. <br> Although the project came to an end, it strengthened my technical skills and understanding of user needs.",
+        "paragraph1": "Currently, I am part of the team at DialOnce, a SaaS software editor specialized in digitizing customer relations. My role is to orchestrate contact journeys in a dynamic environment focused on efficiency and innovation. <br><br> As a freelance developer, I offer my services for creating robust, resilient, and high-quality platforms. My expertise extends to building digital experiences.",
         "modalTitle": "Available as a Freelancer",
-        "modalText": "As an experienced freelancer, I offer my services for the complete design of your web platforms, whether on the frontend or backend, implementing robust solutions in TypeScript. I am open to any discussion to understand your specific needs and find the best approach for your project.",
-        "modalButtonText": "Malt Profile"
+        "modalText": "As an experienced freelancer, I offer my services for the full design of your web platforms, whether on the frontend or backend, implementing robust solutions in TypeScript. I am open to any discussion to understand your specific needs and find the best approach for your project.",
+        "buttonText": "Learn more →"
     },
     "career": {
         "title": "Experiences",
         "items": [
             {
                 "title": "FullStack Developer",
-                "establishment": "DialOnce",
+                "company": "DialOnce",
                 "date": "May 2022 - Present",
                 "description": [
-                    "Development of internal microservices",
-                    "Frontend development with <span class='hightlight'>ReactJS & NextJS</span>, backend with <span class='hightlight'>NodeJS, Koa</span>. GraphQL & REST API. No-SQL MongoDB database",
-                    "TypeScript <span class='hightlight'>overlay</span>",
-                    "Migration of services for a transition to a <span class='hightlight'>mono-repo</span> structure",
+                    "Development of internal micro-services within the company",
+                    "Frontend development with ReactJS & NextJS, backend with NodeJS, Koa. GraphQL & REST API. No-SQL MongoDB database",
+                    "TypeScript overlay",
+                    "Migration of services towards a mono-repo structure",
                     "Collaboration with a team of 5 to 10 developers."
                 ]
             },
             {
-                "title": "Master's MSC PRO in Alternance",
-                "establishment": "Epitech Paris",
+                "title": "Master MSC PRO",
+                "company": "Epitech Paris",
                 "date": "May 2022 - Present",
                 "description": [
                     "Development of applications with a team of 5 to 10 developers",
-                    "Unit testing"
+                    "Unit tests"
                 ]
             },
             {
                 "title": "FullStack Developer",
-                "establishment": "Offeaze",
+                "company": "Offeaze",
                 "date": "January - May 2022",
                 "description": [
-                    "Development of an e-commerce platform connecting coworking spaces with potential clients using <span class='hightlight'>NextJS - NestJS GraphQL</span>",
-                    "Implementation of the blog with the headless CMS <span class='hightlight'>Contentful</span>",
-                    "TypeScript <span class='hightlight'>overlay</span>",
+                    "Development of an e-commerce platform connecting various coworking spaces with potential clients using NextJS - NestJS GraphQL technologies",
+                    "Implementation of the blog with the headless CMS Contentful",
+                    "TypeScript overlay",
                     "Addressing SEO issues with server-side rendering",
-                    "Remote collaboration with the lead tech"
+                    "Remote work in collaboration with the lead tech"
                 ]
             },
             {
                 "title": "FullStack Developer",
-                "establishment": "Lyknowledge",
+                "company": "Lyknowledge",
                 "date": "January 2020 - January 2021",
                 "description": [
-                    "Development of a modular API with <span class='hightlight'>ExpressJS</span> intended to be reused as a base in other developments",
-                    "TypeScript <span class='hightlight'>overlay</span>",
-                    "Remote collaboration with the lead tech"
+                    "Development of a modular API with ExpressJS intended to be reused as a base in other developments",
+                    "TypeScript overlay",
+                    "Remote work in collaboration with the lead tech"
                 ]
             },
             {
-                "title": "Bachelor Digital Project Manager in Alternance",
-                "establishment": "EEMI",
+                "title": "Bachelor in Digital Project Management",
+                "company": "EEMI",
                 "date": "September 2019 - August 2022",
                 "description": [
-                    "Integration of static sites with <span class='hightlight'>HTML/CSS</span>.",
-                    "Learning <span class='hightlight'>PHP & JavaScript</span> languages",
-                    "Development of APIs with <span class='hightlight'>NodeJS</span>",
-                    "Containerization of applications with <span class='hightlight'>Docker</span>. Training on <span class='hightlight'>Linux</span> commands.",
-                    "Introduction to <span class='hightlight'>Wordpress</span> CMS."
+                    "Integration of static sites with HTML/CSS.",
+                    "Learning languages PHP & JavaScript",
+                    "API development with NodeJS.",
+                    "Containerization of applications with Docker. Training on Linux commands.",
+                    "Introduction to CMS Wordpress."
                 ]
             }
         ]
@@ -76,7 +92,7 @@
         "items": [
             {
                 "title": "Offeaze",
-                "description": "SaaS platform facilitating the connection of offices and coworking spaces with individuals and businesses.",
+                "description": "SaaS platform facilitating the connection between coworking spaces and individuals/businesses.",
                 "url": "#",
                 "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
             },
@@ -95,7 +111,7 @@
             },
             {
                 "title": "Notif Weather",
-                "description": "A Python script informing me of the current weather.",
+                "description": "A Python script to inform me of the current weather.",
                 "url": "https://github.com/xaviernouaille/Notif-Weather",
                 "tags": ["Python", "bs4"]
             },
@@ -120,9 +136,12 @@
         ]
     },
     "contact": {
+        "emailTitle": "Contact me by email",
         "title": "Have a project or any questions?",
-        "subtitle": "Contact",
-        "paragraph": "A project, a question? Feel free to contact me, and I will get back to you as soon as possible.",
-        "button": "Contact"
+        "paragraph": "A project, a question? Feel free to contact me; I'll get back to you as soon as possible.",
+        "buttonText": "Learn more →"
+    },
+    "footer": {
+        "paragraph": "Copyright © 2023 Xavier Nouaille. All Rights Reserved. Made in 🇫🇷"
     }
 }
