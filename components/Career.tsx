@@ -51,7 +51,7 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                 }}
                             >
                                 {items.map((item, index) => (
-                                    <>
+                                    <Box key={index}>
                                         <Box>
                                             <CustomLink
                                                 link="#"
@@ -107,7 +107,7 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                         {index !== items.length - 1 && (
                                             <Divider />
                                         )}
-                                    </>
+                                    </Box>
                                 ))}
                             </Box>
                         </List>

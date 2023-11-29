@@ -8,6 +8,8 @@ import { muiThemeDark, muiThemeLight } from 'muiTheme'
 import useSwitchTheme from '@helpers/useSwitchTheme'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [theme, toggleTheme] = useSwitchTheme()
@@ -16,11 +18,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         [theme]
     )
 
+    const { asPath } = useRouter()
     const { t } = useTranslation()
 
     return (
-        <>
-            <ThemeProvider theme={themeValue}>
+        <AnimatePresence mode="popLayout">
+            <ThemeProvider key={asPath} theme={themeValue}>
                 <Header
                     links={t('header.links', { returnObjects: true })}
                     toggleTheme={toggleTheme}
@@ -30,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <Footer paragraph={t('footer.paragraph')} />
                 <CssBaseline />
             </ThemeProvider>
-        </>
+        </AnimatePresence>
     )
 }
 

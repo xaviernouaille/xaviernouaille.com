@@ -8,8 +8,12 @@ import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import { MetaTag } from 'next-seo/lib/types'
 import { Box } from '@mui/material'
+import PageTransition from '@components/PageTransition'
 
-const Home: NextPage = () => {
+type IndexPageProps = {}
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>
+
+const Home: NextPage = (_: IndexPageProps, ref: IndexPageRef) => {
     const { t } = useTranslation()
 
     const age = useMemo(() => new Date().getFullYear() - 2000, [])
@@ -71,56 +75,58 @@ const Home: NextPage = () => {
     const canonical = useMemo(() => 'https://xaviernouaille.com/about', [])
 
     return (
-        <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
-            <Box
-                sx={{
-                    position: 'fixed',
-                    left: { xs: -300, md: 0 },
-                    top: 0,
-                    opacity: 0.35,
-                }}
-            >
-                {/* eslint-disable-next-line */}
-                {/* <img src="/docs-right.png" /> */}
-            </Box>
-            <NextSeo
-                title={title}
-                description={description}
-                canonical={canonical}
-                additionalMetaTags={additionalMetaTags}
-                openGraph={openGraph}
-                additionalLinkTags={additionalLinkTags}
-            />
-            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
-                <Hero title={'Hello ! 👋'} />
-            </Box>
-            <Box sx={{ marginTop: { xs: 10 } }}>
-                <About
-                    isAboutPage={true}
-                    title={t('about.title')}
-                    paragraph0={t('about.paragraph0')}
-                    paragraph1={t('about.paragraph1')}
-                    modalTitle={t('about.modalTitle')}
-                    modalText={t('about.modalText')}
-                    modalButtonText={t('about.modalButtonText')}
+        <PageTransition ref={ref}>
+            <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        left: { xs: -300, md: 0 },
+                        top: 0,
+                        opacity: 0.35,
+                    }}
+                >
+                    {/* eslint-disable-next-line */}
+                    {/* <img src="/docs-right.png" /> */}
+                </Box>
+                <NextSeo
+                    title={title}
+                    description={description}
+                    canonical={canonical}
+                    additionalMetaTags={additionalMetaTags}
+                    openGraph={openGraph}
+                    additionalLinkTags={additionalLinkTags}
                 />
-            </Box>
+                <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
+                    <Hero title={'Hello ! 👋'} />
+                </Box>
+                <Box sx={{ marginTop: { xs: 10 } }}>
+                    <About
+                        isAboutPage={true}
+                        title={t('about.title')}
+                        paragraph0={t('about.paragraph0')}
+                        paragraph1={t('about.paragraph1')}
+                        modalTitle={t('about.modalTitle')}
+                        modalText={t('about.modalText')}
+                        modalButtonText={t('about.modalButtonText')}
+                    />
+                </Box>
 
-            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
-                <Career
-                    title={t('career.title')}
-                    items={t('career.items', { returnObjects: true })}
-                    withDetail
-                />
+                <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
+                    <Career
+                        title={t('career.title')}
+                        items={t('career.items', { returnObjects: true })}
+                        withDetail
+                    />
+                </Box>
+                <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
+                    <Project
+                        title={t('project.title')}
+                        items={t('project.items', { returnObjects: true })}
+                        withDetail
+                    />
+                </Box>
             </Box>
-            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
-                <Project
-                    title={t('project.title')}
-                    items={t('project.items', { returnObjects: true })}
-                    withDetail
-                />
-            </Box>
-        </Box>
+        </PageTransition>
     )
 }
 

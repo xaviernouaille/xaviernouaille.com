@@ -68,7 +68,7 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
     )
 
     return (
-        <Slide direction="down" in={goingUp}>
+        <Slide appear={false} direction="down" in={goingUp}>
             <AppBar
                 elevation={0}
                 sx={{
