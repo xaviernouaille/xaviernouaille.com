@@ -23,17 +23,28 @@ const CustomLink: FC<Props> = ({
         big: 'h3',
         huge: 'h2',
     }
+
+    const sxProps = {
+        lineHeight: 1.3,
+        borderBottom: withUnderline ? '1px solid' : 'none',
+        ...(withArrow && {
+            '&::after': {
+                fontSize: '.75rem',
+                fontWeight: 500,
+                lineHeight: 1,
+                marginLeft: '0.25rem',
+                content: '"↗"',
+                verticalAlign: 'text-top',
+            },
+        }),
+    }
     return (
         <Link href={link}>
             <a style={{ textDecoration: 'none', display: 'inline-block' }}>
                 <Typography
                     variant={linkSize[size] as any}
                     color="text.primary"
-                    className={withArrow ? 'withArrow' : ''}
-                    sx={{
-                        lineHeight: 1.3,
-                        borderBottom: withUnderline ? '1px solid' : 'none',
-                    }}
+                    sx={sxProps}
                 >
                     {text}
                 </Typography>
