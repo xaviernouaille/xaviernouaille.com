@@ -60,7 +60,10 @@ const Contact: FC<Props> = ({
                         {title}
                     </Typography>
 
-                    <Typography variant="body1" sx={{ width: '80%' }}>
+                    <Typography
+                        variant="body1"
+                        sx={{ width: { xs: '100%', sm: '80%' } }}
+                    >
                         {paragraph}
                     </Typography>
 

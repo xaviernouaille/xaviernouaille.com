@@ -24,15 +24,7 @@ type Props = {
 
 const Career: FC<Props> = ({ title, items, withDetail = false }) => {
     return (
-        <Box
-            sx={{
-                padding: {
-                    xs: '30px 15px 60px 15px',
-                    sm: '40px 0 70px 0',
-                    md: '120px 0 70px 0',
-                },
-            }}
-        >
+        <Box>
             <Container maxWidth="md">
                 <Box>
                     <Typography

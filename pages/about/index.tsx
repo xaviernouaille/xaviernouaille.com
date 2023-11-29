@@ -71,7 +71,7 @@ const Home: NextPage = () => {
     const canonical = useMemo(() => 'https://xaviernouaille.com', [])
 
     return (
-        <>
+        <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
             <Box
                 sx={{
                     position: 'fixed',
@@ -91,24 +91,10 @@ const Home: NextPage = () => {
                 openGraph={openGraph}
                 additionalLinkTags={additionalLinkTags}
             />
-            <Box
-                sx={{
-                    marginTop: '110px',
-                    padding: {
-                        xs: '0 15px 0 15px',
-                    },
-                }}
-            >
+            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
                 <Hero title={'Hello !'} />
             </Box>
-            <Box
-                sx={{
-                    padding: {
-                        xs: '80px 15px 60px 15px',
-                        sm: '80px 0 70px 0',
-                    },
-                }}
-            >
+            <Box sx={{ marginTop: { xs: 10 } }}>
                 <About
                     isAboutPage={true}
                     title={t('about.title')}
@@ -118,19 +104,23 @@ const Home: NextPage = () => {
                     modalText={t('about.modalText')}
                     modalButtonText={t('about.modalButtonText')}
                 />
+            </Box>
 
+            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
                 <Career
                     title={t('career.title')}
                     items={t('career.items', { returnObjects: true })}
                     withDetail
                 />
+            </Box>
+            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
                 <Project
                     title={t('project.title')}
                     items={t('project.items', { returnObjects: true })}
                     withDetail
                 />
             </Box>
-        </>
+        </Box>
     )
 }
 

@@ -69,7 +69,7 @@ const Home: NextPage = () => {
     const canonical = useMemo(() => 'https://xaviernouaille.com', [])
 
     return (
-        <>
+        <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
             <Box
                 sx={{
                     position: 'fixed',
@@ -92,23 +92,13 @@ const Home: NextPage = () => {
 
             <Box
                 sx={{
-                    marginTop: '110px',
-                    padding: {
-                        xs: '0px 15px 0px 15px',
-                    },
+                    marginTop: { xs: 14, sm: 17 },
                 }}
             >
                 <Hero title={'Contact'} />
             </Box>
 
-            <Box
-                sx={{
-                    padding: {
-                        xs: '80px 15px 60px 15px',
-                        sm: '80px 0 70px 0',
-                    },
-                }}
-            >
+            <Box sx={{ marginTop: { xs: 10 } }}>
                 <Contact
                     title={t('contact.title')}
                     emailTitle={t('contact.emailTitle')}
@@ -117,7 +107,7 @@ const Home: NextPage = () => {
                     buttonText={t('contact.buttonText')}
                 />
             </Box>
-        </>
+        </Box>
     )
 }
 

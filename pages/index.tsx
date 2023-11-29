@@ -72,7 +72,7 @@ const Home: NextPage = () => {
     const canonical = useMemo(() => 'https://xaviernouaille.com', [])
 
     return (
-        <>
+        <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
             <Box
                 sx={{
                     position: 'fixed',
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
                 }}
             >
                 {/* eslint-disable-next-line */}
-                <img src="/docs-right.png" />
+                {/* <img src="/docs-right.png" /> */}
             </Box>
             <NextSeo
                 title={title}
@@ -94,25 +94,13 @@ const Home: NextPage = () => {
             />
             <Box
                 sx={{
-                    marginTop: { xs: '170px', sm: '200px' },
-                    padding: {
-                        xs: '0px 15px 0px 15px',
-                        sm: '0',
-                    },
+                    marginTop: { xs: 20, sm: 24 },
                 }}
             >
                 <Hero title={t('hero.title')} subtitle={t('hero.subtitle')} />
             </Box>
 
-            <Box
-                sx={{
-                    padding: {
-                        xs: '100px 15px 60px 15px',
-                        sm: '90px 0 70px 0',
-                        md: '160px 0 70px 0',
-                    },
-                }}
-            >
+            <Box sx={{ marginTop: { xs: 14 } }}>
                 <About
                     title={t('about.title')}
                     paragraph0={t('about.paragraph0')}
@@ -124,21 +112,22 @@ const Home: NextPage = () => {
                 />
             </Box>
 
-            <Career
-                title={t('career.title')}
-                items={t('career.items', { returnObjects: true })}
-            />
-            <Project
-                title={t('project.title')}
-                items={t('project.items', { returnObjects: true })}
-            />
+            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
+                <Career
+                    title={t('career.title')}
+                    items={t('career.items', { returnObjects: true })}
+                />
+            </Box>
+            <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
+                <Project
+                    title={t('project.title')}
+                    items={t('project.items', { returnObjects: true })}
+                />
+            </Box>
             <Box
                 sx={{
-                    padding: {
-                        xs: '30px 15px 60px 15px',
-                        sm: '40px 0 70px 0',
-                        md: '120px 0 70px 0',
-                    },
+                    marginTop: { xs: 14, sm: 17 },
+                    marginBottom: { xs: 10, sm: 14 },
                 }}
             >
                 <Contact
@@ -148,7 +137,7 @@ const Home: NextPage = () => {
                     buttonText={t('contact.buttonText')}
                 />
             </Box>
-        </>
+        </Box>
     )
 }
 
