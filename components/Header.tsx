@@ -38,10 +38,19 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
-            if (prevScrollY.current < currentScrollY && goingUp) {
+            const isEnoughScroll = window.scrollY > 800
+            if (
+                isEnoughScroll &&
+                prevScrollY.current < currentScrollY &&
+                goingUp
+            ) {
                 setGoingUp(false)
             }
-            if (prevScrollY.current > currentScrollY && !goingUp) {
+            if (
+                isEnoughScroll &&
+                prevScrollY.current > currentScrollY &&
+                !goingUp
+            ) {
                 setGoingUp(true)
             }
 
