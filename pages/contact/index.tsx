@@ -42,8 +42,7 @@ const Home: NextPage = () => {
         () => ({
             type: 'website',
             url: 'https://xaviernouaille.com',
-            title: 'Bonjour, je suis Xavier, développeur junior fullstack basé sur Paris.',
-            description: `Portfolio | Xavier Nouaille, ${age} ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.`,
+            title: "Contact | Un projet, une question ? N'hésitez pas à me contacter, je vous ferai part de ma réponse dans les plus brefs délais.",
         }),
         [age]
     )
@@ -62,11 +61,11 @@ const Home: NextPage = () => {
     const title = useMemo(() => 'Xavier Nouaille | Développeur fullstack', [])
     const description = useMemo(
         () =>
-            `Portfolio | Xavier Nouaille, ${age} ans basé à Paris. Je suis développeur fullstack React NodeJS. Passionné par les nouvelles technologies, découvrez mes projets personnels et professionnels.`,
+            `Contact | Un projet, une question ? N'hésitez pas à me contacter, je vous ferai part de ma réponse dans les plus brefs délais.`,
         [age]
     )
 
-    const canonical = useMemo(() => 'https://xaviernouaille.com', [])
+    const canonical = useMemo(() => 'https://xaviernouaille.com/contact', [])
 
     return (
         <Box sx={{ paddingRight: 1, paddingLeft: 1 }}>
