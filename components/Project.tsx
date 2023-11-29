@@ -44,7 +44,7 @@ const Project: FC<Props> = ({ title, items, withDetail = false }) => {
                             }}
                         >
                             {items.map((item, index) => (
-                                <>
+                                <Box key={index}>
                                     <Box>
                                         <CustomLink
                                             link="#"
@@ -87,7 +87,7 @@ const Project: FC<Props> = ({ title, items, withDetail = false }) => {
                                         </List>
                                     )}
                                     {index !== items.length - 1 && <Divider />}
-                                </>
+                                </Box>
                             ))}
                         </List>
                     </Box>

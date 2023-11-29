@@ -22,14 +22,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     const { t } = useTranslation()
 
     return (
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence>
             <ThemeProvider key={asPath} theme={themeValue}>
                 <Header
                     links={t('header.links', { returnObjects: true })}
                     toggleTheme={toggleTheme}
                     theme={theme}
                 />
-                <Component {...pageProps} />
+                <Component key={asPath} {...pageProps} />
                 <Footer paragraph={t('footer.paragraph')} />
                 <CssBaseline />
             </ThemeProvider>

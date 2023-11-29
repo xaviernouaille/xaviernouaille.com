@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import CustomLink from './CustomLink'
-import { format } from 'date-fns'
+import { utcToZonedTime, format } from 'date-fns-tz'
 
 type Props = {
     title: string
@@ -18,6 +18,22 @@ const Contact: FC<Props> = ({
     emailTitle,
     isContactPage = false,
 }) => {
+    const getCurrentDate = () => {
+        const currentDate = new Date()
+        const parisTimeZone = 'Europe/Paris'
+        const parisDate = utcToZonedTime(currentDate, parisTimeZone)
+        const formattedParisDate = format(parisDate, 'yyyy/MM/dd HH:mm:ss')
+        return formattedParisDate
+    }
+    const [date, setDate] = useState<string>(getCurrentDate())
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDate(getCurrentDate())
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [])
+
     return (
         <Box>
             <Container maxWidth="md">
@@ -43,11 +59,12 @@ const Contact: FC<Props> = ({
                             <Typography
                                 variant="body2"
                                 sx={{ marginBottom: 2 }}
-                            >
-                                {format(new Date(), 'dd MMMM yyyy, hh:ss:ii')}
-                            </Typography>
+                                dangerouslySetInnerHTML={{
+                                    __html: date.toString(),
+                                }}
+                            ></Typography>
                             <Typography variant="body2">
-                                UTC-01:00 - Paris, FR
+                                UTC+01:00 - Paris, FR
                             </Typography>
                         </Box>
                     </Box>
