@@ -66,7 +66,7 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                                 display: 'flex',
                                                 flexDirection: {
                                                     xs: 'column',
-                                                    sm: 'row',
+                                                    md: 'row',
                                                 },
                                                 justifyContent: 'space-between',
                                             }}
@@ -83,6 +83,10 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                                 sx={{
                                                     maxWidth: '620px',
                                                     listStyleType: 'disc',
+                                                    display: {
+                                                        xs: 'none',
+                                                        md: 'block',
+                                                    },
                                                 }}
                                             >
                                                 {item.description.map(
@@ -91,6 +95,7 @@ const Career: FC<Props> = ({ title, items, withDetail = false }) => {
                                                             <Typography
                                                                 variant="body2"
                                                                 lineHeight={1.3}
+                                                                fontWeight={400}
                                                             >
                                                                 {description}
                                                             </Typography>

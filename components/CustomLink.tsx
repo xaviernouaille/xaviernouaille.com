@@ -7,7 +7,7 @@ type Props = {
     text: string
     withArrow?: boolean
     withUnderline?: boolean
-    size: 'small' | 'medium' | 'big'
+    size: 'small' | 'medium' | 'big' | 'huge'
 }
 
 const CustomLink: FC<Props> = ({
@@ -21,6 +21,7 @@ const CustomLink: FC<Props> = ({
         small: 'body2',
         medium: 'body1',
         big: 'h3',
+        huge: 'h2',
     }
     return (
         <Link href={link}>

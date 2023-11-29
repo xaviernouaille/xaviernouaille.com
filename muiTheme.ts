@@ -34,7 +34,7 @@ const baseTheme = {
             fontFamily: ['Inter'].join(','),
         },
         h2: {
-            fontSize: '2rem',
+            fontSize: '1.8rem',
             fontWeight: 600,
             lineHeight: 1.5,
             fontFamily: ['Inter'].join(','),

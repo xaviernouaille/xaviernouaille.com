@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                 additionalLinkTags={additionalLinkTags}
             />
             <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
-                <Hero title={'Hello !'} />
+                <Hero title={'Hello ! 👋'} />
             </Box>
             <Box sx={{ marginTop: { xs: 10 } }}>
                 <About

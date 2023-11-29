@@ -69,6 +69,7 @@ const Project: FC<Props> = ({ title, items, withDetail = false }) => {
                                             sx={{
                                                 display: 'flex',
                                                 alignItems: 'center',
+                                                flexWrap: 'wrap',
                                                 justifyContent: 'start',
                                                 gap: 3,
                                             }}

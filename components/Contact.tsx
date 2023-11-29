@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
 import { FC } from 'react'
 import CustomLink from './CustomLink'
+import { format } from 'date-fns'
 
 type Props = {
     title: string
@@ -43,10 +44,10 @@ const Contact: FC<Props> = ({
                                 variant="body2"
                                 sx={{ marginBottom: 2 }}
                             >
-                                November 11th, 2023, 9:17:54 AM
+                                {format(new Date(), 'dd MMMM yyyy, hh:ss:ii')}
                             </Typography>
                             <Typography variant="body2">
-                                UTC-05:00 - Boston, MA
+                                UTC-01:00 - Paris, FR
                             </Typography>
                         </Box>
                     </Box>

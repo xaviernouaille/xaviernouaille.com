@@ -12,8 +12,10 @@ const Footer: FC<Props> = ({ paragraph }) => {
             component="footer"
             sx={{
                 paddingBottom: 5,
-                paddingTop: 2,
+                paddingTop: 4,
                 marginTop: 6,
+                paddingRight: { xs: 2, sm: 0 },
+                paddingLeft: { xs: 2, sm: 0 },
             }}
         >
             <Divider />
@@ -21,7 +23,7 @@ const Footer: FC<Props> = ({ paragraph }) => {
                 display={'flex'}
                 alignItems={'center'}
                 gap={1}
-                paddingTop={3}
+                paddingTop={4}
                 paddingBottom={4}
             >
                 <Typography variant="body2" fontWeight={400} lineHeight={1.5}>

@@ -16,7 +16,7 @@
         ]
     },
     "hero": {
-        "title": "Développeur et passionné de Javascript originaire de France. Je suis intéressé par React, Node, Jamstack, Typescript.",
+        "title": "Développeur et passionné de Javascript originaire de France. Je suis intéressé par React, Node & Typescript.",
         "subtitle": "Bonjour, je suis Xavier Nouaille 👋",
         "paragraph": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative."
     },
@@ -120,18 +120,6 @@
                 "description": "Un bot qui scrap les offres d'alternance.",
                 "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
                 "tags": ["DiscordJS", "cheerio"]
-            },
-            {
-                "title": "ktr-msc-ls1 - Test d'admission Epitech MSC Pro",
-                "description": "Partage de buisness card entre utilisateurs.",
-                "url": "https://github.com/xaviernouaille/ktr-msc-ls1",
-                "tags": ["ExpressJS", "NextJS", "TypeScript"]
-            },
-            {
-                "title": "React, TypeScript & TailwindCSS Generator",
-                "description": "Un script qui permet de créer rapidement un projet React avec TypeScript & TailwindCSS incorporé directement. Plus besoin de suivre la doc de Tailwind.",
-                "url": "https://github.com/xaviernouaille/React-TypeScript-TailwindCSS-Generator",
-                "tags": ["Shell"]
             }
         ]
     },

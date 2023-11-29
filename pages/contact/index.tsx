@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                     marginTop: { xs: 14, sm: 17 },
                 }}
             >
-                <Hero title={'Contact'} />
+                <Hero title={'Contact 📆'} />
             </Box>
 
             <Box sx={{ marginTop: { xs: 10 } }}>

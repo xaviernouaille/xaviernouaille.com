@@ -93,8 +93,8 @@ const About: FC<Props> = ({
                 <Box sx={{ marginTop: '20px' }}>
                     <CustomLink
                         link={SOCIAL.Malt}
-                        text={modalTitle}
-                        size="big"
+                        text={`🚀 ${modalTitle}`}
+                        size="huge"
                         withArrow
                     />
                 </Box>
