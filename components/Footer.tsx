@@ -14,8 +14,8 @@ const Footer: FC<Props> = ({ paragraph }) => {
                 paddingBottom: 5,
                 paddingTop: 4,
                 marginTop: 6,
-                paddingRight: { xs: 2, sm: 0 },
-                paddingLeft: { xs: 2, sm: 0 },
+                paddingRight: { xs: 3, sm: 0 },
+                paddingLeft: { xs: 3, sm: 0 },
             }}
         >
             <Divider />
