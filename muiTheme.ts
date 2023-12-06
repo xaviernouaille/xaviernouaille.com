@@ -28,15 +28,17 @@ const baseTheme = {
     typography: {
         fontFamily: 'Inter',
         h1: {
-            fontSize: '2.6rem',
+            fontSize: '2.7rem',
             fontWeight: 600,
-            lineHeight: '1.5',
+            lineHeight: '1.3',
+            letterSpacing: '-0.7px',
             fontFamily: ['Inter'].join(','),
         },
         h2: {
             fontSize: '1.8rem',
             fontWeight: 600,
             lineHeight: 1.5,
+            letterSpacing: '-0.4px',
             fontFamily: ['Inter'].join(','),
         },
         h3: {
