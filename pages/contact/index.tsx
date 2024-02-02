@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo'
 import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import { MetaTag } from 'next-seo/lib/types'
-import { Box } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 import PageTransition from '@components/PageTransition'
 
 type IndexPageProps = {}
@@ -96,15 +96,16 @@ const Home: NextPage = (_: IndexPageProps, ref: IndexPageRef) => {
 
                 <Box
                     sx={{
-                        marginTop: { xs: 14, sm: 17 },
+                        marginTop: { xs: 14, sm: 20 },
                     }}
                 >
-                    <Hero title={'Contact 📆'} />
+                    <Hero title={t('contact.title')} />
+                    <Divider sx={{ marginTop: 5 }} />
                 </Box>
 
                 <Box sx={{ marginTop: { xs: 10 } }}>
                     <Contact
-                        title={t('contact.title')}
+                        title={''}
                         emailTitle={t('contact.emailTitle')}
                         paragraph={t('contact.paragraph')}
                         isContactPage={true}

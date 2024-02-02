@@ -1,11 +1,4 @@
-import {
-    Box,
-    Container,
-    Divider,
-    List,
-    ListItem,
-    Typography,
-} from '@mui/material'
+import { Box, Container, Divider, List, Typography } from '@mui/material'
 import { FC } from 'react'
 import CustomLink from './CustomLink'
 
@@ -47,7 +40,8 @@ const Project: FC<Props> = ({ title, items, withDetail = false }) => {
                                 <Box key={index}>
                                     <Box>
                                         <CustomLink
-                                            link="#"
+                                            target="_blank"
+                                            link={item.url}
                                             text={item.title}
                                             withArrow
                                             withUnderline

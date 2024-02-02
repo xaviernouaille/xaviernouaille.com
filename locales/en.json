@@ -17,7 +17,7 @@
     },
     "hero": {
         "title": "FullStack Developer and Javascript enthusiast from France. Interested in React, Node & Typescript.",
-        "subtitle": "Hello, I'm Xavier Nouaille 👋",
+        "subtitle": "Hello, I'm Xavier Nouaille ",
         "paragraph": "Engineer and fullstack developer trained at <b>Epitech</b> Paris, offering my skills to design robust, high-performance, and high-quality web applications. <br> With over 5 years of experience in fullstack development, I've worked collaboratively with teams of 5 to 10 developers on significant projects."
     },
     "about": {
@@ -72,34 +72,28 @@
                     "TypeScript overlay",
                     "Remote work in collaboration with the lead tech"
                 ]
-            },
-            {
-                "title": "Bachelor in Digital Project Management",
-                "company": "EEMI",
-                "date": "September 2019 - August 2022",
-                "description": [
-                    "Integration of static sites with HTML/CSS.",
-                    "Learning languages PHP & JavaScript",
-                    "API development with NodeJS.",
-                    "Containerization of applications with Docker. Training on Linux commands.",
-                    "Introduction to CMS Wordpress."
-                ]
             }
         ]
     },
     "project": {
-        "title": "My Projects",
+        "title": "My Projects / Contributions",
         "items": [
             {
-                "title": "Offeaze",
+                "title": "offeaze.co (closed)",
                 "description": "SaaS platform facilitating the connection between coworking spaces and individuals/businesses.",
                 "url": "#",
                 "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
             },
             {
-                "title": "Portfolio",
+                "title": "keeze.co",
+                "description": "SaaS platform facilitating the connection between coworking spaces and individuals/businesses.",
+                "url": "https://keeze.co",
+                "tags": ["React", "TypeScript", "TailwindCSS"]
+            },
+            {
+                "title": "xaviernouaille.com",
                 "description": "My personal portfolio where you currently are.",
-                "url": "#",
+                "url": "https://xaviernouaille.com",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -108,18 +102,6 @@
                     "AWS S3",
                     "GitHub Action"
                 ]
-            },
-            {
-                "title": "Notif Weather",
-                "description": "A Python script to inform me of the current weather.",
-                "url": "https://github.com/xaviernouaille/Notif-Weather",
-                "tags": ["Python", "bs4"]
-            },
-            {
-                "title": "Terra DiscordBot",
-                "description": "A bot that scrapes internship offers.",
-                "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
-                "tags": ["DiscordJS", "cheerio"]
             }
         ]
     },

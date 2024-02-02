@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, HTMLAttributeAnchorTarget } from 'react'
 
 type Props = {
     link: string
@@ -8,6 +8,7 @@ type Props = {
     withArrow?: boolean
     withUnderline?: boolean
     size: 'small' | 'medium' | 'big' | 'huge'
+    target?: HTMLAttributeAnchorTarget
 }
 
 const CustomLink: FC<Props> = ({
@@ -16,6 +17,7 @@ const CustomLink: FC<Props> = ({
     withArrow = false,
     withUnderline = false,
     size = 'medium',
+    target = '_self',
 }) => {
     const linkSize = {
         small: 'body2',
@@ -35,16 +37,24 @@ const CustomLink: FC<Props> = ({
                 marginLeft: '0.25rem',
                 content: '"↗"',
                 verticalAlign: 'text-top',
+                transition: 'all .5s ease',
+            },
+            '&:hover::after': {
+                fontSize: '.9rem',
             },
         }),
     }
     return (
         <Link href={link}>
-            <a style={{ textDecoration: 'none', display: 'inline-block' }}>
+            <a
+                target={target}
+                style={{ textDecoration: 'none', display: 'inline-block' }}
+            >
                 <Typography
                     variant={linkSize[size] as any}
                     color="text.primary"
                     sx={sxProps}
+                    component={'span'}
                 >
                     {text}
                 </Typography>

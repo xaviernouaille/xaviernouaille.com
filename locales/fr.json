@@ -17,7 +17,7 @@
     },
     "hero": {
         "title": "Développeur et passionné de Javascript originaire de France. Je suis intéressé par React, Node & Typescript.",
-        "subtitle": "Bonjour, je suis Xavier Nouaille 👋",
+        "subtitle": "Bonjour, je suis Xavier Nouaille ",
         "paragraph": "Ingénieur et développeur fullstack formé à <b>Epitech</b> Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité. <br> Avec une expérience de plus de 5 ans dans le développement fullstack, j'ai travaillé en collaboration avec des équipes de 5 à 10 développeurs sur des projets d'envergure significative."
     },
     "about": {
@@ -88,18 +88,24 @@
         ]
     },
     "project": {
-        "title": "Mes projets",
+        "title": "Mes projets / Contributions",
         "items": [
             {
-                "title": "Offeaze",
+                "title": "offeaze.co (fermé)",
                 "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
                 "url": "#",
                 "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
             },
             {
-                "title": "Portfolio",
+                "title": "keeze.co",
+                "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
+                "url": "https://keeze.co",
+                "tags": ["React", "TypeScript", "TailwindCSS"]
+            },
+            {
+                "title": "xaviernouaille.com",
                 "description": "Mon portfolio personnel ou vous vous trouvez en ce moment même.",
-                "url": "#",
+                "url": "https://xaviernouaille.com",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -108,18 +114,6 @@
                     "AWS S3",
                     "GitHub Action"
                 ]
-            },
-            {
-                "title": "Notif Weather",
-                "description": "Un script Python permettant de m'informer de la météo actuelle.",
-                "url": "https://github.com/xaviernouaille/Notif-Weather",
-                "tags": ["Python", "bs4"]
-            },
-            {
-                "title": "Terra DiscordBot",
-                "description": "Un bot qui scrap les offres d'alternance.",
-                "url": "https://github.com/xaviernouaille/Terra-DiscordBot",
-                "tags": ["DiscordJS", "cheerio"]
             }
         ]
     },

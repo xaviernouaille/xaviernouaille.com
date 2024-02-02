@@ -28,10 +28,12 @@ const Contact: FC<Props> = ({
     const [date, setDate] = useState<string>(getCurrentDate())
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setDate(getCurrentDate())
-        }, 1000)
-        return () => clearInterval(interval)
+        if (isContactPage) {
+            const interval = setInterval(() => {
+                setDate(getCurrentDate())
+            }, 1000)
+            return () => clearInterval(interval)
+        }
     }, [])
 
     return (
@@ -81,6 +83,7 @@ const Contact: FC<Props> = ({
                     <Typography
                         variant="body1"
                         sx={{ width: { xs: '100%', sm: '80%' } }}
+                        component={'span'}
                     >
                         {paragraph}
                     </Typography>

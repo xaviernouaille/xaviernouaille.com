@@ -7,7 +7,7 @@ import { NextSeo } from 'next-seo'
 import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import { MetaTag } from 'next-seo/lib/types'
-import { Box } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 import PageTransition from '@components/PageTransition'
 
 type IndexPageProps = {}
@@ -96,9 +96,11 @@ const Home: NextPage = (_: IndexPageProps, ref: IndexPageRef) => {
                     openGraph={openGraph}
                     additionalLinkTags={additionalLinkTags}
                 />
-                <Box sx={{ marginTop: { xs: 14, sm: 17 } }}>
-                    <Hero title={'Hello ! 👋'} />
+                <Box sx={{ marginTop: { xs: 14, sm: 20 } }}>
+                    <Hero title={'En savoir plus sur moi'} />
                 </Box>
+                <Divider sx={{ marginTop: 5 }} />
+
                 <Box sx={{ marginTop: { xs: 10 } }}>
                     <About
                         isAboutPage={true}

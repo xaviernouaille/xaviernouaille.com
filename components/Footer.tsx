@@ -14,8 +14,8 @@ const Footer: FC<Props> = ({ paragraph }) => {
                 paddingBottom: 5,
                 paddingTop: 4,
                 marginTop: 6,
-                paddingRight: { xs: 3, sm: 0 },
-                paddingLeft: { xs: 3, sm: 0 },
+                paddingRight: { xs: 3, lg: 0 },
+                paddingLeft: { xs: 3, lg: 0 },
             }}
         >
             <Divider />
@@ -26,7 +26,12 @@ const Footer: FC<Props> = ({ paragraph }) => {
                 paddingTop={4}
                 paddingBottom={4}
             >
-                <Typography variant="body2" fontWeight={400} lineHeight={1.5}>
+                <Typography
+                    component={'span'}
+                    variant="body2"
+                    fontWeight={400}
+                    lineHeight={1.5}
+                >
                     {paragraph}
                 </Typography>
             </Box>

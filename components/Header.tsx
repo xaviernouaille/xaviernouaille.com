@@ -76,17 +76,17 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
                         alpha(theme.palette.background.paper, 0.4),
                     bgOpacity: 0.4,
                     paddingTop: 1,
-                    paddingLeft: { xs: 2, sm: 0 },
                 }}
             >
                 <Container
                     maxWidth="md"
+                    component="footer"
                     sx={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        padding: 0,
-                        paddingRight: 1,
+                        paddingRight: { xs: 3, lg: 0 },
+                        paddingLeft: { xs: 3, lg: 0 },
                     }}
                 >
                     <List
@@ -118,6 +118,9 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
                             <ListItemButton
                                 onClick={changeLanguageFunc}
                                 aria-label="Language"
+                                sx={{
+                                    padding: 0,
+                                }}
                             >
                                 <TranslateIcon
                                     sx={{
@@ -131,6 +134,10 @@ const Header: FC<Props> = ({ toggleTheme, theme, links }) => {
                             <ListItemButton
                                 aria-label="Theme"
                                 onClick={() => toggleTheme()}
+                                sx={{
+                                    padding: 0,
+                                    marginLeft: { xs: 3, sm: 4 },
+                                }}
                             >
                                 {theme === 'dark' ? (
                                     <Brightness7Icon

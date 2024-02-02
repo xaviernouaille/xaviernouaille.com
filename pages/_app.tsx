@@ -6,10 +6,11 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import { muiThemeDark, muiThemeLight } from 'muiTheme'
 import useSwitchTheme from '@helpers/useSwitchTheme'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [theme, toggleTheme] = useSwitchTheme()
@@ -23,6 +24,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <AnimatePresence>
+            <Head>
+                <style>
+                    {`
+                        p{
+                            opacity: 0.7;
+                        }
+                    `}
+                </style>
+            </Head>
             <ThemeProvider key={asPath} theme={themeValue}>
                 <Header
                     links={t('header.links', { returnObjects: true })}
