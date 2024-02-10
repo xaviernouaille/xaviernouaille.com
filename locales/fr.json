@@ -91,16 +91,30 @@
         "title": "Mes projets / Contributions",
         "items": [
             {
-                "title": "offeaze.co (fermé)",
-                "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
-                "url": "#",
-                "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
+                "title": "orizons.io",
+                "description": "Pour les professionnels et particuliers, Orizons simplifie et digitalise vos prestations d'efficacité énergétique pour un avenir durable.",
+                "url": "https://orizons.io",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "React Hook Form",
+                    "Google MAPS API",
+                    "Firebase",
+                    "React Query"
+                ]
             },
             {
                 "title": "keeze.co",
                 "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
                 "url": "https://keeze.co",
                 "tags": ["React", "TypeScript", "TailwindCSS"]
+            },
+            {
+                "title": "offeaze.co (fermé)",
+                "description": "Plateforme SaaS permettant la mise en relation de bureau et espace de coworking avec des particuliers et entreprises.",
+                "url": "#",
+                "tags": ["React", "TypeScript", "NestJS", "GraphQL", "Apollo"]
             },
             {
                 "title": "xaviernouaille.com",
