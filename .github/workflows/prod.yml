@@ -6,7 +6,7 @@ name: Deploy to Amazon S3 -- Dev
 on:
   # Triggers the workflow on push events but only for the dev branch
   push:
-    branches: [ prod ]
+    branches: [prod]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,15 +20,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
         with:
-          node-version: "14"
+          node-version: 20
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
           check-latest: true
       - run: npm install
       - run: npm run build
       - run: npm run sitemap
-      - run: npm run export
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
         with:
@@ -37,13 +38,13 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "eu-west-3"
-          SOURCE_DIR: "out"
+          AWS_REGION: 'eu-west-3'
+          SOURCE_DIR: 'out'
       - name: Create CloudFront Cache Invalidation
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION_ID_DEV }}
-          PATHS: "/*"
-          AWS_REGION: "eu-central-1"
+          PATHS: '/*'
+          AWS_REGION: 'eu-central-1'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
