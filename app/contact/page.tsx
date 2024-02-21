@@ -8,20 +8,33 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className='py-6 prose dark:prose-invert mt-10'>
+    <div className='mt-28'>
       <h1 className='mb-2'>Contact</h1>
-      <p className='text-md font-mono my-4 text-slate-700 dark:text-slate-200 mr-20 opacity-70'>
+      <p className='text-md  my-4  mr-20'>
         Un projet, une question ? N{"'"}hésitez pas à me contacter, je vous
         ferai part de ma réponse dans les plus brefs délais.
+        <br />
+        <br />
+        Merci :-)
       </p>
-      <hr className='my-4' />
+
       <div className='mt-20'>
-        <h3 className='font-extrabold'>Contactez moi par email :</h3>
+        <h3 className='font-extrabold mb-0 pb-0'>Contactez moi par email :</h3>
         <a
           href='mailto:xavier.nouaille@protonmail.com'
-          className='font-mono italic text-sm hover:underline cursor-pointer'
+          className='cursor-pointer font-medium'
         >
-          xavier.nouaille@protonmail.com
+          <p className='highlight mt-2'>xavier.nouaille@protonmail.com</p>
+        </a>
+
+        <h3 className='font-extrabold mb-0 pb-0 mt-5'>
+          Contactez moi sur Linkedin :
+        </h3>
+        <a
+          href='mailto:xavier.nouaille@protonmail.com'
+          className='cursor-pointer font-medium'
+        >
+          <p className='highlight mt-2'>Xavier Nouaille</p>
         </a>
 
         <DataCounter />

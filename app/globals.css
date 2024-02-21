@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1{
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+    line-height: 1.6em !important;
+}
+
+h2{
+    @apply text-2xl sm:text-4xl font-bold tracking-wide;
+}
+
+h3{
+    @apply uppercase pb-4 tracking-wide font-bold text-gray-300/90;
+}
+
+h4{
+    @apply text-xl font-bold;
+}
+
+small, .small {
+    @apply text-sm sm:text-base;
+}
+
+.menu-link{
+    @apply sm:text-base text-[0.9rem];
+}
+
+.footer-link {
+    @apply sm:text-base text-[0.95rem];
+}
+
+p{
+    @apply pb-4 font-medium leading-relaxed md:leading-8 md:text-lg tracking-wide md:tracking-wider;
+    color: rgba(156, 163, 175, 0.9);
+}
+
+p>.highlight{
+    @apply font-bold;
+}
+
+.disabled{
+    color: rgba(156, 163, 175, 0.9);
+}
+
+.highlight{
+    @apply text-white;
+}
+
+.my-container{
+    @apply max-w-[880px];
+}
