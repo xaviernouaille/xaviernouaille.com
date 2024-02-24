@@ -16,8 +16,8 @@ const footerLinks1: Link[] = [
   { label: 'Contributions', href: '/contributions/' },
 ];
 const footerLinks2: Link[] = [
+  { label: 'Expériences', href: '/#career' },
   { label: 'Contact', href: '/contact/' },
-  { label: 'A propos', href: '/#about/' },
 ];
 const footerLinks3: Link[] = [
   {
@@ -48,7 +48,7 @@ export const Footer = () => {
     links.map(({ label, href, target }, index) => (
       <Link scroll={true} target={target} href={href} key={index}>
         <p
-          className={clsx('footer-link', {
+          className={clsx('footer-link pb-0', {
             highlight: isActive(pathname, href),
           })}
         >
@@ -60,13 +60,19 @@ export const Footer = () => {
   return (
     <>
       <hr
-        style={{ color: 'rgba(55,65,81,.4)', opacity: '0.4' }}
+        style={{ color: 'rgba(55,65,81,.4)', opacity: '0.2' }}
         className='mt-20'
       />
-      <footer className='max-w-[880px] mx-auto grid grid-cols-2 md:flex md:space-row justify-between py-12 px-4 md:px-8'>
-        <div>{renderLinks(footerLinks1)}</div>
-        <div>{renderLinks(footerLinks2)}</div>
-        <div>{renderLinks(footerLinks3)}</div>
+      <footer className='max-w-[880px] mx-auto grid grid-cols-2 md:flex md:space-row justify-around py-12 px-4 md:px-8'>
+        <div className='flex flex-col space-y-2'>
+          {renderLinks(footerLinks1)}
+        </div>
+        <div className='flex flex-col space-y-2'>
+          {renderLinks(footerLinks2)}
+        </div>
+        <div className='flex flex-col space-y-2'>
+          {renderLinks(footerLinks3)}
+        </div>
         <div>
           <p className='footer-link highlight'>©{currentYear}</p>
         </div>

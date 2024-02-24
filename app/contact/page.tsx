@@ -18,13 +18,13 @@ const Page = () => {
         Merci :-)
       </p>
 
-      <div className='mt-20'>
+      <div className='mt-16'>
         <h3 className='font-extrabold mb-0 pb-0'>Contactez moi par email :</h3>
         <a
           href='mailto:xavier.nouaille@protonmail.com'
           className='cursor-pointer font-medium'
         >
-          <p className='highlight mt-2'>xavier.nouaille@protonmail.com</p>
+          <p className='highlight mt-2 small'>xavier.nouaille@protonmail.com</p>
         </a>
 
         <h3 className='font-extrabold mb-0 pb-0 mt-5'>
@@ -34,7 +34,7 @@ const Page = () => {
           href='mailto:xavier.nouaille@protonmail.com'
           className='cursor-pointer font-medium'
         >
-          <p className='highlight mt-2'>Xavier Nouaille</p>
+          <p className='highlight mt-2 small'>Xavier Nouaille</p>
         </a>
 
         <DataCounter />
