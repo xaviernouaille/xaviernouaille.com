@@ -63,7 +63,7 @@ export const Footer = () => {
         style={{ color: 'rgba(55,65,81,.4)', opacity: '0.2' }}
         className='mt-20'
       />
-      <footer className='max-w-[880px] mx-auto grid grid-cols-2 md:flex md:space-row justify-around py-12 px-4 md:px-8'>
+      <footer className='max-w-[880px] mx-auto grid grid-cols-2 gap-6 md:flex md:space-row justify-around py-12 px-6 lg:px-4 md:px-8'>
         <div className='flex flex-col space-y-2'>
           {renderLinks(footerLinks1)}
         </div>

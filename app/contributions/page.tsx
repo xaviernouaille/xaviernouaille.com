@@ -49,7 +49,7 @@ const renderProjects = (projects: Project[]) => {
       href='#'
     >
       <div
-        className='bg-cover bg-center rounded-lg shadow-md h-72'
+        className='bg-cover bg-center rounded-lg shadow-md md:h-64 lg:h-72 sm:h-52 h-44'
         style={{ backgroundImage: `url(/${imageSrc})` }}
       ></div>
       <div className='mt-3'>
