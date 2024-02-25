@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-[#09090B] text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          <header className='fixed top-0 py-6 w-full bg-white dark:bg-[#09090B] backdrop-blur-sm z-50 px-6 lg:px-0'>
+          <header className='fixed top-0 py-6 w-full bg-white dark:bg-[#09090BCC] backdrop-blur-sm z-50 px-6 lg:px-0'>
             <div className='my-container flex items-center justify-between mx-auto bg-primary'>
               {/* <ModeToggle /> */}
               <Menu />
