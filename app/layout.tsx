@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <Menu />
             </div>
           </header>
-          <main className='px-6 lg:px-4 my-container mx-auto pt-10'>
+          <main className='px-6 lg:px-0 my-container mx-auto pt-10'>
             {children}
           </main>
           <Footer />
