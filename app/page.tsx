@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className='md:mt-36 mt-28'>
+    <div className='md:mt-36 mt-24'>
       <p className='uppercase'>Hello, je suis Xavier Nouaille</p>
       <h1>
         Développeur fullstack passionné de Javascript originaire de France.{' '}
