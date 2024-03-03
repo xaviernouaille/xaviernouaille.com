@@ -19,7 +19,9 @@ export const DataCounter = () => {
 
   return (
     <div>
-      <p className='py-0 mb-0 text-right'>{date.toString()}</p>
+      <p className='py-0 mb-0 text-right' suppressHydrationWarning>
+        {date.toString()}
+      </p>
       <p className='opacity-70 mt-0 small py-0 text-right'>
         UTC+01:00 - Paris, FR
       </p>
