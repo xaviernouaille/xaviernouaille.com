@@ -19,20 +19,7 @@ h4{
     @apply text-xl font-bold;
 }
 
-small, .small {
-    @apply text-sm sm:text-base;
-}
-
-.menu-link{
-    @apply sm:text-base text-[0.9rem];
-}
-
-.footer-link {
-    @apply sm:text-base text-[0.95rem];
-}
-
 p{
-    @apply pb-4 font-medium leading-relaxed md:leading-8 md:text-lg tracking-wide md:tracking-wider;
     color: rgba(156, 163, 175, 0.9);
 }
 
@@ -44,10 +31,14 @@ p>.highlight{
     color: rgba(156, 163, 175, 0.9);
 }
 
+.border-disabled{
+    border-color: rgba(156, 163, 175, 0.2);
+}
+
 .highlight{
     @apply text-white;
 }
 
 .my-container{
-    @apply max-w-[880px];
+    @apply max-w-[780px];
 }

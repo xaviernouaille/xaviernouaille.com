@@ -18,9 +18,11 @@ export const DataCounter = () => {
   }, []);
 
   return (
-    <div className='mt-20'>
-      <p className='py-0 mb-0'>{date.toString()}</p>
-      <p className='opacity-70 mt-0 small py-0'>UTC+01:00 - Paris, FR</p>
+    <div>
+      <p className='py-0 mb-0 text-right'>{date.toString()}</p>
+      <p className='opacity-70 mt-0 small py-0 text-right'>
+        UTC+01:00 - Paris, FR
+      </p>
     </div>
   );
 };

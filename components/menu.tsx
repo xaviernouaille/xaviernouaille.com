@@ -3,26 +3,21 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { HEADER_LINK } from '@/constants/links';
 
 const isActive = (pathname: string, label: string) => {
   return pathname === label;
 };
 
-const menuLinks = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Contributions', href: '/contributions/' },
-  { label: 'Contact', href: '/contact/' },
-];
-
 export const Menu = () => {
   const pathname = usePathname();
 
   const renderMenuLinks = () => {
-    return menuLinks.map(({ label, href }, i) => {
+    return HEADER_LINK.map(({ label, href }, i) => {
       return (
         <Link key={i} scroll={true} href={href}>
           <p
-            className={clsx('menu-link pb-0', {
+            className={clsx('pb-0 font-medium', {
               highlight: isActive(pathname, href),
             })}
           >

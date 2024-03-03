@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div className='md:mt-36 mt-24'>
-      <p className='uppercase'>Hello, je suis Xavier Nouaille</p>
+      <p className='uppercase font-semibold'>Hello, je suis Xavier Nouaille</p>
       <h1>
         Développeur fullstack passionné de Javascript originaire de France.{' '}
         <span className='disabled'>
@@ -17,7 +17,7 @@ const Page = () => {
         </span>
       </h1>
 
-      <div id='about' className='mt-32 md:mt-44'>
+      <div id='about' className='mt-32 md:mt-36'>
         <h3>A propos</h3>
         <p>
           Ingénieur et développeur fullstack formé à{' '}
@@ -42,9 +42,9 @@ const Page = () => {
       </div>
 
       <div id='career' className='mt-36'>
-        <h3>Expériences</h3>
-        <div className='flex flex-col space-y-3 md:space-y-2'>
-          <div>
+        <h3 className='mb-3'>Expériences</h3>
+        <div className='flex flex-col space-y-3'>
+          <div className='flex flex-col space-y-1'>
             <p className='highlight font-bold uppercase pb-0 small'>DialOnce</p>
             <div className='flex flex-col md:flex-row md:justify-between md:items-center'>
               <p className='pb-0'>Développer FullStack & DevOPS</p>
