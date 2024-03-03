@@ -37,7 +37,9 @@ const renderSources = (sources: Sources[]) => {
 const Page = () => {
   return (
     <div className='mt-28'>
-      <h1 className='mb-2'>Les sources que j{"'"}ai trouvé interessantes</h1>
+      <h1 className='mb-2 lg:mb-6'>
+        Les sources que j{"'"}ai trouvé interessantes
+      </h1>
       <p className='my-4 md:mr-32 mb-28'>
         Voici une sélection d{"'"}articles, de vidéos et autres qui ont captivé
         mon intérêt, organisée selon la date à laquelle je les ai découverts.

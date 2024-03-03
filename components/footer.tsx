@@ -24,7 +24,7 @@ export const Footer = () => {
     links.map(({ label, href, target }, index) => (
       <Link scroll={true} target={target} href={href} key={index}>
         <p
-          className={clsx('footer-link pb-0', {
+          className={clsx('footer-link font-medium pb-0', {
             highlight: isActive(pathname, href),
           })}
         >

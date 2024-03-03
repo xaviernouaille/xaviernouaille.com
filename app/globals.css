@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 h1{
-    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+    @apply text-2xl sm:text-[2.2rem] font-bold;
     line-height: 1.6em !important;
-}
-
-h2{
-    @apply text-2xl sm:text-4xl font-bold tracking-wide;
 }
 
 h3{
