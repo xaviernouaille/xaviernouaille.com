@@ -41,7 +41,7 @@ const renderProjects = (projects: Project[]) => {
 const Page = () => {
   return (
     <div className='mt-28'>
-      <h1 className='mb-2 lg:mb-6'>Mon portfolio</h1>
+      <h1 className='mb-2 lg:mb-6'>Portfolio</h1>
       <p className='my-4 md:mr-32 mb-28'>
         Les projets <span className='highlight'>Freelance</span> sur lesquels j
         {"'"}ai travaillé ces dernières. années. Sur la grande majorité de mes

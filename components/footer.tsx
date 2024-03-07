@@ -38,19 +38,19 @@ export const Footer = () => {
       <div className='px-6 lg:px-4 md:px-8 my-container mx-auto mt-28 flex justify-between items-end mb-12'>
         <div className='flex space-x-3'>
           <a
-            href='#'
+            href='mailto:xavier.nouaille@protonmail.com'
             className='border border-solid p-1.5 rounded-md border-disabled inline-block hover:opacity-70'
           >
             <Mail className='h-5 w-5' />
           </a>
           <a
-            href='#'
+            href={FOOTER_LINKS3[1].href}
             className='border border-solid p-1.5 rounded-md border-disabled inline-block hover:opacity-70'
           >
             <Github className='h-5 w-5' />
           </a>
           <a
-            href='#'
+            href={FOOTER_LINKS3[0].href}
             className='border border-solid p-1.5 rounded-md border-disabled inline-block hover:opacity-70'
           >
             <Linkedin className='h-5 w-5' />
