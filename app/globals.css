@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1{
-    @apply text-2xl sm:text-[2.2rem] font-bold;
+    @apply text-2xl sm:text-[2rem] font-bold;
     line-height: 1.6em !important;
 }
 
