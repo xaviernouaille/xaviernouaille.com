@@ -18,4 +18,16 @@ export const SOURCES = [
     date: '10/03/2024',
     tags: ['FullStack'],
   },
+  {
+    url: 'https://kisztof.medium.com/hexagonal-architecture-with-nest-js-and-typescript-f181cc7b6452',
+    title: 'Hexagonal Architecture with Nest.js and TypeScript',
+    date: '13/03/2024',
+    tags: ['FullStack'],
+  },
+  {
+    url: 'https://restfulapi.net/resource-naming/',
+    title: 'REST API URI Naming Conventions and Best Practices',
+    date: '13/03/2024',
+    tags: ['FullStack'],
+  },
 ];
