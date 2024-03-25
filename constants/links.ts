@@ -1,13 +1,13 @@
 export const HEADER_LINK = [
   { label: 'Accueil', href: '/' },
-  { label: 'Portfolio', href: '/portfolio/' },
+  { label: 'Experiences', href: '/experiences/' },
   { label: 'Ressources', href: '/ressources/' },
 ];
 
 export const FOOTER_LINKS1 = [
   { label: 'Accueil', href: '/' },
   { label: 'A propos', href: '/#about' },
-  { label: 'Portfolio', href: '/portfolio/' },
+  { label: 'Experiences', href: '/experiences/' },
 ];
 export const FOOTER_LINKS2 = [
   { label: 'Expériences', href: '/#career' },

@@ -1,4 +1,5 @@
 import { SOURCES } from '@/constants/sources';
+import { ChevronRight } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -37,8 +38,12 @@ const renderSources = (sources: Sources[]) => {
 const Page = () => {
   return (
     <div className='mt-28'>
-      <h1 className='mb-2 lg:mb-6'>Ressources</h1>
-      <p className='my-4 md:mr-32 mb-28'>
+      <div className='flex space-x-1 mb-12 text-md items-center uppercase'>
+        <span className='disabled'>Accueil</span>
+        <ChevronRight className='h-4 w-4 disabled' />
+        <span className='font-bold'>Ressources</span>
+      </div>
+      <p className='my-4 md:mr-16 mb-28'>
         Voici une sélection d{"'"}articles, de vidéos et autres qui ont captivé
         mon intérêt, organisée selon la date à laquelle je les ai découverts.
         Les thèmes abordés varient, incluant le DevOps et le développement web.

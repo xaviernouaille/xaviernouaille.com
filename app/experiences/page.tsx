@@ -1,4 +1,5 @@
 import { PROJECTS } from '@/constants/projects';
+import { ChevronRight } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -31,7 +32,7 @@ const renderProjects = (projects: Project[]) => {
         <div className='flex flex-col'>
           <p className='py-0 mb-1'>{description}</p>
           <p className='small py-0 mb-2'>{date}</p>
-          <p className='opacity-60'>{content}</p>
+          <p className='opacity-60 text-sm'>{content}</p>
         </div>
       </div>
     </Link>
@@ -41,7 +42,11 @@ const renderProjects = (projects: Project[]) => {
 const Page = () => {
   return (
     <div className='mt-28'>
-      <h1 className='mb-2 lg:mb-6'>Portfolio</h1>
+      <div className='flex space-x-1 mb-12 text-md items-center uppercase'>
+        <span className='disabled'>Accueil</span>
+        <ChevronRight className='h-4 w-4 disabled' />
+        <span className='font-bold'>Experiences</span>
+      </div>
       <p className='my-4 md:mr-32 mb-28'>
         Les projets <span className='highlight'>Freelance</span> sur lesquels j
         {"'"}ai travaillé ces dernières. années. Sur la grande majorité de mes

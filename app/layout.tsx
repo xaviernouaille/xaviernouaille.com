@@ -6,7 +6,10 @@ import { ModeToggle } from '@/components/mode-toggle';
 import { Menu } from '@/components/menu';
 import { Footer } from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+// Supports weights 200-800
+import '@fontsource-variable/plus-jakarta-sans';
+
+// const inter = Inter({ subsets: ['latin'] });
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -16,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-[#09090B] text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={`antialiased min-h-screen bg-white dark:bg-[#09090B] text-slate-900 dark:text-slate-50`}
       >
         <ThemeProvider attribute='class' defaultTheme='dark'>
           <header className='fixed top-0 pt-4 w-full bg-white dark:bg-[#09090BCC] backdrop-blur-sm z-50 px-6 lg:px-0'>

@@ -30,4 +30,16 @@ export const SOURCES = [
     date: '13/03/2024',
     tags: ['FullStack'],
   },
+  {
+    url: 'https://12factor.net/fr/',
+    title: 'The Twelve-Factor App',
+    date: '16/03/2024',
+    tags: ['FullStack'],
+  },
+  {
+    url: 'https://www.reactivemanifesto.org/fr',
+    title: 'Le Manifeste Réactif',
+    date: '17/03/2024',
+    tags: ['FullStack'],
+  },
 ];

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'Plus Jakarta Sans Variable', sans-serif;
+}
+
+p{
+    @apply font-mono text-md;
+}
+
 h1{
     @apply text-2xl sm:text-[2rem] font-bold;
     line-height: 1.6em !important;

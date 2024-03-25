@@ -17,7 +17,7 @@ export const Menu = () => {
       return (
         <Link key={i} scroll={true} href={href}>
           <p
-            className={clsx('pb-0 font-medium', {
+            className={clsx('pb-0 text-sm menu-link font-medium', {
               highlight: isActive(pathname, href),
             })}
           >
