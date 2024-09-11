@@ -18,6 +18,7 @@ export default function RootLayout({
         <div className='sticky top-6 z-30 -mx-px transition duration-75 will-change-transform opacity-100'>
           <div className='bg-slate-100/30 flex justify-between items-center max-w-[900px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur'>
             <Link href='/'>
+              {/* eslint-disable-next-line */}
               <img
                 src='https://media.licdn.com/dms/image/v2/D4E03AQG9WfSmyJRX1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723508921407?e=1731542400&v=beta&t=Ho4p7LwvnWMufmdLRhWAB5PK-QS20zqU_sulKX9Zxf0'
                 alt='Xavier Nouaille'
@@ -34,10 +35,10 @@ export default function RootLayout({
                   Malt
                 </Link>
                 <Link href='tel:+33778389134'>
-                  <Phone size={16} />
+                  <Phone size={20} />
                 </Link>
                 <Link href='mailto:xavier.nouaille@pm.me'>
-                  <AtSign size={16} />
+                  <AtSign size={20} />
                 </Link>
               </ul>
             </div>
