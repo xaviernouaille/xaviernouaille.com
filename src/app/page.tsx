@@ -1,101 +1,79 @@
-import Image from "next/image";
+import ThemeSwitcher from './components/ThemeSwitcher';
+import { projects } from './constants';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className='mt-32 container pb-14 border-b border-slate-300 mb-14'>
+        <div className='flex space-x-6 items-center mb-6'>
+          <img
+            className='w-20 h-20 rounded-full'
+            src='https://media.licdn.com/dms/image/v2/D4E03AQG9WfSmyJRX1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723508921407?e=1731542400&v=beta&t=Ho4p7LwvnWMufmdLRhWAB5PK-QS20zqU_sulKX9Zxf0'
+            alt=''
+          />
+          <div>
+            <h1 className='font-medium text-4xl text-slate-950'>
+              Bonjour !
+              <span className='block text-slate-500 font-light text-2xl'>
+                Je suis Xavier Nouaille, développeur full-stack.
+              </span>
+            </h1>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+        <p className='text-slate-700 text-lg md:text-xl leading-normal font-light'>
+          Développeur fullstack avec une forte appétence pour le DevOps,
+          collaborant avec des entreprises pour concevoir des solutions
+          performantes et scalables.
+        </p>
+        <a className='group bg-slate-950 hover:bg-slate-800 transition-colors inline-block mt-8 font-mono text-xs font-semibold rounded-full px-8 py-3 text-white'>
+          More Information{' '}
+          <span className='inline-block group-hover:translate-x-2 transition-transform'>
+            →
+          </span>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className='max-w-[850px] mx-auto mt-16'>
+        <div className='flex flex-col space-y-10'>
+          {projects.map((project) => (
+            <div
+              className='bg-slate-100 rounded-2xl p-4 flex'
+              key={project.index}
+            >
+              <div className='w-full'>
+                <img
+                  className='rounded-2xl'
+                  src={`/projects/${project.name}.png`}
+                  alt={project.company}
+                />
+              </div>
+              <div className='w-full p-6'>
+                <h3 className='text-xl font-medium'>{project.company}</h3>
+                <p className='text-slate-600 font-light'>
+                  {project.description} - {project.date}
+                </p>
+                <p className='mt-2 text-sm font-light'>
+                  {project.tasks.substring(0, 150)}...
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className='mt-32 container mx-auto pb-12'>
+        <ul className='flex space-x-5 items-center mb-5'>
+          <li>+33 7 78 38 91 34</li>
+          <li>xavier.nouaille@pm.me</li>
+          <li>Linkedin</li>
+          <li>GitHub</li>
+          <li>Malt</li>
+        </ul>
+        <p className='text-slate-400 opacity-70 font-light text-left'>
+          Construit avec NextJS, ShadcnUI & Tailwind. Hebergé sur AWS 💛
+        </p>
+      </section>
+    </>
   );
-}
+};
+
+export default Home;
