@@ -35,10 +35,10 @@ export default function RootLayout({
                   Malt
                 </Link>
                 <Link href='tel:+33778389134'>
-                  <Phone size={20} />
+                  <Phone size={19} />
                 </Link>
                 <Link href='mailto:xavier.nouaille@pm.me'>
-                  <AtSign size={20} />
+                  <AtSign size={19} />
                 </Link>
               </ul>
             </div>
