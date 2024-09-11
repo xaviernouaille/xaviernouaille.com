@@ -1,3 +1,5 @@
+'use client';
+
 import './globals.css';
 import clsx from 'clsx';
 import localFont from 'next/font/local';
