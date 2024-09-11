@@ -37,11 +37,14 @@ const Home = () => {
       <section className='max-w-[850px] px-6 md:px-0 mx-auto mt-16'>
         <div className='flex flex-col space-y-10'>
           {projects.map((project) => (
-            <div
+            <Link
+              href={project.url}
+              target='_blank'
               className='bg-slate-100 rounded-2xl p-5 flex flex-col md:flex-row'
               key={project.index}
             >
               <div className='w-full'>
+                {/* eslint-disable-next-line */}
                 <img
                   className='rounded-2xl'
                   src={`/projects/${project.index}.png`}
@@ -57,7 +60,7 @@ const Home = () => {
                   {project.tasks.substring(0, 150)}...
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
