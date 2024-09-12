@@ -6,6 +6,7 @@ import localFont from 'next/font/local';
 import Link from 'next/link';
 import Footer from './components/Footer';
 import { Phone, AtSign } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const myFont = localFont({ src: '../../public/font/my-font.woff2' });
 
@@ -14,6 +15,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
     <html lang='en'>
       <body className={clsx(myFont.className, 'bg-[#F7FAFC]')}>
@@ -29,7 +32,12 @@ export default function RootLayout({
             </Link>
             <div>
               <ul className='flex items-center space-x-5 md:space-x-6 text-slate-600'>
-                <Link href='/about'>A propos</Link>
+                <Link
+                  className={clsx({ 'opacity-60': pathname === '/about/' })}
+                  href='/about'
+                >
+                  A propos
+                </Link>
                 <Link
                   target='_blank'
                   href='https://www.malt.fr/profile/xaviernouaille'
