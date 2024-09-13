@@ -1,5 +1,13 @@
 import Link from 'next/link';
 import { projects } from './constants';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Xavier Nouaille',
+  description:
+    'Développeur fullstack avec une forte appétence pour le DevOps, collaborant avec des entreprises pour concevoir des solutions performantes et scalables.',
+  keywords: 'Développeur, Fullstack, DevOps, Xavier Nouaille',
+};
 
 const Home = () => {
   return (
