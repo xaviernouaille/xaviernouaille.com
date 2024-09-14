@@ -49,7 +49,7 @@ const Home = () => {
             <Link
               href={project.url}
               target='_blank'
-              className='bg-slate-100 rounded-2xl p-5 flex flex-col md:flex-row'
+              className='bg-slate-100 rounded-2xl p-5 flex flex-col md:flex-row hover:bg-[#f0f2f5] ease-in-out duration-200'
               key={project.index}
             >
               <div className='w-full'>
