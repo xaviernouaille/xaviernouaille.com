@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { projects } from './constants';
+import { articles, projects } from './constants';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -43,7 +43,14 @@ const Home = () => {
         </Link>
       </section>
 
-      <section className='max-w-[850px] px-6 md:px-0 mx-auto mt-16'>
+      <section className='max-w-[850px] px-6 md:px-0 mx-auto mt-14'>
+        <div className='container px-0 mb-10'>
+          <h2 className='text-2xl font-medium'>Mes projets</h2>
+          <p className='text-slate-700 font-light mt-3 text-lg'>
+            Vous trouverez ci-dessous une sélection de projets récents sur
+            lesquels j{"'"}ai travaillé.
+          </p>
+        </div>
         <div className='flex flex-col space-y-10'>
           {projects.map((project) => (
             <Link
@@ -65,10 +72,31 @@ const Home = () => {
                 <p className='text-slate-600 font-light'>
                   {project.description} - {project.date}
                 </p>
-                <p className='mt-2 text-[0.9rem] font-light'>
-                  {project.tasks.substring(0, 150)}...
+                <p className='mt-2 text-base font-light'>
+                  {project.tasks.substring(0, 100)}...
                 </p>
               </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className='mt-20 container md:px-0'>
+        <h2 className='text-2xl font-medium'>Mes derniers articles</h2>
+        <div className='mt-8 flex flex-col divide-y'>
+          {articles.map((article) => (
+            <Link
+              target='_blank'
+              className='flex flex-col space-y-3 hover:opacity-75'
+              key={article.title}
+              href={article.url}
+            >
+              <h3 className='text-2xl font-medium'>{article.title}</h3>
+              <p className='font-mono text-thin text-sm text-slate-500'>
+                {article.date}
+              </p>
+              <p className='font-light text-slate-700 text-base'>
+                {article.description}
+              </p>
             </Link>
           ))}
         </div>

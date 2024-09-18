@@ -74,3 +74,13 @@ export const projects = [
     date: '09/2020 - 09/2022',
   },
 ];
+
+export const articles = [
+  {
+    title: 'Deploy NextJS Portfolio with Github Actions and AWS',
+    description:
+      '“Deploying a Next.js Portfolio with GitHub Actions and AWS: A Step-by-Step Guide”',
+    url: 'https://medium.com/@agreeable_phlox_mink_149/deploy-nextjs-portfolio-with-github-actions-and-aws-4a83a007c7a3',
+    date: 'Septembre 2024',
+  },
+];

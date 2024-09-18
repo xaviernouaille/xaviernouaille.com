@@ -58,7 +58,7 @@ const Header = () => {
               Malt
             </Link>
             <Link
-              href='/about'
+              href='#footer'
               className='relative group bg-slate-950 hover:opacity-70 transition-colors inline-block font-mono text-xs font-semibold rounded-full px-6 py-2 text-white'
             >
               Contact
