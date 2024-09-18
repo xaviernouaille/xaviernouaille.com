@@ -29,9 +29,9 @@ const Header = () => {
     <div className='sticky top-6 z-30 -mx-px transition duration-75 will-change-transform opacity-100'>
       <div
         className={clsx(
-          'bg-slate-100/30 flex justify-between items-center transition-all border border-transparent ease-in-out duration-200 max-w-[900px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur',
+          'bg-slate-100/30 flex justify-between items-center transition-all border border-transparent ease-in-out duration-200 max-w-[850px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur',
           {
-            'border-gray-200 max-w-[930px] border-opacity-50': isScrolled,
+            'border-gray-200 max-w-[880px] border-opacity-50': isScrolled,
           },
         )}
       >
@@ -40,7 +40,7 @@ const Header = () => {
           <img
             src='https://media.licdn.com/dms/image/v2/D4E03AQG9WfSmyJRX1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723508921407?e=1731542400&v=beta&t=Ho4p7LwvnWMufmdLRhWAB5PK-QS20zqU_sulKX9Zxf0'
             alt='Xavier Nouaille'
-            className='w-10 h-10 rounded-full'
+            className='w-10 h-10 rounded-full hover:scale-110 transition-all ease-in-out duration-300'
           />
         </Link>
         <div>
