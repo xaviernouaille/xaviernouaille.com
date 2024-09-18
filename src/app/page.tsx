@@ -90,7 +90,9 @@ const Home = () => {
               key={article.title}
               href={article.url}
             >
-              <h3 className='text-2xl font-medium'>{article.title}</h3>
+              <h3 className='text-xl md:text-2xl font-medium'>
+                {article.title}
+              </h3>
               <p className='font-mono text-thin text-sm text-slate-500'>
                 {article.date}
               </p>
