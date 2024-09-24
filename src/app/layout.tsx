@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(myFont.className, 'bg-[#F7FAFC]')}>
+      <body
+        className={clsx(myFont.className, 'overflow-x-hidden bg-[#F7FAFC]')}
+      >
         <Header />
         {children}
         <Footer />
