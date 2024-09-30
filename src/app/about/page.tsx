@@ -3,7 +3,7 @@ import { projects } from '../constants';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Xavier Nouaille',
+  title: 'Xavier Nouaille | À propos',
   description:
     'A propos | Ingénieur et développeur fullstack formé à Epitech Paris, je propose mes compétences pour concevoir des applications web robustes, performantes et de haute qualité.',
   keywords: 'Développeur, Fullstack, DevOps, Xavier Nouaille',
