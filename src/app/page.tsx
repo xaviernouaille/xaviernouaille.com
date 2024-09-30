@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <section className='mt-28 container md:px-0 pb-14 border-b border-slate-300 mb-14'>
-        <div className='flex flex-col md:flex-row md:space-x-6 md:items-center mb-6'>
+        <div className='flex flex-col md:flex-row md:space-x-5 md:items-center mb-6'>
           {/* eslint-disable-next-line */}
           <img
             className='w-20 h-20 rounded-full mb-2 md:mb-0'
@@ -43,7 +43,7 @@ const Home = () => {
         </Link>
       </section>
 
-      <section className='max-w-[850px] px-6 md:px-0 mx-auto mt-14'>
+      <section className='max-w-[1000px] px-6 md:px-0 mx-auto mt-14'>
         <div className='container px-0 mb-10'>
           <h2 className='text-2xl font-medium'>Mes projets</h2>
           <p className='text-slate-700 font-light mt-3 text-lg'>
@@ -51,12 +51,12 @@ const Home = () => {
             lesquels j{"'"}ai travaillé.
           </p>
         </div>
-        <div className='flex flex-col space-y-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {projects.map((project) => (
             <Link
               href={project.url}
               target='_blank'
-              className='bg-slate-100 rounded-2xl p-5 flex flex-col md:flex-row hover:bg-[#f0f2f5] ease-in-out duration-200'
+              className='bg-slate-100 rounded-2xl p-6 md:p-8 flex flex-col hover:bg-[#f0f2f5] ease-in-out duration-200'
               key={project.index}
             >
               <div className='w-full'>
@@ -67,12 +67,12 @@ const Home = () => {
                   alt={project.company}
                 />
               </div>
-              <div className='w-full p-6'>
+              <div className='w-full pt-6'>
                 <h3 className='text-xl font-medium'>{project.company}</h3>
-                <p className='text-slate-600 font-light'>
+                <p className='text-slate-600'>
                   {project.description} - {project.date}
                 </p>
-                <p className='mt-2 text-base font-light'>
+                <p className='mt-2 text-base font-light text-slate-500'>
                   {project.tasks.substring(0, 100)}...
                 </p>
               </div>

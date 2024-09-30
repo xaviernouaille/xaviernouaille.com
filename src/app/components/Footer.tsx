@@ -6,7 +6,7 @@ const Footer = () => {
       id='footer'
       className='mt-24 md:mt-24 container px-6 mx-auto pb-16 md:px-0 border-t pt-8 border-slate-300'
     >
-      <ul className='flex flex-col md:flex-row md:items-center md:space-x-6 text-slate-600 mb-5 text-sm'>
+      <ul className='flex flex-col md:flex-row md:items-center md:space-x-6 mb-5 text-sm'>
         <Link href='tel:+33778389134'>+33 7 78 38 91 34</Link>
         <Link href='mailto:xavier.nouaille@pm.me'>xavier.nouaille@pm.me</Link>
         <Link

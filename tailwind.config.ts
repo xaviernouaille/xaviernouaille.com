@@ -8,10 +8,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      mono: ['var(--font-source-code-pro)'],
+    },
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.5rem',
+        DEFAULT: '1rem',
       },
       screens: {
         sm: '100%',

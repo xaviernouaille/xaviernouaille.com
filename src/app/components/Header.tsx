@@ -29,9 +29,9 @@ const Header = () => {
     <div className='sticky top-6 z-30 -mx-px transition duration-75 will-change-transform opacity-100'>
       <div
         className={clsx(
-          'bg-slate-100/30 flex justify-between items-center transition-all border border-transparent ease-in-out duration-200 max-w-[850px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur',
+          'bg-slate-100/40 flex justify-between items-center transition-all ease-in-out duration-200 max-w-[850px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur',
           {
-            'border-gray-200 max-w-[880px] border-opacity-50': isScrolled,
+            'max-w-[880px]': isScrolled,
           },
         )}
       >
@@ -44,7 +44,7 @@ const Header = () => {
           />
         </Link>
         <div>
-          <ul className='flex items-center space-x-5 md:space-x-6 text-slate-600 font-mono tracking-tight font-semibold text-sm'>
+          <ul className='flex items-center space-x-5 md:space-x-6 font-mono tracking-tighter font-medium text-sm '>
             <Link
               className={clsx({ 'opacity-60': pathname === '/about/' })}
               href='/about'
