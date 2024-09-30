@@ -17,7 +17,7 @@ const Home = () => {
           {/* eslint-disable-next-line */}
           <img
             className='w-20 h-20 rounded-full mb-2 md:mb-0'
-            src='https://media.licdn.com/dms/image/v2/D4E03AQG9WfSmyJRX1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723508921407?e=1731542400&v=beta&t=Ho4p7LwvnWMufmdLRhWAB5PK-QS20zqU_sulKX9Zxf0'
+            src='https://media.licdn.com/dms/image/v2/D4E03AQECl4VM6fM72Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727639353667?e=1733356800&v=beta&t=ohqxp5K_G4nRrqS9z9pJ123A5HIFwyBTziOKXQO3mYI'
             alt='Xavier Nouaille'
           />
           <div>
