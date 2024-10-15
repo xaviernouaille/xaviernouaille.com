@@ -1,12 +1,3 @@
-export const technologies = [
-  'React',
-  'NextJS',
-  'NodeJS',
-  'NestJS',
-  'AWS',
-  'MongoDB/PostgreSQL',
-];
-
 export const projects = [
   {
     asFreelancer: true,
@@ -20,6 +11,7 @@ export const projects = [
     content:
       "Republike.io est une plateforme de média social axée sur le partage des profits, le soutien au bien commun, et la propriété utilisateur. Elle adopte un modèle économique \"Pay-to-Own\", permettant aux utilisateurs de devenir copropriétaires de la plateforme, tout en mettant l'accent sur un avenir durable et éthique dans l'ère de l'intelligence artificielle.",
     date: '03/2024 - Aujourd’hui',
+    techno: ['React', 'NextJS', 'NodeJS', 'AWS', 'MongoDB'],
   },
   {
     asFreelancer: true,
@@ -33,6 +25,7 @@ export const projects = [
     content:
       "Chez Dialonce.ai, une entreprise spécialisée en relation client, j'ai occupé le poste de développeur fullstack, utilisant la stack MERN pour le développement. Mes responsabilités incluaient également la conteneurisation avec Docker, la gestion de clusters Kubernetes avec Helm et ArgoCD, ainsi que la mise en œuvre de l'infrastructure as code avec Terraform et Pulumi.",
     date: '05/2022 - 06/2024',
+    techno: ['React', 'NodeJS', 'Kubernetes', 'Docker', 'Terraform', 'Pulumi'],
   },
   {
     asFreelancer: true,
@@ -77,10 +70,27 @@ export const projects = [
 
 export const articles = [
   {
+    imgUrl:
+      'https://miro.medium.com/v2/resize:fit:1000/format:webp/1*d7qcFrqSS3iVFQ8GwNV1dQ.jpeg',
     title: 'Deploy NextJS Portfolio with Github Actions and AWS',
     description:
       '“Deploying a Next.js Portfolio with GitHub Actions and AWS: A Step-by-Step Guide”',
     url: 'https://medium.com/@agreeable_phlox_mink_149/deploy-nextjs-portfolio-with-github-actions-and-aws-4a83a007c7a3',
     date: 'Septembre 2024',
+  },
+];
+
+export const testimonials = [
+  {
+    name: 'Cyril',
+    company: 'Keeze',
+    content:
+      "Xavier a été très fiable et s'est adapté à nos demandes, notre tech et notre fonctionnement pour nous livrer dans les délais ! C'est un plaisir de travailler avec lui et nous n'hésiterons pas à faire appel à lui à nouveau. Merci Xavier, Cyril",
+  },
+  {
+    name: 'Julien',
+    company: 'Orizons',
+    content:
+      "Xavier a été un élément clé dans le développement de notre application. Il a su s'adapter à notre stack et a été force de proposition pour améliorer l'expérience utilisateur. Je recommande Xavier pour son sérieux et son professionnalisme.",
   },
 ];

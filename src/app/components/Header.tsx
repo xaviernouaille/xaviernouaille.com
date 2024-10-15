@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -26,15 +27,20 @@ const Header = () => {
   }, []);
 
   return (
-    <div className='sticky top-6 z-30 -mx-px transition duration-75 will-change-transform opacity-100'>
-      <div
-        className={clsx(
-          'bg-slate-100/40 flex justify-between items-center transition-all ease-in-out duration-200 max-w-[850px] mx-2 sm:mx-auto rounded-2xl py-2 pl-3 pr-4 md:pr-6 shadow-surface-glass backdrop-blur',
-          {
-            'max-w-[880px]': isScrolled,
-          },
-        )}
-      >
+    <div
+      className={clsx(
+        'w-full mx-auto top-0 py-4 z-30 transition duration-75 will-change-transform opacity-100',
+        {
+          'fixed bg-secondary': isScrolled,
+          absolute: !isScrolled,
+        },
+      )}
+      style={{
+        translate: '50%',
+        right: '50%',
+      }}
+    >
+      <div className='container flex items-center justify-between'>
         <Link href='/'>
           {/* eslint-disable-next-line */}
           <img
@@ -44,7 +50,7 @@ const Header = () => {
           />
         </Link>
         <div>
-          <ul className='flex items-center space-x-5 md:space-x-6 font-mono tracking-tighter font-medium text-sm '>
+          <ul className='flex items-center space-x-5 md:space-x-6 font-semibold uppercase text-sm'>
             <Link
               className={clsx({ 'opacity-60': pathname === '/about/' })}
               href='/about'
@@ -55,15 +61,19 @@ const Header = () => {
               target='_blank'
               href='https://www.malt.fr/profile/xaviernouaille'
             >
-              Malt
+              Mes services
             </Link>
-            <Link
-              href='#footer'
-              className='relative group bg-slate-950 hover:opacity-70 transition-colors inline-block font-mono text-xs font-semibold rounded-full px-6 py-2 text-white'
-            >
-              Contact
+            <Link href='#footer' className=''>
+              Mes projets
+            </Link>
+            <Link href='#footer' className=''>
+              Publications
             </Link>
           </ul>
+        </div>
+
+        <div className='text-sm font-semibold uppercase'>
+          <Button className='text-white'>Contact</Button>
         </div>
       </div>
     </div>
