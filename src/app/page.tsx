@@ -1,5 +1,5 @@
 import { Metadata } from 'next/types';
-import { articles, projects } from './constants';
+import { articles, projects, studies } from './constants';
 
 export const metadata: Metadata = {
   title: 'Xavier Nouaille | Développeur Fullstack',
@@ -93,6 +93,29 @@ const Home = () => {
                   <div>
                     <p className='mt-2 text-[0.9rem] font-light text-right'>
                       {project.date}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='mt-16 pb-6'>
+        <div className='flex space-x-6 items-center w-full'>
+          <div className='w-full'>
+            <h2 className='font-medium  text-2xl p-0 mb-4'>Formations</h2>
+            <div className='flex flex-col divide-solid divide-y w-full divide-muted-foreground'>
+              {studies.map((study) => (
+                <div className='py-6 flex justify-between' key={study.index}>
+                  <div>
+                    <h3 className='  font-medium'>{study.school}</h3>
+                    <p className='font-light'>{study.description}</p>
+                  </div>
+                  <div>
+                    <p className='mt-2 text-[0.9rem] font-light text-right'>
+                      {study.date}
                     </p>
                   </div>
                 </div>
