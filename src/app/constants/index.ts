@@ -1,6 +1,22 @@
 export const projects = [
   {
     asFreelancer: true,
+    index: 'lemonway',
+    name: 'lemonway',
+    url: 'https://lemonway.com',
+    company: 'lemonway.com',
+    description: 'Développer FullStack',
+    tasks:
+      "Développement d'un système de posts/commentaires et de repost, optimisation du flux d'activité grâce au caching, intégration de paiements via Stripe et de la recherche avec Algolia. Participation au déploiement sur AWS et création de scripts avec AWS Lambda.",
+    content:
+      "Republike.io est une plateforme de média social axée sur le partage des profits, le soutien au bien commun, et la propriété utilisateur. Elle adopte un modèle économique \"Pay-to-Own\", permettant aux utilisateurs de devenir copropriétaires de la plateforme, tout en mettant l'accent sur un avenir durable et éthique dans l'ère de l'intelligence artificielle.",
+    date: '03/2024 - 09/2024',
+    years: "2024 - aujourd'hui",
+    techno: ['NodeJS', 'AWS', 'MongoDB'],
+    logo: 'https://logo.clearbit.com/lemonway.com',
+  },
+  {
+    asFreelancer: true,
     index: 'republike',
     name: 'Republike',
     url: 'https://republike.io',
@@ -11,13 +27,15 @@ export const projects = [
     content:
       "Republike.io est une plateforme de média social axée sur le partage des profits, le soutien au bien commun, et la propriété utilisateur. Elle adopte un modèle économique \"Pay-to-Own\", permettant aux utilisateurs de devenir copropriétaires de la plateforme, tout en mettant l'accent sur un avenir durable et éthique dans l'ère de l'intelligence artificielle.",
     date: '03/2024 - 09/2024',
+    years: '2023 - 2024',
     techno: ['React', 'NextJS', 'NodeJS', 'AWS', 'MongoDB'],
+    logo: 'https://logo.clearbit.com/republike.io',
   },
   {
     asFreelancer: true,
     index: 'dialonce',
     name: 'DialOnce',
-    url: 'https://dialonce.ai',
+    url: 'https://dialonce.ai/index.html',
     company: 'dialonce.ai',
     description: 'Développer FullStack & DevOPS',
     tasks:
@@ -25,7 +43,9 @@ export const projects = [
     content:
       "Chez Dialonce.ai, une entreprise spécialisée en relation client, j'ai occupé le poste de développeur fullstack, utilisant la stack MERN pour le développement. Mes responsabilités incluaient également la conteneurisation avec Docker, la gestion de clusters Kubernetes avec Helm et ArgoCD, ainsi que la mise en œuvre de l'infrastructure as code avec Terraform et Pulumi.",
     date: '05/2022 - 08/2024',
+    years: '2022 - 2024',
     techno: ['React', 'NodeJS', 'Kubernetes', 'Docker', 'Terraform', 'Pulumi'],
+    logo: 'https://foxeet.fr/images/logo/7e510a87-2df9-4ffd-a722-869a90f47a0d/solution-dialonce-relation-client-intelligence-artificielle.webp',
   },
   {
     asFreelancer: true,
@@ -39,6 +59,8 @@ export const projects = [
     content:
       "Chez Orizons, j'ai contribué à digitaliser les services d'efficacité énergétique pour les professionnels et particuliers. Mon rôle en tant que développeur frontend comprenait la mise en place de systèmes d'authentification avec Firebase, la création de formulaires et l'intégration de ces éléments avec des API, spécifiquement en utilisant FastAPI pour le backend.",
     date: '06/2022 - 09/2022',
+    years: '2022',
+    logo: 'https://cdn.brandfetch.io/orizons.io',
   },
   {
     asFreelancer: true,
@@ -52,6 +74,8 @@ export const projects = [
     content:
       "Chez Keeze, une entreprise offrant des espaces de coworking, j'ai œuvré en tant que développeur frontend, axé sur l'intégration et le développement sur la plateforme, utilisant MeteorJS, CSS-in-JS, et ReactJS. J'étais également chargé de la correction de bugs variés, affectant le style et le rendu des applications.",
     date: '09/2021 - 02/2022',
+    years: '2022',
+    logo: 'https://logo.clearbit.com/keeze.co',
   },
   {
     asFreelancer: false,
@@ -65,6 +89,8 @@ export const projects = [
     content:
       "Chez Offeaze, une plateforme dédiée à la mise en relation entre particuliers et professionnels pour la location de bureaux privés, de coworking et d'espaces de réunion, j'ai occupé le poste de développeur frontend. La plateforme, désormais fermée, était développée avec Next.js, Tailwind CSS, et Apollo Client pour le frontend, et NestJS avec Apollo (GraphQL) pour le backend. J'ai également intégré diverses API, telles que Google Maps, Stripe, et Sentry, pour enrichir les fonctionnalités de la plateforme.",
     date: '09/2020 - 09/2022',
+    years: '2020 - 2022',
+    logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGq_BaGbuYgTg/company-logo_200_200/company-logo_200_200/0/1634744736608/offeaze_logo?e=2147483647&v=beta&t=yAaQyMXx1t2Q3NBP308AbGkPkzqVBmdGOe7bJ4RrkKw',
   },
 ];
 
@@ -74,6 +100,9 @@ export const studies = [
     school: 'Epitech',
     description: "Master Architecte logiciel et développeur d'application",
     date: '09/2017 - 08/2022',
+    years: '2017 - 2022',
+    url: 'https://www.epitech.eu',
+    logo: 'https://logo.clearbit.com/epitech.eu',
   },
 ];
 

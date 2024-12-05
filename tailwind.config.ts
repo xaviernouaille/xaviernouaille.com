@@ -8,13 +8,16 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['system-ui'],
+    },
     container: {
       center: true,
       padding: {
         DEFAULT: '1rem',
       },
       screens: {
-        md: '620px',
+        md: '720px',
       },
     },
     extend: {
