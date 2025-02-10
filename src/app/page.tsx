@@ -22,7 +22,7 @@ const Home = () => {
           <div className='flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row md:items-center'>
             <img
               className='h-24 w-24 md:w-28 md:h-28 rounded-full hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer'
-              src='https://media.licdn.com/dms/image/v2/D4E03AQEBgtVkhJXwXw/profile-displayphoto-shrink_800_800/B4EZOWt_FRHEAc-/0/1733400458738?e=1738800000&v=beta&t=IkIWdqUiSyM7ngJ61guu49iiRElv7fo5Axe300YGg3Y'
+              src='https://media.licdn.com/dms/image/v2/D4E03AQEBgtVkhJXwXw/profile-displayphoto-shrink_800_800/B4EZOWt_FRHEAc-/0/1733400458738?e=1744848000&v=beta&t=bEZOmDFAvRjp4vxAlXn08kwHE9YA-asAKMluUsauLMk'
               alt='Xavier Nouaille'
             />
             <div>
