@@ -1,82 +1,36 @@
-# Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Description
+## Getting Started
 
-Ce projet est une application web basée sur **Next.js** avec une structure modulaire, comprenant plusieurs composants réutilisables et des pages dynamiques. Le projet utilise également **TailwindCSS** pour le style et **TypeScript** pour une gestion de typage robuste.
+First, run the development server:
 
-L'application est hébergée sur **AWS S3** et distribuée via **AWS CloudFront** pour une livraison rapide et optimisée des ressources.
-
-## Structure du projet
-
-Voici une vue d'ensemble de l'arborescence du projet :
-
-```
-.github/
-    workflows/
-        prod.yml             # Configuration du workflow CI/CD pour déploiement sur AWS
-public/
-    font/
-        my-font.woff2        # Fichier de police personnalisé
-src/
-    app/
-        about/
-            page.tsx         # Page 'About'
-        components/
-            Footer.tsx       # Composant footer
-        favicon.ico          # Icône du site
-        globals.css          # Styles globaux
-        layout.tsx           # Composant de mise en page
-    components/
-        ui/
-            avatar.tsx       # Composant Avatar
-            badge.tsx        # Composant Badge
-            button.tsx       # Composant Bouton
-    lib/
-.gitignore                  # Fichiers ignorés par Git
-package.json                # Dépendances du projet et scripts NPM
-next.config.mjs             # Configuration de Next.js
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Technologies Utilisées
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- **Next.js** : Framework pour React, utilisé pour le rendu côté serveur et la génération statique.
-- **React** : Bibliothèque JavaScript pour la création d'interfaces utilisateur.
-- **TypeScript** : Superset de JavaScript, ajoutant le typage statique pour améliorer la robustesse du code.
-- **TailwindCSS** : Framework CSS utilitaire pour une conception rapide et réactive.
-- **AWS S3** : Utilisé pour l'hébergement des fichiers statiques.
-- **AWS CloudFront** : Utilisé pour la distribution du contenu (CDN) afin d'améliorer les performances de chargement.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Hébergement
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Ce projet est hébergé sur **AWS S3** et les fichiers sont distribués via **AWS CloudFront** pour garantir une haute disponibilité et des temps de chargement rapides.
+## Learn More
 
-## Installation
+To learn more about Next.js, take a look at the following resources:
 
-1. Cloner le dépôt :
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   ```bash
-   git clone https://github.com/mon-utilisateur/mon-repo.git
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-2. Installer les dépendances :
+## Deploy on Vercel
 
-   ```bash
-   npm install
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-3. Lancer le serveur de développement :
-
-   ```bash
-   npm run dev
-   ```
-
-4. Construire le projet pour la production :
-   ```bash
-   npm run build
-   ```
-
-## Déploiement
-
-Le déploiement est automatisé via un workflow GitHub Actions, qui pousse les fichiers de production sur un bucket **AWS S3** et met à jour la distribution **CloudFront**.
-
----
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -1,7 +1,11 @@
+import { Inter } from 'next/font/google';
 import './globals.css';
-import clsx from 'clsx';
-import { ThemeProvider } from 'next-themes';
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 export default function RootLayout({
   children,
@@ -9,25 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang='fr'>
-      <body className={clsx('overflow-x-hidden bg-background font-sans')}>
-        <ThemeProvider enableSystem={false} defaultTheme='light'>
-          {children}
-        </ThemeProvider>
-
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-PR0RYWYEZJ'
-        ></script>
-        <Script id='ga'>
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-PR0RYWYEZJ');
-        `}
-        </Script>
-      </body>
+    <html lang='en'>
+      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <GoogleAnalytics gaId='https://www.googletagmanager.com/gtag/js?id=G-PR0RYWYEZJ' />
     </html>
   );
 }
