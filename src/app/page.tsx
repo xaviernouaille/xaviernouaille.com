@@ -1,8 +1,8 @@
 import { Metadata } from 'next/types';
-// import { projects, studies } from './constants';
 import { FiGlobe, FiMail } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { projects, studies } from './constants';
+import WorkExperiences from '@/components/WorkExperiences';
+import EducationAndCertifications from '@/components/EducationAndCertifications';
 
 export const metadata: Metadata = {
   title: 'Xavier Nouaille | Développeur Fullstack',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <div className='py-4 px-2 md:p-12'>
-      <div className='text-white font-sans px-6 py-10 space-y-10 container mx-auto'>
+      <div className='text-white font-sans px-6 py-10 space-y-12 container mx-auto'>
         {/* Header */}
         <header className='space-y-4'>
           <div className='flex justify-between'>
@@ -66,7 +66,7 @@ const Home = () => {
 
         {/* Compétences */}
         <section>
-          <h2 className='text-xl font-semibold mb-5'>Compétences</h2>
+          <h2 className='font-semibold mb-5'>Compétences</h2>
           <div className='flex flex-wrap gap-2'>
             {[
               'NestJS',
@@ -96,53 +96,14 @@ const Home = () => {
 
         {/* Expérience */}
         <section>
-          <h2 className='text-xl font-semibold mb-5'>
-            Expérience Professionelle
-          </h2>
-          <div className='divide-y divide-gray-700'>
-            {projects.map((exp) => (
-              <div key={exp.company} className='flex justify-between py-4'>
-                <div className='flex items-center space-x-3'>
-                  <div className='bg-white text-black p-0.5 rounded-full font-bold text-sm'>
-                    <img
-                      className='rounded-full h-10 w-10'
-                      src={exp.logo}
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <p className='font-semibold text-sm'>{exp.company}</p>
-                    <p className='text-gray-400 text-xs'>{exp.description}</p>
-                  </div>
-                </div>
-                <p className='text-gray-400 text-xs font-bold'>{exp.date}</p>
-              </div>
-            ))}
-          </div>
+          <h2 className='font-semibold mb-5'>Expérience Professionelle</h2>
+          <WorkExperiences />
         </section>
 
         <section>
-          <h2 className='text-xl font-semibold mb-5'>Formation</h2>
+          <h2 className='font-semibold mb-5'>Formation & Certifications</h2>
           <div className='space-y-4'>
-            {studies.map((study) => (
-              <div key={study.index} className='flex justify-between'>
-                <div className='flex items-center space-x-3'>
-                  <div className='bg-white text-black p-0.5 rounded-full font-bold text-sm'>
-                    <img
-                      className='rounded-full h-10 w-10'
-                      src={study.logo}
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <p className='font-semibold text-sm'>{study.school}</p>
-                    <p className='text-gray-400 text-xs max-w-[210px] md:max-w-none'>
-                      {study.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <EducationAndCertifications />
           </div>
         </section>
       </div>

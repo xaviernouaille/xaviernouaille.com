@@ -76,15 +76,25 @@ const projects = [
 
 const studies = [
   {
+    index: 'aws-cloud-developer',
+    school: 'AWS',
+    date: '2025',
+    description: 'AWS Certified Developer - Associate DVA-C02',
+    url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/63d764c6b3804050b8a7a45ecbf26c3b',
+    logo: 'https://logo.clearbit.com/amazon.com',
+  },
+  {
     index: 'aws-cloud-practitioner',
-    school: 'AWS Certification',
-    description: 'AWS Certified Cloud Practitioner',
+    school: 'AWS',
+    date: '2025',
+    description: 'AWS Certified Cloud Practitioner CLF-C02',
     url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/63d764c6b3804050b8a7a45ecbf26c3b',
     logo: 'https://logo.clearbit.com/amazon.com',
   },
   {
     index: 'epitech',
     school: 'Epitech',
+    date: '2021',
     description: "Master Architecte logiciel et développeur d'application",
     url: 'https://www.epitech.eu',
     logo: 'https://logo.clearbit.com/epitech.eu',
