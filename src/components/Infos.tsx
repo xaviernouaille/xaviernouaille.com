@@ -1,11 +1,9 @@
-import { PROFILE_IMG_SRC } from '@/app/constants';
-
 function Infos() {
   return (
     <div>
       <img
         className='rounded-full h-18 w-18 mb-6'
-        src={PROFILE_IMG_SRC}
+        src={'./xn.jpeg'}
         alt='Xavier Nouaille'
       ></img>
       <div className='prose text-primary prose-a:text-blue-600 prose-strong:text-blue-600'>

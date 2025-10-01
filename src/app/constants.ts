@@ -3,8 +3,14 @@ const PROFILE_IMG_SRC =
 
 const WORKS = [
   {
+    company: 'Salva By Garance',
+    date: '05/2024 - 10/2025',
+    position: 'Développeur BackEnd',
+    href: 'https://salvalefaire.fr',
+  },
+  {
     company: 'Lemonway',
-    date: '11/2024 - 04/2025',
+    date: '11/2024 - 05/2025',
     position: 'Développeur FullStack',
     href: 'https://lemonway.com',
   },
