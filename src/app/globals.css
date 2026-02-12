@@ -1,31 +1,199 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Palette noir & blanc, style portfolio sombre */
 :root {
-  --background: #121212;
-  --foreground: #fff;
-  --accent: #a3a3a3;
+  --background: #020617; /* noir profond */
+  --foreground: #e5e7eb; /* texte principal */
+  --accent: #64748b; /* gris bleuté pour les métas */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --color-primary: var(--foreground);
-  --color-secondary: var(--foreground);
-  --color-tertiary: var(--accent);
-  --color-quaternary: #737373;
+  --color-primary: #f9fafb;
+  --color-secondary: #e5e7eb;
+  --color-tertiary: #9ca3af;
+  --color-quaternary: #6b7280;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f9fafb;
+    --accent: #64748b;
   }
 }
 
 body {
-  background: var(--background);
+  background: #09090B;
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+/* Conteneur principal type portfolio centré */
+.newspaper-shell {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col items-center;
+}
+
+.newspaper-page {
+  max-width: 650px;
+  width: 100%;
+}
+
+/* Ligne de séparation légère entre sections */
+.newspaper-divider {
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+/* En-tête / libellé de section */
+.section-label {
+  @apply uppercase tracking-[0.24em] text-[0.65rem] sm:text-[0.7rem] font-semibold text-tertiary;
+  letter-spacing: 0.28em;
+}
+
+.section-title {
+  @apply text-sm sm:text-base font-medium text-tertiary;
+}
+
+/* Carte de section avec léger relief */
+.section-block {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.section-block::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* Animation fade-in-up pour les sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.fade-delay-4 {
+  animation-delay: 0.32s;
+}
+
+.fade-delay-5 {
+  animation-delay: 0.4s;
+}
+
+/* Avatar en médaillon noir & blanc */
+.avatar-frame {
+  position: relative;
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 3px;
+  background: radial-gradient(circle at 30% 0%, #ffffff, #d4d4d4 55%, #a3a3a3 100%);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 0, 0, 0.14);
+}
+
+.avatar-frame::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+.avatar-img {
+  border-radius: 999px;
+  display: block;
+  width: 4.25rem;
+  height: 4.25rem;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+@media (min-width: 640px) {
+  .avatar-img {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+}
+
+/* Texte de type "article" */
+.article {
+  @apply prose prose-sm sm:prose-base max-w-none text-primary;
+}
+
+.article a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-style: solid;
+  color: inherit;
+  position: relative;
+}
+
+.article a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 160ms ease-out;
+}
+
+.article a:hover::after {
+  transform: scaleX(1);
+}
+
+.article strong {
+  @apply font-semibold;
+}
+
+/* Petites méta-infos en haut de page */
+.newspaper-meta {
+  @apply flex flex-wrap items-center justify-between gap-3 text-[0.7rem] sm:text-xs uppercase tracking-[0.22em] text-tertiary mb-6;
+}
+
+.newspaper-meta-pill {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 0.25rem 0.9rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(229, 229, 229, 0.7));
+}
+
+/* Mode sombre pour l'iframe OpenStreetMap tout en restant draggable */
+.map-dark iframe {
+  filter: invert(0.9) hue-rotate(190deg) saturate(0.9) contrast(0.95);
 }
