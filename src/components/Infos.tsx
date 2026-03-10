@@ -1,77 +1,57 @@
-import { GoLocation } from 'react-icons/go';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
 function Infos() {
   return (
-    <div className='flex flex-col gap-4'>
-      {/* Hero — même carte que Parcours / Certifications */}
-      <section className='rounded-xl border border-white/5 bg-white/[0.01] px-4 sm:px-5 py-4 sm:py-5'>
-        <div className='flex items-center md:gap-6 gap-4'>
-          <div>
-            <img
-              src='./xn.jpeg'
-              alt='Xavier Nouaille'
-              className='md:w-22 md:h-22 w-20 h-20 rounded-full border border-white/10'
-            />
+    <div className='flex flex-col'>
+      {/* Hero : photo + titre + sous-titre + liens */}
+      <section className='flex flex-col sm:flex-row sm:items-start gap-8 sm:gap-10'>
+        <div className='min-w-0 px-12 pt-6'>
+          <h1 className='text-4xl font-bold tracking-tight text-zinc-100'>
+            Xavier Nouaille
+          </h1>
+          <p className='mt-4 text-lg sm:text-xl text-zinc-400'>
+            Senior Backend Developer. Paris, France · Remote EU
+          </p>
+          <div className='mt-6 flex flex-wrap items-center gap-5 text-base text-zinc-500'>
+            <a
+              href='https://github.com/xaviernouaille'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-zinc-300 transition-colors inline-flex items-center gap-1.5'
+            >
+              <FiGithub /> @xaviernouaille
+            </a>
+            <a
+              href='https://www.linkedin.com/in/xavier-nouaille/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-zinc-300 transition-colors inline-flex items-center gap-1.5'
+            >
+              <FiLinkedin /> /in/xavier-nouaille
+            </a>
           </div>
-          <div>
-            <h1 className='text-3xl font-bold leading-tight tracking-tight text-primary'>
-              Xavier
-            </h1>
-            <p className='text-sm sm:text-base text-tertiary max-w-md'>
-              Senior Backend Developer.
-            </p>
-          </div>
-        </div>
-        <div className='mt-4 flex flex-wrap items-center gap-2 text-xs sm:text-[0.8rem] text-tertiary'>
-          <span className='inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1'>
-            <GoLocation className='text-tertiary' />
-            Paris, France · Remote EU
-          </span>
-          <a
-            href='https://github.com/xaviernouaille'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1 hover:text-secondary'
-          >
-            <FiGithub />
-            @xaviernouaille
-          </a>
-          <a
-            href='https://www.linkedin.com/in/xavier-nouaille/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1 hover:text-secondary'
-          >
-            <FiLinkedin />
-            /in/xavier-nouaille
-          </a>
         </div>
       </section>
 
-      {/* Section Informations — même style de carte */}
-      <section className='rounded-xl border border-white/5 bg-white/[0.01] px-4 sm:px-5 py-4 sm:py-5'>
-        <div className='space-y-1 mb-4'>
-          <p className='section-label mb-2'>Informations</p>
-          <h2 className='section-title text-sm sm:text-base'>À propos</h2>
-        </div>
-        <div className='space-y-3 text-[0.9rem] sm:text-[0.95rem] text-secondary'>
+      <p className='py-20 font-mono'>---</p>
+
+      {/* À propos */}
+      <section className='pt-10'>
+        <p className='section-label mb-4'>À propos</p>
+        <div className='space-y-5 text-[1.05rem] sm:text-lg text-zinc-400 leading-relaxed'>
           <p>
-            Développeur full-stack freelance, je conçois et développe des
-            applications web robustes, performantes et évolutives.
+            Développeur <span className='font-medium text-white'>full-stack</span> freelance, je conçois et développe des
+            applications web <span className='font-medium text-white'>robustes</span>, <span className='font-medium text-white'>performantes</span> et <span className='font-medium text-white'>évolutives</span>.
+            J&apos;interviens sur des projets à <span className='font-medium text-white'>forts enjeux techniques et métiers</span> dans des environnements exigeants, avec des références dans
+            la fintech (Lemonway), les réseaux sociaux (Republike),
+            l&apos;immobilier (Offeaze), l&apos;assurance (Garance), ainsi que
+            dans la finance et l&apos;événementiel (Naboo).
           </p>
           <p>
-            J’interviens sur des projets à forts enjeux techniques et métiers
-            dans des environnements exigeants, avec des références dans la
-            fintech (Lemonway), les réseaux sociaux (Republike), l’immobilier
-            (Offeaze), l’assurance (Garance), ainsi que dans la finance et
-            l’événementiel (Naboo).
-          </p>
-          <p>
-            Je mets un accent particulier sur la qualité globale des systèmes :
-            architecture logicielle (hexagonale, microservices), lisibilité et
-            maintenabilité du code, tests automatisés, pipelines CI/CD,
-            observabilité et scalabilité des plateformes sur le long terme.
+            Je mets un accent particulier sur la <span className='font-medium text-white'>qualité globale des systèmes</span> :
+            <span className='font-medium text-white'>architecture logicielle</span> (<span className='font-medium text-white'>hexagonale</span>, <span className='font-medium text-white'>microservices</span>), <span className='font-medium text-white'>lisibilité</span> et
+            <span className='font-medium text-white'>maintenabilité</span> du code, <span className='font-medium text-white'>tests automatisés</span>, pipelines <span className='font-medium text-white'>CI/CD</span>,
+            <span className='font-medium text-white'>observabilité</span> et <span className='font-medium text-white'>scalabilité</span> des plateformes sur le long terme.
           </p>
         </div>
       </section>

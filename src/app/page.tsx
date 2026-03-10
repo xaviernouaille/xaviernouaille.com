@@ -10,22 +10,19 @@ export const metadata: Metadata = {
 
 function HomePage() {
   return (
-    <div className='flex flex-col gap-10 md:gap-14 lg:gap-16'>
-      <section className='section-block animate-fade-in-up fade-delay-1'>
+    <div className='flex flex-col gap-10 sm:gap-20'>
+      <div className='animate-fade-in-up fade-delay-1'>
         <Infos />
-      </section>
-
-      <section className='section-block animate-fade-in-up fade-delay-2'>
+      </div>
+      <div className='animate-fade-in-up fade-delay-2'>
         <Map />
-      </section>
-
-      <section className='section-block animate-fade-in-up fade-delay-4'>
+      </div>
+      <div className='animate-fade-in-up fade-delay-4'>
         <Experiences />
-      </section>
-
-      <section className='section-block animate-fade-in-up fade-delay-5'>
+      </div>
+      <div className='animate-fade-in-up fade-delay-5'>
         <Degrees />
-      </section>
+      </div>
     </div>
   );
 }

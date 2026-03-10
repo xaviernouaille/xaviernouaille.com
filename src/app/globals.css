@@ -1,199 +1,114 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* Palette noir & blanc, style portfolio sombre */
+/* Minimaliste : fond sombre, palette réduite, contenu centré */
 :root {
-  --background: #020617; /* noir profond */
-  --foreground: #e5e7eb; /* texte principal */
-  --accent: #64748b; /* gris bleuté pour les métas */
+  --background: #0a0a0c;
+  --foreground: #fafafa;
+  --muted: #71717a;
+  --border: rgba(255, 255, 255, 0.06);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-primary: #f9fafb;
-  --color-secondary: #e5e7eb;
-  --color-tertiary: #9ca3af;
-  --color-quaternary: #6b7280;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f9fafb;
-    --accent: #64748b;
-  }
+  --color-primary: #fafafa;
+  --color-secondary: #e4e4e7;
+  --color-tertiary: #a1a1aa;
+  --color-quaternary: #71717a;
+  --font-sans: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: #09090B;
+  background: var(--background);
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Segoe UI", sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
 }
 
-/* Conteneur principal type portfolio centré */
-.newspaper-shell {
-  @apply mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col items-center;
+/* Colonne unique centrée (sections standard) */
+.page-shell {
+  @apply mx-auto w-full max-w-[780px] px-6 sm:px-10 py-14 sm:py-20;
 }
 
-.newspaper-page {
-  max-width: 650px;
-  width: 100%;
+/* Bande pleine largeur pour section plus large (ex. carte 830px) */
+.section-wide {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;
+}
+.section-wide-inner {
+  @apply max-w-[870px] mx-auto px-6 sm:px-10;
 }
 
-/* Ligne de séparation légère entre sections */
-.newspaper-divider {
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-/* En-tête / libellé de section */
+/* Titre de section impactant */
 .section-label {
-  @apply uppercase tracking-[0.24em] text-[0.65rem] sm:text-[0.7rem] font-semibold text-tertiary;
-  letter-spacing: 0.28em;
+  @apply text-[0.85rem] font-semibold uppercase tracking-[0.22em] text-zinc-500;
 }
 
 .section-title {
-  @apply text-sm sm:text-base font-medium text-tertiary;
+  @apply text-xl font-semibold text-zinc-300;
 }
 
-/* Carte de section avec léger relief */
-.section-block {
-  position: relative;
-  padding-top: 1.5rem;
+/* Séparateur discret */
+.section-divider {
+  border-top: 1px solid var(--border);
 }
 
-.section-block::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-/* Animation fade-in-up pour les sections */
+/* Animation légère */
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
-    filter: blur(2px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
 .animate-fade-in-up {
   opacity: 0;
-  animation: fade-in-up 0.7s ease-out forwards;
+  animation: fade-in-up 0.5s ease-out forwards;
 }
 
-.fade-delay-1 {
-  animation-delay: 0.08s;
+.fade-delay-1 { animation-delay: 0.05s; }
+.fade-delay-2 { animation-delay: 0.1s; }
+.fade-delay-3 { animation-delay: 0.15s; }
+.fade-delay-4 { animation-delay: 0.2s; }
+.fade-delay-5 { animation-delay: 0.25s; }
+
+/* Carte map dark */
+.map-dark iframe {
+  filter: invert(0.9) hue-rotate(190deg) saturate(0.9) contrast(0.95);
 }
 
-.fade-delay-2 {
-  animation-delay: 0.16s;
-}
-
-.fade-delay-3 {
-  animation-delay: 0.24s;
-}
-
-.fade-delay-4 {
-  animation-delay: 0.32s;
-}
-
-.fade-delay-5 {
-  animation-delay: 0.4s;
-}
-
-/* Avatar en médaillon noir & blanc */
-.avatar-frame {
-  position: relative;
-  display: inline-flex;
-  border-radius: 999px;
-  padding: 3px;
-  background: radial-gradient(circle at 30% 0%, #ffffff, #d4d4d4 55%, #a3a3a3 100%);
-  box-shadow:
-    0 14px 28px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(0, 0, 0, 0.14);
-}
-
-.avatar-frame::after {
-  content: "";
-  position: absolute;
-  inset: 9px;
-  border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  pointer-events: none;
-}
-
-.avatar-img {
-  border-radius: 999px;
-  display: block;
-  width: 4.25rem;
-  height: 4.25rem;
-  object-fit: cover;
-  filter: grayscale(100%);
-}
-
-@media (min-width: 640px) {
-  .avatar-img {
-    width: 4.75rem;
-    height: 4.75rem;
+/* Animation d’invitation au clic sur le cœur (footer) */
+@keyframes heart-pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(236, 72, 153, 0));
+    color: rgb(161 161 174);
+  }
+  40% {
+    transform: scale(1.35);
+    filter: drop-shadow(0 0 14px rgba(236, 72, 153, 0.6)) drop-shadow(0 0 24px rgba(219, 39, 119, 0.35));
+    color: rgb(244 114 182);
+  }
+  70% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.4)) drop-shadow(0 0 18px rgba(219, 39, 119, 0.2));
+    color: rgb(251 207 232);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(236, 72, 153, 0));
+    color: rgb(161 161 174);
   }
 }
 
-/* Texte de type "article" */
-.article {
-  @apply prose prose-sm sm:prose-base max-w-none text-primary;
-}
-
-.article a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  text-decoration-style: solid;
-  color: inherit;
-  position: relative;
-}
-
-.article a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 160ms ease-out;
-}
-
-.article a:hover::after {
-  transform: scaleX(1);
-}
-
-.article strong {
-  @apply font-semibold;
-}
-
-/* Petites méta-infos en haut de page */
-.newspaper-meta {
-  @apply flex flex-wrap items-center justify-between gap-3 text-[0.7rem] sm:text-xs uppercase tracking-[0.22em] text-tertiary mb-6;
-}
-
-.newspaper-meta-pill {
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  padding: 0.25rem 0.9rem;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(229, 229, 229, 0.7));
-}
-
-/* Mode sombre pour l'iframe OpenStreetMap tout en restant draggable */
-.map-dark iframe {
-  filter: invert(0.9) hue-rotate(190deg) saturate(0.9) contrast(0.95);
+.heart-pulse-animate {
+  animation: heart-pulse 0.7s ease-out forwards;
 }

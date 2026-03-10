@@ -1,64 +1,49 @@
 function Contact() {
   return (
-    <div className='flex flex-col gap-4'>
-      <header>
-        <p className='section-label mb-2'>Coordonnées</p>
-        <h2 className='section-title text-sm sm:text-base'>Travaillons ensemble</h2>
-      </header>
+    <section id='contact' className='section-divider pt-12 sm:pt-14'>
+      <p className='section-label mb-3'>Coordonnées</p>
+      <h2 className='section-title mb-8'>Contact</h2>
 
-      <div>
-        <div className='flex flex-col gap-5 lg:gap-3'>
+      <ul className='space-y-4 text-base sm:text-lg'>
+        <li>
           <a
             target='_blank'
             rel='noopener noreferrer'
             href='https://www.linkedin.com/in/xavier-nouaille/'
-            className='flex sm:items-center flex-col sm:flex-row gap-0.5 sm:gap-4 group'
+            className='text-zinc-400 hover:text-zinc-200 transition-colors underline underline-offset-2'
           >
-            <strong className='line-clamp-2 font-medium text-primary group-hover:underline'>
-              Linkedin
-            </strong>
-            <span className='hidden sm:flex flex-1 border-t border-dashed border-black/10 shrink'></span>
-            <span className='flex-none text-tertiary'>Visiter</span>
+            LinkedIn
           </a>
+        </li>
+        <li>
           <a
             target='_blank'
             rel='noopener noreferrer'
             href='https://github.com/xaviernouaille'
-            className='flex sm:items-center flex-col sm:flex-row gap-0.5 sm:gap-4 group'
+            className='text-zinc-400 hover:text-zinc-200 transition-colors underline underline-offset-2'
           >
-            <strong className='line-clamp-2 font-medium text-primary group-hover:underline'>
-              GitHub
-            </strong>
-            <span className='hidden sm:flex flex-1 border-t border-dashed border-black/10 shrink'></span>
-            <span className='flex-none text-tertiary'>Visiter</span>
+            GitHub
           </a>
+        </li>
+        <li>
           <a
-            target='_blank'
-            rel='noopener noreferrer'
             href='mailto:xavier.nouaille@pm.me'
-            className='flex sm:items-center flex-col sm:flex-row gap-0.5 sm:gap-4 group'
+            className='text-zinc-400 hover:text-zinc-200 transition-colors underline underline-offset-2'
           >
-            <strong className='line-clamp-2 font-medium text-primary group-hover:underline'>
-              EMail
-            </strong>
-            <span className='hidden sm:flex flex-1 border-t border-dashed border-black/10 shrink'></span>
-            <span className='flex-none text-tertiary'>Contact</span>
+            xavier.nouaille@pm.me
           </a>
+        </li>
+        <li>
           <a
-            target='_blank'
-            rel='noopener noreferrer'
             href='tel:+33778389134'
-            className='flex sm:items-center flex-col sm:flex-row gap-0.5 sm:gap-4 group'
+            className='text-zinc-400 hover:text-zinc-200 transition-colors underline underline-offset-2'
           >
-            <strong className='line-clamp-2 font-medium text-primary group-hover:underline'>
-              Téléphone
-            </strong>
-            <span className='hidden sm:flex flex-1 border-t border-dashed border-black/10 shrink'></span>
-            <span className='flex-none text-tertiary'>Appeler</span>
+            +33 7 78 38 91 34
           </a>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </section>
   );
 }
+
 export default Contact;
