@@ -17,11 +17,8 @@ function getMapboxEmbedSrc(token: string): string {
 }
 
 function MapContent() {
-  const token =
-    typeof process !== 'undefined' &&
-    process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
-      ? process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
-      : '';
+  /** Référence directe pour que Next/Webpack remplace bien la var au build (export statique). */
+  const token = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ?? '';
 
   if (token) {
     return (

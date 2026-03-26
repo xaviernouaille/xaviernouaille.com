@@ -28,7 +28,23 @@ jobs:
           node-version: 20
           check-latest: true
       - run: npm install
+      # Export statique : le jeton doit être présent au moment de `next build` (fichier .env lu par Next).
+      - name: Vérifier le secret Mapbox
+        env:
+          NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN" ]; then
+            echo "::error::Ajoute le secret GitHub Actions nommé exactement NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN (Repository settings → Secrets → Actions)."
+            exit 1
+          fi
+      - name: Fichier .env pour le build Next
+        env:
+          NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
+        run: |
+          printf 'NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=%s\n' "$NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN" > .env.production.local
       - run: npm run build
+        env:
+          NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
       - run: npm run sitemap
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
