@@ -12,11 +12,13 @@
   "dependencies": {
     "@next/third-parties": "^15.3.1",
     "@tailwindcss/typography": "^0.5.16",
+    "mapbox-gl": "^3.20.0",
     "next": "^15.3.1",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-map-gl": "^8.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
