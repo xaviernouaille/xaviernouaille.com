@@ -6,7 +6,7 @@ const WORKS = [
     date: "10/2025 - aujourd'hui",
     position: 'Développeur FullStack',
     href: 'https://naboo.com',
-    logo: 'https://media.licdn.com/dms/image/v2/D560BAQGccPOW5JkDYQ/company-logo_100_100/company-logo_100_100/0/1719387337845/naboo_app_logo?e=1774483200&v=beta&t=VtO6oxI7ESDuPOBjkBJAOyZeKDbnhSY7oLfIjrrwGUk',
+    logo: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAARVBMVEVHcEzv93nv93nv93nt9Xjw+Hnv93nv93nv93nv93nv93n1/Xvb43Cdo1TJz2gAABSwtl3AxmRpbD0NDBmChUgxMSZLTTAIJB+IAAAAC3RSTlMAM4nL9P9h5SLTR7eE+CEAAAEQSURBVHgBfZMHEsMgDATdzk2AAIH//9SgAdKTm6a5paoMd43TvADLPI3Du9YNd23rC9oPvOjYH+zEh84HI/pFdxhrXTepB/XkA47ZVtN4H0wND2UrqEFykYskVaxv3jokLywKOTulW/k7GqTAItEHe4nkBUXjMHWIYloi0BKFExU4DXOHjiWqVWiWrME86AEKyTIHgooSswGwDCgyKQXyKalDRaGG6NCpWUP/gIs6zKmdGNoNjvTYWb3cHg+Kwq7DeZjqCySCiqzIhQ4nTQJgcjFt8FGEA3U4avr0p7lmTjQbDW6aeCg1SSFfxexwrSWrOHhvQGgQRyt21aMfnLUG+88WIpz/G+x/a/5v6r/jcAMXUhdoWrrIxwAAAABJRU5ErkJggg==',
     techStack: 'NestJS / React / Next.js / TypeScript',
     location: 'Paris · Hybride',
     kind: 'Freelance',
